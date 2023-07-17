@@ -5,7 +5,7 @@ CREATE TABLE `users` (
   `full_name` varchar(250) DEFAULT NULL,
   `email` varchar(250) DEFAULT NULL,
   `password` varchar(250) DEFAULT NULL,
-  `bot_id` varchar(250) DEFAULT NULL
+  `bot_ip` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 ALTER TABLE `users`

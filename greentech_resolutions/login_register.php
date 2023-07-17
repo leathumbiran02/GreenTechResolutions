@@ -58,8 +58,8 @@
                     <input type = "password" class="input_field" name = "pass" placeholder = "Password"/>
                     <!-- Confirm Password: -->
                     <input type = "password" class="input_field" name = "confirm_pass" placeholder = "Confirm password"/>
-                    <!-- BOT ID:-->
-                    <input type = "text" class="input_field" name = "bot_id" placeholder = "BOT ID"/>
+                    <!-- BOT IP:-->
+                    <input type = "text" class="input_field" name = "bot_ip" placeholder = "BOT IP"/>
                     <!-- Agree to terms and conditions checkbox -->
                     <input type="checkbox" class="check_box" id="agree_checkbox"><span class="remember_password">I agree to the terms & conditions</span>
                     <!--Button to submit the form:-->

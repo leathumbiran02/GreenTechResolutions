@@ -9,7 +9,7 @@
         $email = $_POST['email'];
         $pass = $_POST['pass'];
         $confirm_pass = $_POST['confirm_pass'];
-        $bot_id = $_POST['bot_id'];
+        $bot_ip = $_POST['bot_ip'];
         
         /* Hasing passwords for security purposes: */
         $hash_password=password_hash($pass, PASSWORD_DEFAULT); 
@@ -47,12 +47,12 @@
                 full_name, 
                 email, 
                 password,
-                bot_id
+                bot_ip
                 )
                 VALUES (?,?,?,?)
                 ");
 
-                $create_user->bind_param("ssss",$full_name,$email,$hash_password,$bot_id); //Bind the parameters:
+                $create_user->bind_param("ssss",$full_name,$email,$hash_password,$bot_ip); //Bind the parameters:
 
                 //Execute the statement:
                 /* If connection is successful and a row was affected, display a success message and redirect to the login page: */
