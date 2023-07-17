@@ -79,9 +79,10 @@
 
                 //Display the user's account information:
                 if(isset($row['full_name'])){
-                    /* Fetch the user/vendor details: */
+                    /* Fetch the user details: */
                     $full_name = $row['full_name'];
                     $email = $row['email'];
+                    $bot_ip = $row['bot_ip'];
 
                     /* Displaying the user's account details, a manage account button and a logout button on the page: */
                     echo "<h1 class='main-header'>Account Details:</h1>";
@@ -102,6 +103,14 @@
                     echo                "</td>";
                     echo                "<td>";
                     echo                    "$email";
+                    echo                "</td>";
+                    echo            "</tr>";
+                    echo            "<tr>";
+                    echo                "<td>";
+                    echo                    "<th>BOT IP:</th>";
+                    echo                "</td>";
+                    echo                "<td>";
+                    echo                    "$bot_ip";
                     echo                "</td>";
                     echo            "</tr>";
                     echo        "</tbody>";
