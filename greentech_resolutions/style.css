@@ -29,7 +29,7 @@ header .logo{ /* Styling the logo */
     font-weight: bolder;
     font-size: 25px;
     color: #09BA20;
-    width:70px;
+    width:80px;
     height:auto;
     border-radius: 10px;
 }
@@ -142,7 +142,7 @@ header label{
 /* Styling for the login and register form:*/
 .form-box{ /* For the form */
     width: 450px;
-    height:600px;
+    height:550px;
     position: relative;
     margin: 0 auto;
     background-color: #CED1D8;

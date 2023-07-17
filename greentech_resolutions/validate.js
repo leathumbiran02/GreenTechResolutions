@@ -1,31 +1,3 @@
-//Validate the contact us form before sending the details to the database:
-function contactValidate() 
-{
-    if(document.contactus.firstname.value.trim() == ""){//If First Name is empty:
-        alert("Please enter your first name");
-        document.contactus.firstname.focus();
-        return false;
-    }
-
-    if(document.contactus.lastname.value.trim() == ""){//If Last Name is empty:
-        alert("Please enter your last name");
-        document.contactus.lastname.focus();
-        return false;
-    }
-
-    if(document.contactus.email.value.trim() == ""){ //If Email is empty:
-        alert("Please enter your email address");
-        document.contactus.email.focus();
-        return false;
-    }
-
-    if(document.contactus.comments.value.trim() == ""){ //If Comments are empty:
-        alert("Please enter any comments or suggestions");
-        document.contactus.comments.focus();
-        return false;
-    }
-}
-
 /* Using Javascript to shift between both forms in the login.php file based on if the user clicks on the Login or Register button:  */
 var x=document.getElementById("login");
 var y=document.getElementById("register");
@@ -82,6 +54,7 @@ function validate_registration(){
     return true; //Alow the form to be submitted once the checkbox is checked:
 }
 
+//Validate the login form before sending the details to the database:
 function validate_login(){
     if(document.login_form.email.value.trim() == ""){ //If Email Address is empty:
         alert("Please enter your email address.");
@@ -91,6 +64,25 @@ function validate_login(){
     if(document.login_form.password.value.trim() == ""){ //If Password empty:
         alert("Please enter your password.");
         document.login_form.password.focus();
+        return false;
+    }
+}
+
+//Validate the contact us form before sending the details to the database:
+function validate_contact_us(){
+    if(document.contact_us.full_name.value.trim() == ""){ //If Full Name is empty:
+        alert("Please enter your full name.");
+        document.contact_us.full_name.focus();
+        return false;
+    }
+    if(document.contact_us.email.value.trim() == ""){ //If Email Address is empty:
+        alert("Please enter your email address.");
+        document.contact_us.email.focus();
+        return false;
+    }
+    if(document.contact_us.comments.value.trim() == ""){ //If Comments is empty:
+        alert("Please enter any comments.");
+        document.contact_us.comments.focus();
         return false;
     }
 }
