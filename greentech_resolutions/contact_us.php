@@ -53,7 +53,7 @@
                 position: absolute;
                 width: 250px;
                 height: 100%;
-                background: linear-gradient(to right, #09BA20, #6cff7f);
+                background: none;
                 border-radius: 30px;
                 transition: .5s;
             }
@@ -106,7 +106,7 @@
                     <button type="button" class="toggle_register_login_btn">Leave A Comment</button> 
                 </div>
 
-                <form class="login_input_group" id="contact_us" name = "contact_us" action="contact_us.php" method="POST" onsubmit = "return(validate_contact_us());">
+                <form class="login_input_group" id="contact_us" name = "contact_us" action="contact_us_send_email.php" method="POST" onsubmit = "return(validate_contact_us());">
                     <!-- Full Name: -->
                     <input type = "text" class="input_field" name = "full_name" placeholder = "Full Name"/>
                     <!-- Email Address: -->

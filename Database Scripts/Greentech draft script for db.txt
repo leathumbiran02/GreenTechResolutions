@@ -13,5 +13,21 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `email_UNIQUE` (`email`);
 
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+CREATE TABLE `contact_us` (
+  `contact_id` int(11) NOT NULL,
+  `full_name` varchar(250) DEFAULT NULL,
+  `email` varchar(250) DEFAULT NULL,
+  `comments` varchar(1000) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+ALTER TABLE `contact_us`
+  ADD PRIMARY KEY (`contact_id`),
+  ADD UNIQUE KEY `email_UNIQUE` (`email`);
+
+ALTER TABLE `contact_us`
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+
 
