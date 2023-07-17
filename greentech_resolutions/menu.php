@@ -13,9 +13,13 @@
         <!-- Only display this menu if the person logged in is a user: -->
         <?php if(isset($_SESSION['users']) && $_SESSION['users'] == true): ?>
             <li><a href="dashboard.php">Dashboard</a></li>
-            <li><a href="plant.php">Plants</a></li>
-            <li><a href="tank.php">Tank</a></li>
-            <li><a href="system.php">System</a></li>
+            <li><a href="#">AquaBot</a>
+                <ul>
+                    <li><a href="plant.php">Plants</a></li>
+                    <li><a href="tank.php">Tank</a></li>
+                    <li><a href="system.php">System</a></li>
+                </ul>
+            </li>
             <li><a href="shop.php">Shop</a></li>
             <li><a href="chat.php">Chat</a></li>
             <li><a href="account.php">Account</a>
