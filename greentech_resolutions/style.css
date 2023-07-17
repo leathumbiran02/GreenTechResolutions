@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: none;
+    text-decoration: none;
+}
+
+body{
+    margin-top: 100px;
+    background-color:rgb(255, 255, 255);
+}
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background:rgb(255, 255, 255); /* Color of the menu :) */
+    padding:0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo{ /* Styling the logo */
+    font-weight: bolder;
+    font-size: 25px;
+    color: #09BA20;
+    width:70px;
+    height:auto;
+    border-radius: 10px;
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+}
+
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    position: relative;
+    float:left;
+}
+
+header .navbar ul li a{
+    font-size: 20px;
+    padding:20px;
+    color: #000000;
+    display: block;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+header .navbar ul li a:hover{
+    color:#09BA20;
+}
+
+header .navbar ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #09BA20;
+    transform: scaleX(0); /* Use an initial scale of 0 to hide the line: */
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+header .navbar ul li a:hover::after{
+    transform: scale(1); /* Set the scale to 1 to disply the green line: */
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left:0;
+    width: 200px;
+    background: #ffffff; /* changes colour of sub menu */
+    display:none;
+}
+
+header .navbar ul li ul li{
+    width: 70%;
+}
+
+header .navbar ul li ul li ul{
+    left: 200px;
+    top:0;
+}
+
+header .navbar ul li:focus-within > ul, header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    color:#ffffff;
+    cursor: pointer;
+    display:none;
+}
+
+.hero{
+    height: calc(100vh - 18.5px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 3vw;
+    margin-bottom: 20px;
+}
+
+.hero h1.main-header {
+    text-align: center;
+    font-size: 3em;
+    text-transform:uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: #000000;
+}
+
+.main-header{
+    color:#fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling for the login and register form:*/
+.form-box{ /* For the form */
+    width: 450px;
+    height:600px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #CED1D8;
+    border-radius: 35px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.register_login_btn_box{
+    width: 260px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: none;
+    border-radius: 30px;
+}
+
+.toggle_register_login_btn{
+    padding: 20px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;   
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#btn{
+    top:0;
+    left: 0;
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to right, #09BA20, #6cff7f);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.login_input_group{
+    top:120px;
+    position: absolute;
+    width: 350px;
+    transition: .5s;
+}
+
+.login_input_group input{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.input_field{
+    width:100%;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 20px;
+    outline: none;
+    background-color: #343A54;
+    color: #ffffff;
+}
+
+.submit_btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #09BA20, #6cff7f);
+    color: #000000;
+    font-weight: bolder;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check_box{
+    margin: 30px 10px 30px 0;
+}
+
+.remember_password{
+    color: #000000;
+    font-size: 20px;
+    bottom: 70px;
+    position: absolute;
+    font-weight: bold;
+}
+
+#login{
+    left:50px
+}
+
+#register{
+    left:450px
+}
+
+.center-text{
+    text-align: center;
+}
+
+.user-info{
+    width: 80%;
+    background-color: #343A54;
+    border: 5px solid #CED1D8;
+    border-radius: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    text-align: justify;
+    padding: 50px;
+}
+
+table{ /* Table to display the users' information on the account page */
+    border-collapse: collapse;
+    color: #ffffff;
+    font-family: 'Arial',sans-serif;
+    font-weight: bold;
+    width:100%;
+    font-size:2.5em;
+}
+th,td{
+    padding: 8px;
+    text-align: left;
+}
