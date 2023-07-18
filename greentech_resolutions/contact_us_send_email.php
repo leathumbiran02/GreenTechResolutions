@@ -93,12 +93,12 @@
                     exit;
                 }
                 catch(Exception $e){ //If the email fails for any reason:
-                    echo '<script>alert("Error sending email 1. Please try again later.")</script>'; 
+                    echo '<script>alert("Error sending email. Please try again later.")</script>'; 
                     header("Refresh:1; url=contact_us.php"); //Redirect to the contact us page so that the user can try again:
                     exit;
                 }
             } else { //If the email fails for any reason:
-                echo '<script>alert("Error sending email 2. Please try again later.")</script>'; 
+                echo '<script>alert("Error sending email. Please try again later.")</script>'; 
                 header("Refresh:1; url=contact_us.php"); //Redirect to the contact us page so that the user can try again:
                 exit;
             }

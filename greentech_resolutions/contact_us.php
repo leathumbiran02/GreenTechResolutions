@@ -42,8 +42,8 @@
                 border: 0;
                 outline: none;
                 position: relative;   
-                color: #000000;
-                font-weight: bold;
+                color: #343A54;
+                font-weight: bolder;
                 font-size: 20px;
                 text-transform: uppercase;
             }
@@ -100,6 +100,12 @@
             ?>
         </header>
         <div class="form_page"> <!-- The body of the page: -->
+            <div class="center-text">
+                <h1 class="toggle_register_login_btn">Contact Us:</h1>
+                <h3 class="toggle_register_login_btn">Head Office Address: <a href="https://goo.gl/maps/UNgsTJUgLagswkQE6">9 Concorde E Rd, Bedfordview Johannesburg</a><br><br> Phone Number: +27 74 614 9038<br><br> Email Address: <a href="mailto:greentechresolutions@gmail.com">greentechresolutions@gmail.com</a><br></h3>
+            </div>
+
+
             <div class="form-box"> 
                 <div class="register_login_btn_box">
                     <div id="btn"></div>
