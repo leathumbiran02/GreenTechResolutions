@@ -102,7 +102,7 @@
         <div class="form_page"> <!-- The body of the page: -->
             <div class="center-text">
                 <h1 class="toggle_register_login_btn">Contact Us:</h1>
-                <h3 class="toggle_register_login_btn">Head Office Address: <a href="https://goo.gl/maps/UNgsTJUgLagswkQE6">9 Concorde E Rd, Bedfordview Johannesburg</a><br><br> Phone Number: +27 74 614 9038<br><br> Email Address: <a href="mailto:greentechresolutions@gmail.com">greentechresolutions@gmail.com</a><br></h3>
+                <h3 class="toggle_register_login_btn">Head Office Address: <a href="https://goo.gl/maps/UNgsTJUgLagswkQE6">9 Concorde E Rd, Bedfordview Johannesburg</a><br><br> Phone Number: <a href="tel:+27746149038">+27 74 614 9038</a><br><br> Email Address: <a href="mailto:greentechresolutions@gmail.com">greentechresolutions@gmail.com</a><br></h3>
             </div>
 
 
