@@ -14,8 +14,8 @@
         //Configuring the SMTP server settings:
         $smtp_server = 'smtp.gmail.com'; //Using gmail
         $smtp_port = 587; //Using a specific port number
-        $smtp_username = 'seansmith23lightsout@gmail.com'; //Email address that will be used to send the welcoming message emails
-        $smtp_password = 'elgnklavadzuatze'; //App password that was generated for gmail so that the email address can be used by other programs.
+        $smtp_username = 'greentechresolutions@gmail.com'; //Email address that will be used to send the welcoming message emails
+        $smtp_password = 'atxctbwwroycsivl'; //App password that was generated for gmail so that the email address can be used by other programs.
             
     //Creating a connection to the database:
     $connect = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
@@ -78,12 +78,10 @@
                     $mail->Subject = 'Contact Request';
                     $mail->Body    = "
                     Dear $full_name,
-                    <br><br>Thank you for contacting us!
-                    <br><br>You can contact us through the following:<br>
-                    <br><br>Email:
-                    <br><br>Phone Number:
-                    <br><br>Physical Address: <br><br>
-                    Hoping to hear from you soon,
+                    <br><br>Welcome to GreenTech Resolutions!
+                    <br><br>One of our consultants will contact you soon.<br>
+                    <br>If you have any other enquiries, please let us know.
+                    <br><br>Hoping to hear from you soon,
                     <br>The GreenTech Resolutions Team";
 
                     //Sending the email to the user:
