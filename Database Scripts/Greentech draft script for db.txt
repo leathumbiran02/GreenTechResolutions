@@ -29,5 +29,19 @@ ALTER TABLE `contact_us`
 ALTER TABLE `contact_us`
   MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
+CREATE TABLE `chat` (
+  `chat_id` int(11) NOT NULL,
+  `full_name` varchar(250) DEFAULT NULL,
+  `email` varchar(250) DEFAULT NULL,
+  `reason` varchar(1000) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+ALTER TABLE `chat`
+  ADD PRIMARY KEY (`chat_id`);
+
+ALTER TABLE `chat`
+  MODIFY `chat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+ALTER TABLE chat ADD COLUMN other_reason VARCHAR(1000);
 
 

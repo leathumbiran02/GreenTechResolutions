@@ -86,3 +86,47 @@ function validate_contact_us(){
         return false;
     }
 }
+
+//Function to show/hide a text field when submitting a chat form:
+function toggleOtherReason(){
+    var reasonSelect = document.getElementById('reasonSelect');
+    var otherReasonInput = document.getElementById('otherReasonInput');
+
+    if(reasonSelect.value === "Other"){
+        otherReasonInput.style.display = 'block';
+    }else{
+        otherReasonInput.style.display = 'none';
+    }
+}
+
+//Function to validate the chat form:
+function validate_chat_form(){
+    if(document.chat.full_name.value.trim() === ""){ //If Full Name is empty:
+        alert("Please enter your full name.");
+        document.chat.full_name.focus();
+        return false;
+    }
+    if(document.chat.email.value.trim() === ""){ //If Email Address is empty:
+        alert("Please enter your email address.");
+        document.chat.email.focus();
+        return false;
+    }
+
+    var reasonSelect = document.getElementById("reasonSelect");
+
+    if(reasonSelect.value === ""){ //If reason for contacting is empty:
+        alert("Please select a reason for contacting.");
+        reasonSelect.focus();
+        return false;
+    }
+    if(reasonSelect.value === "Other"){//If they selected Other:
+
+        var otherReasonInput = document.getElementById("otherReasonInput");
+
+        if(otherReasonInput.value.trim() == ""){ //If they didn't type anything in the Other text box:
+            alert("Please specify the reason for contacting us.");
+            document.chat.email.focus();
+            return false;
+        }
+    }
+}

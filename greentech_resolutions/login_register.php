@@ -68,7 +68,7 @@
             </div>
             <footer> <!-- Have a terms and conditions appear at the bottom of the page: -->
                 <div class="center-text">
-                    <br><p><i>Terms & Conditions: By creating an account you agree to share your full name, email address, and Bot IP with Green Tech Resolutions.</i></p>
+                    <br><p><i>Terms & Conditions: By creating an account you agree to share your full name, email address, and Bot IP with GreenTech Resolutions.</i></p>
                 </div>
             </footer>
         </div>     
