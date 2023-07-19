@@ -113,7 +113,7 @@
                     <!-- Reason for contacting GreenTech Resolutions: -->
                     <select class="input_field" name="reason" id="reasonSelect" onchange="toggleOtherReason()">
                         <option value="" disabled selected>Reason for contacting</option>
-                        <option value="I want to sell produce/become a supplier">I want to sell produce/become a supplier</option>
+                        <option value="I want to become a supplier for GreenTech Resolutions">I want to become a supplier for GreenTech Resolutions</option>
                         <option value="My system stopped working">My system stopped working</option>
                         <option value="I don't know how to set up my Aquabot">I don't know how to set up my Aquabot</option>
                         <option value="Other">Other</option>
