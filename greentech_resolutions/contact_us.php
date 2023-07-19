@@ -10,6 +10,14 @@
 
         <!--Using a CSS style sheet for the page-->
         <link rel="stylesheet" href="style.css">
+        <style>
+            p{
+                margin-top: 20px;
+                color: black;
+                font-size: 22px;
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <header>

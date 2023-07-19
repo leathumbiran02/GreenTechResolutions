@@ -14,13 +14,6 @@
                 font-size: 22px;
                 font-weight: bold;
             }
-            .forgot_password{
-                color: black;
-                font-size: 20px;
-                bottom:-30px;
-                position: relative;
-                font-weight:bold;
-            }
         </style>
     </head>
     <body>
