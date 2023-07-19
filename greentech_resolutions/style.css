@@ -212,7 +212,7 @@ header label{
     display: block;
     margin: auto;
     background: linear-gradient(to right, #09BA20, #6cff7f);
-    color: #000000;
+    color: #ffffff;
     font-weight: bolder;
     font-size: 20px;
     border: 0;
@@ -337,7 +337,7 @@ th,td{
     display: block;
     margin: 0 50px;
     background: linear-gradient(to right, #09BA20, #6cff7f);
-    color: #000000;
+    color: #ffffff;
     font-weight: bolder;
     font-size: 20px;
     border: 0;
@@ -410,7 +410,7 @@ th,td{
     display: block;
     margin: 0 50px;
     background: linear-gradient(to right, #09BA20, #6cff7f);
-    color: #000000;
+    color: #ffffff;
     font-weight: bolder;
     font-size: 20px;
     border: 0;

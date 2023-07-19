@@ -130,3 +130,12 @@ function validate_chat_form(){
         }
     }
 }
+
+//Function to validate the bot ip form:
+function validate_bot_ip(){
+    if(document.bot_ip.bot_ip.value.trim()===""){ //If BOT IP is empty:
+        alert("Please enter your BOT IP.");
+        document.bot_ip.bot_ip.focus();
+        return false;
+    }
+}
