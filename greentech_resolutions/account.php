@@ -20,6 +20,7 @@
             }
             .addbutton { /* Button when clicking on BOT IP: */
                 background: linear-gradient(to right, #09BA20, #6cff7f);
+                border: none;
                 border-radius: 20px;
                 cursor: pointer;
                 display: initial;
