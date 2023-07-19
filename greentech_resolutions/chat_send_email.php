@@ -111,7 +111,7 @@
 
                 //Generating a success message to the user:
                 echo '<script>alert("Your chat request has been sent! Please check your email for a message.")</script>';
-                header("Refresh:1; url=chat.php"); 
+                header("Refresh:1; url=chat.php"); //Redirect to the chat page:
                 exit;
             }
             catch(Exception $e){ //If the email fails for any reason:

@@ -271,3 +271,149 @@ th,td{
     padding: 8px;
     text-align: left;
 }
+
+.chat-page-form-box{ /* For the form */
+    width: 450px;
+    height:350px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #CED1D8;
+    border-radius: 35px;
+    padding: 5px;
+    overflow: hidden;
+}
+.chat-page-register_login_btn_box{
+    width: 260px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: none;
+    border-radius: 30px;
+}
+.chat-page-toggle_register_login_btn{
+    padding: 20px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;   
+    color: #343A54;
+    font-weight: bolder;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+#chat-page-btn{
+    top:0;
+    left: 0;
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    background: none;
+    border-radius: 30px;
+    transition: .5s;
+}
+.chat-page-login_input_group{
+    top:30px;
+    position: absolute;
+    width: 400px;
+    transition: .5s;
+}
+.chat-page-login_input_group input{
+    color: #ffffff;
+    font-size: 20px;
+}
+.chat-page-input_field{
+    width:100%;
+    padding: 10px 15px;
+    margin: 5px 20px;
+    border-radius: 20px;
+    outline: none;
+    background-color: #343A54;
+    color: #ffffff;
+}
+.chat-page-submit_btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 0 50px;
+    background: linear-gradient(to right, #09BA20, #6cff7f);
+    color: #000000;
+    font-weight: bolder;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.contact-us-form-box{ /* For the form */
+    width: 450px;
+    height:400px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #CED1D8;
+    border-radius: 35px;
+    padding: 5px;
+    overflow: hidden;
+}
+.contact-us-register_login_btn_box{
+    width: 260px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: none;
+    border-radius: 30px;
+}
+.contact-us-toggle_register_login_btn{
+    padding: 20px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;   
+    color: #343A54;
+    font-weight: bolder;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+#contact-us-btn{
+    top:0;
+    left: 0;
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    background: none;
+    border-radius: 30px;
+    transition: .5s;
+}
+.contact-us-login_input_group{
+    top:120px;
+    position: absolute;
+    width: 400px;
+    transition: .5s;
+}
+.contact-us-login_input_group input{
+    color: #ffffff;
+    font-size: 20px;
+}
+.contact-us-input_field{
+    width:100%;
+    padding: 10px 15px;
+    margin: 5px 20px;
+    border-radius: 20px;
+    outline: none;
+    background-color: #343A54;
+    color: #ffffff;
+}
+.contact-us-submit_btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 0 50px;
+    background: linear-gradient(to right, #09BA20, #6cff7f);
+    color: #000000;
+    font-weight: bolder;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
