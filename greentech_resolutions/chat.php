@@ -101,7 +101,7 @@
         </header>
         <div class="form_page"> <!-- The body of the page: -->
             <div class="center-text">
-                <h1 class="toggle_register_login_btn">Chat with us! We'd love to hear your feedback or answer any questions that you may have.</h1>
+                <h1 class="toggle_register_login_btn"><br>Chat with us! We'd love to hear your feedback or answer any questions that you may have.</h1>
             </div>
 
             <div class="form-box"> 
