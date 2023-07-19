@@ -32,7 +32,6 @@
                     <li><a href="logout.php" onclick="return confirm('Are you sure that you want to logout?')">Logout</a></li>
                 </ul>
             </li>
-            <li><a href="help.php">Help</a></li>
         <?php else: ?> <!-- Display this menu for guest users only: -->
             <li><a href="about_us.php">About Us</a></li>
             <li><a href="partners.php">Partners</a></li>
