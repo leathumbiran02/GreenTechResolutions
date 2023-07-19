@@ -21,7 +21,13 @@
                 </ul>
             </li>
             <li><a href="shop.php">Shop</a></li>
-            <li><a href="chat.php">Chat</a></li>
+            <li><a href="#">Chat</a>
+                <ul>
+                    <li><a href="chat.php">With Us</a></li>
+                    <li><a href="chat.php">Community</a></li>
+
+                </ul>
+            </li>
             <li><a href="account.php">Account</a>
                 <ul>
                     <li><a href="logout.php" onclick="return confirm('Are you sure that you want to logout?')">Logout</a></li>
