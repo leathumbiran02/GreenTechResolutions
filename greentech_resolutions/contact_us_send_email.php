@@ -81,7 +81,7 @@
                     <br><br>Welcome to GreenTech Resolutions!
                     <br><br>One of our consultants will contact you soon.<br>
                     <br>If you have any other enquiries, please let us know.
-                    <br><br>Hoping to hear from you soon,
+                    <br><br>Looking forward to hearing from you soon,
                     <br>The GreenTech Resolutions Team";
 
                     //Sending the email to the user:
