@@ -417,3 +417,12 @@ th,td{
     outline: none;
     border-radius: 30px;
 }
+
+.back-button{
+    color: #000000;
+    font-size: 17px;
+    bottom:-20px;
+    margin-left:40px;
+    position: relative;
+    font-weight: bolder;
+}

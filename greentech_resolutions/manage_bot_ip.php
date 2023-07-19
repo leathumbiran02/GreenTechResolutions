@@ -110,6 +110,11 @@
                     <input type="text" class="contact-us-input_field" id="bot_ip" name="bot_ip" value="<?php echo $bot_ip; ?>"><br><br>  
                     <!-- Button to submit the details to the database: -->
                     <button type="submit" name="submit" class="contact-us-submit_btn">Save</button>
+
+                    <div class="center-text">
+                        <!-- Go Back:-->
+                        <a href="account.php"><span class="back-button">Go Back</span></a>
+                    </div>
                 </form>
             </div>
         </div> 
