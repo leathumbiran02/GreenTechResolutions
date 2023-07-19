@@ -25,7 +25,6 @@
                 <ul>
                     <li><a href="chat.php">With Us</a></li>
                     <li><a href="chat.php">Community</a></li>
-
                 </ul>
             </li>
             <li><a href="account.php">Account</a>
