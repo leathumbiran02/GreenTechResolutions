@@ -48,6 +48,9 @@
                 color: black;
                 font-weight: bolder;
             }
+            .product-img{
+                border-radius: 15px;
+            }
 
             /* Testing a feature of locking certain elements when scrolling: */
             .center-text,
