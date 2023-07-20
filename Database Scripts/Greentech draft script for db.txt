@@ -63,4 +63,37 @@ ALTER TABLE `community_fish`
   ADD CONSTRAINT `fk_community_fish_users` FOREIGN KEY (`user_email`) REFERENCES `users` (`email`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
+CREATE TABLE `community_plant` (
+  `plant_id` int NOT NULL,
+  `user_email` varchar(250) NOT NULL,
+  `plant_name` varchar(250) DEFAULT NULL,
+  `description` varchar(500) DEFAULT NULL,
+  `image` varchar(500) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+ALTER TABLE `community_plant`
+  ADD PRIMARY KEY (`plant_id`),
+  ADD KEY `fk_community_plant_users` (`user_email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `community_fish`
+--
+ALTER TABLE `community_plant`
+  MODIFY `plant_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `community_fish`
+--
+ALTER TABLE `community_plant`
+  ADD CONSTRAINT `fk_community_plant_users` FOREIGN KEY (`user_email`) REFERENCES `users` (`email`) ON DELETE CASCADE ON UPDATE CASCADE;
+
 
