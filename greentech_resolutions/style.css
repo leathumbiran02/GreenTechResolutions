@@ -439,7 +439,7 @@ th,td{
     padding:10px;
     box-sizing: border-box;
     display: flex;
-    border: 3px solid #000000;
+    border: 2px solid #09BA20;
     border-radius: 10px;
     justify-content: space-between;
     margin-bottom: 20px;

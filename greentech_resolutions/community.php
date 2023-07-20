@@ -27,7 +27,7 @@
             .product{
                 background-color: #343A54;
                 opacity: 95%;
-                border: 2px solid #09BA20;
+                border: 3px solid #000000;
             }
             .register_login_btn_box{
                 margin:35px;
@@ -38,6 +38,14 @@
             }
             .chat-page-toggle_register_login_btn{
                 font-size:40px;
+            }
+            .addbutton{
+                width: 20%;
+                border-radius: 30px;
+                border: 3px solid #000000;
+                font-size: 20px;
+                color: black;
+                font-weight: bolder;
             }
         </style>
     </head>
