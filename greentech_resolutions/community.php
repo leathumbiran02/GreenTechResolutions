@@ -17,6 +17,8 @@
 
         <!--Using a CSS style sheet for the page-->
         <link rel="stylesheet" href="style.css">
+        <!-- Using Font Awesome CDN for icons: -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
         <style>
             h5{
@@ -56,7 +58,7 @@
 
             <div class="search-bar">
                 <input type="text" id="search" placeholder="Search products...">
-                <button type="button" class="search-bar-btn" onclick="searchProducts()">Search</button>
+                <button type="button" class="search-bar-btn" onclick="searchProducts()"><i class="fas fa-search"></i></button>
             </div>
 
             <div id="products">

@@ -621,9 +621,32 @@ a.addbutton{
 }
 
 .search-bar {
-    float: right; /* Float the search bar to the right */
-    margin-top: -70px;
+    float: right;
+    margin-top: -80px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #CED1D8;
+    padding: 10px 10px;
+}
+
+.search-bar input {
+    flex: 1; 
+    padding: 8px;
+    margin-right: 100px;
+    border: none;
+    outline: none;
+    background-color: #CED1D8;
+    color: #000000;
+    font-weight: bolder;
+    border-radius: 30px;
 }
 .search-bar-btn{
     margin-right: 50px;
+    cursor: pointer;
+    color: #000000;
+    background-color: #CED1D8;
+    font-size: 20px;
+    border: none;
 }
