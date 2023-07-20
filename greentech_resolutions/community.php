@@ -38,6 +38,7 @@
             }
             .chat-page-toggle_register_login_btn{
                 font-size:40px;
+                padding: 0px 30px;
             }
             .addbutton{
                 width: 20%;
@@ -46,6 +47,20 @@
                 font-size: 20px;
                 color: black;
                 font-weight: bolder;
+            }
+
+            /* Testing a feature of locking certain elements when scrolling: */
+            .center-text,
+            .register_login_btn_box,
+            .search-bar {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            }
+            #products {
+            overflow-y: scroll;
+            max-height: calc(100vh - 350px);
+            scroll-behavior: smooth;
             }
         </style>
     </head>
