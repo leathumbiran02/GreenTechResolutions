@@ -40,6 +40,12 @@
                 display: inline-block;
                 text-decoration: none;
             }
+            .register_login_btn_box{
+                margin:35px;
+            }
+            #btn{
+                width:120px;
+            }
         </style>
     </head>
     <body>
