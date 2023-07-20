@@ -583,3 +583,18 @@ th,td{
 #menu-bar{
     display: none;
 }
+
+.plus-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #09BA20;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}

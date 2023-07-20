@@ -12,9 +12,6 @@
         <link rel="stylesheet" href="style.css">
 
         <style>
-            /* .hero{ 
-                text-align: center;
-            } */
             h5{
                 font-size:1.1em;
             } 
@@ -23,7 +20,7 @@
                 opacity: 95%;
                 border: 2px solid #09BA20;
             }
-            .addbutton{ /* Button when clicking on products */
+            .addbutton{ /* Button when clicking on fish */
                 background: linear-gradient(to right, #09BA20, #6cff7f);
                 cursor: pointer;
                 display: block;
@@ -65,6 +62,8 @@
                 ?>
             </div>
         </div>
+
+        <a class="plus-button" href="add_fish.php">+</a>
 
         <!-- Provide the link for the JQuery Library: -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
