@@ -49,10 +49,16 @@
                 include 'menu.php';
             ?>
         </header>
-        
+
         <div class="form-page">
             <div class="center-text"> <!-- Class to center the top heading: -->
                 <h1 class="chat-page-toggle_register_login_btn"><br>Community Chat</h1>
+            </div>
+
+            <div class="register_login_btn_box" > <!-- The buttons that switches between both the login and register form: -->
+                <div id="btn"></div>
+                <button type="button" class="toggle_register_login_btn" onclick="fish()">Fish</button> 
+                <button type="button" class="toggle_register_login_btn" onclick="plants()">Plants</button> 
             </div>
 
             <div id="products">
@@ -79,5 +85,8 @@
                 });
             });
         </script>
+
+        <!--Use an external javascript file named validate.js to validate the form:-->
+        <script src="validate.js"></script>
     </body>
 </html>

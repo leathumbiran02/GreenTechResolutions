@@ -156,7 +156,7 @@ function validate_add_fish(){
 
     if(document.community_fish.image.value.trim()==""){ //If Fish Image is empty:
         alert("Please enter the link to the image of the fish.");
-        document.community_fish.fish_name.focus();
+        document.community_fish.image.focus();
         return false;
     }
 
@@ -168,3 +168,63 @@ function validate_add_fish(){
 
     return true; //Alow the form to be submitted once it has passed all checks:
 }
+
+//Function to validate the add a plant form:
+function validate_add_plant(){
+    if(document.community_plant.plant_name.value.trim()==""){ //If Plant Name is empty:
+        alert("Please enter the name of the plant.");
+        document.community_plant.plant_name.focus();
+        return false;
+    }
+
+    if(document.community_plant.description.value.trim()==""){ //If Plant Name is empty:
+        alert("Please enter a description of the plant.");
+        document.community_plant.description.focus();
+        return false;
+    }
+
+    if(document.community_plant.image.value.trim()==""){ //If Plant Image is empty:
+        alert("Please enter the link to the image of the plant.");
+        document.community_plant.image.focus();
+        return false;
+    }
+
+    if(document.community_plant.price.value.trim()==""){ //If Price is empty:
+        alert("Please enter a price for the fish.");
+        document.community_fish.price.focus();
+        return false;
+    }
+
+    return true; //Alow the form to be submitted once it has passed all checks:
+}
+
+/* Using Javascript to shift between both forms in the login.php file based on if the user clicks on the Login or Register button:  */
+var t=document.getElementById("btn");
+
+function fish(){ /* If the user clicks on Login, shift the form into view and hide the other form: */
+    t.style.left = "0";
+
+    //Fetch the fish from the server and update the page:
+    fetch('get_community_fish.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('products').innerHTML = data;
+        })
+        .catch(error =>{
+            console.error('Error fetching fish: ', error);
+        });
+}
+
+function plants(){ /* If the user clicks on Register, shift the form into view and hide the other form: */
+    t.style.left = "110px";
+
+    //Fetch the fish from the server and update the page:
+    fetch('get_community_plant.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('products').innerHTML = data;
+        })
+        .catch(error =>{
+            console.error('Error fetching fish: ', error);
+        });
+}   
