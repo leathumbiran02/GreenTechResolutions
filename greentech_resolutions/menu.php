@@ -25,7 +25,7 @@
                 </ul>
             </li>
             <li><a href="shop.php">Shop</a></li>
-            <li><a href="#">Chat</a>
+            <li><a href="#">Connect</a>
                 <ul>
                     <li><a href="chat.php">With Us</a></li>
                     <li><a href="community.php">Community</a></li>

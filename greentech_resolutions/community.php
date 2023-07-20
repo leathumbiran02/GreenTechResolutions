@@ -38,7 +38,7 @@
 
         <div class="form-page">
             <div class="center-text"> <!-- Class to center the top heading: -->
-                <h1 class="chat-page-toggle_register_login_btn"><br>Community Chat</h1>
+                <h1 class="chat-page-toggle_register_login_btn"><br>Community Market</h1>
             </div>
 
             <div class="register_login_btn_box" > <!-- The buttons that switches between both the login and register form: -->
