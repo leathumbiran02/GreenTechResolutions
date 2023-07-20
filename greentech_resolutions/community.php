@@ -20,26 +20,6 @@
                 opacity: 95%;
                 border: 2px solid #09BA20;
             }
-            .addbutton{ /* Button when clicking on fish */
-                background: linear-gradient(to right, #09BA20, #6cff7f);
-                cursor: pointer;
-                display: block;
-                padding: 3px;
-                width:50%;
-                color: #ffffff;
-                opacity: 100%;
-                font-size: 16px;
-                font-weight: bold;
-                text-align: center;
-                border:none;
-                border-radius: 10px;
-                transition: background-color 0.3s ease-in-out;
-                text-decoration: none;
-            }
-            a.viewbutton, a.addbutton, a.updatebutton, a.deletebutton{
-                display: inline-block;
-                text-decoration: none;
-            }
             .register_login_btn_box{
                 margin:35px;
             }
