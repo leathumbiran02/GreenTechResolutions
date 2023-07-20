@@ -69,8 +69,6 @@
             </div>
         </div>
 
-        <a class="plus-button" href="add_fish.php">+</a>
-
         <!-- Provide the link for the JQuery Library: -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
