@@ -439,7 +439,7 @@ th,td{
     padding:10px;
     box-sizing: border-box;
     display: flex;
-    border: 2px solid #09BA20;
+    border: 3px solid #000000;
     border-radius: 10px;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -594,9 +594,10 @@ th,td{
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
-    font-size: 24px;
+    font-size: 45px;
     color: #ffffff;
     cursor: pointer;
+    border: 3px solid black;
 }
 
 .addbutton{ /* Button when clicking on fish */
@@ -622,13 +623,14 @@ a.addbutton{
 
 .search-bar {
     float: right;
-    margin-top: -80px;
+    margin-top: -95px;
     margin-right: 20px;
     display: flex;
     align-items: center;
     border-radius: 30px;
     background-color: #CED1D8;
     padding: 10px 10px;
+    border:3px solid black;
 }
 
 .search-bar input {
@@ -641,12 +643,13 @@ a.addbutton{
     color: #000000;
     font-weight: bolder;
     border-radius: 30px;
+    font-size: 19px;
 }
 .search-bar-btn{
     margin-right: 50px;
     cursor: pointer;
     color: #000000;
     background-color: #CED1D8;
-    font-size: 20px;
+    font-size: 25px;
     border: none;
 }

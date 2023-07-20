@@ -34,6 +34,10 @@
             }
             #btn{
                 width:120px;
+                border: 3px solid black;
+            }
+            .chat-page-toggle_register_login_btn{
+                font-size:40px;
             }
         </style>
     </head>
