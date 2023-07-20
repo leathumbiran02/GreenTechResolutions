@@ -8,8 +8,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--Title of Web Page: Lights Out-->
-        <title>Lights Out</title>
+        <!--Title of Web Page: GreenTechResolutions-->
+        <title>GreenTechResolutions</title>
 
         <!--Using a CSS style sheet for the page:-->
         <link rel="stylesheet" href="style.css">
@@ -18,8 +18,10 @@
             .hero{ /* Centering the text on the page: */
                 text-align: center;
             }
-            .addbutton { /* Button when clicking on products */
-                background: linear-gradient(to right, rgb(101,43,252,1), rgb(176,20,252,1));
+            .addbutton { /* Button when clicking on BOT IP: */
+                background: linear-gradient(to right, #09BA20, #6cff7f);
+                border: none;
+                border-radius: 20px;
                 cursor: pointer;
                 display: initial;
                 padding: 15px;
@@ -86,6 +88,7 @@
 
                     /* Displaying the user's account details, a manage account button and a logout button on the page: */
                     echo "<h1 class='main-header'>Account Details:</h1>";
+                    echo "<a href='manage_bot_ip.php'><button class='addbutton'>Change BOT IP</button></a>";
                     echo "<div class='user-info'>";
                     echo    "<table>";
                     echo        "<tbody>";

@@ -44,4 +44,23 @@ ALTER TABLE `chat`
 
 ALTER TABLE chat ADD COLUMN other_reason VARCHAR(1000);
 
+CREATE TABLE `community_fish` (
+	`fish_id` int(11) NOT NULL,
+  	`user_email` varchar(250) NOT NULL,
+  	`fish_name` varchar(250) DEFAULT NULL,
+  	`description` varchar(500) DEFAULT NULL,
+  	`image` varchar(500) DEFAULT NULL,
+  	`price` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+ALTER TABLE `community_fish`
+  ADD PRIMARY KEY (`fish_id`);
+
+ALTER TABLE `community_fish`
+  MODIFY `fish_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+ALTER TABLE `community_fish`
+  ADD CONSTRAINT `fk_community_fish_users` FOREIGN KEY (`user_email`) REFERENCES `users` (`email`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
 

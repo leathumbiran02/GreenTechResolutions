@@ -7,6 +7,10 @@
     <a href="about_us.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
 <?php endif; ?>
 
+<!-- Creating a menu for mobile view: -->
+<input type="checkbox" id="menu-bar">
+<label for="menu-bar">Menu</label>
+
 <!--Creating a clickable menu that navigates to the various pages:-->
 <nav class="navbar">
     <ul>
@@ -24,7 +28,7 @@
             <li><a href="#">Chat</a>
                 <ul>
                     <li><a href="chat.php">With Us</a></li>
-                    <li><a href="chat.php">Community</a></li>
+                    <li><a href="community.php">Community</a></li>
                 </ul>
             </li>
             <li><a href="account.php">Account</a>
