@@ -139,3 +139,32 @@ function validate_bot_ip(){
         return false;
     }
 }
+
+//Function to validate the add a fish form:
+function validate_add_fish(){
+    if(document.community_fish.fish_name.value.trim()==""){ //If Fish Name is empty:
+        alert("Please enter the name of the fish.");
+        document.community_fish.fish_name.focus();
+        return false;
+    }
+
+    if(document.community_fish.description.value.trim()==""){ //If Fish Name is empty:
+        alert("Please enter a description of the fish.");
+        document.community_fish.description.focus();
+        return false;
+    }
+
+    if(document.community_fish.image.value.trim()==""){ //If Fish Image is empty:
+        alert("Please enter the link to the image of the fish.");
+        document.community_fish.fish_name.focus();
+        return false;
+    }
+
+    if(document.community_fish.price.value.trim()==""){ //If Price is empty:
+        alert("Please enter a price for the fish.");
+        document.community_fish.price.focus();
+        return false;
+    }
+
+    return true; //Alow the form to be submitted once it has passed all checks:
+}

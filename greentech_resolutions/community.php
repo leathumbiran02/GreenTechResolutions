@@ -73,7 +73,7 @@
             $(document).ready(function(){
                 /* Ensuring that the user cannot click outside of the add button, view button, update button, as well as making sure that the menu (which is located in the header) and the product-img remain responsive: */
                 $(document).on('click', function(event){
-                    if(!$(event.target).closest('.addbutton, header, .product-img').length && !$(event.target).is('.deletebutton')){
+                    if(!$(event.target).closest('.addbutton, header, .product-img, .plus-button').length && !$(event.target).is('.deletebutton')){
                         event.preventDefault();
                     }
                 });
