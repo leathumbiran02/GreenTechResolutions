@@ -43,12 +43,11 @@
         echo    "<div class='center-text'>";
         echo        "<h2 style='color:#09BA20;'>No Fish Were Found.</h2>"; 
         echo    "</div>";
-        
-        //If the table is empty, users can still add fish:
-        echo "<div class='center-text'>";
-        echo        "<a href='add_fish.php'><button class='addbutton' style='margin-top:20px; margin-bottom:30px; width:35%;'>Add</button></a>";
-        echo "</div>";
     }
+
+    //If the table is empty, users can still add fish:
+    echo "<a class='plus-button' href='add_fish.php'>+</a>";
+    
     //Closing the database connection:
     $connect->close();
 ?>
