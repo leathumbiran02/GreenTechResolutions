@@ -49,7 +49,8 @@
             <?php
                 /* Redirect the user/vendor to the login page if they are not logged in: */
                 if(!isset($_SESSION['email'])){
-                    header('Location: login_register.php');
+                    echo "<script>alert('You must be logged in to view this page.')</script>";
+                    header('Refresh: 1; url=login_register.php');
                     exit();
                 }
 

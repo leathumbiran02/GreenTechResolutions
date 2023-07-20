@@ -619,3 +619,11 @@ a.addbutton{
     display: inline-block;
     text-decoration: none;
 }
+
+.search-bar {
+    float: right; /* Float the search bar to the right */
+    margin-top: -70px;
+}
+.search-bar-btn{
+    margin-right: 50px;
+}

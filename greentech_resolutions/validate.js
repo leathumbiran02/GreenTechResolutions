@@ -228,3 +228,21 @@ function plants(){ /* If the user clicks on Register, shift the form into view a
             console.error('Error fetching fish: ', error);
         });
 }   
+
+//Function to handle fish and plant search:
+function searchProducts() {
+    var input, filter, div, product, i, txtValue;
+    input = document.getElementById('search');
+    filter = input.value.toUpperCase();
+    div = document.getElementById('products');
+    product = div.getElementsByClassName('product');
+
+    for (i = 0; i < product.length; i++) {
+        txtValue = product[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            product[i].style.display = '';
+        } else {
+            product[i].style.display = 'none';
+        }
+    }
+}

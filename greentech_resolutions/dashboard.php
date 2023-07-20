@@ -1,6 +1,13 @@
 <?php
     //Starting the session so we can check if the user is logged in:
     session_start();
+
+    //Checking if the email address is stored in the session:
+    if(!isset($_SESSION['email'])){
+        echo "<script>alert('You must be logged in to view this page.')</script>";
+        header('Refresh: 1; url=login_register.php');
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,6 +1,13 @@
 <?php
     //Starting the session so we can check if the user is logged in:
     session_start();
+
+    //Checking if the email address is stored in the session:
+    if(!isset($_SESSION['email'])){
+        echo "<script>alert('You must be logged in to view this page.')</script>";
+        header('Refresh: 1; url=login_register.php');
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,6 +52,11 @@
                 <div id="btn"></div>
                 <button type="button" class="toggle_register_login_btn" onclick="fish()">Fish</button> 
                 <button type="button" class="toggle_register_login_btn" onclick="plants()">Plants</button> 
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search products...">
+                <button type="button" class="search-bar-btn" onclick="searchProducts()">Search</button>
             </div>
 
             <div id="products">
