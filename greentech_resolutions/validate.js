@@ -198,7 +198,7 @@ function validate_add_plant(){
     return true; //Alow the form to be submitted once it has passed all checks:
 }
 
-/* Using Javascript to shift between both forms in the login.php file based on if the user clicks on the Login or Register button:  */
+//function to shift between the fish and plant page:
 var t=document.getElementById("btn");
 
 function fish(){ /* If the user clicks on Login, shift the form into view and hide the other form: */
@@ -215,7 +215,8 @@ function fish(){ /* If the user clicks on Login, shift the form into view and hi
         });
 }
 
-function plants(){ /* If the user clicks on Register, shift the form into view and hide the other form: */
+//function to shift between the fish and plant page:
+function plants(){ 
     t.style.left = "110px";
 
     //Fetch the fish from the server and update the page:

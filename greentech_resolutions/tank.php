@@ -27,9 +27,10 @@
                 margin: 0 auto;
                 margin-bottom: 10px;
                 padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+                border: 3px solid black;
+                border-radius: 10px;
                 background-color: lightgray; /* Replace 'lightgray' with your preferred shade of gray */
+
             }
             .card button {
                 display: flex;
@@ -37,16 +38,19 @@
                 justify-content: center;
                 width: 100%;
                 height: 40px;
-                background-color: #000546; 
+                background-color: #343A54; 
                 color: white;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
+                font-size: 17px;
+                font-weight: bolder;
+                border: 3px solid black;
             }
             .card button:hover {
-                background-color: #fff; /* Change to your preferred background color on hover */
+                background-color: #09BA20; /* Change to your preferred background color on hover */
                 color: #000546; /* Change to your preferred text color on hover */
-                border: 2px solid #000546; /* Add a border on hover, or customize as needed */
+                border: 3px solid black;
             }
             .card h2 {
                 font-size: 20px;
@@ -110,49 +114,50 @@
                 include 'menu.php';
             ?>
         </header>
-        
 
-        <div class="card">
-        <table>
-            <tr>
-                <td>
-                    <div class="water-level">
-                        <div class="water"></div>
-                    </div>
-                </td>
-                <td>
-                    <h2>WATER LEVEL</h2>
-                    <h5>50%</h5>
-                </td>
-            </tr>
-            </table>
-        <button>FILL TANK</button>
-    </div>
+        <div class="spacing" style="height:150px;"></div>
+        <div class="form-page">
+            <div class="card">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="water-level">
+                                <div class="water"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h2>WATER LEVEL</h2>
+                            <h5>50%</h5>
+                        </td>
+                    </tr>
+                </table>
+                <button>FILL TANK</button>
+            </div>
 
-    <div class="card">
-        <table>
-            <tr>
-                <td><h3>pH<h3></td>
-                <td>
-                    <h2>PH LEVEL</h2>
-                    <h5>7</h5>
-                </td>
-            </tr>
-        </table>
-    </div>
+            <div class="card">
+                <table>
+                    <tr>
+                        <td><h3>pH<h3></td>
+                        <td>
+                            <h2>PH LEVEL</h2>
+                            <h5>7</h5>
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
-    <div class="card">
-            <table>
-                <tr>
-                    <td class="clock-icon">&#x23F1;</td>
-                    <td>
-                        <h2>FISH FEEDER</h2>
-                        <h5>7</h5>
-                    </td>
-                </tr>
-            </table>
-        <button>FEED FISH</button>
-    </div>
-
+            <div class="card">
+                <table>
+                    <tr>
+                        <td class="clock-icon">&#x23F1;</td>
+                        <td>
+                            <h2>FISH FEEDER</h2>
+                            <h5>7</h5>
+                        </td>
+                    </tr>
+                </table>
+                <button>FEED FISH</button>
+            </div>
+        </div>
 </body>
 </html>
