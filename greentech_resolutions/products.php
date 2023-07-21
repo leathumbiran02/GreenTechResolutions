@@ -15,6 +15,78 @@
             .hero{ /* Centering the text: */
                 text-align: center;
             }
+
+            /* Ensure that the table and its cells take the full width of the container */
+            table {
+                width: 100%;
+            }
+            
+            td {
+                width: 33.33%; /* Divide the table width into equal parts for each cell */
+            }
+            
+            /* Set the card class styles */
+            .card {
+                
+                padding: 10px; /* Reduce the padding to make the cards smaller */
+                position: relative;
+                width: 333px; /* Adjust the size as needed */
+                height: 333px; /* Adjust the size as needed */
+                perspective: 1000px; /* Create the 3D effect */
+            }
+
+            .flip-card-inner {
+                position: relative;
+                width: 333px; /* Adjust the size as needed */
+                height: 333px; /* Adjust the size as needed */
+                transform-style: preserve-3d; /* Enable 3D transformations for inner elements */
+                transition: transform 0.5s; /* Add a smooth transition */
+            }
+            
+            /* Set the image styles inside the cards */
+            .card img {
+                width: 333px; /* Set a fixed width for the images, adjust as needed */
+                height: 333px; /* Set a fixed height for the images, adjust as needed */
+                object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+            }
+            
+            /* Optional: Center the images vertically if needed */
+            .card img {
+                display: block;
+                margin: 0 auto;
+            }
+
+            .front, .back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden; /* Hide the backface of the card */
+            }
+
+            .front {
+                transform: rotateY(0deg); /* Show the front side of the card */
+            }
+
+            .back {
+                transform: rotateY(180deg); /* Initially hide the back side of the card */
+                text-align: center;
+                padding: 20px;
+                background-color: #f1f1f1;
+                color: black; /* Set the text color to black */
+                font-size: 14px; /* Adjust the font size as needed */
+                border-radius: 5px;
+            }
+
+            /* Show the back side of the card on hover */
+            .card:hover .front {
+                transform: rotateY(-180deg);
+            }
+
+            .card:hover .back {
+                transform: rotateY(0deg);
+            }
+
+            
         </style>
     </head>
     <body>
