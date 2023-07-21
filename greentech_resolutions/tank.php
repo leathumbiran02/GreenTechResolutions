@@ -23,7 +23,8 @@
                 text-align: center;
             }
             .card {
-                width: 300px;
+                width: 400px;
+                height: 200px;
                 margin: 0 auto;
                 margin-bottom: 10px;
                 padding: 10px;
@@ -32,6 +33,7 @@
                 background-color: lightgray; /* Replace 'lightgray' with your preferred shade of gray */
 
             }
+
             .card button {
                 display: flex;
                 align-items: center;
@@ -61,6 +63,10 @@
                 font-size: 16px;
                 margin-bottom: 10px;
                 color: #000546; 
+            }
+
+            .first-row {
+                margin-bottom: -10px;
             }
             .water-level {
                 width: 50px;
@@ -106,6 +112,7 @@
             }
             
         </style>
+
     </head>
     <body>
         <header>
@@ -115,24 +122,23 @@
             ?>
         </header>
 
-        <div class="spacing" style="height:150px;"></div>
-        <div class="form-page">
-            <div class="card">
-                <table>
-                    <tr>
-                        <td>
-                            <div class="water-level">
-                                <div class="water"></div>
-                            </div>
-                        </td>
-                        <td>
-                            <h2>WATER LEVEL</h2>
-                            <h5>50%</h5>
-                        </td>
-                    </tr>
-                </table>
-                <button>FILL TANK</button>
-            </div>
+
+        <div class="card">
+        <table>
+            <tr class="first-row">
+                <td>
+                    <div class="water-level">
+                        <div class="water"></div>
+                    </div>
+                </td>
+                <td>
+                    <h2>WATER LEVEL</h2>
+                    <h5>50%</h5>
+                </td>
+            </tr>
+            </table>
+        <button>FILL TANK</button>
+    </div>
 
             <div class="card">
                 <table>
@@ -146,18 +152,76 @@
                 </table>
             </div>
 
-            <div class="card">
-                <table>
-                    <tr>
-                        <td class="clock-icon">&#x23F1;</td>
-                        <td>
-                            <h2>FISH FEEDER</h2>
-                            <h5>7</h5>
-                        </td>
-                    </tr>
-                </table>
-                <button>FEED FISH</button>
-            </div>
-        </div>
+    <div class="card">
+            <table>
+                <tr>
+                    <td class="clock-icon">&#x23F1;</td>
+                    <td>
+                        <h2>FISH FEEDER</h2>
+                        <h5>
+                            <!--Setting feeding time-->
+                            <input type="time" id="feedTimeInput"><!-- Store Time -->
+                            <button onclick="setFishFeederTimer()">SET TIMER</button>
+                            <div class="timer">00:00:00</div>   
+                        </h5>
+                    </td>
+                </tr>
+            </table>
+        <button>FEED FISH</button>
+    </div>
+
+    <script>
+        // Global variable to hold the timer interval ID
+        let timerInterval;
+
+        // Timer function
+        function startTimer(targetTime) {
+            function updateTimer() {
+                let currentTime = new Date().getTime();
+                let remainingTime = targetTime - currentTime;
+
+                if (remainingTime < 0) {
+                    // Timer has ended
+                    clearInterval(timerInterval);
+                    document.querySelector(".timer").textContent = "Time's up!";
+                } else {
+                    let hours = Math.floor(remainingTime / (1000 * 60 * 60));
+                    let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                    let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+                    hours = hours < 10 ? "0" + hours : hours;
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                    // Display the timer
+                    document.querySelector(".timer").textContent = hours + ":" + minutes + ":" + seconds;
+                }
+            }
+
+            // Clear the previous timer interval if it exists
+            clearInterval(timerInterval);
+
+            updateTimer(); // Update immediately to avoid the initial 1-second delay
+            timerInterval = setInterval(updateTimer, 1000); // Update every second
+        }
+
+        // Function to set the fish feeder timer based on user input
+        function setFishFeederTimer() {
+            let feedTimeInput = document.getElementById("feedTimeInput").value;
+            let currentTime = new Date();
+            let feedTime = new Date(currentTime.toDateString() + " " + feedTimeInput);
+
+            // If the user has selected a time in the past, set the timer for the next day
+            if (feedTime.getTime() <= currentTime.getTime()) {
+                feedTime.setDate(feedTime.getDate() + 1);
+            }
+
+            // Calculate the time difference in milliseconds
+            let timerDuration = feedTime.getTime() - currentTime.getTime();
+
+            // Start the timer
+            startTimer(feedTime.getTime());
+        }
+    </script>
 </body>
 </html>

@@ -15,6 +15,7 @@
             .hero{ /* Centering the text: */
                 text-align: center;
             }
+
             /* Ensure that the table and its cells take the full width of the container */
             table {
                 width: 100%;
@@ -84,6 +85,8 @@
             .card:hover .back {
                 transform: rotateY(0deg);
             }
+
+            
         </style>
     </head>
     <body>
