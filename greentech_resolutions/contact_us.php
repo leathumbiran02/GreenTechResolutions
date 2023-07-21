@@ -26,6 +26,7 @@
                 include 'menu.php';
             ?>
         </header>
+        <div class="spacing" style="height:50px;"></div>
         <div class="form_page"> <!-- The body of the page: -->
             <div class="center-text">
                 <h1 class="contact-us-toggle_register_login_btn">Contact Us:</h1>
@@ -50,11 +51,12 @@
                 </form>
             </div>
             <footer> <!-- Have a notice appear at the bottom of the page: -->
+                <div class="spacing" style="height:200px;"></div>
                 <div class="center-text">
                     <br><p><i>Notice: All requests will be handled during working hours (8am-5pm) from Monday to Friday.</i></p>
                 </div>
             </footer>
-        </div>     
+        </div>  
         <!--Use an external javascript file named validate.js to validate the form:-->
         <script src="validate.js"></script>
     </body>

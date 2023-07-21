@@ -150,6 +150,7 @@ header label{
     border-radius: 35px;
     padding: 5px;
     overflow: hidden;
+    border: 3px solid black;
 }
 
 .register_login_btn_box{
@@ -177,11 +178,12 @@ header label{
     top:0;
     left: 0;
     position: absolute;
-    width: 150px;
+    width: 140px;
     height: 100%;
     background: linear-gradient(to right, #09BA20, #6cff7f);
     border-radius: 30px;
     transition: .5s;
+    border: 3px solid black;
 }
 
 .login_input_group{
@@ -204,6 +206,7 @@ header label{
     outline: none;
     background-color: #343A54;
     color: #ffffff;
+    border: 3px solid black;
 }
 
 .submit_btn{
@@ -213,12 +216,13 @@ header label{
     display: block;
     margin: auto;
     background: linear-gradient(to right, #09BA20, #6cff7f);
-    color: #ffffff;
+    color: #000000;
     font-weight: bolder;
     font-size: 20px;
     border: 0;
     outline: none;
     border-radius: 30px;
+    border: 3px solid black;
 }
 
 .check_box{
@@ -248,7 +252,7 @@ header label{
 .user-info{
     width: 80%;
     background-color: #343A54;
-    border: 5px solid #CED1D8;
+    border: 3px solid #000000;
     border-radius: 30px;
     margin: 0 auto;
     display: flex;
@@ -282,6 +286,7 @@ th,td{
     border-radius: 35px;
     padding: 5px;
     overflow: hidden;
+    border: 3px solid black;
 }
 .chat-page-register_login_btn_box{
     width: 260px;
@@ -330,6 +335,7 @@ th,td{
     outline: none;
     background-color: #343A54;
     color: #ffffff;
+    border: 3px solid black;
 }
 .chat-page-submit_btn{
     width: 85%;
@@ -355,6 +361,7 @@ th,td{
     border-radius: 35px;
     padding: 5px;
     overflow: hidden;
+    border: 3px solid black;
 }
 .contact-us-register_login_btn_box{
     width: 260px;
@@ -403,6 +410,7 @@ th,td{
     outline: none;
     background-color: #343A54;
     color: #ffffff;
+    border: 3px solid black;
 }
 .contact-us-submit_btn{
     width: 85%;
@@ -411,18 +419,19 @@ th,td{
     display: block;
     margin: 0 50px;
     background: linear-gradient(to right, #09BA20, #6cff7f);
-    color: #ffffff;
+    color: #000000;
     font-weight: bolder;
     font-size: 20px;
     border: 0;
     outline: none;
     border-radius: 30px;
+    border: 3px solid black;
 }
 
 .back-button{
     color: #000000;
-    font-size: 17px;
-    bottom:-20px;
+    font-size: 18px;
+    bottom:-15px;
     margin-left:40px;
     position: relative;
     font-weight: bolder;
@@ -463,6 +472,7 @@ th,td{
     margin-top:0;
     margin-bottom:10px;
     color: #ffffff;
+    font-size: 20px;
 }
 
 .product-price-discount{

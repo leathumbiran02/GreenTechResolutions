@@ -26,13 +26,21 @@
                 display: initial;
                 padding: 15px;
                 width:30%;
-                color: #ffffff;
+                color: black;
                 font-size: 21px;
                 font-weight: bold;
                 text-align:center;
                 transition: background-color 0.3s ease-in-out;
                 text-decoration: none;
                 margin:20px;
+                border: 3px solid black;
+            }
+            .chat-page-toggle_register_login_btn{
+                font-size:40px;
+                padding: 0px 30px;
+            }
+            .hero h1{
+                color: #343A54;
             }
         </style>
     </head>
@@ -88,7 +96,7 @@
                     $bot_ip = $row['bot_ip'];
 
                     /* Displaying the user's account details, a manage account button and a logout button on the page: */
-                    echo "<h1 class='main-header'>Account Details:</h1>";
+                    echo "<h1 class='chat-page-toggle_register_login_btn'><br>Account Details</h1>";
                     echo "<a href='manage_bot_ip.php'><button class='addbutton'>Change BOT IP</button></a>";
                     echo "<div class='user-info'>";
                     echo    "<table>";

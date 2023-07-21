@@ -23,6 +23,7 @@
                 include 'menu.php';
             ?>
         </header>
+        <div class="spacing" style="height:200px;"></div>
         <div class="form_page"> <!-- The body of the page: -->
             <div class="form-box"> <!-- The login and register form: -->
                 <div class="register_login_btn_box"> <!-- The buttons that switches between both the login and register form: -->
@@ -60,6 +61,7 @@
                 </form>
             </div>
             <footer> <!-- Have a terms and conditions appear at the bottom of the page: -->
+                <div class="spacing" style="height:120px;"></div>
                 <div class="center-text">
                     <br><p><i>Terms & Conditions: By creating an account you agree to share your full name, email address, and Bot IP with GreenTech Resolutions.</i></p>
                 </div>

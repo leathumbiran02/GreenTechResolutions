@@ -88,7 +88,15 @@
                 margin: 35px 130px;
             }
             .contact-us-form-box{
-                height: 300px
+                height: 300px;
+                border: 3px solid black;
+            }
+            .contact-us-login_input_group input{
+                border: 3px solid black;
+            }
+            .contact-us-submit_btn{
+                color: black;
+                border: 3px solid black;
             }
         </style>
     </head>
@@ -99,6 +107,7 @@
                 include 'menu.php';
             ?>
         </header>
+        <div class="spacing" style="height:200px;"></div>
         <div class="form_page"> <!-- The body of the page: -->
             <div class="contact-us-form-box"> 
                 <div class="contact-us-register_login_btn_box">

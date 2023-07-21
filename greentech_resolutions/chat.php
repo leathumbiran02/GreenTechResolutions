@@ -17,6 +17,12 @@
 
         <!--Using a CSS style sheet for the page-->
         <link rel="stylesheet" href="style.css">
+        <style>
+            .chat-page-submit_btn{
+                border: 3px solid black;
+                color:black;
+            }
+        </style>
     </head>
     <body>
         <header> <!-- Including the file that contains the menu: -->
@@ -24,6 +30,7 @@
                 include 'menu.php';
             ?>
         </header>
+        <div class="spacing" style="height:150px;"></div>
         <div class="form_page"> <!-- The body of the page: -->
             <div class="center-text"> <!-- Class to center the top heading: -->
                 <h1 class="chat-page-toggle_register_login_btn"><br>Chat with us! We'd love to hear your feedback or answer any questions that you may have.</h1><br>
