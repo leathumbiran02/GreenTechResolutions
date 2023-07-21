@@ -88,7 +88,7 @@
                 margin: 35px 130px;
             }
             .contact-us-form-box{
-                height: 300px;
+                height: 330px;
                 border: 3px solid black;
             }
             .contact-us-login_input_group input{

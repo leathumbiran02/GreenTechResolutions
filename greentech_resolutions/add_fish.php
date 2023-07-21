@@ -76,6 +76,7 @@
                 include 'menu.php';
             ?>
         </header>
+        <div class="spacing" style="height:150px;"></div>
         <div class="form_page"> <!-- The body of the page: -->
             <div class="contact-us-form-box"> 
                 <div class="contact-us-register_login_btn_box">
