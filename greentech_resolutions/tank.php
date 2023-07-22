@@ -201,26 +201,51 @@
         </div>
 
     <script>
-        window.addEventListener("DOMContentLoaded", function () {
-            // Send an AJAX request to the server to get the timer value
-            let xhr = new XMLHttpRequest();
-            xhr.open("GET", "get_timer.php", true);
-            xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                let timerValue = xhr.responseText;
-                if (timerValue) {
-                    // If timerValue is not empty, set the timer with the fetched value
-                    startTimer(timerValue);
-                    // Also set the value in the input field
-                    let feedTimeInput = document.getElementById("feedTimeInput");
-                    let feedTime = new Date(parseInt(timerValue));
-                    let hours = String(feedTime.getHours()).padStart(2, "0");
-                    let minutes = String(feedTime.getMinutes()).padStart(2, "0");
-                    feedTimeInput.value = `${hours}:${minutes}`;
-                }
+        // Add an event listener to fetch the timer value and update the timer once the page is loaded
+        window.addEventListener("load", function() {
+            // Check if the timer value is stored in LocalStorage
+            let storedTimerValue = localStorage.getItem("fishFeederTimer");
+
+            if (storedTimerValue) {
+                // If the timer value is found in LocalStorage, fetch the timer value from the server
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", "get_timer.php", true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                        let timerValue = parseInt(xhr.responseText);
+                        if (!isNaN(timerValue)) {
+                            // Update the timer with the fetched value:
+                            if (storedTimerValue === xhr.responseText) {
+                                // If the timer is already running with the stored value, start the timer with it
+                                startTimer(timerValue);
+                            } else {
+                                // If the timer is not running with the stored value, update the displayed timer value
+                                updateDisplayedTimerValue(timerValue);
+                            }
+
+                            // Store the fetched value in localStorage:
+                            localStorage.setItem("fishFeederTimer", timerValue);
+                        }
+                    }
+                };
+                xhr.send();
+            } else {
+                // If the timer value is not found in LocalStorage, fetch it from the server
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", "get_timer.php", true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                        let timerValue = parseInt(xhr.responseText);
+                        if (!isNaN(timerValue)) {
+                            // Update the timer with the fetched value:
+                            updateDisplayedTimerValue(timerValue);
+                            // Store the fetched value in localStorage:
+                            localStorage.setItem("fishFeederTimer", timerValue);
+                        }
+                    }
+                };
+                xhr.send();
             }
-        };
-        xhr.send();
         });
 
         // Global variable to hold the timer interval ID
@@ -232,9 +257,8 @@
             let remainingTime = timerValue - currentTime;
 
             if (remainingTime < 0) {
-                // Timer has ended
-                clearInterval(timerInterval);
-                document.querySelector(".timer").textContent = "Time's up!";
+                // Timer has ended:
+                document.querySelector(".timer").textContent = "It's time to feed the fish!";
             } else {
                 let hours = Math.floor(remainingTime / (1000 * 60 * 60));
                 let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
@@ -246,14 +270,31 @@
 
                 // Display the timer
                 document.querySelector(".timer").textContent = hours + ":" + minutes + ":" + seconds;
+            }
 
-                // Clear the previous timer interval if it exists
-                clearInterval(timerInterval);
+            // Start the timer with the updated value:
+            startTimer(timerValue);
+        }
 
-                // Start the timer
-                timerInterval = setInterval(function() {
-                    updateTimerWithFetchedValue(timerValue);
-                }, 1000); // Update every second
+        // Function to update the displayed timer value without starting the timer
+        function updateDisplayedTimerValue(timerValue) {
+            let currentTime = new Date().getTime();
+            let remainingTime = timerValue - currentTime;
+
+            if (remainingTime < 0) {
+                // Timer has ended:
+                document.querySelector(".timer").textContent = "It's time to feed the fish!";
+            } else {
+                let hours = Math.floor(remainingTime / (1000 * 60 * 60));
+                let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                // Display the timer
+                document.querySelector(".timer").textContent = hours + ":" + minutes + ":" + seconds;
             }
         }
 
@@ -279,6 +320,9 @@
                     // Display the timer
                     document.querySelector(".timer").textContent = hours + ":" + minutes + ":" + seconds;
                 }
+
+                // Store the fetched value in LocalStorage:
+                localStorage.setItem("fishFeederTimer", targetTime); // Updated from timerValue to targetTime
             }
 
             //Call the updateTimer immediately to show the initial timer value:
@@ -289,6 +333,9 @@
 
             updateTimer(); // Update immediately to avoid the initial 1-second delay
             timerInterval = setInterval(updateTimer, 1000); // Update every second
+        
+            // Store the fetched value in LocalStorage:
+            localStorage.setItem("fishFeederTimer", targetTime); // Updated from timerValue to targetTime
         }
 
         // Function to set the fish feeder timer based on user input
@@ -305,8 +352,8 @@
             // Calculate the time difference in milliseconds
             let timerDuration = feedTime.getTime() - currentTime.getTime();
 
-            // Start the timer
-            startTimer(feedTime.getTime());
+            // Update the displayed timer value without starting the timer
+            updateDisplayedTimerValue(feedTime.getTime());
 
             // Store the timer value in LocalStorage
             localStorage.setItem("fishFeederTimer", feedTime.getTime());
@@ -320,40 +367,16 @@
                     // Request successful:
                     let updatedTimerValue = xhr.responseText; //Get the response from update_timer.php:
                     if(updatedTimerValue){
-                        //Update the timer with the updated value:
-                        updateTimerWithFetchedValue(parseInt(updatedTimerValue));
+                        // Update the timer with the updated value:
+                        startTimer(parseInt(updatedTimerValue));
+                        //Update the value in localStorage:
+                        localStorage.setItem("fishFeederTimer", updatedTimerValue);
                     }
                 }
             };
 
             xhr.send("timerValue=" + feedTime.getTime());
         }
-
-        // Add an event listener to fetch the timer value and update the timer once the page is loaded
-        window.addEventListener("load", function() {
-            // Check if the timer value is stored in LocalStorage
-            let storedTimerValue = localStorage.getItem("fishFeederTimer");
-            if (storedTimerValue) {
-                // If the timer value is found in LocalStorage, update the timer with the stored value
-                updateTimerWithFetchedValue(parseInt(storedTimerValue));
-            } else {
-                // If the timer value is not found in LocalStorage, fetch it from the server
-                let xhr = new XMLHttpRequest();
-                xhr.open("GET", "get_timer.php", true);
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                        let timerValue = parseInt(xhr.responseText);
-                        if (!isNaN(timerValue)) {
-                            // Update the timer with the fetched value
-                            updateTimerWithFetchedValue(timerValue);
-                            // Store the fetched value in localStorage
-                            localStorage.setItem("fishFeederTimer", timerValue);
-                        }
-                    }
-                };
-                xhr.send();
-            }
-        });
     </script>
 </body>
 </html>

@@ -99,9 +99,7 @@ ALTER TABLE `community_plant`
 CREATE TABLE fish_feeder_timers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_email VARCHAR(255) NOT NULL,
-    timer_value BIGINT NOT NULL
+    timer_value BIGINT NOT NULL,
+    UNIQUE KEY `email_UNIQUE` (`user_email`)
 );
 
-
-ALTER TABLE `fish_feeder_timers`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
