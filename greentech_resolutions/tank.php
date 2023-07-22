@@ -33,6 +33,7 @@
                 background-color: lightgray; /* Replace 'lightgray' with your preferred shade of gray */
                 position: relative;
                 perspective: 1000px;
+                margin-right: 300px;
             }
 
             .card button {
