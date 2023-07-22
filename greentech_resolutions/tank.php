@@ -137,6 +137,44 @@
             td {
                 width: 33.33%; /* Divide the table width into equal parts for each cell */
             }
+
+           /* Positioning the water tank image */
+           .water-tank-img {
+                position: absolute;
+                left: 300px;
+                width: 50em; 
+                height: auto; 
+                z-index: 1; 
+            }
+
+            /* Adjusting the position of the cards */
+            .form-page {
+                position: relative;
+            }
+
+            /* Adjusting the water tank image for mobile view: */
+            @media (max-width: 1080px) {
+                .water-tank-img {
+                    width: 100%;
+                    max-width: 400px; /* Set a maximum width for the water tank image on smaller screens */
+                    height: auto;
+                    position: static; /* Reset position to allow normal flow on smaller screens */
+                    margin: 0 auto;
+                }
+
+                /* Center the cards horizontally on smaller screens */
+                .card {
+                    margin: 0 auto;
+                }
+                
+                /* Center the image vertically on the screen */
+                body {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                }
+            }
         </style>
 
     </head>
@@ -151,6 +189,9 @@
 
         <div class="spacing" style="height:150px;"></div>
         <div class="form-page">
+            <!-- Water Tank Image -->
+            <img src="https://www.pngmart.com/files/15/Aquarium-Fish-Tank-PNG-Free-Download.png" alt="Water Tank" class="water-tank-img">
+
             <div class="card">
                 <table>
                     <tr class="first-row">
