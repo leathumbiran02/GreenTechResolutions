@@ -407,6 +407,12 @@
                 // Timer has ended
                 clearInterval(timerInterval);
                 document.querySelector(".timer").textContent = "It's time to feed the fish!";
+                //Display the message for a minute (60 000 milliseconds) before resetting the timer:
+                setTimeout(()=>{
+                    document.querySelector(".timer").textContent = "00:00:00";
+                    // Restart the timer based on the user's previous input:
+                    setFishFeederTimer();
+                }, 60000);
             } else {
                 let hours = Math.floor(remainingTime / (1000 * 60 * 60));
                 let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
