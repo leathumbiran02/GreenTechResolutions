@@ -111,6 +111,20 @@
                 color: #00aaff; 
             }
             
+            .feedFishTimer{
+                margin-right: 20px;
+                width: 100px;
+                padding: 5px 5px;
+            }
+            .fish-feeder {
+                display: flex;
+                align-items: center;
+                margin-top: 10px; 
+            }
+            .timer{
+                margin-top:10px;
+                font-size: px;
+            }
         </style>
 
     </head>
@@ -123,22 +137,24 @@
         </header>
 
 
-        <div class="card">
-        <table>
-            <tr class="first-row">
-                <td>
-                    <div class="water-level">
-                        <div class="water"></div>
-                    </div>
-                </td>
-                <td>
-                    <h2>WATER LEVEL</h2>
-                    <h5>50%</h5>
-                </td>
-            </tr>
-            </table>
-        <button>FILL TANK</button>
-    </div>
+        <div class="spacing" style="height:150px;"></div>
+        <div class="form-page">
+            <div class="card">
+                <table>
+                    <tr class="first-row">
+                        <td>
+                            <div class="water-level">
+                                <div class="water"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h2 style="margin-right: 100px;">WATER LEVEL</h2>
+                            <h5>50%</h5>
+                        </td>
+                    </tr>
+                </table>
+                <button style="margin-top: 30px;" >FILL TANK</button>
+            </div>
 
             <div class="card">
                 <table>
@@ -152,27 +168,83 @@
                 </table>
             </div>
 
-    <div class="card">
-            <table>
-                <tr>
-                    <td class="clock-icon">&#x23F1;</td>
-                    <td>
-                        <h2>FISH FEEDER</h2>
-                        <h5>
-                            <!--Setting feeding time-->
-                            <input type="time" id="feedTimeInput"><!-- Store Time -->
-                            <button onclick="setFishFeederTimer()">SET TIMER</button>
-                            <div class="timer">00:00:00</div>   
-                        </h5>
-                    </td>
-                </tr>
-            </table>
-        <button>FEED FISH</button>
-    </div>
+            <div class="card">
+                <table>
+                    <tr>
+                        <td class="clock-icon">&#x23F1;</td>
+                        <td>
+                            <h2>FISH FEEDER</h2>
+                            <h5>
+                                <!--Setting feeding time-->
+                                <div class="fish-feeder">
+                                    <input type="time" id="feedTimeInput" class="feedFishTimer"><!-- Store Time -->
+                                    <button onclick="setFishFeederTimer()" style="width: 120%; display: initial; margin-right: -5px;">SET REMINDER</button>
+                                </div>
+                                <div class="timer">00:00:00</div>   
+                            </h5>
+                        </td>
+                    </tr>
+                </table>
+                <button>FEED FISH</button>
+            </div>
+        </div>
 
     <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            // Send an AJAX request to the server to get the timer value
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "get_timer.php", true);
+            xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                let timerValue = xhr.responseText;
+                if (timerValue) {
+                    // If timerValue is not empty, set the timer with the fetched value
+                    startTimer(timerValue);
+                    // Also set the value in the input field
+                    let feedTimeInput = document.getElementById("feedTimeInput");
+                    let feedTime = new Date(parseInt(timerValue));
+                    let hours = String(feedTime.getHours()).padStart(2, "0");
+                    let minutes = String(feedTime.getMinutes()).padStart(2, "0");
+                    feedTimeInput.value = `${hours}:${minutes}`;
+                }
+            }
+        };
+        xhr.send();
+        });
+
         // Global variable to hold the timer interval ID
         let timerInterval;
+
+        // Function to update the timer based on the fetched value
+        function updateTimerWithFetchedValue(timerValue) {
+            let currentTime = new Date().getTime();
+            let remainingTime = timerValue - currentTime;
+
+            if (remainingTime < 0) {
+                // Timer has ended
+                clearInterval(timerInterval);
+                document.querySelector(".timer").textContent = "Time's up!";
+            } else {
+                let hours = Math.floor(remainingTime / (1000 * 60 * 60));
+                let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                // Display the timer
+                document.querySelector(".timer").textContent = hours + ":" + minutes + ":" + seconds;
+
+                // Clear the previous timer interval if it exists
+                clearInterval(timerInterval);
+
+                // Start the timer
+                timerInterval = setInterval(function() {
+                    updateTimerWithFetchedValue(timerValue);
+                }, 1000); // Update every second
+            }
+        }
 
         // Timer function
         function startTimer(targetTime) {
@@ -198,6 +270,9 @@
                 }
             }
 
+            //Call the updateTimer immediately to show the initial timer value:
+            updateTimer();
+
             // Clear the previous timer interval if it exists
             clearInterval(timerInterval);
 
@@ -221,7 +296,53 @@
 
             // Start the timer
             startTimer(feedTime.getTime());
+
+            // Store the timer value in LocalStorage
+            localStorage.setItem("fishFeederTimer", feedTime.getTime());
+
+            //Send an AJAX request to the server to update the database
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "update_timer.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    // Request successful:
+                    let updatedTimerValue = xhr.responseText; //Get the response from update_timer.php:
+                    if(updatedTimerValue){
+                        //Update the timer with the updated value:
+                        updateTimerWithFetchedValue(parseInt(updatedTimerValue));
+                    }
+                }
+            };
+
+            xhr.send("timerValue=" + feedTime.getTime());
         }
+
+        // Add an event listener to fetch the timer value and update the timer once the page is loaded
+        window.addEventListener("load", function() {
+            // Check if the timer value is stored in LocalStorage
+            let storedTimerValue = localStorage.getItem("fishFeederTimer");
+            if (storedTimerValue) {
+                // If the timer value is found in LocalStorage, update the timer with the stored value
+                updateTimerWithFetchedValue(parseInt(storedTimerValue));
+            } else {
+                // If the timer value is not found in LocalStorage, fetch it from the server
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", "get_timer.php", true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                        let timerValue = parseInt(xhr.responseText);
+                        if (!isNaN(timerValue)) {
+                            // Update the timer with the fetched value
+                            updateTimerWithFetchedValue(timerValue);
+                            // Store the fetched value in localStorage
+                            localStorage.setItem("fishFeederTimer", timerValue);
+                        }
+                    }
+                };
+                xhr.send();
+            }
+        });
     </script>
 </body>
 </html>

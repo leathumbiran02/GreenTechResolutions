@@ -178,11 +178,12 @@ header label{
     top:0;
     left: 0;
     position: absolute;
-    width: 150px;
+    width: 140px;
     height: 100%;
     background: linear-gradient(to right, #09BA20, #6cff7f);
     border-radius: 30px;
     transition: .5s;
+    border: 3px solid black;
 }
 
 .login_input_group{
@@ -205,6 +206,7 @@ header label{
     outline: none;
     background-color: #343A54;
     color: #ffffff;
+    border: 3px solid black;
 }
 
 .submit_btn{
@@ -214,12 +216,13 @@ header label{
     display: block;
     margin: auto;
     background: linear-gradient(to right, #09BA20, #6cff7f);
-    color: #ffffff;
+    color: #000000;
     font-weight: bolder;
     font-size: 20px;
     border: 0;
     outline: none;
     border-radius: 30px;
+    border: 3px solid black;
 }
 
 .check_box{
@@ -249,7 +252,7 @@ header label{
 .user-info{
     width: 80%;
     background-color: #343A54;
-    border: 5px solid #CED1D8;
+    border: 5px solid #000000;
     border-radius: 30px;
     margin: 0 auto;
     display: flex;
@@ -276,13 +279,14 @@ th,td{
 
 .chat-page-form-box{ /* For the form */
     width: 450px;
-    height:350px;
+    height:380px;
     position: relative;
     margin: 0 auto;
     background-color: #CED1D8;
     border-radius: 35px;
     padding: 5px;
     overflow: hidden;
+    border: 3px solid black;
 }
 .chat-page-register_login_btn_box{
     width: 260px;
@@ -331,6 +335,7 @@ th,td{
     outline: none;
     background-color: #343A54;
     color: #ffffff;
+    border: 3px solid black;
 }
 .chat-page-submit_btn{
     width: 85%;
@@ -356,6 +361,7 @@ th,td{
     border-radius: 35px;
     padding: 5px;
     overflow: hidden;
+    border: 3px solid black;
 }
 .contact-us-register_login_btn_box{
     width: 260px;
@@ -404,6 +410,7 @@ th,td{
     outline: none;
     background-color: #343A54;
     color: #ffffff;
+    border: 3px solid black;
 }
 .contact-us-submit_btn{
     width: 85%;
@@ -412,18 +419,19 @@ th,td{
     display: block;
     margin: 0 50px;
     background: linear-gradient(to right, #09BA20, #6cff7f);
-    color: #ffffff;
+    color: #000000;
     font-weight: bolder;
     font-size: 20px;
     border: 0;
     outline: none;
     border-radius: 30px;
+    border: 3px solid black;
 }
 
 .back-button{
     color: #000000;
-    font-size: 17px;
-    bottom:-20px;
+    font-size: 18px;
+    bottom:-25px;
     margin-left:40px;
     position: relative;
     font-weight: bolder;
@@ -464,6 +472,7 @@ th,td{
     margin-top:0;
     margin-bottom:10px;
     color: #ffffff;
+    font-size:20px;
 }
 
 .product-price-discount{
@@ -595,12 +604,66 @@ th,td{
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
-    font-size: 24px;
+    font-size: 45px;
     color: #ffffff;
     cursor: pointer;
+    border: 3px solid black;
 }
 
+.addbutton{ /* Button when clicking on fish */
+    background: linear-gradient(to right, #09BA20, #6cff7f);
+    cursor: pointer;
+    display: block;
+    padding: 3px;
+    width:50%;
+    color: #ffffff;
+    opacity: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border:none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+}
 
+a.addbutton{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.search-bar {
+    float: right;
+    margin-top: -95px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #CED1D8;
+    padding: 10px 20px;
+    border:3px solid black;
+}
+
+.search-bar input {
+    flex: 1; 
+    padding: 8px;
+    margin-right: 100px;
+    border: none;
+    outline: none;
+    background-color: #CED1D8;
+    color: #000000;
+    font-weight: bolder;
+    border-radius: 30px;
+    font-size: 19px;
+}
+.search-bar-btn{
+    margin-right: 50px;
+    cursor: pointer;
+    color: #000000;
+    background-color: #CED1D8;
+    font-size: 25px;
+    border: none;
+}
 
 /* Ensure that the table and its cells take the full width of the container */
 table {
