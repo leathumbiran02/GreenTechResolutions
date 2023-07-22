@@ -153,7 +153,7 @@
             }
 
             /* Adjusting the water tank image for mobile view: */
-            @media (max-width: 1080px) {
+            @media (max-width: 1900px) {
                 .water-tank-img {
                     width: 100%;
                     max-width: 400px; /* Set a maximum width for the water tank image on smaller screens */
