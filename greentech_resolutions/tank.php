@@ -31,7 +31,8 @@
                 border: 3px solid black;
                 border-radius: 10px;
                 background-color: lightgray; /* Replace 'lightgray' with your preferred shade of gray */
-
+                position: relative;
+                perspective: 1000px;
             }
 
             .card button {
@@ -124,6 +125,16 @@
             .timer{
                 margin-top:10px;
                 font-size: px;
+            }
+
+            /* Moved table styling here to avoid CSS conflicts: */
+            /* Ensure that the table and its cells take the full width of the container */
+            table {
+                width: 100%;
+            }
+
+            td {
+                width: 33.33%; /* Divide the table width into equal parts for each cell */
             }
         </style>
 

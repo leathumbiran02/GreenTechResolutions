@@ -43,7 +43,7 @@
                 $full_name = $row['full_name']; //Get the user's first name from the database:
 
                 echo "<script>alert('Welcome $full_name.')</script>"; //Display a successful login message to the user:
-                header('Refresh: 1; url=dashboard.php'); //Redirect to the dashboard page:
+                header('Refresh: 1; url=plant.php'); //Redirect to the plant page:
                 exit();
             }else{ 
                 //If the user was not found in the users table, display an error message:

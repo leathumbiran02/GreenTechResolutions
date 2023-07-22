@@ -1,8 +1,8 @@
 <!-- This will be the code for the menu that appears on all pages in the website: -->
 
-<!-- Adding a logo that navigates to the dashboard page when logged in: -->
+<!-- Adding a logo that navigates to the plant page when logged in: -->
 <?php if(isset($_SESSION['users']) && $_SESSION['users'] == true): ?>
-    <a href="dashboard.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
+    <a href="plant.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
 <?php else: ?> <!-- Logo to navigate to the about us page when not logged in: -->
     <a href="about_us.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
 <?php endif; ?>
@@ -16,7 +16,6 @@
     <ul>
         <!-- Only display this menu if the person logged in is a user: -->
         <?php if(isset($_SESSION['users']) && $_SESSION['users'] == true): ?>
-            <li><a href="dashboard.php">Dashboard</a></li>
             <li><a>AquaBot</a>
                 <ul>
                     <li><a href="plant.php">Plants</a></li>

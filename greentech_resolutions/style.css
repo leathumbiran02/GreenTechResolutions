@@ -252,7 +252,7 @@ header label{
 .user-info{
     width: 80%;
     background-color: #343A54;
-    border: 5px solid #000000;
+    border: 3px solid #000000;
     border-radius: 30px;
     margin: 0 auto;
     display: flex;
@@ -264,7 +264,7 @@ header label{
     padding: 50px;
 }
 
-table{ /* Table to display the users' information on the account page */
+.user-info-table{ /* Table to display the users' information on the account page */
     border-collapse: collapse;
     color: #ffffff;
     font-family: 'Arial',sans-serif;
@@ -272,7 +272,7 @@ table{ /* Table to display the users' information on the account page */
     width:100%;
     font-size:2em;
 }
-th,td{
+th.user-th, td.user-td{
     padding: 8px;
     text-align: left;
 }
@@ -566,14 +566,14 @@ th,td{
 /* Adjusting for even smaller screens: */
 @media(max-width:480px){ /* Screens with a width of 480px: */
     
-    table{ /* Table to display the users' information on the account page */
+    .user-info-table{ /* Table to display the users' information on the account page */
         font-size:2em;
     }
 }
 
 @media(max-width:412px){ /* Screens with a width of 412px: */
 
-    table{ /* Table to display the users' information on the account page */
+    .user-info-table{ /* Table to display the users' information on the account page */
         font-size:1.5em;
     }
 
@@ -585,7 +585,7 @@ th,td{
 
 @media(max-width:320px){ /* Screens with a width of 320px: */
 
-    table{ /* Table to display the users' information on the account page */
+    .user-info-table{ /* Table to display the users' information on the account page */
         font-size:1em;
     }
 }
@@ -663,25 +663,6 @@ a.addbutton{
     background-color: #CED1D8;
     font-size: 25px;
     border: none;
-}
-
-/* Ensure that the table and its cells take the full width of the container */
-table {
-    width: 100%;
-}
-
-td {
-    width: 33.33%; /* Divide the table width into equal parts for each cell */
-}
-
-/* Set the card class styles */
-.card {
-    
-    padding: 10px; /* Reduce the padding to make the cards smaller */
-    position: relative;
-    width: 333px; /* Adjust the size as needed */
-    height: 333px; /* Adjust the size as needed */
-    perspective: 1000px; /* Create the 3D effect */
 }
 
 .flip-card-inner {
