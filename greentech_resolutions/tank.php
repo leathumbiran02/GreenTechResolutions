@@ -187,7 +187,7 @@
         </header>
 
 
-        <div class="spacing" style="height:150px;"></div>
+        <div class="spacing" style="height:120px;"></div>
         <div class="form-page">
             <!-- Water Tank Image -->
             <img src="https://www.pngmart.com/files/15/Aquarium-Fish-Tank-PNG-Free-Download.png" alt="Water Tank" class="water-tank-img">
@@ -219,7 +219,7 @@
                         </td>
                     </tr>
                 </table>
-                <button>ADD CHEM???</button>
+                <button style="margin-top: 54px;">ADD CHEM???</button>
             </div>
 
             <div class="card">
@@ -232,7 +232,7 @@
                         </td>
                     </tr>
                 </table>
-                <button>INCREASE WATER</button>
+                <button style="margin-top: 54px;">INCREASE WATER LEVEL</button>
             </div>
 
             <div class="card">
