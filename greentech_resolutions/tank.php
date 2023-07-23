@@ -219,6 +219,20 @@
                         </td>
                     </tr>
                 </table>
+                <button>ADD CHEM???</button>
+            </div>
+
+            <div class="card">
+                <table>
+                    <tr>
+                        <td><h3>temp<h3></td>
+                        <td>
+                            <h2>Temp</h2>
+                            <h5>10</h5>
+                        </td>
+                    </tr>
+                </table>
+                <button>INCREASE WATER</button>
             </div>
 
             <div class="card">
