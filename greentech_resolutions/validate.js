@@ -411,8 +411,10 @@ function startTimer(targetTime) {
             // Display the message for 20 seconds (20,000 milliseconds) before resetting the timer:
             setTimeout(() => {
                 document.querySelector(".timer").textContent = "00:00:00";
-                // Restart the timer for the next day based on the user's previous input:
-                setFishFeederTimer();
+                // Restart the timer for the next day using the previous targetTime value:
+                let nextDay = new Date(targetTime);
+                nextDay.setDate(nextDay.getDate() + 1);
+                startTimer(nextDay.getTime());
             }, 20000);
         } else {
             let hours = Math.floor(remainingTime / (1000 * 60 * 60));
@@ -425,11 +427,6 @@ function startTimer(targetTime) {
 
             // Display the timer
             document.querySelector(".timer").textContent = hours + ":" + minutes + ":" + seconds;
-
-           /*  if (remainingTime < 1000) {
-                // If the remaining time is less than 1 second, reset the timer for the next day:
-                setFishFeederTimer();
-            } */
         }
 
         // Store the fetched value in LocalStorage:
