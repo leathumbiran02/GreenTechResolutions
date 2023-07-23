@@ -333,28 +333,21 @@
         let storedTimerValue = localStorage.getItem("fishFeederTimer");
 
         if (storedTimerValue) {
-            // If the timer value is found in LocalStorage, fetch the timer value from the server:
-            let xhr = new XMLHttpRequest();
-            xhr.open("GET", "get_timer.php", true);
-            xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                let timerValue = parseInt(xhr.responseText);
-                if (!isNaN(timerValue)) {
-                    // Update the timer with the fetched value:
-                    if (storedTimerValue === xhr.responseText) {
-                        // If the timer is already running with the stored value, start the timer with it:
-                        startTimer(timerValue);
-                    } else {
-                        // If the timer is not running with the stored value, update the displayed timer value:
-                        updateDisplayedTimerValue(timerValue);
-                    }
-
-                    // Store the fetched value in localStorage:
-                    localStorage.setItem("fishFeederTimer", timerValue);
-                }
+            let currentTime = new Date().getTime();
+            let timerValue = parseInt(storedTimerValue);
+    
+            // Check if the timer has already ended
+            if (timerValue <= currentTime) {
+                // Timer has already ended, reset for the next day
+                let nextDay = new Date(timerValue);
+                nextDay.setDate(nextDay.getDate() + 1);
+                startTimer(nextDay.getTime());
+            } else {
+                // Timer is still running, update the timer based on the fetched value:
+                updateDisplayedTimerValue(timerValue);
+                // Start the timer with the fetched value:
+                startTimer(timerValue);
             }
-        };
-            xhr.send();
         } else { // If the timer value is not found in LocalStorage, fetch it from the server:
             let xhr = new XMLHttpRequest();
             xhr.open("GET", "get_timer.php", true);
@@ -364,6 +357,8 @@
                 if (!isNaN(timerValue)) {
                     // Update the timer with the fetched value:
                     updateDisplayedTimerValue(timerValue);
+                    // Start the timer with the fetched value:
+                    startTimer(timerValue);
                     // Store the fetched value in localStorage:
                     localStorage.setItem("fishFeederTimer", timerValue);
                 }
