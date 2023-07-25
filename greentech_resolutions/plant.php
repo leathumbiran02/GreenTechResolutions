@@ -1,5 +1,5 @@
 <?php
-    //Starting the session so we can check if the user is logged in:
+    //Starting the session so we can che^ck if the user is logged in:
     session_start();
 
     //Checking if the email address is stored in the session:
@@ -186,7 +186,29 @@
 
                     </div>
                  </td>
+                 <td>
+                    <div class ="card">
+                        <h2 id="lightStatus">LED Light</h2>
+                        <h5 id="onOffStatus">Light OFF</h5>
+                        <button id="toggleButton" onclick="toggleLight()">ON</button>
+                    </div>
+
+                 </td>
             </th>
         </table>
+        <script>
+            function toggleLight() {
+                var button = document.getElementById('toggleButton');
+                var h5Element = document.getElementById('onOffStatus');
+
+                if (button.textContent === 'ON') {
+                    button.textContent = 'OFF';
+                    h5Element.innerHTML = 'Light ON';
+                } else {
+                    button.textContent = 'ON';
+                    h5Element.innerHTML = 'Light OFF';
+                }
+            }
+        </script>
     </body>
 </html>
