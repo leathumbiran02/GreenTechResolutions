@@ -82,8 +82,8 @@
 
             <div class="register_login_btn_box" > <!-- The buttons that switches between both the login and register form: -->
                 <div id="btn"></div>
-                <button type="button" class="toggle_register_login_btn" onclick="fish()">Fish</button> 
-                <button type="button" class="toggle_register_login_btn" onclick="plants()">Plants</button> 
+                <button type="button" class="toggle_register_login_btn" onclick="learn_about_fish()">Fish</button> 
+                <button type="button" class="toggle_register_login_btn" onclick="learn_about_plants()">Plants</button> 
             </div>
 
             <div class="search-bar">
@@ -94,7 +94,7 @@
             <div id="products">
                 <!-- All the products from the database will be displayed here: -->
                 <?php 
-                include 'get_community_fish.php'; 
+                include 'get_fish_details.php'; 
                 ?>
             </div>
         </div>

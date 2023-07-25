@@ -31,9 +31,9 @@
                 echo    "<div class='product'>";
                 echo        "<img class='product-img' src='" . $row["image"] . "' alt='" . $row['plant_name'] . "'>"; /* Plant image: */
                 echo        "<div class='product-info'>";
-                echo            "<h3 class='product-title' style='color:#6cff7f;'>" . $row["plant_name"] . "</h3>"; /* Plant name: */
-                echo            "<h3 class='product-title'>" . $row["description"] . "</h3>"; /* Plant Description: */
-                echo            "<span class='product-price-discount'>R" . $row["price"] . "</span>"; /* Plant price: */
+                echo            "<h3 class='product-title' style='color:#6cff7f; font-size:25px;'>" . $row["plant_name"] . "</h3>"; /* Plant name: */
+                echo            "<h3 class='product-title' style='font-size:22px;'>" . $row["description"] . "</h3>"; /* Plant Description: */
+                echo            "<span class='product-price-discount' style='font-size:22px;'>R" . $row["price"] . "</span>"; /* Plant price: */
                 echo        "<a href='plant_details.php?id=" . $row["plant_id"] . "'><button class='addbutton' style='margin-top:10px;'>Buy</button></a>";
                 echo        "</div>";
                 echo    "</div>";

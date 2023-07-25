@@ -442,3 +442,55 @@ function startTimer(targetTime) {
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
+
+/* --------------------------------------------------LEARN.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
+    //Function to handle fish and plant search:
+    function searchProducts() {
+        var input, filter, div, product, i, txtValue;
+        input = document.getElementById('search');
+        filter = input.value.toUpperCase();
+        div = document.getElementById('products');
+        product = div.getElementsByClassName('product');
+
+        for (i = 0; i < product.length; i++) {
+            txtValue = product[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                product[i].style.display = '';
+            } else {
+                product[i].style.display = 'none';
+            }
+        }
+    }
+
+    //function to shift between the fish and plant page:
+    function learn_about_plants(){ 
+        t.style.left = "110px";
+
+        //Fetch the fish from the server and update the page:
+        fetch('get_plant_details.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('products').innerHTML = data;
+            })
+            .catch(error =>{
+                console.error('Error fetching fish: ', error);
+            });
+    }  
+
+    //function to shift between the fish and plant page:
+    var t=document.getElementById("btn");
+
+    function learn_about_fish(){ /* If the user clicks on Login, shift the form into view and hide the other form: */
+        t.style.left = "0";
+
+        //Fetch the fish from the server and update the page:
+        fetch('get_fish_details.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('products').innerHTML = data;
+            })
+            .catch(error =>{
+                console.error('Error fetching fish: ', error);
+            });
+    }
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 

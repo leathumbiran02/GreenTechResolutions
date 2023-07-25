@@ -103,3 +103,13 @@ CREATE TABLE fish_feeder_timers (
     UNIQUE KEY `email_UNIQUE` (`user_email`)
 );
 
+
+ALTER TABLE community_fish
+ADD health_benefits VARCHAR(1000),
+ADD fish_details VARCHAR(1000),
+ADD recipe_link VARCHAR(1000);
+
+ALTER TABLE community_plant
+ADD health_benefits VARCHAR(1000),
+ADD plant_details VARCHAR(1000),
+ADD recipe_link VARCHAR(1000);
