@@ -189,39 +189,22 @@
                  <td>
                     <div class ="card">
                         <h2 id="lightStatus">LED Light</h2>
-                        <h5 id="onOffStatus">Light OFF</h5>
-                        <button id="toggleButton" onclick="toggleLight()">ON</button>
+                        <button onclick="sendCommand('1')">Turn On</button>
+                        <button onclick="sendCommand('0')">Turn Off</button>
                     </div>
 
                  </td>
             </th>
         </table>
         <script>
-           function toggleLight() {
-                var button = document.getElementById('toggleButton');
-                var h5Element = document.getElementById('onOffStatus');
-
-                // Disable the button temporarily to prevent multiple clicks
-                button.disabled = true;
-
-                // Make an AJAX request to the PHP file
+           function sendCommand(command) {
                 var xhr = new XMLHttpRequest();
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        if (xhr.responseText === '1') {
-                            button.textContent = 'OFF';
-                            h5Element.innerHTML = 'Light ON';
-                        } else {
-                            button.textContent = 'ON';
-                            h5Element.innerHTML = 'Light OFF';
-                        }
-
-                        // Re-enable the button after receiving the response
-                        button.disabled = false;
-                    }
-                };
-                xhr.open("GET", "control_led.php", true);
+                xhr.open('GET', 'control.php?cmd=' + command, true);
                 xhr.send();
+                // Add a delay before allowing the next command (adjust timing as needed)
+                setTimeout(function() {
+                    xhr.abort(); // Abort the request to prevent conflicts
+                }, 100);
             }
         </script>
     </body>
