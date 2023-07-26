@@ -25,7 +25,7 @@
 
             .card {
                 width: 300px;
-                height: 200px;
+                height: 150px;
                 margin: 0 auto;
                 margin-left: 50px;
                 padding: 10px;
@@ -187,24 +187,48 @@
                     </div>
                  </td>
                  <td>
-                    <div class ="card">
+                    <div class="card">
                         <h2 id="lightStatus">LED Light</h2>
-                        <button onclick="sendCommand('1')">Turn On</button>
-                        <button onclick="sendCommand('0')">Turn Off</button>
+                        <button onclick="toggleLED()" style="margin-top:30px;">Turn ON</button>
                     </div>
+                </td>
 
-                 </td>
             </th>
         </table>
         <script>
-           function sendCommand(command) {
+            var ledState = false; // Variable to store the state of the LED (OFF by default)
+            var button = document.querySelector("button"); // Get the button element
+
+            function toggleLED() {
+                ledState = !ledState; // Toggle the LED state between ON and OFF
+                var buttonText = ledState ? "ON" : "OFF";
+                button.textContent = "Turn " + buttonText; // Update the button text immediately
+
+                // Send the command to the Arduino based on the current LED state
+                var command = ledState ? '1' : '0';
+                sendCommand(command);
+
+                // Revert the button text if no response received after 1 second
+                setTimeout(function() {
+                    var currentText = button.textContent;
+                    if (currentText === "Turn ON" || currentText === "Turn OFF") {
+                        var newText = ledState ? "OFF" : "ON";
+                        button.textContent = "Turn " + newText;
+                    }
+                }, 500);
+            }
+
+            function sendCommand(command) {
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', 'control.php?cmd=' + command, true);
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        // Request successful, do nothing (button text already updated)
+                    } else {
+                        // Request failed, handle any error if needed
+                    }
+                };
                 xhr.send();
-                // Add a delay before allowing the next command (adjust timing as needed)
-                setTimeout(function() {
-                    xhr.abort(); // Abort the request to prevent conflicts
-                }, 100);
             }
         </script>
     </body>

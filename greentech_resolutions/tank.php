@@ -115,7 +115,7 @@
             
             .feedFishTimer{
                 margin-right: 20px;
-                width: 200px;
+                width: 100px;
                 padding: 5px 5px;
             }
             .fish-feeder {
