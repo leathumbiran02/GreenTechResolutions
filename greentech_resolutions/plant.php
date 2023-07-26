@@ -197,17 +197,31 @@
             </th>
         </table>
         <script>
-            function toggleLight() {
+           function toggleLight() {
                 var button = document.getElementById('toggleButton');
                 var h5Element = document.getElementById('onOffStatus');
 
-                if (button.textContent === 'ON') {
-                    button.textContent = 'OFF';
-                    h5Element.innerHTML = 'Light ON';
-                } else {
-                    button.textContent = 'ON';
-                    h5Element.innerHTML = 'Light OFF';
-                }
+                // Disable the button temporarily to prevent multiple clicks
+                button.disabled = true;
+
+                // Make an AJAX request to the PHP file
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        if (xhr.responseText === '1') {
+                            button.textContent = 'OFF';
+                            h5Element.innerHTML = 'Light ON';
+                        } else {
+                            button.textContent = 'ON';
+                            h5Element.innerHTML = 'Light OFF';
+                        }
+
+                        // Re-enable the button after receiving the response
+                        button.disabled = false;
+                    }
+                };
+                xhr.open("GET", "control_led.php", true);
+                xhr.send();
             }
         </script>
     </body>
