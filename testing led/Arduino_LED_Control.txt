@@ -1,0 +1,24 @@
+void setup() {
+  // Initialize serial communication at 9600 baud
+  Serial.begin(9600);
+  
+  // Set the pin 13 as an output (built-in LED on most Arduino boards)
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  // Check if there is any data available in the serial buffer
+  if (Serial.available() > 0) {
+    // Read the incoming command
+    char command = Serial.read();
+
+    // Perform action based on the received command
+    if (command == 'ON') {
+      // Turn on the built-in LED (TX LED)
+      digitalWrite(13, HIGH);
+    } else if (command == 'OFF') {
+      // Turn off the built-in LED (RX LED)
+      digitalWrite(13, LOW);
+    }
+  }
+}
