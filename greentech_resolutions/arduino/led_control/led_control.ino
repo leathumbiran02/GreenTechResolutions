@@ -37,7 +37,7 @@ void executeCommand(char command) {
     case 'c': // 'c' corresponds to 'read' command
       sensors.requestTemperatures();
       float temperature = sensors.getTempCByIndex(0);
-      Serial.println("Temperature: " + String(temperature) + " °C");
+      Serial.print(temperature); // Send the temperature value without a line break
       break;
     default:
       Serial.println("Invalid command");

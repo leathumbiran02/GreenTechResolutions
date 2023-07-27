@@ -189,7 +189,7 @@
                  <td>
                     <div class="card">
                         <h2 id="lightStatus">LED Light</h2>
-                        <button onclick="toggleLED()" style="margin-top:30px;">Turn ON</button>
+                        <button id="ledButton" onclick="toggleLED()" style="margin-top:30px;">Turn ON</button>
                     </div>
                 </td>
 
@@ -197,7 +197,7 @@
         </table>
         <script>
             var ledState = false; // Variable to store the state of the LED (OFF by default)
-            var button = document.querySelector("button"); // Get the button element
+            var button = document.getElementById("ledButton"); // Get the button element
 
             function toggleLED() {
                 ledState = !ledState; // Toggle the LED state between ON and OFF
@@ -220,7 +220,7 @@
 
             function sendCommand(command) {
                 var xhr = new XMLHttpRequest();
-                xhr.open('GET', 'control_arduino?cmd=' + command, true);
+                xhr.open('GET', 'control_arduino.php?cmd=' + command, true);
                 xhr.onload = function() {
                     if (xhr.status === 200) {
                         // Request successful, do nothing (button text already updated)

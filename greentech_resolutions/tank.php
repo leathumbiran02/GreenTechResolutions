@@ -227,12 +227,11 @@
                     <tr>
                         <td><h3>temp<h3></td>
                         <td>
-                            <h2>Temp</h2>
-                            <h5>10</h5>
+                            <h2>TEMPERATURE</h2>
+                            <h5 id="temperatureValue">Loading...</h5> <!-- Use "Loading..." as a placeholder until the value is fetched -->
                         </td>
                     </tr>
                 </table>
-                <h1>Temperature Sensor Control</h1>
                 <button onclick="readTemperature()">Read Temperature Sensor</button>
             </div>
 
@@ -257,24 +256,26 @@
             </div>
         </div>
 
+    <!-- ... Existing code ... -->
+
     <!-- Using an external javascript file for the buttons and timers: -->
-    <script src="validate.js">
+    <script src="validate.js"></script>
+    <script>
         function readTemperature() {
-            sendDataToArduino("c");
-        }
-
-        function sendDataToArduino(command) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
+            // Send AJAX request to fetch temperature from control_arduino.php
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
-            // Handle response from Arduino if needed
-            console.log(this.responseText);
+                // Update the temperature value on the page
+                var temperature = parseFloat(this.responseText);
+                if (!isNaN(temperature)) {
+                document.getElementById("temperatureValue").innerText = temperature.toFixed(2) + " °C";
+                }
             }
-        };
-        xhttp.open("GET", "control_arduino?cmd=" + command, true);
-        xhttp.send();
+            };
+            xhttp.open("GET", "control_arduino.php?cmd=c", true);
+            xhttp.send();
         }
-
     </script>
 </body>
 </html>
