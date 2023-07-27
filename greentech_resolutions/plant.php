@@ -23,25 +23,27 @@
                 text-align: center;
             }
 
-            .card {
-                width: 300px;
-                height: 150px;
+            .card{
+                width: 270px;
+                height: 240px;
                 margin: 0 auto;
-                margin-left: 50px;
+                /*margin-left: 0 auto;
+                margin-right: 0 auto;
+                margin-bottom: 0 auto;*/
                 padding: 10px;
                 border: 3px solid black;
                 border-radius: 10px;
                 background-color: lightgray; /* Replace 'lightgray' with your preferred shade of gray */
                 position: relative;
                 perspective: 1000px;
-                margin-right: 300px;
             }
-
-            .card button {
+            
+            .card button,
+            td button {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 100%;
+                width: 245px;
                 height: 40px;
                 background-color: #343A54; 
                 color: white;
@@ -52,7 +54,9 @@
                 font-weight: bolder;
                 border: 3px solid black;
             }
-            .card button:hover {
+
+            .card button:hover,
+            td button:hover{
                 background-color: #09BA20; /* Change to your preferred background color on hover */
                 color: #000546; /* Change to your preferred text color on hover */
                 border: 3px solid black;
@@ -74,11 +78,16 @@
                 color: #000546; 
             }
 
+            .card h4 {
+                font-size: 16px;
+                text-align: left;
+                margin-bottom: 10px;
+                color: #000546; 
+            }
+
             .first-row {
                 margin-bottom: -10px;
             }
-
-
 
             /* Styling for the grid container */
             .grid-container {
@@ -117,7 +126,9 @@
                 width: 100px;
                 height: 100px; 
             }
+
             .grid-item {
+                display: inline-block;
                 font-size: 20px; /* Set the font size to 20 pixels */
             }
 
@@ -125,8 +136,14 @@
             .label {
                 font-size: 20px; /* Set the font size to 24 pixels */
             }
+
             table {
                 margin: 0 auto; /* Sets left and right margins to "auto", which centers the table */
+                width: 100%;
+            }
+
+            .selected-text {
+                display: none;
             }
         </style>
     </head>
@@ -152,7 +169,7 @@
                             <div class="grid-item label label-left">1</div> <!-- Label "1" in the left column -->
                             <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" alt="weed leaf"></div> <!-- Content in the cell corresponding to row 1 and column "A" -->
                             <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" alt="lettuce"></div> <!-- Content in the cell corresponding to row 1 and column "B" -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" alt="tomato"></div> <!-- Content in the cell corresponding to row 1 and column "C" -->
+                            <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" alt="tomato" onclick="showText()"></div> <!-- Content in the cell corresponding to row 1 and column "C" -->
 
                             <!-- Second column of labels -->
                             <div class="grid-item label label-left">2</div> <!-- Label "2" in the left column -->
@@ -169,21 +186,29 @@
                 </td>
                 <td>
                     <div class ="card">
-                            <h2>PLANT INFO</h2>
-                            <h5>Select plant</h5>
-
-                            <!--only display when plant is selected JS code-->
-                            <table> 
-                                <th>
-                                    <td>
-                                        <h5>Position:</h5>
-                                    </td>
-                                    <td>
-                                        <h5>3A</h5>
-                                    </td>
-                                </th>
-                             </table>
-
+                        <h2>PLANT INFO</h2>
+                        <h5>Select plant</h5>
+                        <div class="selected-text" id="displayText">
+                        <table> 
+                            <th>
+                                <div class="selected-text" id="displayText">
+                                <td>
+                                    <h4>POSITION:</h4>
+                                    <h4>GROWTH:</h4>
+                                    <h4>TYPE:</h4>
+                                    <h4>HARVEST IN:</h4>
+                                </td>
+                                <td>
+                                    <h4>1A</h4>
+                                    <h4>34 Days</h4>
+                                    <h4>Tomato</h4>
+                                    <h4>30 to 70 days</h4>
+                                </td>
+                                </div>
+                            </th>
+                        </table>
+                        <button>HARVEST</button>
+                        </div>
                     </div>
                  </td>
                  <td>
@@ -191,10 +216,24 @@
                         <h2 id="lightStatus">LED Light</h2>
                         <button id="ledButton" onclick="toggleLED()" style="margin-top:30px;">Turn ON</button>
                     </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <button id="openCameraButton" style="margin-left: 130px;">OPEN CAMERA</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </td>
-
             </th>
         </table>
+        <div class="card" id="cameraCard" style="display: none;">
+            <!-- Add camera content here -->
+            <h3>Camera Content</h3>
+            <p>This is the display for the camera.</p>
+        </div>
+
         <script>
             var ledState = false; // Variable to store the state of the LED (OFF by default)
             var button = document.getElementById("ledButton"); // Get the button element
@@ -209,13 +248,13 @@
                 sendCommand(command);
 
                 // Revert the button text if no response received after 1 second
-                setTimeout(function() {
+                setTimeout(function() {S
                     var currentText = button.textContent;
                     if (currentText === "Turn ON" || currentText === "Turn OFF") {
                         var newText = ledState ? "OFF" : "ON";
                         button.textContent = "Turn " + newText;
                     }
-                }, 500);
+                },500);
             }
 
             function sendCommand(command) {
@@ -230,6 +269,28 @@
                 };
                 xhr.send();
             }
+
+//--------------------------------------------------------------------------------------
+
+            // Get references to the button and the camera card
+            const openCameraButton = document.getElementById('openCameraButton');
+            const cameraCard = document.getElementById('cameraCard');
+            // Add an event listener to the button
+            openCameraButton.addEventListener('click', function() {
+                // Toggle the visibility of the camera card
+                if (cameraCard.style.display === 'none') {
+                    cameraCard.style.display = 'block';
+                } else {
+                    cameraCard.style.display = 'none';
+                }
+            });
+
+            function showText() {
+                const displayText = document.getElementById('displayText');
+                displayText.style.display = 'block';
+            }
+
+
         </script>
     </body>
 </html>
