@@ -232,7 +232,8 @@
                         </td>
                     </tr>
                 </table>
-                <button style="margin-top: 54px;">INCREASE WATER LEVEL</button>
+                <h1>Temperature Sensor Control</h1>
+                <button onclick="readTemperature()">Read Temperature Sensor</button>
             </div>
 
             <div class="card">
@@ -257,6 +258,23 @@
         </div>
 
     <!-- Using an external javascript file for the buttons and timers: -->
-    <script src="validate.js"></script>
+    <script src="validate.js">
+        function readTemperature() {
+            sendDataToArduino("c");
+        }
+
+        function sendDataToArduino(command) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+            // Handle response from Arduino if needed
+            console.log(this.responseText);
+            }
+        };
+        xhttp.open("GET", "control_arduino?cmd=" + command, true);
+        xhttp.send();
+        }
+
+    </script>
 </body>
 </html>

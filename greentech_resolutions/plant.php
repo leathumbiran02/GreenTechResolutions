@@ -205,7 +205,7 @@
                 button.textContent = "Turn " + buttonText; // Update the button text immediately
 
                 // Send the command to the Arduino based on the current LED state
-                var command = ledState ? '1' : '0';
+                var command = ledState ? 'a' : 'b';
                 sendCommand(command);
 
                 // Revert the button text if no response received after 1 second
@@ -220,7 +220,7 @@
 
             function sendCommand(command) {
                 var xhr = new XMLHttpRequest();
-                xhr.open('GET', 'control.php?cmd=' + command, true);
+                xhr.open('GET', 'control_arduino?cmd=' + command, true);
                 xhr.onload = function() {
                     if (xhr.status === 200) {
                         // Request successful, do nothing (button text already updated)
