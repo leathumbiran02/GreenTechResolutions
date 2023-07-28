@@ -393,54 +393,70 @@
     }
 
     // Timer function:
- // Timer function:
-function startTimer(targetTime) {
-    function updateTimer() {
-        let currentTime = new Date().getTime();
-        let remainingTime = targetTime - currentTime;
+    function startTimer(targetTime) {
+        function updateTimer() {
+            let currentTime = new Date().getTime();
+            let remainingTime = targetTime - currentTime;
 
-        if (remainingTime < 1000) {
-            // Timer has ended
-            clearInterval(timerInterval);
-            document.querySelector(".timer").textContent = "It's time to feed the fish!";
-            // Display the message for 20 seconds (20,000 milliseconds) before resetting the timer:
-            setTimeout(() => {
-                document.querySelector(".timer").textContent = "00:00:00";
-                // Restart the timer for the next day using the previous targetTime value:
-                let nextDay = new Date(targetTime);
-                nextDay.setDate(nextDay.getDate() + 1);
-                startTimer(nextDay.getTime());
-            }, 20000);
-        } else {
-            let hours = Math.floor(remainingTime / (1000 * 60 * 60));
-            let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+            if (remainingTime < 1000) {
+                // Timer has ended
+                clearInterval(timerInterval);
+                document.querySelector(".timer").textContent = "It's time to feed the fish!";
+                // Display the message for 20 seconds (20,000 milliseconds) before resetting the timer:
+                setTimeout(() => {
+                    document.querySelector(".timer").textContent = "00:00:00";
+                    // Restart the timer for the next day using the previous targetTime value:
+                    let nextDay = new Date(targetTime);
+                    nextDay.setDate(nextDay.getDate() + 1);
+                    startTimer(nextDay.getTime());
+                }, 20000);
+            } else {
+                let hours = Math.floor(remainingTime / (1000 * 60 * 60));
+                let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-            hours = hours < 10 ? "0" + hours : hours;
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
 
-            // Display the timer
-            document.querySelector(".timer").textContent = hours + ":" + minutes + ":" + seconds;
+                // Display the timer
+                document.querySelector(".timer").textContent = hours + ":" + minutes + ":" + seconds;
+            }
+
+            // Store the fetched value in LocalStorage:
+            localStorage.setItem("fishFeederTimer", targetTime); // Updated from timerValue to targetTime:
         }
+
+        // Call the updateTimer immediately to show the initial timer value:
+        updateTimer();
+
+        // Clear the previous timer interval if it exists:
+        clearInterval(timerInterval);
+
+        updateTimer(); // Update immediately to avoid the initial 1-second delay:
+        timerInterval = setInterval(updateTimer, 1000); // Update every second:
 
         // Store the fetched value in LocalStorage:
         localStorage.setItem("fishFeederTimer", targetTime); // Updated from timerValue to targetTime:
     }
 
-    // Call the updateTimer immediately to show the initial timer value:
-    updateTimer();
+    /* AJAX CODE FOR TANK.PHP: */
+    function readTemperature() {
+        // Send AJAX request to fetch temperature from control_arduino.php
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                // Update the temperature value on the page
+                var temperature = parseFloat(this.responseText);
+                if (!isNaN(temperature)) {
+                document.getElementById("temperatureValue").innerText = temperature.toFixed(2) + " °C";
+                }
+            }
+        };
 
-    // Clear the previous timer interval if it exists:
-    clearInterval(timerInterval);
-
-    updateTimer(); // Update immediately to avoid the initial 1-second delay:
-    timerInterval = setInterval(updateTimer, 1000); // Update every second:
-
-    // Store the fetched value in LocalStorage:
-    localStorage.setItem("fishFeederTimer", targetTime); // Updated from timerValue to targetTime:
-}
-
+        xhttp.open("GET", "control_arduino.php?cmd=c", true);
+        xhttp.send();
+    }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 
 /* --------------------------------------------------LEARN.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
@@ -492,5 +508,45 @@ function startTimer(targetTime) {
             .catch(error =>{
                 console.error('Error fetching fish: ', error);
             });
+    }
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
+
+/* --------------------------------------------------PLANT.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
+    var ledState = false; // Variable to store the state of the LED (OFF by default):
+    var button = document.getElementById("ledButton"); // Get the button element:
+
+    /* CHANGE TEXT FOR TURNING LED ON AND OFF: */
+    function toggleLED() { 
+        ledState = !ledState; 
+        var buttonText = ledState ? "ON" : "OFF";
+        button.textContent = "Turn " + buttonText; // Update the button text immediately:
+
+        // Send the command to the Arduino based on the current LED state:
+        var command = ledState ? 'a' : 'b';
+        sendCommand(command);
+
+        // Revert the button text if no response received after 1 second:
+        setTimeout(function() {S
+            var currentText = button.textContent;
+            if (currentText === "Turn ON" || currentText === "Turn OFF") {
+                var newText = ledState ? "OFF" : "ON";
+                button.textContent = "Turn " + newText;
+            }
+        },500);
+    }
+
+    /* AJAX CODE FOR PLANT.PHP: */
+    function sendCommand(command) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'control_arduino.php?cmd=' + command, true);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Request successful, do nothing (button text already updated):
+            } else {
+                // Request failed, handle any error if needed:
+            }
+        };
+
+        xhr.send();
     }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 

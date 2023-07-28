@@ -272,6 +272,7 @@ header label{
     width:100%;
     font-size:2em;
 }
+
 th.user-th, td.user-td{
     padding: 8px;
     text-align: left;
@@ -288,6 +289,7 @@ th.user-th, td.user-td{
     overflow: hidden;
     border: 3px solid black;
 }
+
 .chat-page-register_login_btn_box{
     width: 260px;
     margin: 35px auto;
@@ -295,6 +297,7 @@ th.user-th, td.user-td{
     box-shadow: none;
     border-radius: 30px;
 }
+
 .chat-page-toggle_register_login_btn{
     padding: 20px 30px;
     cursor: pointer;
@@ -307,6 +310,7 @@ th.user-th, td.user-td{
     font-size: 20px;
     text-transform: uppercase;
 }
+
 #chat-page-btn{
     top:0;
     left: 0;
@@ -317,6 +321,7 @@ th.user-th, td.user-td{
     border-radius: 30px;
     transition: .5s;
 }
+
 .chat-page-login_input_group{
     top:30px;
     position: absolute;
@@ -327,6 +332,7 @@ th.user-th, td.user-td{
     color: #ffffff;
     font-size: 20px;
 }
+
 .chat-page-input_field{
     width:100%;
     padding: 10px 15px;
@@ -337,6 +343,7 @@ th.user-th, td.user-td{
     color: #ffffff;
     border: 3px solid black;
 }
+
 .chat-page-submit_btn{
     width: 85%;
     padding: 10px 30px;
@@ -363,6 +370,7 @@ th.user-th, td.user-td{
     overflow: hidden;
     border: 3px solid black;
 }
+
 .contact-us-register_login_btn_box{
     width: 260px;
     margin: 35px auto;
@@ -370,6 +378,7 @@ th.user-th, td.user-td{
     box-shadow: none;
     border-radius: 30px;
 }
+
 .contact-us-toggle_register_login_btn{
     padding: 20px 30px;
     cursor: pointer;
@@ -382,6 +391,7 @@ th.user-th, td.user-td{
     font-size: 20px;
     text-transform: uppercase;
 }
+
 #contact-us-btn{
     top:0;
     left: 0;
@@ -392,16 +402,19 @@ th.user-th, td.user-td{
     border-radius: 30px;
     transition: .5s;
 }
+
 .contact-us-login_input_group{
     top:120px;
     position: absolute;
     width: 400px;
     transition: .5s;
 }
+
 .contact-us-login_input_group input{
     color: #ffffff;
     font-size: 20px;
 }
+
 .contact-us-input_field{
     width:100%;
     padding: 10px 15px;
@@ -412,6 +425,7 @@ th.user-th, td.user-td{
     color: #ffffff;
     border: 3px solid black;
 }
+
 .contact-us-submit_btn{
     width: 85%;
     padding: 10px 30px;
@@ -656,6 +670,7 @@ a.addbutton{
     border-radius: 30px;
     font-size: 19px;
 }
+
 .search-bar-btn{
     margin-right: 50px;
     cursor: pointer;
@@ -714,4 +729,126 @@ a.addbutton{
 
 .card:hover .back {
     transform: rotateY(0deg);
+}
+
+.tank-card {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: lightgray; 
+    position: relative;
+    perspective: 1000px;
+    margin-right: 100px;
+}
+
+.tank-card button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: #343A54; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bolder;
+    border: 3px solid black;
+}
+
+.tank-card button:hover {
+    background-color: #09BA20;
+    color: #000546; 
+    border: 3px solid black;
+}
+
+.tank-card h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #000546; 
+}
+
+.tank-card h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000546; 
+}
+
+.tank-first-row {
+    margin-bottom: -10px;
+}
+
+.tank-water-level {
+    width: 50px;
+    height: 50px;
+    background-color: lightgray; /* lightgray background representing the container */
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.tank-water {
+    width: 100%;
+    background-color: #00aaff; /* Blue background representing the water: */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: fillWater 2s ease-in-out infinite alternate; /* Animation properties: */
+}
+
+.tank-water::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 70%; /* Change this value to adjust the initial water level (0 to 100%) */
+    background-color: rgba(0, 170, 255, 0.7); /* Semi-transparent blue representing water level: */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Animation keyframes: */
+@keyframes fillWater {
+    0% {
+        height: 50%; /* Initial water level: */
+    }
+    100% {
+        height: 60%; /* Final water level (completely filled): */
+    }
+}
+
+.clock-icon {
+    font-size: 60px; 
+    color: #00aaff; 
+}
+
+.feedFishTimer{
+    margin-right: 20px;
+    width: 100px;
+    padding: 5px 5px;
+}
+
+.fish-feeder {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; 
+}
+
+.timer{
+    margin-top:10px;
+    margin-left: -106px;
+}
+
+/* Positioning the water tank image: */
+.water-tank-img {
+    position: absolute;
+    left: 300px;
+    width: 50em; 
+    height: auto; 
+    z-index: 1; 
 }

@@ -37,9 +37,7 @@
                 position: relative;
                 perspective: 1000px;
             }
-            
-            .card button,
-            td button {
+            .card button, td button {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -54,14 +52,11 @@
                 font-weight: bolder;
                 border: 3px solid black;
             }
-
-            .card button:hover,
-            td button:hover{
+            .card button:hover, td button:hover{
                 background-color: #09BA20; /* Change to your preferred background color on hover */
                 color: #000546; /* Change to your preferred text color on hover */
                 border: 3px solid black;
             }
-
             .cards-wrapper {
                 display: flex;
             }
@@ -77,18 +72,15 @@
                 margin-bottom: 10px;
                 color: #000546; 
             }
-
             .card h4 {
                 font-size: 16px;
                 text-align: left;
                 margin-bottom: 10px;
                 color: #000546; 
             }
-
             .first-row {
                 margin-bottom: -10px;
             }
-
             /* Styling for the grid container */
             .grid-container {
                 display: grid;
@@ -98,50 +90,40 @@
                 /* Collapses the borders of the grid cells */
                 border-collapse: collapse;
             }
-
             /* Styling for grid cells */
             .grid-item {
                 padding: 8px;
                 border: 1px solid black; /* Adds a black border to all grid cells */
             }
-
             /* Styling for labels (A, B, C, 1, 2, 3) */
             .label {
                 font-weight: bold; /* Makes the text bold */
                 text-align: center; /* Centers the text horizontally */
             }
-
             /* Styling for the top row of labels (A, B, C) */
-            .label-top,
-            .label-left {
+            .label-top, .label-left {
                 border: none; /* Removes the borders for the labels on the top row and the left column */
             }
-
             /* New class to remove borders for A, B, and C */
             .label-letter {
                 border: none; /* Removes the borders for A, B, and C cells */
             }
-
             .grid-item img {
                 width: 100px;
                 height: 100px; 
             }
-
             .grid-item {
                 display: inline-block;
                 font-size: 20px; /* Set the font size to 20 pixels */
             }
-
             /* New CSS rule to make the labels (A, B, C, 1, 2, 3) bigger */
             .label {
                 font-size: 20px; /* Set the font size to 24 pixels */
             }
-
             table {
                 margin: 0 auto; /* Sets left and right margins to "auto", which centers the table */
                 width: 100%;
             }
-
             .selected-text {
                 display: none;
             }
@@ -233,45 +215,9 @@
             <h3>Camera Content</h3>
             <p>This is the display for the camera.</p>
         </div>
-
+        <!-- Using an external javascript file for the buttons and timers: -->
+        <script src="validate.js"></script>
         <script>
-            var ledState = false; // Variable to store the state of the LED (OFF by default)
-            var button = document.getElementById("ledButton"); // Get the button element
-
-            function toggleLED() {
-                ledState = !ledState; // Toggle the LED state between ON and OFF
-                var buttonText = ledState ? "ON" : "OFF";
-                button.textContent = "Turn " + buttonText; // Update the button text immediately
-
-                // Send the command to the Arduino based on the current LED state
-                var command = ledState ? 'a' : 'b';
-                sendCommand(command);
-
-                // Revert the button text if no response received after 1 second
-                setTimeout(function() {S
-                    var currentText = button.textContent;
-                    if (currentText === "Turn ON" || currentText === "Turn OFF") {
-                        var newText = ledState ? "OFF" : "ON";
-                        button.textContent = "Turn " + newText;
-                    }
-                },500);
-            }
-
-            function sendCommand(command) {
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', 'control_arduino.php?cmd=' + command, true);
-                xhr.onload = function() {
-                    if (xhr.status === 200) {
-                        // Request successful, do nothing (button text already updated)
-                    } else {
-                        // Request failed, handle any error if needed
-                    }
-                };
-                xhr.send();
-            }
-
-//--------------------------------------------------------------------------------------
-
             // Get references to the button and the camera card
             const openCameraButton = document.getElementById('openCameraButton');
             const cameraCard = document.getElementById('cameraCard');
@@ -289,8 +235,6 @@
                 const displayText = document.getElementById('displayText');
                 displayText.style.display = 'block';
             }
-
-
         </script>
     </body>
 </html>

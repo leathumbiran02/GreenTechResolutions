@@ -22,132 +22,16 @@
             .hero{ /* Centering the text: */
                 text-align: center;
             }
-            .card {
-                width: 400px;
-                height: 200px;
-                margin: 0 auto;
-                margin-bottom: 10px;
-                padding: 10px;
-                border: 3px solid black;
-                border-radius: 10px;
-                background-color: lightgray; /* Replace 'lightgray' with your preferred shade of gray */
-                position: relative;
-                perspective: 1000px;
-                margin-right: 300px;
-            }
-
-            .card button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 40px;
-                background-color: #343A54; 
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 17px;
-                font-weight: bolder;
-                border: 3px solid black;
-            }
-            .card button:hover {
-                background-color: #09BA20; /* Change to your preferred background color on hover */
-                color: #000546; /* Change to your preferred text color on hover */
-                border: 3px solid black;
-            }
-            .card h2 {
-                font-size: 20px;
-                margin-top: 10px;
-                color: #000546; 
-            }
-            .card h5 {
-                font-size: 16px;
-                margin-bottom: 10px;
-                color: #000546; 
-            }
-
-            .first-row {
-                margin-bottom: -10px;
-            }
-            .water-level {
-                width: 50px;
-                height: 50px;
-                background-color: lightgray; /* Blue background representing the container */
-                border-radius: 50%;
-                position: relative;
-                overflow: hidden;
-            }
-
-            .water {
-                width: 100%;
-                background-color: #00aaff; /* Blue background representing the water */
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                animation: fillWater 2s ease-in-out infinite alternate; /* Animation properties */
-            }
-
-            .water::before {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 70%; /* Change this value to adjust the initial water level (0 to 100%) */
-                background-color: rgba(0, 170, 255, 0.7); /* Semi-transparent blue representing water level */
-                position: absolute;
-                bottom: 0;
-                left: 0;
-            }
-
-            /* Animation keyframes */
-            @keyframes fillWater {
-                0% {
-                    height: 50%; /* Initial water level */
-                }
-                100% {
-                    height: 60%; /* Final water level (completely filled) */
-                }
-            }
-            .clock-icon {
-                font-size: 60px; 
-                color: #00aaff; 
-            }
-            
-            .feedFishTimer{
-                margin-right: 20px;
-                width: 100px;
-                padding: 5px 5px;
-            }
-            .fish-feeder {
-                display: flex;
-                align-items: center;
-                margin-top: 10px; 
-            }
-            .timer{
-                margin-top:10px;
-                margin-left: -106px;
-            }
-
             /* Moved table styling here to avoid CSS conflicts: */
-            /* Ensure that the table and its cells take the full width of the container */
+            /* Ensure that the table and its cells take the full width of the container: */
             table {
                 width: 100%;
             }
 
             td {
-                width: 33.33%; /* Divide the table width into equal parts for each cell */
+                width: 33.33%; /* Divide the table width into equal parts for each cell: */
             }
-
-           /* Positioning the water tank image */
-           .water-tank-img {
-                position: absolute;
-                left: 300px;
-                width: 50em; 
-                height: auto; 
-                z-index: 1; 
-            }
-
-            /* Adjusting the position of the cards */
+            /* Adjusting the position of the cards: */
             .form-page {
                 position: relative;
             }
@@ -156,18 +40,18 @@
             @media (max-width: 1900px) {
                 .water-tank-img {
                     width: 100%;
-                    max-width: 400px; /* Set a maximum width for the water tank image on smaller screens */
+                    max-width: 400px; /* Set a maximum width for the water tank image on smaller screens: */
                     height: auto;
-                    position: static; /* Reset position to allow normal flow on smaller screens */
+                    position: static; /* Reset position to allow normal flow on smaller screens: */
                     margin: 0 auto;
                 }
 
-                /* Center the cards horizontally on smaller screens */
-                .card {
+                /* Center the cards horizontally on smaller screens: */
+                .tank-card {
                     margin: 0 auto;
                 }
                 
-                /* Center the image vertically on the screen */
+                /* Center the image vertically on the screen: */
                 body {
                     display: flex;
                     justify-content: center;
@@ -176,7 +60,6 @@
                 }
             }
         </style>
-
     </head>
     <body>
         <header>
@@ -189,91 +72,73 @@
 
         <div class="spacing" style="height:80px;"></div>
         <div class="form-page">
-            <!-- Water Tank Image -->
+            <!-- Water Tank Image: -->
             <img src="https://www.pngmart.com/files/15/Aquarium-Fish-Tank-PNG-Free-Download.png" alt="Water Tank" class="water-tank-img">
 
-            <div class="card">
+            <div class="tank-card">
                 <table>
-                    <tr class="first-row">
+                    <tr class="tank-first-row">
                         <td>
-                            <div class="water-level">
-                                <div class="water"></div>
+                            <div class="tank-water-level">
+                                <div class="tank-water"></div>
                             </div>
                         </td>
                         <td>
-                            <h2 style="margin-right: 100px;">WATER LEVEL</h2>
+                            <h2 style="margin-right: 100px;">WATER LEVEL</h2> <!-- WATER LEVEL: -->
                             <h5>50%</h5>
                         </td>
                     </tr>
                 </table>
-                <button style="margin-top: 30px;" >FILL TANK</button>
+                <button style="margin-top: 30px;" >FILL TANK</button> <!-- FILL TANK BUTTON: -->
             </div>
 
-            <div class="card">
+            <div class="tank-card">
                 <table>
                     <tr>
                         <td><h3>pH<h3></td>
                         <td>
-                            <h2>PH LEVEL</h2>
+                            <h2>PH LEVEL</h2> <!-- PH LEVEL: -->
                             <h5>7</h5>
                         </td>
                     </tr>
                 </table>
-                <button style="margin-top: 54px;">NEUTRALIZE</button>
+                <button style="margin-top: 54px;">NEUTRALIZE</button> <!-- PH LEVEL BUTTON (UNUSED FEATURE) -->
             </div>
 
-            <div class="card">
+            <div class="tank-card">
                 <table>
                     <tr>
                         <td><h3>temp<h3></td>
                         <td>
                             <h2>TEMPERATURE</h2>
-                            <h5 id="temperatureValue">Loading...</h5> <!-- Use "Loading..." as a placeholder until the value is fetched -->
+                            <h5 id="temperatureValue">Loading...</h5> <!-- Use "Loading..." as a placeholder until the value is fetched from the arduino: -->
                         </td>
                     </tr>
                 </table>
-                <button onclick="readTemperature()">Read Temperature Sensor</button>
+                <button onclick="readTemperature()" style="margin-top: 54px;">READ TEMPERATURE</button> <!-- READ TEMPERATURE SENSOR BUTTON: -->
             </div>
 
-            <div class="card">
+            <div class="tank-card">
                 <table>
                     <tr>
                         <td class="clock-icon" style="width: 20%;">&#x23F1;</td>
                         <td>
-                            <h2>FISH FEEDER</h2>
+                            <h2>FISH FEEDER</h2> <!-- FISH FEEDER: -->
                             <h5>
                                 <!--Setting feeding time-->
                                 <div class="fish-feeder">
                                     <input type="time" id="feedTimeInput" class="feedFishTimer"><!-- Store Time -->
-                                    <button onclick="setFishFeederTimer()" style="width: 120%; display: initial; margin-right: -5px;">SET REMINDER</button>
+                                    <button onclick="setFishFeederTimer()" style="width: 120%; display: initial; margin-right: -5px;">SET REMINDER</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
                                 </div>
-                                <div class="timer">00:00:00</div>   
+                                <div class="timer">00:00:00</div>   <!-- COUNTDOWN TIMER: -->
                             </h5>
                         </td>
                     </tr>
                 </table>
-                <button>FEED FISH</button>
+                <button>FEED FISH</button> <!-- FEED FISH BUTTON: -->
             </div>
         </div>
-
     <!-- Using an external javascript file for the buttons and timers: -->
     <script src="validate.js"></script>
-    <script>
-        function readTemperature() {
-            // Send AJAX request to fetch temperature from control_arduino.php
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-            if (this.readyState === 4 && this.status === 200) {
-                // Update the temperature value on the page
-                var temperature = parseFloat(this.responseText);
-                if (!isNaN(temperature)) {
-                document.getElementById("temperatureValue").innerText = temperature.toFixed(2) + " °C";
-                }
-            }
-            };
-            xhttp.open("GET", "control_arduino.php?cmd=c", true);
-            xhttp.send();
-        }
-    </script>
 </body>
 </html>
