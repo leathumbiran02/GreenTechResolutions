@@ -526,7 +526,7 @@
         sendCommand(command);
 
         // Revert the button text if no response received after 1 second:
-        setTimeout(function() {S
+        setTimeout(function() {
             var currentText = button.textContent;
             if (currentText === "Turn ON" || currentText === "Turn OFF") {
                 var newText = ledState ? "OFF" : "ON";
