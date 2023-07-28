@@ -53,9 +53,7 @@
             }
 
             /* Testing a feature of locking certain elements when scrolling: */
-            .center-text,
-            .register_login_btn_box,
-            .search-bar {
+            .center-text, .register_login_btn_box, .search-bar {
             position: sticky;
             top: 0;
             z-index: 1;

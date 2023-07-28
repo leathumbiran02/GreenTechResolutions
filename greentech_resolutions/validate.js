@@ -489,7 +489,7 @@
                 document.getElementById('products').innerHTML = data;
             })
             .catch(error =>{
-                console.error('Error fetching fish: ', error);
+                console.error('Error fetching plants: ', error);
             });
     }  
 
