@@ -1,4 +1,4 @@
-# GreenTechResolutions
+# GreenTechResolutions - A smart aquaponics system
 
 A group project for the 2023 Hack Jam.
 
