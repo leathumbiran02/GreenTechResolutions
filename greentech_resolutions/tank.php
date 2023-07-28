@@ -125,7 +125,7 @@
             }
             .timer{
                 margin-top:10px;
-                font-size: px;
+                margin-left: -106px;
             }
 
             /* Moved table styling here to avoid CSS conflicts: */
@@ -238,7 +238,7 @@
             <div class="card">
                 <table>
                     <tr>
-                        <td class="clock-icon">&#x23F1;</td>
+                        <td class="clock-icon" style="width: 20%;">&#x23F1;</td>
                         <td>
                             <h2>FISH FEEDER</h2>
                             <h5>
@@ -255,8 +255,6 @@
                 <button>FEED FISH</button>
             </div>
         </div>
-
-    <!-- ... Existing code ... -->
 
     <!-- Using an external javascript file for the buttons and timers: -->
     <script src="validate.js"></script>
