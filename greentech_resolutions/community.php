@@ -26,7 +26,7 @@
             } 
             .product{
                 background-color: #343A54;
-                opacity: 95%;
+                opacity: 100%;
                 border: 3px solid #000000;
             }
             .register_login_btn_box{

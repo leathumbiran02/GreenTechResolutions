@@ -483,7 +483,7 @@
         t.style.left = "110px";
 
         //Fetch the fish from the server and update the page:
-        fetch('get_plant_details.php')
+        fetch('get_plant_page.php')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('products').innerHTML = data;
@@ -500,7 +500,7 @@
         t.style.left = "0";
 
         //Fetch the fish from the server and update the page:
-        fetch('get_fish_details.php')
+        fetch('get_fish_page.php')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('products').innerHTML = data;
