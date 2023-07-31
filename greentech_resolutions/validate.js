@@ -404,6 +404,7 @@
                 document.querySelector(".timer").textContent = "It's time to feed the fish!";
                 // Display the message for 20 seconds (20,000 milliseconds) before resetting the timer:
                 setTimeout(() => {
+                    sendFeedFishCommandToArduino(); /* Call the function to feed the fish: */
                     document.querySelector(".timer").textContent = "00:00:00";
                     // Restart the timer for the next day using the previous targetTime value:
                     let nextDay = new Date(targetTime);
@@ -441,6 +442,7 @@
     }
 
     /* AJAX CODE FOR TANK.PHP: */
+    /* Checking temperature: */
     function readTemperature() {
         // Send AJAX request to fetch temperature from control_arduino.php
         var xhttp = new XMLHttpRequest();
@@ -455,6 +457,20 @@
         };
 
         xhttp.open("GET", "control_arduino.php?cmd=c", true);
+        xhttp.send();
+    }
+
+    /* Feeding fish: */
+    function sendFeedFishCommandToArduino(){
+        // Send AJAX request to control_arduino.php to send the command "8"
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                // Handle the response if needed
+            }
+        };
+        
+        xhttp.open("GET", "control_arduino.php?cmd=8", true);
         xhttp.send();
     }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 

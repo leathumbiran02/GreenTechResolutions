@@ -135,7 +135,7 @@
                         </td>
                     </tr>
                 </table>
-                <button>FEED FISH</button> <!-- FEED FISH BUTTON: -->
+                <button onclick="sendFeedFishCommandToArduino()">FEED FISH</button> <!-- FEED FISH BUTTON: -->
             </div>
         </div>
     <!-- Using an external javascript file for the buttons and timers: -->
