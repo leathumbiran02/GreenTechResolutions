@@ -870,10 +870,11 @@ a.addbutton{
 /* Positioning the water tank image: */
 .water-tank-img {
     position: absolute;
-    left: 300px;
+    left: 400px;
     width: 50em; 
     height: auto; 
     z-index: 1; 
+    margin-top: 100px;
 }
 
 .product_details_page{

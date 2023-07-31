@@ -137,78 +137,72 @@
             ?>
         </header>
 
-        <table>
-            <tr>
-                <td>
-                    <div class="grid-container">
-                            <!-- Top row of labels -->
-                            <div class="grid-item label label-top"></div> <!-- Empty cell to position the top-left corner -->
-                            <div class="grid-item label label-letter">A</div> <!-- Label "A" in the top row -->
-                            <div class="grid-item label label-letter">B</div> <!-- Label "B" in the top row -->
-                            <div class="grid-item label label-letter">C</div> <!-- Label "C" in the top row -->
+        <div class="spacing" style="height: 100px;"></div>
+            <table>
+                <tr>
+                    <td>
+                        <div class="grid-container">
+                                <!-- Top row of labels -->
+                                <div class="grid-item label label-top"></div> <!-- Empty cell to position the top-left corner -->
+                                <div class="grid-item label label-letter">A</div> <!-- Label "A" in the top row -->
+                                <div class="grid-item label label-letter">B</div> <!-- Label "B" in the top row -->
+                                <div class="grid-item label label-letter">C</div> <!-- Label "C" in the top row -->
 
-                            <!-- First column of labels -->
-                            <div class="grid-item label label-left">1</div> <!-- Label "1" in the left column -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" id="weedleaf"></div> <!-- Content in the cell corresponding to row 1 and column "A" -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" id="lettuce"></div> <!-- Content in the cell corresponding to row 1 and column "B" -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" id ="tomato" onclick="showText()"></div> <!-- Content in the cell corresponding to row 1 and column "C" -->
+                                <!-- First column of labels -->
+                                <div class="grid-item label label-left">1</div> <!-- Label "1" in the left column -->
+                                <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" id="weedleaf"></div> <!-- Content in the cell corresponding to row 1 and column "A" -->
+                                <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" id="lettuce"></div> <!-- Content in the cell corresponding to row 1 and column "B" -->
+                                <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" id ="tomato" onclick="showText()"></div> <!-- Content in the cell corresponding to row 1 and column "C" -->
 
-                            <!-- Second column of labels -->
-                            <!-- <div class="grid-item label label-left">2</div> 
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" alt="weed leaf"></div> 
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" alt="lettuce"></div> 
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" alt="tomato"></div> 
-                            
-                            <div class="grid-item label label-left">3</div> 
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" alt="weed leaf"></div> 
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" alt="lettuce"></div> 
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" alt="tomato"></div> 
-                    --> </div>
-                </td>
-                <td>
-                    <div class ="card">
-                        <h2>PLANT INFO</h2>
-                        <h5>Select plant</h5>
-                        <div class="selected-text" id="displayText">
-                        <table> 
-                            <th>
-                                <div class="selected-text" id="displayText">
-                                <td>
-                                    <h4>POSITION:</h4>
-                                    <h4>GROWTH:</h4>
-                                    <h4>TYPE:</h4>
-                                    <h4>HARVEST IN:</h4>
-                                </td>
-                                <td>
-                                    <h4>1A</h4>
-                                    <h4>34 Days</h4>
-                                    <h4>Tomato</h4>
-                                    <h4>30 to 70 days</h4>
-                                </td>
-                                </div>
-                            </th>
-                        </table>
-                        <button>HARVEST</button>
                         </div>
-                    </div>
-                 </td>
-                 <td>
-                    <div class="card">
-                        <h2 id="lightStatus">LED Light</h2>
-                        <button id="ledButton" onclick="toggleLED()" style="margin-top:30px;">Turn ON</button>
-                    </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <button id="openCameraButton">OPEN CAMERA</button>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </td>
-            </th>
-        </table>
+                    </td>
+                    <td>
+                        <div class ="card">
+                            <h2>PLANT INFO</h2>
+                            <h5>Select plant</h5>
+                            <div class="selected-text" id="displayText">
+                            <table> 
+                                <th>
+                                    <div class="selected-text" id="displayText">
+                                    <td>
+                                        <h4>POSITION:</h4>
+                                        <h4>GROWTH:</h4>
+                                        <h4>TYPE:</h4>
+                                        <h4>HARVEST IN:</h4>
+                                    </td>
+                                    <td>
+                                        <h4>1A</h4>
+                                        <h4>34 Days</h4>
+                                        <h4>Tomato</h4>
+                                        <h4>30 to 70 days</h4>
+                                    </td>
+                                    </div>
+                                </th>
+                            </table>
+                            <button>HARVEST</button>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" style="height: 140px;">
+                            <h2 id="lightStatus">LED Light</h2>
+                            <button id="ledButton" onclick="toggleLED()" style="margin-top:20px; ">Turn ON</button>
+                        </div>
+                        <div class="card" style="height: 140px;">
+                            <h2 id="cameraStatus">Camera</h2>
+                            <button id="openCameraButton" style="margin-top:20px; ">OPEN CAMERA</button>
+                            <!-- <table>
+                                <tr>
+                                    <td>
+                                        <button id="openCameraButton" >OPEN CAMERA</button>
+                                    </td>
+                                </tr>
+                            </table> -->
+                        </div>
+                    </td>
+                </th>
+            </table>
+        
         <div class="card" id="cameraCard" style="display: none;">
             <!-- Add camera content here -->
             <h3>Camera Content</h3>
