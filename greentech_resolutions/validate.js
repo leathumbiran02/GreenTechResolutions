@@ -516,7 +516,7 @@
 
 /* --------------------------------------------------LEARN.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
     //Function to handle fish and plant search:
-    function searchProducts() {
+    function searchProductsLearn() {
         var input, filter, div, product, i, txtValue;
         input = document.getElementById('search');
         filter = input.value.toUpperCase();

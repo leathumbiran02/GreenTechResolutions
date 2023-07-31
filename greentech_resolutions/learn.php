@@ -86,7 +86,7 @@
 
             <div class="search-bar">
                 <input type="text" id="search" placeholder="Search products...">
-                <button type="button" class="search-bar-btn" onclick="searchProducts()"><i class="fas fa-search"></i></button>
+                <button type="button" class="search-bar-btn" onclick="searchProductsLearn()"><i class="fas fa-search"></i></button>
             </div>
 
             <div id="products">
