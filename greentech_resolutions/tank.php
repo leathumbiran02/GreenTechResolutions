@@ -89,7 +89,7 @@
                         </td>
                     </tr>
                 </table>
-                <button style="margin-top: 30px;" >FILL TANK</button> <!-- FILL TANK BUTTON: -->
+                <button id="pumpButton" onclick="togglePump()" style="margin-top: 30px;" >TURN PUMP ON</button> <!-- WATER PUMP BUTTON: -->
             </div>
 
             <div class="tank-card">

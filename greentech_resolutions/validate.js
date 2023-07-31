@@ -441,8 +441,32 @@
         localStorage.setItem("fishFeederTimer", targetTime); // Updated from timerValue to targetTime:
     }
 
+    //Function to change the text for the water pump when it is put on and off:
+    var pumpState = false; // Variable to store the state of the water pump (OFF by default):
+    var pumpButton = document.getElementById("pumpButton"); // Get the button element:
+
+    /* CHANGE TEXT FOR TURNING WATER PUMP ON AND OFF: */
+    function togglePump() { 
+        pumpState = !pumpState; 
+        var buttonText = pumpState ? "ON" : "OFF";
+        pumpButton.textContent = "TURN PUMP " + buttonText; // Update the button text immediately:
+
+        // Send the command to the Arduino based on the current water pump state:
+        var command = pumpState ? '6' : '5';
+        toggleWaterPump(command);
+
+        // Revert the button text if no response received after 1 second:
+        setTimeout(function() {
+            var currentText = pumpButton.textContent;
+            var newText = pumpState ? "OFF" : "ON"; // Use the correct newText based on pumpState
+            if (currentText === "TURN PUMP ON" || currentText === "TURN PUMP OFF") {
+                pumpButton.textContent = "TURN PUMP " + newText;
+            } 
+        },500);
+    }
+
     /* AJAX CODE FOR TANK.PHP: */
-    /* Checking temperature: */
+    /* Checking temperature reading: */
     function readTemperature() {
         // Send AJAX request to fetch temperature from control_arduino.php
         var xhttp = new XMLHttpRequest();
@@ -460,7 +484,7 @@
         xhttp.send();
     }
 
-    /* Feeding fish: */
+    /* Putting fish feeder on and off: */
     function sendFeedFishCommandToArduino(){
         // Send AJAX request to control_arduino.php to send the command "8"
         var xhttp = new XMLHttpRequest();
@@ -472,6 +496,21 @@
         
         xhttp.open("GET", "control_arduino.php?cmd=8", true);
         xhttp.send();
+    }
+
+    /* Function to turn water pump on and off: */
+    function toggleWaterPump(command) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'control_arduino.php?cmd=' + command, true);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Request successful, do nothing (button text already updated):
+            } else {
+                // Request failed, handle any error if needed:
+            }
+        };
+
+        xhr.send();
     }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 
@@ -552,6 +591,7 @@
     }
 
     /* AJAX CODE FOR PLANT.PHP: */
+    /* Putting led on and off: */
     function sendCommand(command) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'control_arduino.php?cmd=' + command, true);
