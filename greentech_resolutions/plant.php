@@ -154,17 +154,16 @@
                             <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" alt="tomato" onclick="showText()"></div> <!-- Content in the cell corresponding to row 1 and column "C" -->
 
                             <!-- Second column of labels -->
-                            <div class="grid-item label label-left">2</div> <!-- Label "2" in the left column -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" alt="weed leaf"></div> <!-- Content in the cell corresponding to row 2 and column "A" -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" alt="lettuce"></div> <!-- Content in the cell corresponding to row 2 and column "B" -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" alt="tomato"></div> <!-- Content in the cell corresponding to row 2 and column "C" -->
-
-                            <!-- Third column of labels -->
-                            <div class="grid-item label label-left">3</div> <!-- Label "3" in the left column -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" alt="weed leaf"></div> <!-- Content in the cell corresponding to row 3 and column "A" -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" alt="lettuce"></div> <!-- Content in the cell corresponding to row 3 and column "B" -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" alt="tomato"></div> <!-- Content in the cell corresponding to row 3 and column "C" -->
-                    </div>
+                            <!-- <div class="grid-item label label-left">2</div> 
+                            <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" alt="weed leaf"></div> 
+                            <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" alt="lettuce"></div> 
+                            <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" alt="tomato"></div> 
+                            
+                            <div class="grid-item label label-left">3</div> 
+                            <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" alt="weed leaf"></div> 
+                            <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" alt="lettuce"></div> 
+                            <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" alt="tomato"></div> 
+                    --> </div>
                 </td>
                 <td>
                     <div class ="card">
@@ -198,11 +197,11 @@
                         <h2 id="lightStatus">LED Light</h2>
                         <button id="ledButton" onclick="toggleLED()" style="margin-top:30px;">Turn ON</button>
                     </div>
-                    <div>
+                    <div class="card">
                         <table>
                             <tr>
                                 <td>
-                                    <button id="openCameraButton" style="margin-left: 130px;">OPEN CAMERA</button>
+                                    <button id="openCameraButton">OPEN CAMERA</button>
                                 </td>
                             </tr>
                         </table>
