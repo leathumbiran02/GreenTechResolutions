@@ -149,9 +149,9 @@
 
                             <!-- First column of labels -->
                             <div class="grid-item label label-left">1</div> <!-- Label "1" in the left column -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" alt="weed leaf"></div> <!-- Content in the cell corresponding to row 1 and column "A" -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" alt="lettuce"></div> <!-- Content in the cell corresponding to row 1 and column "B" -->
-                            <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" alt="tomato" onclick="showText()"></div> <!-- Content in the cell corresponding to row 1 and column "C" -->
+                            <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" id="weedleaf"></div> <!-- Content in the cell corresponding to row 1 and column "A" -->
+                            <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" id="lettuce"></div> <!-- Content in the cell corresponding to row 1 and column "B" -->
+                            <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" id ="tomato" onclick="showText()"></div> <!-- Content in the cell corresponding to row 1 and column "C" -->
 
                             <!-- Second column of labels -->
                             <!-- <div class="grid-item label label-left">2</div> 
@@ -234,6 +234,28 @@
                 const displayText = document.getElementById('displayText');
                 displayText.style.display = 'block';
             }
+
+            document.getElementById("weedleaf").addEventListener("click", function() {
+                // Set the value of the 'command' variable to 1
+                var command = 1;
+
+                // Call the 'sendCommand' function with the value of 'command'
+                sendCommand(command);
+            });
+            document.getElementById("lettuce").addEventListener("click", function() {
+                // Set the value of the 'command' variable to 1
+                var command = 2;
+
+                // Call the 'sendCommand' function with the value of 'command'
+                sendCommand(command);
+            });
+            document.getElementById("tomato").addEventListener("click", function() {
+                // Set the value of the 'command' variable to 1
+                var command = 3;
+
+                // Call the 'sendCommand' function with the value of 'command'
+                sendCommand(command);
+            });
         </script>
     </body>
 </html>
