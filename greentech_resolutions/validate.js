@@ -402,7 +402,7 @@
                 // Timer has ended
                 clearInterval(timerInterval);
                 document.querySelector(".timer").textContent = "It's time to feed the fish!";
-                // Display the message for 20 seconds (20,000 milliseconds) before resetting the timer:
+                // Display the message for 10 seconds (10,000 milliseconds) before resetting the timer:
                 setTimeout(() => {
                     sendFeedFishCommandToArduino(); /* Call the function to feed the fish: */
                     document.querySelector(".timer").textContent = "00:00:00";
@@ -410,7 +410,7 @@
                     let nextDay = new Date(targetTime);
                     nextDay.setDate(nextDay.getDate() + 1);
                     startTimer(nextDay.getTime());
-                }, 20000);
+                }, 10000);
             } else {
                 let hours = Math.floor(remainingTime / (1000 * 60 * 60));
                 let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
@@ -578,7 +578,7 @@
 
         // Send the command to the Arduino based on the current LED state:
         var command = ledState ? 'a' : 'b';
-        sendCommand(command);
+        turnLedOnOff(command);
 
         // Revert the button text if no response received after 1 second:
         setTimeout(function() {
@@ -590,9 +590,15 @@
         },500);
     }
 
+    //Function to use the robotic arm to plant the plants:
+    var button1 = document.getElementById("plant1"); // Get the button1 element:
+    var button2 = document.getElementById("plant2"); // Get the button2 element:
+    var button3 = document.getElementById("plant3"); // Get the button3 element:
+
+
     /* AJAX CODE FOR PLANT.PHP: */
     /* Putting led on and off: */
-    function sendCommand(command) {
+    function turnLedOnOff(command) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'control_arduino.php?cmd=' + command, true);
         xhr.onload = function() {
@@ -604,5 +610,20 @@
         };
 
         xhr.send();
+    }
+
+    /* Planting the plants based on the cup selected: */
+    function sendPlantingPlantCommandToArduino(plantNumber){
+        // Send AJAX request to control_arduino.php to send the command "8"
+        var command = plantNumber;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                // Handle the response if needed
+            }
+        };
+        
+        xhttp.open("GET", "control_arduino.php?cmd=" + command, true);
+        xhttp.send();
     }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
