@@ -157,33 +157,6 @@
                         </div>
                     </td>
                     <td>
-                        <div class ="card">
-                            <h2>PLANT INFO</h2>
-                            <h5>Select plant</h5>
-                            <div class="selected-text" id="displayText">
-                            <table> 
-                                <th>
-                                    <div class="selected-text" id="displayText">
-                                    <td>
-                                        <h4>POSITION:</h4>
-                                        <h4>GROWTH:</h4>
-                                        <h4>TYPE:</h4>
-                                        <h4>HARVEST IN:</h4>
-                                    </td>
-                                    <td>
-                                        <h4>1A</h4>
-                                        <h4>34 Days</h4>
-                                        <h4>Tomato</h4>
-                                        <h4>30 to 70 days</h4>
-                                    </td>
-                                    </div>
-                                </th>
-                            </table>
-                            <button>HARVEST</button>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
                         <div class="card" style="height: 140px;">
                             <h2 id="lightStatus">LED Light</h2>
                             <button id="ledButton" onclick="toggleLED()" style="margin-top:20px; ">Turn ON</button>

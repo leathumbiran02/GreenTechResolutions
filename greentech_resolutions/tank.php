@@ -17,6 +17,7 @@
 
         <!--Using a CSS style sheet for the page-->
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
         <style>
             .hero{ /* Centering the text: */
@@ -84,44 +85,45 @@
                             </div>
                         </td>
                         <td>
-                            <h2 style="margin-right: 100px;">WATER LEVEL</h2> <!-- WATER LEVEL: -->
-                            <h5>50%</h5>
+                            <h2 style="margin-left: -50px;">WATER LEVEL</h2> <!-- WATER LEVEL: -->
+                            <h5 style="margin-left: -50px;">50%</h5>
                         </td>
                     </tr>
                 </table>
-                <button id="pumpButton" onclick="togglePump()" style="margin-top: 30px;" >TURN PUMP ON</button> <!-- WATER PUMP BUTTON: -->
+                <button id="pumpButton" onclick="togglePump()" style="margin-top: 50px;" >TURN PUMP ON</button> <!-- WATER PUMP BUTTON: -->
             </div>
 
             <div class="tank-card">
                 <table>
                     <tr>
-                        <td><h3>pH<h3></td>
+                        <td><i class="fas fa-flask" style="font-size: 50px; color: #00aaff; margin-top:30px; margin-left: 20px;"></i></td>
                         <td>
-                            <h2>PH LEVEL</h2> <!-- PH LEVEL: -->
-                            <h5>7</h5>
+                            <h2 style="margin-left: -50px;">PH LEVEL</h2> <!-- PH LEVEL: -->
+                            <h5 style="margin-left: -50px;">7</h5>
                         </td>
                     </tr>
                 </table>
-                <button style="margin-top: 54px;">NEUTRALIZE</button> <!-- PH LEVEL BUTTON (UNUSED FEATURE) -->
+                <button style="margin-top: 34px;">NEUTRALIZE</button> <!-- PH LEVEL BUTTON (UNUSED FEATURE) -->
             </div>
 
             <div class="tank-card">
                 <table>
                     <tr>
-                        <td><h3>temp<h3></td>
+                        <td><i class="fas fa-thermometer-half" style="font-size: 50px; color: #00aaff; margin-top: 30px; margin-left: 22px;"></i></td>
                         <td>
-                            <h2>TEMPERATURE</h2>
-                            <h5 id="temperatureValue">Loading...</h5> <!-- Use "Loading..." as a placeholder until the value is fetched from the arduino: -->
+                            <h2 style="margin-left: -50px;">TEMPERATURE</h2>
+                            <h5 id="temperatureValue" style="margin-left: -50px;">Loading...</h5> <!-- Use "Loading..." as a placeholder until the value is fetched from the arduino: -->
                         </td>
                     </tr>
                 </table>
-                <button onclick="readTemperature()" style="margin-top: 54px;">READ TEMPERATURE</button> <!-- READ TEMPERATURE SENSOR BUTTON: -->
+                <button onclick="readTemperature()" style="margin-top: 34px;">READ TEMPERATURE</button> <!-- READ TEMPERATURE SENSOR BUTTON: -->
             </div>
 
             <div class="tank-card">
                 <table>
                     <tr>
-                        <td class="clock-icon" style="width: 20%;">&#x23F1;</td>
+                        <!-- <td class="clock-icon" style="width: 20%;">&#x23F1;</td> -->
+                        <td><i class="fas fa-stopwatch" style="font-size: 50px; color: #00aaff; margin-left: 20px;"></td>
                         <td>
                             <h2>FISH FEEDER</h2> <!-- FISH FEEDER: -->
                             <h5>

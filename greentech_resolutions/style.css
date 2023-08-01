@@ -813,6 +813,7 @@ a.addbutton{
     border-radius: 50%;
     position: relative;
     overflow: hidden;
+    margin-left: 20px;
 }
 
 .tank-water {
@@ -864,7 +865,7 @@ a.addbutton{
 
 .timer{
     margin-top:10px;
-    margin-left: -106px;
+    margin-left: -126px;
 }
 
 /* Positioning the water tank image: */
