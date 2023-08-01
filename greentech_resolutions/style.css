@@ -797,8 +797,8 @@ a.addbutton{
 }
 
 .tank-card h5 {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-top: 20px;
     color: #000546; 
 }
 
@@ -864,7 +864,6 @@ a.addbutton{
 }
 
 .timer{
-    margin-top:10px;
     margin-left: -126px;
 }
 

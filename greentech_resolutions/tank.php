@@ -74,7 +74,7 @@
         <div class="spacing" style="height:80px;"></div>
         <div class="form-page">
             <!-- Water Tank Image: -->
-            <img src="https://www.pngmart.com/files/15/Aquarium-Fish-Tank-PNG-Free-Download.png" alt="Water Tank" class="water-tank-img">
+            <img src="images/tank-img.png" alt="Water Tank" class="water-tank-img">
 
             <div class="tank-card">
                 <table>
@@ -86,11 +86,14 @@
                         </td>
                         <td>
                             <h2 style="margin-left: -50px;">WATER LEVEL</h2> <!-- WATER LEVEL: -->
-                            <h5 style="margin-left: -50px;">50%</h5>
+                            <div style="display:flex; align-items:center;">
+                                <h5 style="margin-left: -50px;">50%</h5>
+                                <button onclick="setFishFeederTimer()" style="width: 80%; display: initial; margin-left: 40px; margin-top:20px;">CHECK LEVEL</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
+                            </div>
                         </td>
                     </tr>
                 </table>
-                <button id="pumpButton" onclick="togglePump()" style="margin-top: 50px;" >TURN PUMP ON</button> <!-- WATER PUMP BUTTON: -->
+                <button id="pumpButton" onclick="togglePump()" style="margin-top: 20px;" >TURN PUMP ON</button> <!-- WATER PUMP BUTTON: -->
             </div>
 
             <div class="tank-card">
@@ -130,7 +133,7 @@
                                 <!--Setting feeding time-->
                                 <div class="fish-feeder">
                                     <input type="time" id="feedTimeInput" class="feedFishTimer"><!-- Store Time -->
-                                    <button onclick="setFishFeederTimer()" style="width: 120%; display: initial; margin-right: -5px;">SET REMINDER</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
+                                    <button onclick="setFishFeederTimer()" style="width: 120%; display: initial; margin-right: 5px;">SET REMINDER</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
                                 </div>
                                 <div class="timer">00:00:00</div>   <!-- COUNTDOWN TIMER: -->
                             </h5>
