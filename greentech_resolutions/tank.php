@@ -106,7 +106,7 @@
                         </td>
                     </tr>
                 </table>
-                <button style="margin-top: 34px;">NEUTRALIZE</button> <!-- PH LEVEL BUTTON (UNUSED FEATURE) -->
+                <button onclick="showComingSoonMessage()" style="margin-top: 34px;">NEUTRALIZE</button> <!-- PH LEVEL BUTTON (UNUSED FEATURE) -->
             </div>
 
             <div class="tank-card">

@@ -595,6 +595,10 @@
     var button2 = document.getElementById("plant2"); // Get the button2 element:
     var button3 = document.getElementById("plant3"); // Get the button3 element:
 
+    //Function to show a coming soon message when clicking on the ph button:
+    function showComingSoonMessage() {
+        alert("This Feature Is Coming Soon!");
+    }
 
     /* AJAX CODE FOR PLANT.PHP: */
     /* Putting led on and off: */
