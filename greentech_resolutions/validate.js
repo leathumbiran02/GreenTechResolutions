@@ -578,7 +578,7 @@
 
         // Send the command to the Arduino based on the current LED state:
         var command = ledState ? 'a' : 'b';
-        turnLedOnOff(command);
+        turnLedOnOffOnEsp32(command);
 
         // Revert the button text if no response received after 1 second:
         setTimeout(function() {
@@ -601,8 +601,8 @@
     }
 
     /* AJAX CODE FOR PLANT.PHP: */
-    /* Putting led on and off: */
-    function turnLedOnOff(command) {
+    /* Putting led on and off on Arduino: */
+    /* function turnLedOnOff(command) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'control_arduino.php?cmd=' + command, true);
         xhr.onload = function() {
@@ -614,6 +614,39 @@
         };
 
         xhr.send();
+    } */
+
+    /* Putting led on and off on ESP32: */
+    function turnLedOnOffOnEsp32(){
+        sendToESP32(command, function(response) {
+            if (response === 'OK') {
+                // Success! Do any additional handling if needed.
+            } else {
+                // Request failed or received an unexpected response.
+                // You can handle the error condition here.
+            }
+        });
+    }
+
+    /* Function to send command to ESP32 */
+    function sendToESP32(command, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://192.168.3.7/sendCommand', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var response = xhr.responseText;
+                if (typeof callback === 'function') {
+                    callback(response);
+                }
+            } else {
+                if (typeof callback === 'function') {
+                    callback(null);
+                }
+            }
+        };
+
+        xhr.send('command=' + encodeURIComponent(command));
     }
 
     /* Planting the plants based on the cup selected: */
