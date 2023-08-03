@@ -616,19 +616,21 @@
         xhr.send();
     } */
 
-    /* Putting led on and off on ESP32: */
-    function turnLedOnOffOnEsp32(){
+    /* Putting led on and off: */
+    function turnLedOnOffOnEsp32(command){
         sendToESP32(command, function(response) {
             if (response === 'OK') {
                 // Success! Do any additional handling if needed.
+                console.log("Command successful. Response:", response);
             } else {
                 // Request failed or received an unexpected response.
                 // You can handle the error condition here.
+                console.log("Command failed. Response:", response); // Console log statement added
             }
         });
     }
 
-    /* Function to send command to ESP32 */
+    /* Function to send command to ESP32: */
     function sendToESP32(command, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'http://192.168.3.7/sendCommand', true);
