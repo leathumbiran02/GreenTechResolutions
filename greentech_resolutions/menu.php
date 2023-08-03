@@ -4,7 +4,7 @@
 <?php if(isset($_SESSION['users']) && $_SESSION['users'] == true): ?>
     <a href="plant.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
 <?php else: ?> <!-- Logo to navigate to the about us page when not logged in: -->
-    <a href="about_us.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
+    <a href="index.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
 <?php endif; ?>
 
 <!-- Creating a menu for mobile view: -->
@@ -37,7 +37,7 @@
                 </ul>
             </li>
         <?php else: ?> <!-- Display this menu for guest users only: -->
-            <li><a href="about_us.php">About Us</a></li>
+            <li><a href="index.php">About Us</a></li>
             <li><a href="partners.php">Partners</a></li>
             <li><a href="products.php">Products</a></li>
             <li><a href="contact_us.php">Contact Us</a></li>
