@@ -37,7 +37,7 @@
                 </ul>
             </li>
         <?php else: ?> <!-- Display this menu for guest users only: -->
-            <li><a href="index.php">About Us</a></li>
+            <li><a href="about_us.php">About Us</a></li>
             <li><a href="partners.php">Partners</a></li>
             <li><a href="products.php">Products</a></li>
             <li><a href="contact_us.php">Contact Us</a></li>
