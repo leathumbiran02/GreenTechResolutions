@@ -88,7 +88,7 @@
                             <h2 style="margin-left: -50px;">WATER LEVEL</h2> <!-- WATER LEVEL: -->
                             <div style="display:flex; align-items:center;">
                                 <h5 style="margin-left: -50px;">50%</h5>
-                                <button onclick="setFishFeederTimer()" style="width: 80%; display: initial; margin-left: 40px; margin-top:20px;">CHECK LEVEL</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
+                                <button style="width: 80%; display: initial; margin-left: 40px; margin-top:20px;">CHECK LEVEL</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
                             </div>
                         </td>
                     </tr>
@@ -119,7 +119,7 @@
                         </td>
                     </tr>
                 </table>
-                <button onclick="readTemperature()" style="margin-top: 34px;">READ TEMPERATURE</button> <!-- READ TEMPERATURE SENSOR BUTTON: -->
+                <button style="margin-top: 34px;">READ TEMPERATURE</button> <!-- READ TEMPERATURE SENSOR BUTTON: -->
             </div>
 
             <div class="tank-card">
@@ -140,7 +140,7 @@
                         </td>
                     </tr>
                 </table>
-                <button onclick="sendFeedFishCommandToArduino()">FEED FISH</button> <!-- FEED FISH BUTTON: -->
+                <button onclick="sendFeedFishCommandToESP32()">FEED FISH</button> <!-- FEED FISH BUTTON: -->
             </div>
         </div>
     <!-- Using an external javascript file for the buttons and timers: -->

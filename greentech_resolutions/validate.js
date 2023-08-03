@@ -1,5 +1,5 @@
 /* --------------------------------------------------LOGIN_REGISTER.PHP JAVASCRIPT:------------------------------------------------------------------------------------ */
-    //Variables used for login_register.php to shift the 2 forms:
+    //Variables used for login_register.php to shift the 2 forms from left to right:
     var x=document.getElementById("login");
     var y=document.getElementById("register");
     var z=document.getElementById("btn");
@@ -106,7 +106,7 @@
             return false;
         }
 
-        var reasonSelect = document.getElementById("reasonSelect");
+        var reasonSelect = document.getElementById("reasonSelect"); /* Define a variable for storing the reason selected in the form: */
 
         if(reasonSelect.value === ""){ //If reason for contacting is empty:
             alert("Please select a reason for contacting.");
@@ -115,7 +115,7 @@
         }
         if(reasonSelect.value === "Other"){//If they selected Other:
 
-            var otherReasonInput = document.getElementById("otherReasonInput");
+            var otherReasonInput = document.getElementById("otherReasonInput"); /* Define a variable for storing the other reason: */
 
             if(otherReasonInput.value.trim() == ""){ //If they didn't type anything in the Other text box:
                 alert("Please specify the reason for contacting us.");
@@ -131,9 +131,9 @@
         var otherReasonInput = document.getElementById('otherReasonInput');
 
         if(reasonSelect.value === "Other"){
-            otherReasonInput.style.display = 'block';
+            otherReasonInput.style.display = 'block'; /* Display the block when selecting Other: */
         }else{
-            otherReasonInput.style.display = 'none';
+            otherReasonInput.style.display = 'none'; /* Hide the block if other is not selected: */
         }
     }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
@@ -248,7 +248,7 @@
     //function to shift between the fish and plant page:
     var t=document.getElementById("btn");
 
-    function fish(){ /* If the user clicks on Login, shift the form into view and hide the other form: */
+    function fish(){ /* If the user clicks on fish, shift the form into view and hide the other form: */
         t.style.left = "0";
 
         //Fetch the fish from the server and update the page:
@@ -264,24 +264,24 @@
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 
 /* --------------------------------------------------TANK.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
-    // Function to set the fish feeder timer based on user input:
+    //Function to set the fish feeder timer based on user input:
     function setFishFeederTimer() {
         let feedTimeInput = document.getElementById("feedTimeInput").value;
         let currentTime = new Date();
         let feedTime = new Date(currentTime.toDateString() + " " + feedTimeInput);
     
-        // If the user has selected a time in the past, set the timer for the next day:
+        //If the user has selected a time in the past, set the timer for the next day:
         if (feedTime.getTime() <= currentTime.getTime()) {
             feedTime.setDate(feedTime.getDate() + 1);
         }
     
-        // Calculate the time difference in milliseconds:
+        //Calculate the time difference in milliseconds:
         let timerDuration = feedTime.getTime() - currentTime.getTime();
     
-        // Update the displayed timer value without starting the timer:
+        //Update the displayed timer value without starting the timer:
         updateDisplayedTimerValue(feedTime.getTime());
     
-        // Store the timer value in LocalStorage:
+        //Store the timer value in LocalStorage:
         localStorage.setItem("fishFeederTimer", feedTime.getTime());
     
         //Send an AJAX request to the server to update the database:
@@ -290,10 +290,10 @@
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            // Request successful:
+            //Request is successful:
             let updatedTimerValue = xhr.responseText; //Get the response from update_timer.php:
             if(updatedTimerValue){
-                // Update the timer with the updated value:
+                //Update the timer with the updated value:
                 startTimer(parseInt(updatedTimerValue));
                 //Update the value in localStorage:
                 localStorage.setItem("fishFeederTimer", updatedTimerValue);
@@ -303,12 +303,12 @@
         xhr.send("timerValue=" + feedTime.getTime());
     }
 
-    // Function to update the timer based on the fetched value:
+    //Function to update the timer based on the fetched value:
     function updateTimerWithFetchedValue(timerValue) {
         let currentTime = new Date().getTime();
         let remainingTime = timerValue - currentTime;
     
-        if (remainingTime < 0) { // Timer has ended:
+        if (remainingTime < 0) { //Timer has ended:
             document.querySelector(".timer").textContent = "It's time to feed the fish!";
         } else {
                 let hours = Math.floor(remainingTime / (1000 * 60 * 60));
@@ -319,36 +319,36 @@
                 minutes = minutes < 10 ? "0" + minutes : minutes;
                 seconds = seconds < 10 ? "0" + seconds : seconds;
     
-                // Display the timer:
+                //Display the timer:
                 document.querySelector(".timer").textContent = hours + ":" + minutes + ":" + seconds;
             }
     
-        // Start the timer with the updated value:
+        //Start the timer with the updated value:
         startTimer(timerValue);
     }
      
-    // Add an event listener to fetch the timer value and update the timer once the page is loaded:
+    //Add an event listener to fetch the timer value and update the timer once the page is loaded:
     window.addEventListener("load", function() {
-        // Check if the timer value is stored in LocalStorage:
+        //Check if the timer value is stored in LocalStorage:
         let storedTimerValue = localStorage.getItem("fishFeederTimer");
 
         if (storedTimerValue) {
             let currentTime = new Date().getTime();
             let timerValue = parseInt(storedTimerValue);
     
-            // Check if the timer has already ended
+            //Check if the timer has already ended
             if (timerValue <= currentTime) {
-                // Timer has already ended, reset for the next day
+                //Timer has already ended, reset for the next day
                 let nextDay = new Date(timerValue);
                 nextDay.setDate(nextDay.getDate() + 1);
                 startTimer(nextDay.getTime());
             } else {
-                // Timer is still running, update the timer based on the fetched value:
+                //Timer is still running, update the timer based on the fetched value:
                 updateDisplayedTimerValue(timerValue);
-                // Start the timer with the fetched value:
+                //Start the timer with the fetched value:
                 startTimer(timerValue);
             }
-        } else { // If the timer value is not found in LocalStorage, fetch it from the server:
+        } else { //If the timer value is not found in LocalStorage, fetch it from the server:
             let xhr = new XMLHttpRequest();
             xhr.open("GET", "get_timer.php", true);
             xhr.onreadystatechange = function () {
@@ -368,15 +368,15 @@
         }
     });
 
-    // Global variable to hold the timer interval ID:
+    //Global variable to hold the timer interval ID:
     let timerInterval;
 
-    // Function to update the displayed timer value without starting the timer:
+    //Function to update the displayed timer value without starting the timer:
     function updateDisplayedTimerValue(timerValue) {
         let currentTime = new Date().getTime();
         let remainingTime = timerValue - currentTime;
 
-        if (remainingTime < 0) { // Timer has ended:
+        if (remainingTime < 0) { //Timer has ended:
             document.querySelector(".timer").textContent = "It's time to feed the fish!";
         } else {
             let hours = Math.floor(remainingTime / (1000 * 60 * 60));
@@ -392,21 +392,21 @@
         }
     }
 
-    // Timer function:
+    //Timer function:
     function startTimer(targetTime) {
         function updateTimer() {
             let currentTime = new Date().getTime();
             let remainingTime = targetTime - currentTime;
 
             if (remainingTime < 1000) {
-                // Timer has ended
+                //Timer has ended:
                 clearInterval(timerInterval);
                 document.querySelector(".timer").textContent = "It's time to feed the fish!";
                 // Display the message for 10 seconds (10,000 milliseconds) before resetting the timer:
                 setTimeout(() => {
-                    sendFeedFishCommandToArduino(); /* Call the function to feed the fish: */
+                    sendFeedFishCommandToESP32(); /* Call the function to feed the fish: */
                     document.querySelector(".timer").textContent = "00:00:00";
-                    // Restart the timer for the next day using the previous targetTime value:
+                    //Restart the timer for the next day using the previous targetTime value:
                     let nextDay = new Date(targetTime);
                     nextDay.setDate(nextDay.getDate() + 1);
                     startTimer(nextDay.getTime());
@@ -420,25 +420,25 @@
                 minutes = minutes < 10 ? "0" + minutes : minutes;
                 seconds = seconds < 10 ? "0" + seconds : seconds;
 
-                // Display the timer
+                //Display the timer:
                 document.querySelector(".timer").textContent = hours + ":" + minutes + ":" + seconds;
             }
 
-            // Store the fetched value in LocalStorage:
-            localStorage.setItem("fishFeederTimer", targetTime); // Updated from timerValue to targetTime:
+            //Store the fetched value in LocalStorage:
+            localStorage.setItem("fishFeederTimer", targetTime); 
         }
 
-        // Call the updateTimer immediately to show the initial timer value:
+        //Call the updateTimer immediately to show the initial timer value:
         updateTimer();
 
-        // Clear the previous timer interval if it exists:
+        //Clear the previous timer interval if it exists:
         clearInterval(timerInterval);
 
-        updateTimer(); // Update immediately to avoid the initial 1-second delay:
-        timerInterval = setInterval(updateTimer, 1000); // Update every second:
+        updateTimer(); //Update immediately to avoid the initial 1-second delay:
+        timerInterval = setInterval(updateTimer, 1000); //Update every second:
 
-        // Store the fetched value in LocalStorage:
-        localStorage.setItem("fishFeederTimer", targetTime); // Updated from timerValue to targetTime:
+        //Store the fetched value in LocalStorage:
+        localStorage.setItem("fishFeederTimer", targetTime); //Updated from timerValue to targetTime:
     }
 
     //Function to change the text for the water pump when it is put on and off:
@@ -449,16 +449,16 @@
     function togglePump() { 
         pumpState = !pumpState; 
         var buttonText = pumpState ? "ON" : "OFF";
-        pumpButton.textContent = "TURN PUMP " + buttonText; // Update the button text immediately:
+        pumpButton.textContent = "TURN PUMP " + buttonText; //Update the button text immediately:
 
-        // Send the command to the Arduino based on the current water pump state:
+        //Send the command to the Arduino based on the current water pump state:
         var command = pumpState ? '6' : '5';
         toggleWaterPump(command);
 
-        // Revert the button text if no response received after 1 second:
+        //Revert the button text if no response received after 1 second:
         setTimeout(function() {
             var currentText = pumpButton.textContent;
-            var newText = pumpState ? "OFF" : "ON"; // Use the correct newText based on pumpState
+            var newText = pumpState ? "OFF" : "ON"; //Use the correct newText based on pumpState:
             if (currentText === "TURN PUMP ON" || currentText === "TURN PUMP OFF") {
                 pumpButton.textContent = "TURN PUMP " + newText;
             } 
@@ -466,7 +466,7 @@
     }
 
     /* AJAX CODE FOR TANK.PHP: */
-    /* Checking temperature reading: */
+    /* //Checking temperature reading on Arduino [OLD]:
     function readTemperature() {
         // Send AJAX request to fetch temperature from control_arduino.php
         var xhttp = new XMLHttpRequest();
@@ -482,10 +482,10 @@
 
         xhttp.open("GET", "control_arduino.php?cmd=c", true);
         xhttp.send();
-    }
+    } */
 
-    /* Putting fish feeder on and off: */
-    function sendFeedFishCommandToArduino(){
+    /* Putting fish feeder on and off on Arduino [OLD]: */
+    /* function sendFeedFishCommandToArduino(){
         // Send AJAX request to control_arduino.php to send the command "8"
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -496,10 +496,24 @@
         
         xhttp.open("GET", "control_arduino.php?cmd=8", true);
         xhttp.send();
+    } */
+
+    /* Putting fish feeder on and off on ESP32: */
+    function sendFeedFishCommandToESP32() {
+        //Send the command "8" to the ESP32:
+        sendToESP32('8', function(response) {
+            if (response === 'OK') {
+                //Success:
+                console.log("Command successful. Response:", response);
+            } else {
+                //Failed:
+                console.log("Command failed. Response:", response); //Console log statement for debugging purposes:
+            }
+        });
     }
 
-    /* Function to turn water pump on and off: */
-    function toggleWaterPump(command) {
+    /* Function to turn water pump on and off on Arduino [OLD]: */
+    /* function toggleWaterPump(command) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'control_arduino.php?cmd=' + command, true);
         xhr.onload = function() {
@@ -511,7 +525,23 @@
         };
 
         xhr.send();
+    } */
+
+    // Function to turn water pump on and off on ESP32:
+    function toggleWaterPump(command) {
+        // Send the command to the ESP32 based on the command:
+        sendToESP32(command, function(response) {
+            if (response === 'OK') {
+                // Success! Do any additional handling if needed.
+                console.log("Command successful. Response:", response);
+            } else {
+                // Request failed or received an unexpected response.
+                // You can handle the error condition here.
+                console.log("Command failed. Response:", response); // Console log statement added
+            }
+        });
     }
+
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 
 /* --------------------------------------------------LEARN.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
@@ -533,7 +563,7 @@
         }
     }
 
-    //function to shift between the fish and plant page:
+    //Function to shift between the fish and plant page:
     function learn_about_plants(){ 
         t.style.left = "110px";
 
@@ -548,7 +578,7 @@
             });
     }  
 
-    //function to shift between the fish and plant page:
+    //Function to shift between the fish and plant page:
     var t=document.getElementById("btn");
 
     function learn_about_fish(){ /* If the user clicks on Login, shift the form into view and hide the other form: */
@@ -567,20 +597,20 @@
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 
 /* --------------------------------------------------PLANT.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
-    var ledState = false; // Variable to store the state of the LED (OFF by default):
-    var button = document.getElementById("ledButton"); // Get the button element:
+    var ledState = false; //Variable to store the state of the LED (OFF by default):
+    var button = document.getElementById("ledButton"); //Get the button element:
 
     /* CHANGE TEXT FOR TURNING LED ON AND OFF: */
     function toggleLED() { 
         ledState = !ledState; 
         var buttonText = ledState ? "ON" : "OFF";
-        button.textContent = "Turn " + buttonText; // Update the button text immediately:
+        button.textContent = "Turn " + buttonText; //Update the button text immediately:
 
-        // Send the command to the Arduino based on the current LED state:
+        //Send the command to the Arduino based on the current LED state:
         var command = ledState ? 'a' : 'b';
         turnLedOnOffOnEsp32(command);
 
-        // Revert the button text if no response received after 1 second:
+        //Revert the button text if no response received after 1 second:
         setTimeout(function() {
             var currentText = button.textContent;
             if (currentText === "Turn ON" || currentText === "Turn OFF") {
@@ -601,7 +631,7 @@
     }
 
     /* AJAX CODE FOR PLANT.PHP: */
-    /* Putting led on and off on Arduino: */
+    /* Putting led on and off on Arduino [OLD]: */
     /* function turnLedOnOff(command) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'control_arduino.php?cmd=' + command, true);
@@ -616,21 +646,20 @@
         xhr.send();
     } */
 
-    /* Putting led on and off: */
+    /*Putting led on and off on ESP32: */
     function turnLedOnOffOnEsp32(command){
         sendToESP32(command, function(response) {
             if (response === 'OK') {
-                // Success! Do any additional handling if needed.
+                // Success:
                 console.log("Command successful. Response:", response);
             } else {
-                // Request failed or received an unexpected response.
-                // You can handle the error condition here.
-                console.log("Command failed. Response:", response); // Console log statement added
+                //Failed:
+                console.log("Command failed. Response:", response); // Console log statement for debugging:
             }
         });
     }
 
-    /* Function to send command to ESP32: */
+    /*Function to send command to ESP32: */
     function sendToESP32(command, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'http://192.168.8.114/sendCommand', true);
@@ -651,8 +680,8 @@
         xhr.send('command=' + encodeURIComponent(command));
     }
 
-    /* Planting the plants based on the cup selected: */
-    function sendPlantingPlantCommandToArduino(plantNumber){
+    /* Planting the plants based on the cup selected to the Arduino [OLD]: */
+    /* function sendPlantingPlantCommandToArduino(plantNumber){
         // Send AJAX request to control_arduino.php to send the command "8"
         var command = plantNumber;
         var xhttp = new XMLHttpRequest();
@@ -664,5 +693,21 @@
         
         xhttp.open("GET", "control_arduino.php?cmd=" + command, true);
         xhttp.send();
+    } */
+
+    /* Planting the plants based on the cup selected to ESP32: */
+    function sendPlantingPlantCommandToESP32(plantNumber) {
+        // Send the command to the ESP32 based on the plantNumber:
+        var command = plantNumber.toString();
+        sendToESP32(command, function(response) {
+            if (response === 'OK') {
+                // Success! Do any additional handling if needed:
+                console.log("Command successful. Response:", response);
+            } else {
+                // Request failed or received an unexpected response:
+                // You can handle the error condition here:
+                console.log("Command failed. Response:", response); // Console log statement added:
+            }
+        });
     }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 

@@ -150,9 +150,9 @@
 
                                 <!-- First column of labels -->
                                 <div class="grid-item label label-left">1</div> <!-- Label "1" in the left column -->
-                                <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" id="plant1" onclick="sendPlantingPlantCommandToArduino(1)"></div> <!-- Content in the cell corresponding to row 1 and column "A" -->
-                                <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" id="plant2" onclick="sendPlantingPlantCommandToArduino(2)"></div> <!-- Content in the cell corresponding to row 1 and column "B" -->
-                                <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" id ="plant3" onclick="sendPlantingPlantCommandToArduino(3)"></div> <!-- Content in the cell corresponding to row 1 and column "C" -->
+                                <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" id="plant1" onclick="sendPlantingPlantCommandToESP32(1)"></div> <!-- Content in the cell corresponding to row 1 and column "A" -->
+                                <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" id="plant2" onclick="sendPlantingPlantCommandToESP32(2)"></div> <!-- Content in the cell corresponding to row 1 and column "B" -->
+                                <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" id ="plant3" onclick="sendPlantingPlantCommandToESP32(3)"></div> <!-- Content in the cell corresponding to row 1 and column "C" -->
 
                         </div>
                     </td>
