@@ -633,7 +633,7 @@
     /* Function to send command to ESP32: */
     function sendToESP32(command, callback) {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://192.168.3.7/sendCommand', true);
+        xhr.open('POST', 'http://192.168.8.114/sendCommand', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onload = function() {
             if (xhr.status === 200) {

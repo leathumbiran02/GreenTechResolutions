@@ -4,7 +4,7 @@
 
 #define espSerial Serial2 // Assuming you are using Serial2 for ESP32's TX and RX pins
 
-//Ip address of esp32 on mobile wifi: 192.168.1.114 (check)
+//Ip address of esp32 on mobile wifi: 192.168.8.114 (check)
 //Ip address of esp32 on home network: 192.168.3.7
 
 const char* ssid = "HUAWEI_E5577_CB36"; /* Wifi name */
