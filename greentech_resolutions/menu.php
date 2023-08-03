@@ -4,7 +4,7 @@
 <?php if(isset($_SESSION['users']) && $_SESSION['users'] == true): ?>
     <a href="plant.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
 <?php else: ?> <!-- Logo to navigate to the about us page when not logged in: -->
-    <a href="index.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
+    <a href="about_us.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
 <?php endif; ?>
 
 <!-- Creating a menu for mobile view: -->
