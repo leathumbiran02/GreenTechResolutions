@@ -13,6 +13,7 @@
 
         <!--Using a CSS style sheet for the page:-->
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
         <style>
             .hero{ /* Centering the text on the page: */
@@ -38,7 +39,7 @@
             .chat-page-toggle_register_login_btn{
                 font-size:40px;
                 padding: 0px 30px;
-                filter: drop-shadow(1px 1px 2px black);
+                filter: drop-shadow(1px 1px 10px black);
                 margin-bottom: 50px;
             }
             .hero h1{
@@ -51,6 +52,7 @@
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;
+                overflow: hidden;
             }
         </style>
     </head>
@@ -107,7 +109,6 @@
 
                     /* Displaying the user's account details, a manage account button and a logout button on the page: */
                     echo "<h1 class='chat-page-toggle_register_login_btn'><br>Account Details</h1>";
-                    echo "<a href='manage_bot_ip.php'><button class='addbutton'>Change BOT IP</button></a>";
                     echo "<div class='user-info'>";
                     echo    "<table class='user-info-table'>";
                     echo        "<tbody>";
@@ -116,7 +117,7 @@
                     echo                    "<th class='user-th'>Name:</th>";
                     echo                "</td>";
                     echo                "<td class='user-td'>";
-                    echo                    "$full_name";
+                    echo                    "$full_name <a href='manage_name.php'><i class='fas fa-leaf' style='color:#62f875'></i></a>";
                     echo                "</td>";
                     echo            "</tr>";
                     echo            "<tr>";
@@ -124,7 +125,7 @@
                     echo                    "<th class='user-th'>Email:</th>";
                     echo                "</td>";
                     echo                "<td class='user-td'>";
-                    echo                    "$email";
+                    echo                    "$email <a href='manage_email.php'><i class='fas fa-leaf' style='color:#62f875'></i></a>";
                     echo                "</td>";
                     echo            "</tr>";
                     echo            "<tr>";
@@ -132,7 +133,7 @@
                     echo                    "<th class='user-th'>BOT IP:</th>";
                     echo                "</td>";
                     echo                "<td class='user-td'>";
-                    echo                    "$bot_ip";
+                    echo                    "$bot_ip <a href='manage_bot_ip.php'><i class='fas fa-leaf' style='color:#62f875'></i></a>";
                     echo                "</td>";
                     echo            "</tr>";
                     echo        "</tbody>";
