@@ -330,7 +330,7 @@ th.user-th, td.user-td{
 }
 .chat-page-login_input_group input{
     color: #ffffff;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .chat-page-input_field{
@@ -342,6 +342,7 @@ th.user-th, td.user-td{
     background-color: #343A54;
     color: #ffffff;
     border: 3px solid black;
+    font-size: 15px;
 }
 
 .chat-page-submit_btn{
@@ -443,7 +444,7 @@ th.user-th, td.user-td{
 }
 
 .back-button{
-    color: #000000;
+    color: #ffffff;
     font-size: 18px;
     bottom:-25px;
     margin-left:40px;

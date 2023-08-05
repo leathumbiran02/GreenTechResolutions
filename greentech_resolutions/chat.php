@@ -43,7 +43,7 @@
                 include 'menu.php';
             ?>
         </header>
-        <div class="spacing" style="height:80px;"></div>
+        <div class="spacing" style="height:100px;"></div>
         <div class="form_page"> <!-- The body of the page: -->
             <div class="center-text"> <!-- Class to center the top heading: -->
                 <h1 class="chat-page-toggle_register_login_btn"><br>Chat with us! We'd love to hear your feedback or answer any questions that you may have.</h1><br>

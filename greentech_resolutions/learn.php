@@ -25,9 +25,12 @@
                 font-size:1.1em;
             } 
             .product{
-                background-color: #343A54;
                 opacity: 100%;
                 border: 3px solid #000000;
+                backdrop-filter: blur(5px);
+            }
+            .products{
+                background: url(images/account_background.jpg);
             }
             .register_login_btn_box{
                 margin:35px;
@@ -43,7 +46,7 @@
             .addbutton{
                 width: 20%;
                 border-radius: 30px;
-                border: 3px solid #000000;
+                border: none;
                 font-size: 20px;
                 color: black;
                 font-weight: bolder;

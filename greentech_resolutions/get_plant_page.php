@@ -25,10 +25,10 @@
     //Generate HTML code for the webpage to display the details about each plant:
     if($result->num_rows>0){ //If rows were found in the table:
 
-        echo    "<div class='products-row'>";
+        echo    "<div class='products-row' style='background: url(images/account_background.jpg);'>";
         
             while($row = $result->fetch_assoc()){
-                echo    "<div class='product' style='background-color:#343A54;'>";
+                echo    "<div class='product' style='background: none'>";
                 echo        "<img class='product-img' src='" . $row["image"] . "' alt='" . $row['plant_name'] . "'>"; /* Plant image: */
                 echo        "<div class='product-info'>";
                 echo            "<h3 class='product-title' style='color:#6cff7f; font-size:25px;'>" . $row["plant_name"] . "</h3>"; /* Plant name: */

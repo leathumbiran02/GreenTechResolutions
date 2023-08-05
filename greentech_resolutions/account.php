@@ -18,6 +18,7 @@
         <style>
             .hero{ /* Centering the text on the page: */
                 text-align: center;
+                backdrop-filter: blur(5px);
             }
             .addbutton { /* Button when clicking on BOT IP: */
                 background: linear-gradient(to right, #09BA20, #6cff7f);
@@ -47,12 +48,12 @@
             }
             body{ /* Adding a background image to the page: */
                 width: 100%;
-                padding: 20px;
                 background-image: url(images/account_background.jpg);
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;
                 overflow: hidden;
+                margin-top: 80px;
             }
         </style>
     </head>
@@ -109,6 +110,7 @@
 
                     /* Displaying the user's account details, a manage account button and a logout button on the page: */
                     echo "<h1 class='chat-page-toggle_register_login_btn'><br>Account Details</h1>";
+                    echo "<div class='spacing' style='margin-top:100px;'></div>";
                     echo "<div class='user-info'>";
                     echo    "<table class='user-info-table'>";
                     echo        "<tbody>";
