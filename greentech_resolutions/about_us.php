@@ -71,52 +71,48 @@
                 background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent gray background */
                 backdrop-filter: blur(5px);
             }
-
             .content h2 {
-            position: relative;
-            font-size: 25px;
-            text-align: center;
-            color: white;
-            border-radius: 10px;
-            padding: 10px;
-            margin-bottom: 0;  
-        }
-
-        .content h4 {
-            margin-top: 0px;
-            line-height: 2em;
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 10px;
-            color: white;
-            border-radius: 10px;
-            padding: 0px;
-            font-weight: normal;
-            padding-bottom: 0px;
-        }
-                .front {
+                position: relative;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+                border-radius: 10px;
+                padding: 10px;
+                margin-bottom: 0;  
+            }
+            .content h4 {
+                margin-top: 0px;
+                line-height: 2em;
+                font-size: 20px;
+                text-align: center;
+                margin-bottom: 10px;
+                color: white;
+                border-radius: 10px;
+                padding: 0px;
+                font-weight: normal;
+                padding-bottom: 0px;
+            }
+            .front {
                 z-index: 2;
                 background-size: cover;
-                }
+            }
 
-                .back {
+            .back {
                 background-color: white;
                 transform: rotateY(180deg);
                 z-index: 0;
                 padding-top: 10px;
                 background-size: cover;
-                }
+            }
 
-                .aboutUsFront,
-                .aboutUsBack{
-                    background-image: url(https://image.slidesdocs.com/responsive-images/background/green-science-technology-agriculture-farmland-powerpoint-background_d6a0dcbc2c__960_540.jpg);
-                }
-                .aquaponicsFront,
-                .aquaponicsBack{
-                    background-image: url(https://worldwaterreserve.com/wp-content/uploads/2018/11/Small-aquaponics-system-on-wooden-table-art.jpg);
-                }
+            .aboutUsFront, .aboutUsBack{
+                background-image: url(https://image.slidesdocs.com/responsive-images/background/green-science-technology-agriculture-farmland-powerpoint-background_d6a0dcbc2c__960_540.jpg);
+            }
+            .aquaponicsFront,.aquaponicsBack{
+                background-image: url(https://worldwaterreserve.com/wp-content/uploads/2018/11/Small-aquaponics-system-on-wooden-table-art.jpg);
+            }
 
-                .container button {
+            .container button {
                 display: center;
                 align-items: center;
                 justify-content: center;
@@ -133,15 +129,15 @@
                 padding-bottom: 20px;
             }
 
-                form {
+            form {
                 text-align: left;
-                }
+            }
 
-                .back h2 {
+            .back h2 {
                 margin: 0;
-                }
-                /* my button style  */
-                .white-mode {
+            }
+            /* my button style  */
+            .white-mode {
                 text-decoration: none;
                 padding: 7px 10px;
                 background-color: white;
@@ -151,21 +147,20 @@
                 position: fixed;
                 left: 15px;
                 bottom: 15px;
-                }
+            }
 
-                .white-mode:hover {
+            .white-mode:hover {
                 background-color: white;
                 color: white;
-                }
-                table {
-                    width: 80%;
-                    margin-top: 400px; /* Adjust the margin to move the table lower down */
-                    border-collapse: collapse;
-                }
-
-                td {
-                    padding: 5px; /* Adjust the padding to reduce space between td elements */
-                }
+            }
+            table {
+                width: 80%;
+                margin-top: 400px; /* Adjust the margin to move the table lower down */
+                border-collapse: collapse;
+            }
+            td {
+                padding: 5px; /* Adjust the padding to reduce space between td elements */
+            }
         </style>  
     </head>
     <body>
@@ -174,15 +169,16 @@
             <?php 
                 include 'menu.php';
             ?>
-        </header>  
+        </header> 
         <table>
             <tr>
                 <td>
+                    <div class="spacing" style="margin-top:-250px;"></div> 
                     <div class="container" id ="aboutUsID">
                         <div class="front aboutUsFront side">
                             <div class="content">
                                 <h2>About Us</h2> <!-- Changed from h1 to h2 -->
-                                <h4>Welcome to Green Tech Resolution, a company dedicated to sustainability and promoting eco-friendly practices. We aim to create a greener future using technology, education, and innovation.</h4> <!-- Changed from p to h4 -->
+                                <h4>Welcome to GreenTech Resolutions, a company dedicated to sustainability and promoting eco-friendly practices. We aim to create a greener future using technology, education and, innovation.</h4> <!-- Changed from p to h4 -->
                                 <button onclick="flipCardBack('aboutUsID')">Read More</button>
                             </div>
                         </div>
