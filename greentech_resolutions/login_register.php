@@ -8,9 +8,17 @@
         <link rel="stylesheet" href="style.css">
 
         <style>
+            body{ /* Adding a background image to the page: */
+            width: 100%;
+            padding: 20px;
+            background-image: url(images/login_background.jpg);
+            background-position:center;
+            background-size:cover;
+            background-attachment: fixed;
+            }
             p{
                 margin-top: 20px;
-                color: black;
+                color: white;
                 font-size: 22px;
                 font-weight: bold;
             }

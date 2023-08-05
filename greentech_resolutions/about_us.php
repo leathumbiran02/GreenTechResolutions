@@ -173,7 +173,7 @@
         <table>
             <tr>
                 <td>
-                    <div class="spacing" style="margin-top:-250px;"></div> 
+                    <div class="spacing" style="margin-top:-50px;"></div> 
                     <div class="container" id ="aboutUsID">
                         <div class="front aboutUsFront side">
                             <div class="content">
