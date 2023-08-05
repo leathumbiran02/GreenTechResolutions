@@ -31,7 +31,7 @@
                 include 'menu.php';
             ?>
         </header>
-        <div class="spacing" style="height:80px;"></div>
+        <div class="spacing" style="height:90px;"></div>
         <div class="form_page"> <!-- The body of the page: -->
             <div class="form-box"> <!-- The login and register form: -->
                 <div class="register_login_btn_box"> <!-- The buttons that switches between both the login and register form: -->
@@ -69,7 +69,7 @@
                 </form>
             </div>
             <footer style="filter:drop-shadow(1px 1px 3px black);"> <!-- Have a terms and conditions appear at the bottom of the page: -->
-                <div class="spacing" style="height:100px;"></div>
+                <div class="spacing" style="height:90px;"></div>
                 <div class="center-text">
                     <br><p style="font-size: 24px;"><i>Terms & Conditions: By creating an account you agree to share your full name, email address, and Bot IP with GreenTech Resolutions.</i></p>
                 </div>
