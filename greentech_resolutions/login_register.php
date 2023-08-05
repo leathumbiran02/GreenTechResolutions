@@ -9,12 +9,12 @@
 
         <style>
             body{ /* Adding a background image to the page: */
-            width: 100%;
-            padding: 20px;
-            background-image: url(images/login_background.jpg);
-            background-position:center;
-            background-size:cover;
-            background-attachment: fixed;
+                width: 100%;
+                padding: 20px;
+                background-image: url(images/login_background.jpg);
+                background-position:center;
+                background-size:cover;
+                background-attachment: fixed;
             }
             p{
                 margin-top: 20px;
@@ -68,10 +68,10 @@
                     <button type="submit" name="register_submit" class="submit_btn">Sign Up</button>       
                 </form>
             </div>
-            <footer> <!-- Have a terms and conditions appear at the bottom of the page: -->
-                <div class="spacing" style="height:120px;"></div>
+            <footer style="filter:drop-shadow(1px 1px 3px black);"> <!-- Have a terms and conditions appear at the bottom of the page: -->
+                <div class="spacing" style="height:100px;"></div>
                 <div class="center-text">
-                    <br><p><i>Terms & Conditions: By creating an account you agree to share your full name, email address, and Bot IP with GreenTech Resolutions.</i></p>
+                    <br><p style="font-size: 24px;"><i>Terms & Conditions: By creating an account you agree to share your full name, email address, and Bot IP with GreenTech Resolutions.</i></p>
                 </div>
             </footer>
         </div>     

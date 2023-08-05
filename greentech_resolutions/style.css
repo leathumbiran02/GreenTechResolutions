@@ -143,7 +143,7 @@ header label{
 /* Styling for the login and register form:*/
 .form-box{ /* For the form */
     width: 450px;
-    height:550px;
+    height:560px;
     position: relative;
     margin: 0 auto;
     background-color: #CED1D8;
@@ -870,7 +870,7 @@ a.addbutton{
 /* Positioning the water tank image: */
 .water-tank-img {
     position: absolute;
-    left: 400px;
+    left: 250px;
     width: 50em; 
     height: auto; 
     z-index: 1; 

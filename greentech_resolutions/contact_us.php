@@ -11,11 +11,23 @@
         <!--Using a CSS style sheet for the page-->
         <link rel="stylesheet" href="style.css">
         <style>
+            body{ /* Adding a background image to the page: */
+                width: 100%;
+                padding: 20px;
+                background-image: url(images/contact_us_background.jpg);
+                background-position:center;
+                background-size:cover;
+                background-attachment: fixed;
+                /* backdrop-filter: blur(2px); */
+            }
             p{
                 margin-top: 20px;
                 color: black;
                 font-size: 22px;
                 font-weight: bold;
+            }
+            a{
+                color: #62f875;
             }
         </style>
     </head>
@@ -26,11 +38,10 @@
                 include 'menu.php';
             ?>
         </header>
-        <div class="spacing" style="height:50px;"></div>
         <div class="form_page"> <!-- The body of the page: -->
             <div class="center-text">
-                <h1 class="contact-us-toggle_register_login_btn">Contact Us:</h1>
-                <h3 class="contact-us-toggle_register_login_btn">Head Office Address: <a href="https://goo.gl/maps/UNgsTJUgLagswkQE6">9 Concorde E Rd, Bedfordview Johannesburg</a><br><br> Phone Number: <a href="tel:+27746149038">+27 74 614 9038</a><br><br> Email Address: <a href="mailto:greentechresolutions@gmail.com">greentechresolutions@gmail.com</a><br></h3>
+                <h1 class="contact-us-toggle_register_login_btn" style="color:white; filter:drop-shadow(1px 1px 3px black);">Contact Us:</h1>
+                <h3 class="contact-us-toggle_register_login_btn" style="color:white; filter:drop-shadow(1px 1px 3px black);">Head Office Address: <a href="https://goo.gl/maps/UNgsTJUgLagswkQE6">9 Concorde E Rd, Bedfordview Johannesburg</a><br><br> Phone Number: <a href="tel:+27746149038">+27 74 614 9038</a><br><br> Email Address: <a href="mailto:greentechresolutions@gmail.com">greentechresolutions@gmail.com</a><br></h3>
             </div>
 
 
@@ -50,10 +61,10 @@
                     <button type="submit" name="contact_us_submit" class="contact-us-submit_btn">Confirm</button>
                 </form>
             </div>
-            <footer> <!-- Have a notice appear at the bottom of the page: -->
-                <div class="spacing" style="height:200px;"></div>
+            <footer style="filter:drop-shadow(1px 1px 3px black);"> <!-- Have a notice appear at the bottom of the page: -->
+                <div class="spacing" style="height:130px;"></div>
                 <div class="center-text">
-                    <br><p><i>Notice: All requests will be handled during working hours (8am-5pm) from Monday to Friday.</i></p>
+                    <br><p style="color:white; font-size: 24px;"><i>Notice: All requests will be handled during working hours (8am-5pm) from Monday to Friday.</i></p>
                 </div>
             </footer>
         </div>  
