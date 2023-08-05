@@ -72,55 +72,54 @@
             }
 
             .content h2 {
-            position: relative;
-            font-size: 25px;
-            text-align: center;
-            color: white;
-            border-radius: 10px;
-            padding: 10px;
-            margin-bottom: 0;  
-        }
+                position: relative;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+                border-radius: 10px;
+                padding: 10px;
+                margin-bottom: 0;  
+            }
 
-        .content h4 {
-            margin-top: 0px;
-            line-height: 2em;
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 10px;
-            color: white;
-            border-radius: 10px;
-            padding: 0px;
-            font-weight: normal;
-            padding-bottom: 0px;
-        }
-        .front {
-            z-index: 2;
-            background-size:100% 100%;
-        }
+            .content h4 {
+                margin-top: 0px;
+                line-height: 2em;
+                font-size: 20px;
+                text-align: center;
+                margin-bottom: 10px;
+                color: white;
+                border-radius: 10px;
+                padding: 0px;
+                font-weight: normal;
+                padding-bottom: 0px;
+            }
+            .front {
+                z-index: 2;
+                background-size:100% 100%;
+            }
 
-        .back {
-            background-color: white;
-            transform: rotateY(180deg);
-            z-index: 0;
-            padding-top: 10px;
-            background-size:100% 100%;
-        }
+            .back {
+                background-color: white;
+                transform: rotateY(180deg);
+                z-index: 0;
+                padding-top: 10px;
+                background-size:100% 100%;
+            }
 
-                .woolworthsFront,
-                .woolworthsBack{
-                    background-size:105% 125%;
-                    background-image: url(https://seeklogo.com/images/W/woolworths-logo-15149EA470-seeklogo.com.png);
-                }
-                .checkersFront,
-                .checkersBack{
-                    background-image: url(https://businesstech.co.za/news/wp-content/uploads/2019/07/Checkers.jpg);
-                }
-                .lightsOutFront,
-                .lightsOutBack{
-                    background-image: url(images/lightsOutLogo.jpg);
-                }
-
-                .container button {
+            .woolworthsFront,
+            .woolworthsBack{
+                background-size:105% 125%;
+                background-image: url(https://seeklogo.com/images/W/woolworths-logo-15149EA470-seeklogo.com.png);
+            }
+            .checkersFront,
+            .checkersBack{
+                background-image: url(images/checkersLogo.png);
+            }
+            .lightsOutFront,
+            .lightsOutBack{
+                background-image: url(images/lightsOutLogo.jpg);
+            }
+            .container button {
                 display: center;
                 align-items: center;
                 justify-content: center;
@@ -137,15 +136,15 @@
                 padding-bottom: 20px;
             }
 
-                form {
+            form {
                 text-align: left;
-                }
+            }
 
-                .back h2 {
+            .back h2 {
                 margin: 0;
-                }
-                /* my button style  */
-                .white-mode {
+            }
+
+            .white-mode {
                 text-decoration: none;
                 padding: 7px 10px;
                 background-color: white;
@@ -155,22 +154,21 @@
                 position: fixed;
                 left: 15px;
                 bottom: 15px;
-                }
+            }
 
-                .white-mode:hover {
+            .white-mode:hover {
                 background-color: white;
                 color: white;
-                }
-                table {
-                    width: 100%;
-                    margin-top: 0px; /* Adjust the margin to move the table lower down */
-                    border-collapse: collapse;
-                }
-
-                td {
-                    width: 30%; 
-                    padding: 5px; /* Adjust the padding to reduce space between td elements */
-                }
+            }
+            table {
+                width: 100%;
+                margin-top: 0px; /* Adjust the margin to move the table lower down */
+                border-collapse: collapse;
+            }
+            td {
+                width: 30%; 
+                padding: 5px; /* Adjust the padding to reduce space between td elements */
+            }
         </style>  
     </head>
     <body>
@@ -201,24 +199,6 @@
                     </div>
                 </td>
                 <td>
-                    <!-- Checkers -->
-                    <div class="container" id="checkers">
-                        <div class="front checkersFront side">
-                            <div class="content">
-                                <h2>CHECKERS</h2>
-                                <h4>Places a strong emphasis on sourcing fresh produce and other food products from local suppliers, which helps reduce carbon emissions linked to long-distance transportation.</h4>
-                                <button onclick="flipCardBack('checkers')">Read More</button>
-                            </div>
-                        </div>
-                        <div class="back checkersBack side">
-                            <div class="content">
-                                <h4>Checkers is a retail chain that prioritizes sustainability and eco-friendliness in their product offerings by supporting local farmers and promoting sustainable agriculture. They place a strong emphasis on sourcing fresh produce and other food products from local suppliers, which helps reduce carbon emissions linked to long-distance transportation.</h4> 
-                                <button onclick="flipCard('checkers')">Read Less</button>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-                <td>
                     <!-- LightsOut -->
                     <div class="container" id="lightsOut">
                         <div class="front lightsOutFront side">
@@ -232,6 +212,24 @@
                             <div class="content">
                                 <h4>Lights Out is a company that provides products to businesses and individuals that experience the effects of load-shedding.</h4> 
                                 <button onclick="flipCard('lightsOut')">Read Less</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- Checkers -->
+                    <div class="container" id="checkers">
+                        <div class="front checkersFront side">
+                            <div class="content">
+                                <h2>CHECKERS</h2>
+                                <h4>Places a strong emphasis on sourcing fresh produce and other food products from local suppliers, which helps reduce carbon emissions linked to long-distance transportation.</h4>
+                                <button onclick="flipCardBack('checkers')">Read More</button>
+                            </div>
+                        </div>
+                        <div class="back checkersBack side">
+                            <div class="content">
+                                <h4>Checkers is a retail chain that prioritizes sustainability and eco-friendliness in their product offerings by supporting local farmers and promoting sustainable agriculture. They place a strong emphasis on sourcing fresh produce and other food products from local suppliers, which helps reduce carbon emissions linked to long-distance transportation.</h4> 
+                                <button onclick="flipCard('checkers')">Read Less</button>
                             </div>
                         </div>
                     </div>
