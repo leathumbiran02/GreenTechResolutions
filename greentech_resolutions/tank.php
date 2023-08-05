@@ -85,10 +85,10 @@
                             </div>
                         </td>
                         <td>
-                            <h2 style="margin-left: -50px;">WATER LEVEL</h2> <!-- WATER LEVEL: -->
+                            <h2 style="margin-left: -90px;">WATER LEVEL</h2> <!-- WATER LEVEL: -->
                             <div style="display:flex; align-items:center;">
-                                <h5 style="margin-left: -50px;">50%</h5>
-                                <button style="width: 80%; display: initial; margin-left: 40px; margin-top:20px;">CHECK LEVEL</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
+                                <h5 style="margin-left: -85px;">Loading...</h5>
+                                <button style="width: 80%; display: initial; margin-left: 50px; margin-top:20px;">CHECK LEVEL</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
                             </div>
                         </td>
                     </tr>
@@ -101,8 +101,8 @@
                     <tr>
                         <td><i class="fas fa-flask" style="font-size: 50px; color: #00aaff; margin-top:30px; margin-left: 20px;"></i></td>
                         <td>
-                            <h2 style="margin-left: -50px;">PH LEVEL</h2> <!-- PH LEVEL: -->
-                            <h5 style="margin-left: -50px;">7</h5>
+                            <h2 style="margin-left: -90px;">PH LEVEL</h2> <!-- PH LEVEL: -->
+                            <h5 style="margin-left: -85px;">7</h5>
                         </td>
                     </tr>
                 </table>
@@ -114,8 +114,8 @@
                     <tr>
                         <td><i class="fas fa-thermometer-half" style="font-size: 50px; color: #00aaff; margin-top: 30px; margin-left: 22px;"></i></td>
                         <td>
-                            <h2 style="margin-left: -50px;">TEMPERATURE</h2>
-                            <h5 id="temperatureValue" style="margin-left: -50px;">Loading...</h5> <!-- Use "Loading..." as a placeholder until the value is fetched from the arduino: -->
+                            <h2 style="margin-left: -90px;">TEMPERATURE</h2>
+                            <h5 id="temperatureValue" style="margin-left: -85px;">Loading...</h5> <!-- Use "Loading..." as a placeholder until the value is fetched from the arduino: -->
                         </td>
                     </tr>
                 </table>
@@ -133,7 +133,7 @@
                                 <!--Setting feeding time-->
                                 <div class="fish-feeder">
                                     <input type="time" id="feedTimeInput" class="feedFishTimer"><!-- Store Time -->
-                                    <button onclick="setFishFeederTimer()" style="width: 120%; display: initial; margin-right: 5px;">SET REMINDER</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
+                                    <button onclick="setFishFeederTimer()" style="width: 120%; display: initial; margin-right: -2px;">SET REMINDER</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
                                 </div>
                                 <div class="timer">00:00:00</div>   <!-- COUNTDOWN TIMER: -->
                             </h5>
