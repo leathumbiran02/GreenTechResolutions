@@ -25,7 +25,7 @@
             body{ /* Adding a background image to the page: */
                 width: 100%;
                 padding: 20px;
-                background-image: url(images/contact_us_background.jpg);
+                background-image: url(images/chat_background.jpg);
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;
