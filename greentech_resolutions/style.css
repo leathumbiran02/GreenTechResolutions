@@ -767,6 +767,7 @@ a.addbutton{
     position: relative;
     perspective: 1000px;
     margin-right: 100px;
+    background: url(images/account_background.jpg);
 }
 
 .tank-card button {
@@ -775,8 +776,8 @@ a.addbutton{
     justify-content: center;
     width: 100%;
     height: 40px;
-    background-color: #343A54; 
-    color: white;
+    background-color: lightgreen; 
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -786,21 +787,21 @@ a.addbutton{
 }
 
 .tank-card button:hover {
-    background-color: #09BA20;
-    color: #000546; 
+    background-color: #00ffcf;
+    color: #000000; 
     border: 3px solid black;
 }
 
 .tank-card h2 {
     font-size: 20px;
     margin-top: 10px;
-    color: #000546; 
+    color: #ffffff; 
 }
 
 .tank-card h5 {
     font-size: 20px;
     margin-top: 20px;
-    color: #000546; 
+    color: #ffffff; 
 }
 
 .tank-first-row {
@@ -810,7 +811,7 @@ a.addbutton{
 .tank-water-level {
     width: 50px;
     height: 50px;
-    background-color: lightgray; /* lightgray background representing the container */
+    background-color: transparent;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
@@ -854,7 +855,7 @@ a.addbutton{
 
 .feedFishTimer{
     margin-right: 20px;
-    width: 100px;
+    width: 140px;
     padding: 5px 5px;
 }
 
@@ -865,7 +866,7 @@ a.addbutton{
 }
 
 .timer{
-    margin-left: -126px;
+    margin-left: -95px;
 }
 
 /* Positioning the water tank image: */

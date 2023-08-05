@@ -35,6 +35,7 @@
             /* Adjusting the position of the cards: */
             .form-page {
                 position: relative;
+                margin-top: -9px;
             }
 
             /* Adjusting the water tank image for mobile view: */
@@ -45,7 +46,7 @@
                     height: auto;
                     position: static; /* Reset position to allow normal flow on smaller screens: */
                     margin: 0 auto;
-                    margin-top:100px;
+                    margin-top:110px;
                 }
 
                 /* Center the cards horizontally on smaller screens: */

@@ -25,10 +25,10 @@
     //Generate HTML code for the webpage to display the details about each fish:
     if($result->num_rows>0){ //If rows were found in the table:
 
-        echo    "<div class='products-row' style='background: url(images/account_background.jpg);'>";
+        echo    "<div class='products-row' >";
         
             while($row = $result->fetch_assoc()){
-                echo    "<div class='product' style='background:none'>";
+                echo    "<div class='product'>";
                 echo        "<img class='product-img' src='" . $row["image"] . "' alt='" . $row['fish_name'] . "'>"; /* Fish image: */
                 echo        "<div class='product-info'>";
                 echo            "<h3 class='product-title' style='color:#6cff7f; font-size:25px;'>" . $row["fish_name"] . "</h3>"; /* Fish name: */

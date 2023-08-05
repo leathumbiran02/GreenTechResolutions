@@ -26,10 +26,7 @@
             } 
             .product{
                 opacity: 100%;
-                border: 3px solid #000000;
-                backdrop-filter: blur(5px);
-            }
-            .products{
+                border: 5px solid #000000;
                 background: url(images/account_background.jpg);
             }
             .register_login_btn_box{
@@ -50,6 +47,7 @@
                 font-size: 20px;
                 color: black;
                 font-weight: bolder;
+                border: 3px solid #000000;
             }
             .product-img{
                 border-radius: 15px;
