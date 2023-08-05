@@ -31,7 +31,7 @@
                 include 'menu.php';
             ?>
         </header>
-        <div class="spacing" style="height:200px;"></div>
+        <div class="spacing" style="height:80px;"></div>
         <div class="form_page"> <!-- The body of the page: -->
             <div class="form-box"> <!-- The login and register form: -->
                 <div class="register_login_btn_box"> <!-- The buttons that switches between both the login and register form: -->

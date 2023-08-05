@@ -45,6 +45,7 @@
                     height: auto;
                     position: static; /* Reset position to allow normal flow on smaller screens: */
                     margin: 0 auto;
+                    margin-top:100px;
                 }
 
                 /* Center the cards horizontally on smaller screens: */
@@ -70,8 +71,6 @@
             ?>
         </header>
 
-
-        <div class="spacing" style="height:80px;"></div>
         <div class="form-page">
             <!-- Water Tank Image: -->
             <img src="images/tank-img.png" alt="Water Tank" class="water-tank-img">
