@@ -38,9 +38,19 @@
             .chat-page-toggle_register_login_btn{
                 font-size:40px;
                 padding: 0px 30px;
+                filter: drop-shadow(1px 1px 2px black);
+                margin-bottom: 50px;
             }
             .hero h1{
-                color: #343A54;
+                color: white;
+            }
+            body{ /* Adding a background image to the page: */
+                width: 100%;
+                padding: 20px;
+                background-image: url(images/account_background.jpg);
+                background-position:center;
+                background-size:cover;
+                background-attachment: fixed;
             }
         </style>
     </head>
