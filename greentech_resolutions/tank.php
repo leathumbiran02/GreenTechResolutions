@@ -37,7 +37,9 @@
                 position: relative;
                 margin-top: -9px;
             }
-
+            /* body{
+                background-color: #90ee9030;
+            } */
             /* Adjusting the water tank image for mobile view: */
             @media (max-width: 1900px) {
                 .water-tank-img {
@@ -51,7 +53,7 @@
 
                 /* Center the cards horizontally on smaller screens: */
                 .tank-card {
-                    margin: 0 auto;
+                    margin: 10px auto;
                 }
                 
                 /* Center the image vertically on the screen: */
