@@ -22,6 +22,19 @@
                 border: 3px solid black;
                 color:black;
             }
+            body{ /* Adding a background image to the page: */
+                width: 100%;
+                padding: 20px;
+                background-image: url(images/contact_us_background.jpg);
+                background-position:center;
+                background-size:cover;
+                background-attachment: fixed;
+                /* backdrop-filter: blur(2px); */
+            }
+            .chat-page-toggle_register_login_btn{
+                color: #62f875;
+                filter:drop-shadow(1px 1px 3px black);
+            }
         </style>
     </head>
     <body>
@@ -30,7 +43,7 @@
                 include 'menu.php';
             ?>
         </header>
-        <div class="spacing" style="height:150px;"></div>
+        <div class="spacing" style="height:80px;"></div>
         <div class="form_page"> <!-- The body of the page: -->
             <div class="center-text"> <!-- Class to center the top heading: -->
                 <h1 class="chat-page-toggle_register_login_btn"><br>Chat with us! We'd love to hear your feedback or answer any questions that you may have.</h1><br>
