@@ -29,6 +29,11 @@
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
+                background-image: url(https://img.freepik.com/free-vector/realistic-dark-tropical-leaves-background_52683-32883.jpg?w=740&t=st=1691338036~exp=1691338636~hmac=88a9b1575bd34d423ef5940494b21c1bd17a9c4d56dd97b4f8438715c6201f50);
+                background-position:center;
+                background-size:cover;
+                background-attachment: fixed;
+                backdrop-filter: blur(2px);
             }
 
             .container {
@@ -177,7 +182,7 @@
             <?php 
                 include 'menu.php';
             ?>
-        </header>  
+        </header>
         <table>
             <tr>
                 <td>
