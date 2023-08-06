@@ -152,7 +152,7 @@
                     </div>
                     <div class="content">
                         <h2>INDOOR SYSTEM</h2>
-                        <button>Read More</button>
+                        <button>View More</button>
                     </div>
                 </td>
                 <td>
@@ -163,7 +163,7 @@
                     </div>
                     <div class="content">
                         <h2>INDOOR SYSTEM</h2>
-                        <button>Read More</button>
+                        <button>View More</button>
                     </div>
                 </td>
                 <td>
@@ -174,7 +174,7 @@
                     </div>
                     <div class="content">
                         <h2>OUTDOOR SYSTEM</h2>
-                        <button>Read More</button>
+                        <button>View More</button>
                     </div>
                 </td>
             </tr>
