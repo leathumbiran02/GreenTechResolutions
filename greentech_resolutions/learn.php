@@ -27,6 +27,9 @@
             .product{
                 opacity: 100%;
                 border: 5px solid #000000;
+                background: #010007eb;
+            }
+            .form-page{
                 background: url(images/account_background.jpg);
             }
             .register_login_btn_box{
@@ -39,6 +42,8 @@
             .chat-page-toggle_register_login_btn{
                 font-size:40px;
                 padding: 0px 30px;
+                color: white;
+                filter:drop-shadow(1px 1px 3px black);
             }
             .addbutton{
                 width: 20%;
@@ -52,6 +57,9 @@
             .product-img{
                 border-radius: 15px;
             }
+            .toggle_register_login_btn{
+                color: white;
+            }
 
             /* Testing a feature of locking certain elements when scrolling: */
             .center-text, .register_login_btn_box, .search-bar {
@@ -64,6 +72,9 @@
             max-height: calc(100vh - 350px);
             scroll-behavior: smooth;
             }
+            .blur_background{
+                backdrop-filter: blur(5px);
+            }
         </style>
     </head>
     <body>
@@ -75,26 +86,29 @@
         </header>
 
         <div class="form-page">
-            <div class="center-text"> <!-- Class to center the top heading: -->
-                <h1 class="chat-page-toggle_register_login_btn"><br>Educational</h1>
-            </div>
+            <div class="blur_background">
+                <div class="center-text"> <!-- Class to center the top heading: -->
+                    <h1 class="chat-page-toggle_register_login_btn"><br>Educational</h1>
+                </div>
 
-            <div class="register_login_btn_box" > <!-- The buttons that switches between both the login and register form: -->
-                <div id="btn"></div>
-                <button type="button" class="toggle_register_login_btn" onclick="learn_about_fish()">Fish</button> 
-                <button type="button" class="toggle_register_login_btn" onclick="learn_about_plants()">Plants</button> 
-            </div>
+                <div class="register_login_btn_box" > <!-- The buttons that switches between both the login and register form: -->
+                    <div id="btn"></div>
+                    <button type="button" class="toggle_register_login_btn" onclick="learn_about_fish()">Fish</button> 
+                    <button type="button" class="toggle_register_login_btn" onclick="learn_about_plants()">Plants</button> 
+                </div>
 
-            <div class="search-bar">
-                <input type="text" id="search" placeholder="Search products...">
-                <button type="button" class="search-bar-btn" onclick="searchProductsLearn()"><i class="fas fa-search"></i></button>
-            </div>
+                <div class="search-bar">
+                    <input type="text" id="search" placeholder="Search products...">
+                    <button type="button" class="search-bar-btn" onclick="searchProductsLearn()"><i class="fas fa-search"></i></button>
+                </div>
+           
 
-            <div id="products">
-                <!-- All the products from the database will be displayed here: -->
-                <?php 
-                include 'get_fish_page.php'; 
-                ?>
+                <div id="products">
+                    <!-- All the products from the database will be displayed here: -->
+                    <?php 
+                    include 'get_fish_page.php'; 
+                    ?>
+                </div>
             </div>
         </div>
 

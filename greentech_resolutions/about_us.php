@@ -31,7 +31,7 @@
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
-                background-image: url(https://www.pixelstalk.net/wp-content/uploads/images5/Original-Green-Aesthetic-Backgrounds.jpg);
+                background-image: url(images/about_us_background.jpg);
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;

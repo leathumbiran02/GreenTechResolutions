@@ -25,7 +25,7 @@
     //Generate HTML code for the webpage to display the details about each fish:
     if($result->num_rows>0){ //If rows were found in the table:
 
-        echo    "<div class='products-row' >";
+        echo    "<div class='products-row'>";
         
             while($row = $result->fetch_assoc()){
                 echo    "<div class='product'>";
