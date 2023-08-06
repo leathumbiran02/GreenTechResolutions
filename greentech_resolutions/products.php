@@ -21,10 +21,11 @@
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
-                background-image: url(https://img.freepik.com/free-vector/background-gradient-green-tones_23-2148360340.jpg?w=740&t=st=1691328607~exp=1691329207~hmac=ff61b043e7e12160cc6dc24d7e96b8f5a4c24750925d0c9d8cad38aca6eff884);
+                background-image: url(https://www.theaquaponicsource.com/wp-content/uploads/2020/05/Organic_Aquaponic_Vegetable-1200x484-1.jpg);
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;
+                backdrop-filter: blur(2px);
             }
 
             .container {
