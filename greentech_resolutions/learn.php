@@ -30,7 +30,7 @@
                 background: #010007eb;
             }
             .form-page{
-                background: url(images/account_background.jpg);
+                background: url(images/login_background.jpg);
             }
             .register_login_btn_box{
                 margin:35px;
