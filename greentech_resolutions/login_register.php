@@ -8,9 +8,6 @@
         <link rel="stylesheet" href="style.css">
 
         <style>
-            .hero{
-                backdrop-filter: blur(5px);
-            }
             body{ /* Adding a background image to the page: */
                 width: 100%;
                 background-image: url(images/login_background.jpg);
