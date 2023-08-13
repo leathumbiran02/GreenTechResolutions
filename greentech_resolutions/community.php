@@ -49,8 +49,7 @@
                 width: 20%;
                 border-radius: 30px;
                 border: 3px solid #000000;
-                font-size: 20px;
-                color: black;
+                color: white;
                 font-weight: bolder;
             }
             .product-img{

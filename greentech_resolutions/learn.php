@@ -49,8 +49,6 @@
                 width: 20%;
                 border-radius: 30px;
                 border: none;
-                font-size: 20px;
-                color: black;
                 font-weight: bolder;
                 border: 3px solid #000000;
             }

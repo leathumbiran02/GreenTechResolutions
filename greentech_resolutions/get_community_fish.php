@@ -34,7 +34,7 @@
                 echo            "<h3 class='product-title' style='color:#6cff7f; font-size: 25px;'>" . $row["fish_name"] . "</h3>"; /* Fish name: */
                 echo            "<h3 class='product-title' style='font-size: 22px;'>" . $row["description"] . "</h3>"; /* Fish Description: */
                 echo            "<span class='product-price-discount' style='font-size: 22px;'>R" . $row["price"] . "</span>"; /* Fish price: */
-                echo        "<a href='fish_details.php?id=" . $row["fish_id"] . "'><button class='addbutton' style='margin-top:10px;'>Buy</button></a>";
+                echo        "<a href='fish_details.php?id=" . $row["fish_id"] . "'><button class='addbutton' style='margin-top:10px;'>BUY</button></a>";
                 echo        "</div>";
                 echo    "</div>";
             }

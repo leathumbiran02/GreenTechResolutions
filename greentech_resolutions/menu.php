@@ -1,4 +1,5 @@
 <!-- This will be the code for the menu that appears on all pages in the website: -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 <!-- Adding a logo that navigates to the plant page when logged in: -->
 <?php if(isset($_SESSION['users']) && $_SESSION['users'] == true): ?>
@@ -35,6 +36,26 @@
                 <ul>
                     <li><a href="logout.php" onclick="return confirm('Are you sure that you want to logout?')">Logout</a></li>
                 </ul>
+            </li>
+            <li>
+                <a>
+                    <div class="cart-icon" onclick="toggleCartItems()">
+                            <i class="fas fa-shopping-cart fa-2x" style="font-size: 25px; margin-top: -2.5px;"></i>
+                            <ul class="cart-items">
+                            <!-- Cart items go here -->
+                                <li class="checkout" onclick="checkout()">Checkout</li>
+                                <li class="total-price hidden">Total: R0</li>
+                            </ul>
+                        </div>
+                        <ul class="cart-items hidden">
+                            <!-- Cart items go here -->
+                        </ul>
+                        <form id="checkout-form" method="post" action="save_cart_items.php">
+                            <input type="hidden" name="order_number" value="1">
+                            <input type="hidden" name="total_price" value="0">
+                            <button class="cart-items hidden" type="submit">Checkout</button>
+                        </form>
+                </a>
             </li>
         <?php else: ?> <!-- Display this menu for guest users only: -->
             <li><a href="about_us.php">About Us</a></li>
