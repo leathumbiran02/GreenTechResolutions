@@ -53,7 +53,7 @@
                         <form id="checkout-form" method="post" action="save_cart_items.php">
                             <input type="hidden" name="order_number" value="1">
                             <input type="hidden" name="total_price" value="0">
-                            <button class="cart-items hidden" type="submit">Checkout</button>
+                            <!-- <button class="cart-items hidden" type="submit">Checkout</button> -->
                         </form>
                 </a>
             </li>
