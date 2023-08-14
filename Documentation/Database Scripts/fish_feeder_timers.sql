@@ -31,7 +31,7 @@ CREATE TABLE `fish_feeder_timers` (
   `id` int NOT NULL,
   `user_email` varchar(255) NOT NULL,
   `timer_value` bigint NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `fish_feeder_timers`
