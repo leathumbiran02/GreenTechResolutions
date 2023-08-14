@@ -649,7 +649,7 @@ th.user-th, td.user-td{
 }
 
 .addbutton{ /* Button when clicking on fish */
-    background: linear-gradient(to right, #09BA20, #6cff7f);
+    background: linear-gradient(to right, #008f3f, #09BA20);
     cursor: pointer;
     display: block;
     padding: 3px;
@@ -763,11 +763,11 @@ a.addbutton{
     padding: 10px;
     border: 3px solid black;
     border-radius: 10px;
-    background-color: lightgray; 
+    background-color: #010007de; 
     position: relative;
     perspective: 1000px;
     margin-right: 100px;
-    background: url(images/account_background.jpg);
+    /* background: url(images/account_background.jpg); */
 }
 
 .tank-card button {
@@ -776,18 +776,17 @@ a.addbutton{
     justify-content: center;
     width: 100%;
     height: 40px;
-    background-color: lightgreen; 
-    color: rgb(0, 0, 0);
+    background: linear-gradient(to right, #008f3f, #09BA20);
+    color: rgb(255, 255, 255);
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bolder;
     border: 3px solid black;
 }
 
 .tank-card button:hover {
-    background-color: #00ffcf;
     color: #000000; 
     border: 3px solid black;
 }

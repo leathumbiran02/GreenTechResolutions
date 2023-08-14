@@ -138,7 +138,6 @@
     </head>
     <body>
         <header>
-            <!-- Including the file that contains the menu: -->
             <?php 
                 include 'menu.php';
             ?>
@@ -146,7 +145,6 @@
         <table>
             <tr>
                 <td>
-                    <!-- Woolworths -->
                     <div class="container" >
                         <div class="front indoor side">
                         </div>
@@ -157,7 +155,6 @@
                     </div>
                 </td>
                 <td>
-                    <!-- LightsOut -->
                     <div class="container">
                         <div class="front biggerIndoor side">
                         </div>
@@ -168,7 +165,6 @@
                     </div>
                 </td>
                 <td>
-                    <!-- Checkers -->
                     <div class="container" >
                         <div class="front outdoor side">
                         </div>

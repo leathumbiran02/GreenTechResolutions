@@ -711,3 +711,67 @@
         });
     }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
+
+/* Shop page cart test: Added on 12 August 2023: */
+    // Cart items array
+    let cartItems = [];
+
+    // Function to add item to cart
+    function addToCart(productName, price) {
+        const item = { productName, price };
+        cartItems.push(item);
+        updateCart();
+    }
+
+    // Function to remove item from cart
+    function removeFromCart(index) {
+        cartItems.splice(index, 1);
+        updateCart();
+    }
+
+    // Function to update the cart
+    function updateCart() {
+        const cartItemsContainer = document.querySelector(".cart-items");
+        cartItemsContainer.innerHTML = ""; // Clear the container before updating
+    
+        cartItems.forEach((item, index) => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+            ${item.productName} - R${item.price}
+            <span class="remove-item" onclick="removeFromCart(${index})">Remove</span>
+            `;
+            cartItemsContainer.appendChild(li);
+        });
+    
+        // Add the checkout button and total price to the cart items list
+        const checkoutButton = document.createElement("li");
+        checkoutButton.className = "checkout";
+        checkoutButton.textContent = "Checkout";
+        checkoutButton.onclick = checkout;
+
+        const totalPriceElement = document.querySelector(".total-price");
+        totalPriceElement.textContent = "Total: R" + calculateTotal();
+
+        cartItemsContainer.appendChild(checkoutButton);
+        cartItemsContainer.appendChild(totalPriceElement);
+    }
+
+    // Function to toggle cart items visibility
+    function toggleCartItems() {
+        const cartItemsContainer = document.querySelector(".cart-items");
+        const totalPriceElement = document.querySelector(".total-price");
+        
+        cartItemsContainer.classList.toggle("visible");
+        totalPriceElement.classList.toggle("visible");
+    }
+
+    // Function to calculate the total price
+    function calculateTotal() {
+        return cartItems.reduce((sum, item) => sum + item.price, 0);
+    }
+
+    // Function to handle the checkout process
+    function checkout() {
+        const total = calculateTotal();
+        // Your checkout logic here, e.g., redirect to checkout page or display a message
+    }

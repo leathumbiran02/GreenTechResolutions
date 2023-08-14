@@ -31,11 +31,10 @@
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
-                background-image: url(images/about_us_background.jpg);
+                background-image: url(https://www.pixelstalk.net/wp-content/uploads/images5/Original-Green-Aesthetic-Backgrounds.jpg);
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;
-                backdrop-filter: blur(2px);
             }
             
             .container {
@@ -117,6 +116,7 @@
                 background-image: url(https://worldwaterreserve.com/wp-content/uploads/2018/11/Small-aquaponics-system-on-wooden-table-art.jpg);
             }
             .aquaponicsBack{
+                background-size:100% 100%;
                 background-image: url(images/whatIsAquaponics.png);
             }
             
@@ -163,7 +163,7 @@
             }
             table {
                 width: 80%;
-                margin-top: 500px; /* Adjust the margin to move the table lower down */
+                margin-top: 250px; /* Adjust the margin to move the table lower down */
                 border-collapse: collapse;
             }
             td {
