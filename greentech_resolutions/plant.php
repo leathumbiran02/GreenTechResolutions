@@ -33,7 +33,7 @@
                 padding: 10px;
                 border: 3px solid black;
                 border-radius: 10px;
-                background-color: lightgray; /* Replace 'lightgray' with your preferred shade of gray */
+                background-color: #010007de; /* Replace 'lightgray' with your preferred shade of gray */
                 position: relative;
                 perspective: 1000px;
             }
@@ -43,17 +43,17 @@
                 justify-content: center;
                 width: 245px;
                 height: 40px;
-                background-color: #343A54; 
+                background: linear-gradient(to right, #008f3f, #09BA20); 
                 color: white;
                 border: none;
-                border-radius: 5px;
+                border-radius: 30px;
                 cursor: pointer;
                 font-size: 17px;
                 font-weight: bolder;
                 border: 3px solid black;
             }
             .card button:hover, td button:hover{
-                background-color: #09BA20; /* Change to your preferred background color on hover */
+                /* background-color: #09BA20; */ /* Change to your preferred background color on hover */
                 color: #000546; /* Change to your preferred text color on hover */
                 border: 3px solid black;
             }
@@ -64,7 +64,7 @@
                 font-size: 20px;
                 text-align: center;
                 margin-top: 10px;
-                color: #000546; 
+                color: white; 
             }
             .card h5 {
                 font-size: 16px;
