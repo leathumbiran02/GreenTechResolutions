@@ -9,14 +9,14 @@
 
 body{
     margin-top: 100px;
-    background-color: #4A4A4A;
+    background-color: #252525;
 }
 
 header{
     position: fixed;
-    top:15px;
-    left:35px;
-    right:35px;
+    top:35px;
+    left:50px;
+    right:50px;
     background: #4C4D5E; /* Color of the menu :) */
     padding:0px 1%;
     display: flex;
