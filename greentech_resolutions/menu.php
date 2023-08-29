@@ -3,14 +3,14 @@
 
 <!-- Adding a logo that navigates to the plant page when logged in: -->
 <?php if(isset($_SESSION['users']) && $_SESSION['users'] == true): ?>
-    <a href="plant.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
+    <a href="plant.php"><img class="logo" src="images/gtr-logo2.png" alt="GreenTechResolutions"></a>
 <?php else: ?> <!-- Logo to navigate to the about us page when not logged in: -->
-    <a href="about_us.php"><img class="logo" src="images/gtr-logo.png" alt="GreenTechResolutions"></a>
+    <a href="about_us.php"><img class="logo" src="images/gtr-logo2.png" alt="GreenTechResolutions"></a>
 <?php endif; ?>
 
 <!-- Creating a menu for mobile view: -->
 <input type="checkbox" id="menu-bar">
-<label for="menu-bar">Menu</label>
+<label for="menu-bar" style = "font-size: 35px;">&#9776;</label>
 
 <!--Creating a clickable menu that navigates to the various pages:-->
 <nav class="navbar">

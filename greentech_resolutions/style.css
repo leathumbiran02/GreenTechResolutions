@@ -9,34 +9,34 @@
 
 body{
     margin-top: 100px;
-    background-color:rgb(255, 255, 255);
+    background-color: #4A4A4A;
 }
 
 header{
     position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    background:rgb(255, 255, 255); /* Color of the menu :) */
-    padding:0px 7%;
+    top:15px;
+    left:35px;
+    right:35px;
+    background: #4C4D5E; /* Color of the menu :) */
+    padding:0px 1%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    height: 90px;
 }
 
 header .logo{ /* Styling the logo */
-    font-weight: bolder;
-    font-size: 25px;
     color: #09BA20;
-    width:80px;
+    width:160px;
     height:auto;
-    border-radius: 10px;
+    margin-bottom: 0px;
 }
 
 .menu-item{
     display: flex;
     align-items: center;
+    background: #4C4D5E;
 }
 
 header .navbar ul{
@@ -51,10 +51,10 @@ header .navbar ul li{
 header .navbar ul li a{
     font-size: 20px;
     padding:20px;
-    color: #000000;
+    color: #ffffff;
     display: block;
-    font-weight: bolder;
     text-transform: uppercase;
+    background-color: #4C4D5E;
 }
 
 header .navbar ul li a:hover{
@@ -82,7 +82,7 @@ header .navbar ul li ul{
     position: absolute;
     left:0;
     width: 200px;
-    background: #ffffff; /* changes colour of sub menu */
+    background-color: #4C4D5E; /* changes colour of sub menu */
     display:none;
 }
 
@@ -101,14 +101,14 @@ header .navbar ul li:focus-within > ul, header .navbar ul li:hover > ul{
 
 #menu-bar{
     display: none;
+    color: #4C4D5E;
 }
 
 header label{
     font-size: 20px;
-    color:#000000;
+    color:#ffffff;
     cursor: pointer;
     display:none;
-    font-weight: bolder;
 }
 
 .hero{
@@ -135,7 +135,7 @@ header label{
 }
 
 .main-header{
-    color:#fff;
+    color:#4C4D5E;
     padding: 20px;
     text-align: center;
 }
