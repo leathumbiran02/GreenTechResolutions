@@ -12,21 +12,21 @@
         <link rel="stylesheet" href="style.css">
 
         <style>
+            /*About us section*/
             .aboutUsSection {
                 display: flex;
                 align-items: center;
             }
-
             .personHoldingPlant {
                 max-width: 35%; /* Adjust the image width as needed */
                 margin-right: 20px; /* Add some spacing between the image and text */
                 height: auto;
                 padding: 50px;
             }
-            .text-content {
+            .aboutUsContent {
                 flex: 1; /* Allow the text to take up remaining space */
                 margin-left:-40px;
-                padding-right:35px;
+                padding-right:50px;
             }
             @media (max-width: 768px) {
                 .aboutUsSection {
@@ -39,12 +39,33 @@
                     padding: 50px; /* Adjust padding as needed */
                     padding-bottom: 25px;
                 }
-                .text-content {
+                .aboutUsContent {
                     flex: 1; /* Allow the text to take up remaining space */
                     margin-left: 0; /* Reset the margin for text content */
                     padding-right: 50px; /* Adjust padding as needed */
                     padding-left: 50px;
                 }
+            }
+            /*Aquaponics section*/
+            .aquaponicsSection{
+                background-color: #4C4D5E;
+            }
+            .aquaponicsContent{
+                background-color: #4C4D5E;
+                padding-right:50px;
+                padding-left:50px;
+                padding-bottom:20px;
+                padding-top:20px;/* Space in section above text */
+                margin-top:10px;/* Space above section */
+            }
+            .aquaponicsGallery {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .aquaponicsGallery img {
+                max-width: 30%;
+                height: auto;
             }
             h4, h2{
                 color: white;
@@ -67,8 +88,8 @@
             ?>
         </header> 
         <div class="aboutUsSection">
-            <img class="personHoldingPlant" src="images/about_us_holding_plant.jpg" alt="GreenTechResolutions">
-            <div class="text-content">
+            <img class="personHoldingPlant" src="images/about_us_holding_plant.jpg">
+            <div class="aboutUsContent">
                 <h2>ABOUT US</h2>
                 <h4><br>Welcome to GreenTech Resolutions, a company dedicated to
                 sustainability and promoting Eco-friendly practices.
@@ -87,6 +108,33 @@
                 </h4>
             </div>
         </div>
+        <div class="aquaponicsSection">
+            <div class="aquaponicsContent">
+                <h2>WHAT IS AQUAPONICS</h2>
+                <h4><br>Aquaponics is a sustainable farming method that combines
+                aquaculture (fish farming) and hydroponics (growing plants in
+                water) in a symbiotic system. In an aquaponics system, fish
+                waste provides nutrients for the plants, while the plants
+                naturally filter the water for the fish.
+                <br><br>
+                Aquaponics is a sustainable farming method that combines
+                aquaculture (fish farming) and hydroponics (growing plants in
+                water) in a symbiotic system. In an aquaponics system, fish
+                waste provides nutrients for the plants, while the plants
+                naturally filter the water for the fish. The fish waste, which
+                contains ammonia, is broken down by beneficial bacteria into
+                nitrates. These nitrates serve as fertilizer for the plants,
+                allowing them to grow without the need for soil. As the plants
+                absorb the nutrients, they purify the water, creating a clean
+                and healthy environment for the fish. Its advantages are that it
+                requires significantly less water compared to conventional
+                agriculture, as water is recycled within the system and it
+                eliminates the need for chemical fertilizers and pesticides,
+                promoting organic and sustainable food production.
+            </h4>
+            </div>  
+        </div>
+        
     </body>
 </html>
 
