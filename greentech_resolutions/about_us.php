@@ -94,7 +94,7 @@
                 }
 
                 .aquaponicDiagram {
-                    max-width: 70%; /* Adjust as needed for better layout */
+                    max-width: 50%; /* Adjust as needed for better layout */
                 }
             }
 
@@ -167,8 +167,8 @@
         </div>
         <div class="aquaponicsGallery">
             <img class="galleryImg1" src="images/aquaponicsGallery1.jpg" >
-            <img class="aquaponicDiagram" src="images/aquaponicsGallery2.JPG" >
-            <img class="galleryImg2" src="images/aquaponicsGallery3.JPG" >
+            <img class="aquaponicDiagram" src="images/aquaponicsDiagram.JPG" >
+            <img class="galleryImg2" src="images/aquaponicsGallery2.JPG" >
         </div>
     </body>
 </html>
