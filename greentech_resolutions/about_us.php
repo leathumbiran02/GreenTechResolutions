@@ -44,29 +44,60 @@
                     margin-left: 0; /* Reset the margin for text content */
                     padding-right: 50px; /* Adjust padding as needed */
                     padding-left: 50px;
+                    padding-bottom: 20px;
                 }
             }
             /*Aquaponics section*/
             .aquaponicsSection{
                 background-color: #4C4D5E;
+                padding-bottom: 20px;
             }
             .aquaponicsContent{
                 background-color: #4C4D5E;
                 padding-right:50px;
                 padding-left:50px;
                 padding-bottom:20px;
-                padding-top:20px;/* Space in section above text */
+                padding-top:30px;/* Space in section above text */
                 margin-top:10px;/* Space above section */
             }
             .aquaponicsGallery {
                 display: flex;
                 justify-content: space-between;
+                gap: 1rem; /* Add some gap between images */
             }
 
             .aquaponicsGallery img {
-                max-width: 30%;
+                max-height: 500px; /* Set a maximum height for all images */
+            }
+
+            .galleryImg1,
+            .galleryImg2 {
+                flex: 1; /* Distribute available space equally between these images */
+                width: 35%;
+                max-width: none; /* Remove the max-width restriction to allow bigger width */
+                max-height: none; /* Allow the image to use its natural height */
+            }
+
+            .aquaponicDiagram {
+                max-width: 30%; /* Adjust as needed */
                 height: auto;
             }
+            @media (max-width: 768px) {
+            /* Apply these styles when screen width is 768px or smaller */
+                .aquaponicsGallery {
+                    flex-direction: column; /* Stack images vertically */
+                    align-items: center; /* Center align images horizontally */
+                }
+
+                .aquaponicsGallery img {
+                    width: 100%; /* Make images take full width of the container */
+                }
+
+                .aquaponicDiagram {
+                    max-width: 70%; /* Adjust as needed for better layout */
+                }
+            }
+
             h4, h2{
                 color: white;
                 text-align: center; /* Center the text horizontally */
@@ -134,7 +165,11 @@
             </h4>
             </div>  
         </div>
-        
+        <div class="aquaponicsGallery">
+            <img class="galleryImg1" src="images/aquaponicsGallery1.jpg" >
+            <img class="aquaponicDiagram" src="images/aquaponicsGallery2.JPG" >
+            <img class="galleryImg2" src="images/aquaponicsGallery3.JPG" >
+        </div>
     </body>
 </html>
 
