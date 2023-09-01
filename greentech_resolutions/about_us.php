@@ -16,6 +16,7 @@
             .aboutUsSection {
                 display: flex;
                 align-items: center;
+                padding
             }
             .personHoldingPlant {
                 max-width: 35%; /* Adjust the image width as needed */
@@ -97,8 +98,62 @@
                     max-width: 50%; /* Adjust as needed for better layout */
                 }
             }
-
-            h4, h2{
+            .ourTeamSection{
+                padding-top:30px;
+                padding-bottom:30px;
+                text-align: center;
+            }
+            .ourTeamContent{
+                padding-top:20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 7rem; /* Add some gap between images */
+            }
+            .firstCard,
+            .secondCard, 
+            .thirdCard {
+                width: 30%;
+                height: 450px;
+                background-color: #4C4D5E;
+                border: none;
+                display: block;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .firstCard{
+                margin-left:50px;
+            }
+            .ourPictures {
+                width: 250px; /* Adjust the image size as needed */
+                height: auto;
+                border-radius: 50%;
+                padding-top: 20px;
+            }
+            .thirdCard{
+                margin-right:50px;
+            }
+            @media (max-width: 768px) {
+                .ourTeamContent {
+                    display: flex;
+                    flex-wrap: wrap; /* Allow cards to wrap to the next row when needed */
+                    padding-top:0px;
+                }
+                .firstCard, .secondCard, .thirdCard {
+                    margin: 0px;
+                    display: block;
+                    flex: 0 0 100%; /* Make each card occupy 100% of the container width on small screens */
+                    max-width: 100%;
+                }
+                .firstCard{
+                    margin-top: 30px;
+                }
+                .secondCard, .thirdCard {
+                    margin-top: -60px;
+                }
+            }
+            h4, h2, a{
                 color: white;
                 text-align: center; /* Center the text horizontally */
                 font-size: 20px;
@@ -106,11 +161,13 @@
             h2{
                 font-weight: bolder;
             }
-            h4{
+            h4, a{
                 font-weight: normal;
             }
+            a {
+                text-decoration: underline;
+            }
         </style>  
-    </head>
     <body>
         <header>
             <!-- Including the file that contains the menu: -->
@@ -169,6 +226,32 @@
             <img class="galleryImg1" src="images/aquaponicsGallery1.jpg" >
             <img class="aquaponicDiagram" src="images/aquaponicsDiagram.JPG" >
             <img class="galleryImg2" src="images/aquaponicsGallery2.JPG" >
+        </div>
+        <div class="ourTeamSection">
+            <h2>OUT TEAM</h2>
+            <div class="ourTeamContent">
+                <div class="firstCard">
+                    <img class="ourPictures" src="images/mackylesPic.png" >
+                    <h2><br>MACKYLE NAIDOO</h2>
+                    <h4>BSc IT Robotics</h4>
+                    <a href="https://www.linkedin.com/in/mackyle-naidoo-15552723b/"><br>Linked in</a>
+                    <a href="https://github.com/Kyle1802"><br>GitHub</a>
+                </div>
+                <div class="secondCard">
+                    <img class="ourPictures" src="images/leasPic.png" >
+                    <h2><br>LEA THUMBIRAN</h2>
+                    <h4>BSc IT Software Engineering</h4>
+                    <a href="https://www.linkedin.com/in/lea-t-42b352211/"><br>Linked in</a>
+                    <a href="https://github.com/leathumbiran02"><br>GitHub</a>
+                </div>
+                <div class="thirdCard">
+                    <img class="ourPictures" src="images/toniPic.jpg" >
+                    <h2><br>TONISHA GOVENDER</h2>
+                    <h4>BSc IT Software Engineering</h4>
+                    <a href="https://www.linkedin.com/in/tonisha-govender-584785219/"><br>Linked in</a>
+                    <a href="https://github.com/TonishaGovender"><br>GitHub</a>
+                </div>
+            </div>
         </div>
     </body>
 </html>
