@@ -55,6 +55,7 @@ header .navbar ul li a{
     display: block;
     text-transform: uppercase;
     background-color: #4C4D5E;
+    text-decoration: none;/*Removes underline from text*/
 }
 
 header .navbar ul li a:hover{
