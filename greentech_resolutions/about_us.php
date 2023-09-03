@@ -111,7 +111,7 @@
                 gap: 7rem; /* Add some gap between images */
             }
             .ourTeamFirstCard,
-            .ourTeamSsecondCard, 
+            .ourTeamSecondCard, 
             .ourTeamThirdCard {
                 width: 30%;
                 height: 450px;
@@ -152,9 +152,38 @@
                 .ourTeamSecondCard, .ourTeamThirdCard {
                     margin-top: -60px;
                 }
-            } 
+            }
             .chooseUsSection{
-
+                padding-top:30px;
+                padding-bottom:30px;
+                text-align: center;
+                margin-left:50px;
+                margin-right:50px;
+            }
+            .chooseUsContent{
+                padding-top:20px;
+            }
+            .chooseUsFirstRow, .chooseUsSecondtRow
+            {
+                padding-top:20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 2rem; /* Add some gap between images */
+            }
+            .chooseUsFirstCard, .chooseUsSecondCard, .chooseUsThirdCard{
+                width: 30%;
+                height: 290px;
+                border: none;
+                display: block;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }       
+            .chooseUs1, .chooseUs2, .chooseUs3, .chooseUs4, .chooseUs5, .chooseUs6{
+                width: 300px;
+                height: auto;
+                padding-bottom:10px;
             }
             h4, h2, a{
                 color: white;
@@ -256,7 +285,46 @@
                 </div>
             </div>
         </div>
-        
+        <div class="chooseUsSection">
+            <h2>WHY CHOOSE US<br></h2>
+            <div class="chooseUsContent">
+                <div class="chooseUsFirstRow">
+                    <div class="chooseUsFirstCard">
+                    <img class="chooseUs1" src="images/chooseUs1.png" >
+                        <h2>Sustainable Leadership</h2>
+                        <h4><br>We’re committed to leading the charge in Eco-friendly practices and solutions that minimize environmental impact.</h4>
+                    </div>
+                    <div class="chooseUsSecondCard">
+                        <img class="chooseUs2" src="images/chooseUs2.png" >
+                        <h2>Cutting Edge Technology</h2>
+                        <h4><br>Our aquaponics systems integrate robotics and automation to create an efficient, user-friendly experience.</h4>
+                    </div>
+                    <div class="chooseUsThirdCard">
+                        <img class="chooseUs3" src="images/chooseUs3.png" >
+                        <h2>Educational Empowerment</h2>
+                        <h4><br>We believe in empowering individuals to make informed choices. 
+                            We provide education about sustainable living and the benefits of aquaponics.</h4>
+                    </div>
+                </div>
+                <div class="chooseUsSecondtRow">
+                    <div class="chooseUsFirstCard">
+                        <img class="chooseUs4" src="images/chooseUs4.png" >
+                        <h2>Seamless User Experience</h2>
+                        <h4><br>Our aquaponics systems come with a website interface that lets you monitor and control your system from anywhere.</h4>
+                    </div>
+                    <div class="chooseUsSecondCard">
+                        <img class="chooseUs5" src="images/chooseUs5.png" >
+                        <h2>Resource Efficiency</h2>
+                        <h4><br>This means you will not only be growing food, you’ll be doing it in a way that conserves precious resources and eco-friendly.</h4>
+                    </div>
+                    <div class="chooseUsThirdCard">
+                        <img class="chooseUs6" src="images/chooseUs6.png" >
+                        <h2>Promoting Organic Practices</h2>
+                        <h4><br>Our systems foster organic food production without relying on synthetic fertilizers and pesticides.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
 
