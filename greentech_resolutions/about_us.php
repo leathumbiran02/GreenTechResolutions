@@ -110,9 +110,9 @@
                 align-items: center;
                 gap: 7rem; /* Add some gap between images */
             }
-            .firstCard,
-            .secondCard, 
-            .thirdCard {
+            .ourTeamFirstCard,
+            .ourTeamSsecondCard, 
+            .ourTeamThirdCard {
                 width: 30%;
                 height: 450px;
                 background-color: #4C4D5E;
@@ -122,8 +122,11 @@
                 align-items: center;
                 text-align: center;
             }
-            .firstCard{
+            .ourTeamFirstCard{
                 margin-left:50px;
+            }
+            .ourTeamThirdCard{
+                margin-right:50px;
             }
             .ourPictures {
                 width: 250px; /* Adjust the image size as needed */
@@ -131,27 +134,27 @@
                 border-radius: 50%;
                 padding-top: 20px;
             }
-            .thirdCard{
-                margin-right:50px;
-            }
             @media (max-width: 768px) {
                 .ourTeamContent {
                     display: flex;
                     flex-wrap: wrap; /* Allow cards to wrap to the next row when needed */
                     padding-top:0px;
                 }
-                .firstCard, .secondCard, .thirdCard {
+                .ourTeamFirstCard, .ourTeamSecondCard, .ourTeamThirdCard {
                     margin: 0px;
                     display: block;
                     flex: 0 0 100%; /* Make each card occupy 100% of the container width on small screens */
                     max-width: 100%;
                 }
-                .firstCard{
+                .ourTeamFirstCard{
                     margin-top: 30px;
                 }
-                .secondCard, .thirdCard {
+                .ourTeamSecondCard, .ourTeamThirdCard {
                     margin-top: -60px;
                 }
+            } 
+            .chooseUsSection{
+
             }
             h4, h2, a{
                 color: white;
@@ -230,21 +233,21 @@
         <div class="ourTeamSection">
             <h2>OUT TEAM</h2>
             <div class="ourTeamContent">
-                <div class="firstCard">
+                <div class="ourTeamFirstCard">
                     <img class="ourPictures" src="images/mackylesPic.png" >
                     <h2><br>MACKYLE NAIDOO</h2>
                     <h4>BSc IT Robotics</h4>
                     <a href="https://www.linkedin.com/in/mackyle-naidoo-15552723b/"><br>Linked in</a>
                     <a href="https://github.com/Kyle1802"><br>GitHub</a>
                 </div>
-                <div class="secondCard">
+                <div class="ourTeamSecondCard">
                     <img class="ourPictures" src="images/leasPic.png" >
                     <h2><br>LEA THUMBIRAN</h2>
                     <h4>BSc IT Software Engineering</h4>
                     <a href="https://www.linkedin.com/in/lea-t-42b352211/"><br>Linked in</a>
                     <a href="https://github.com/leathumbiran02"><br>GitHub</a>
                 </div>
-                <div class="thirdCard">
+                <div class="ourTeamThirdCard">
                     <img class="ourPictures" src="images/toniPic.jpg" >
                     <h2><br>TONISHA GOVENDER</h2>
                     <h4>BSc IT Software Engineering</h4>
@@ -253,6 +256,7 @@
                 </div>
             </div>
         </div>
+        
     </body>
 </html>
 
