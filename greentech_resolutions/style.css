@@ -147,11 +147,9 @@ header label{
     height:560px;
     position: relative;
     margin: 0 auto;
-    background-color: #CED1D8;
     border-radius: 35px;
     padding: 5px;
     overflow: hidden;
-    border: 3px solid black;
 }
 
 .register_login_btn_box{
@@ -169,12 +167,11 @@ header label{
     border: 0;
     outline: none;
     position: relative;   
-    color: #000000;
+    color: #09BA20;
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
 }
-
 #btn{
     top:0;
     left: 0;
@@ -192,6 +189,7 @@ header label{
     position: absolute;
     width: 350px;
     transition: .5s;
+    padding-bottom: 100px;
 }
 
 .login_input_group input{
@@ -203,27 +201,28 @@ header label{
     width:100%;
     padding: 10px 15px;
     margin: 5px 0;
-    border-radius: 20px;
     outline: none;
-    background-color: #343A54;
-    color: #ffffff;
-    border: 3px solid black;
+    background-color: #252525;
+    border:none;
+    border-bottom: 1px solid #ffffff;
+}
+.input_field::placeholder {
+    color: white;
 }
 
 .submit_btn{
-    width: 85%;
-    padding: 10px 30px;
+    width: 45%;
+    padding: 5px 0px;
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right, #09BA20, #6cff7f);
-    color: #000000;
+    margin-top: -5px;
+    background-color:#009414;
+    color: #ffffff;
     font-weight: bolder;
     font-size: 20px;
     border: 0;
     outline: none;
-    border-radius: 30px;
-    border: 3px solid black;
 }
 
 .check_box{
