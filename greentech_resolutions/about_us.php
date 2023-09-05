@@ -185,6 +185,22 @@
                 height: auto;
                 padding-bottom:10px;
             }
+            @media (max-width: 768px) {
+                .chooseUsFirstRow, .chooseUsSecondtRow {
+                    display: flex;
+                    flex-wrap: wrap; /* Allow cards to wrap to the next row when needed */
+                    padding-top:0px;
+                }
+                .chooseUsFirstCard, .chooseUsSecondCard, .chooseUsThirdCard {
+                    margin: 0px;
+                    display: block;
+                    flex: 0 0 100%; /* Make each card occupy 100% of the container width on small screens */
+                    max-width: 100%;
+                    margin:0px;
+                    padding:0px;
+                    margin-bottom: -20px;
+                }
+            }
             h4, h2, a{
                 color: white;
                 text-align: center; /* Center the text horizontally */
