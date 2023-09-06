@@ -604,7 +604,7 @@
     function toggleLED() { 
         ledState = !ledState; 
         var buttonText = ledState ? "ON" : "OFF";
-        button.textContent = "Turn " + buttonText; //Update the button text immediately:
+        button.textContent = "TURN " + buttonText; //Update the button text immediately:
 
         //Send the command to the Arduino based on the current LED state:
         var command = ledState ? 'a' : 'b';
@@ -613,9 +613,9 @@
         //Revert the button text if no response received after 1 second:
         setTimeout(function() {
             var currentText = button.textContent;
-            if (currentText === "Turn ON" || currentText === "Turn OFF") {
+            if (currentText === "TURN ON" || currentText === "TURN OFF") {
                 var newText = ledState ? "OFF" : "ON";
-                button.textContent = "Turn " + newText;
+                button.textContent = "TURN " + newText;
             }
         },500);
     }

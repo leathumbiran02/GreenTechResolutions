@@ -22,110 +22,109 @@
             .hero{ /* Centering the text: */
                 text-align: center;
             }
-
+            .controlBlock, .plantInfoBlock{
+                display: inline-block; /* Make both blocks inline-block elements */
+                background-color: #4C4D5E;
+                height: auto;
+                padding-top: 5px;
+            }
+            .controlBlock{
+                width: 30%;
+                margin-left: 50px;
+                padding-bottom: 5px;
+            }
+            .plantInfoBlock{
+                width: 60%;
+                margin-right: 50px;
+                float: right;
+                justify-content: center;
+                padding-bottom: 80px;
+            }
             .card{
                 width: 270px;
-                height: 240px;
-                margin: 0 auto;
-                /*margin-left: 0 auto;
-                margin-right: 0 auto;
-                margin-bottom: 0 auto;*/
+                height: 70px;
+                margin: 40px auto;
                 padding: 10px;
-                border: 3px solid black;
-                border-radius: 10px;
-                background-color: #010007de; /* Replace 'lightgray' with your preferred shade of gray */
+                border:none;
+                background-color: #252525; 
                 position: relative;
                 perspective: 1000px;
+                justify-content: space-between; 
             }
-            .card button, td button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 245px;
-                height: 40px;
-                background: linear-gradient(to right, #008f3f, #09BA20); 
+
+            h4, h2, span, th, td{
                 color: white;
-                border: none;
-                border-radius: 30px;
-                cursor: pointer;
-                font-size: 17px;
-                font-weight: bolder;
-                border: 3px solid black;
-            }
-            .card button:hover, td button:hover{
-                /* background-color: #09BA20; */ /* Change to your preferred background color on hover */
-                color: #000546; /* Change to your preferred text color on hover */
-                border: 3px solid black;
-            }
-            .cards-wrapper {
-                display: flex;
-            }
-            .card h2 {
+                text-align: center; /* Center the text horizontally */
                 font-size: 20px;
-                text-align: center;
-                margin-top: 10px;
-                color: white; 
             }
-            .card h5 {
-                font-size: 16px;
-                text-align: center;
-                margin-bottom: 10px;
-                color: #000546; 
+            h2{
+                font-weight: bolder;
+                padding-top: 50px;
+                padding-bottom: 20px;
             }
-            .card h4 {
-                font-size: 16px;
-                text-align: left;
-                margin-bottom: 10px;
-                color: #000546; 
+            h4{
+                font-weight: bolder;
+                padding-top: 15px;
+                margin-bottom: -20px;
             }
-            .first-row {
-                margin-bottom: -10px;
+            span{
+                font-weight: normal;
+                display: inline-block; /* Make the span and button inline-block elements */
+                float: left;
+                position: absolute;
+                top: 30%;
             }
-            /* Styling for the grid container */
-            .grid-container {
-                display: grid;
-                margin-top: 30px;
-                grid-template-columns: auto 110px 110px 110px;
-                grid-template-rows:  auto 115px 115px 115px;
-                /* Collapses the borders of the grid cells */
-                border-collapse: collapse;
-            }
-            /* Styling for grid cells */
-            .grid-item {
-                padding: 8px;
-                border: 1px solid black; /* Adds a black border to all grid cells */
-            }
-            /* Styling for labels (A, B, C, 1, 2, 3) */
-            .label {
-                font-weight: bold; /* Makes the text bold */
-                text-align: center; /* Centers the text horizontally */
-            }
-            /* Styling for the top row of labels (A, B, C) */
-            .label-top, .label-left {
-                border: none; /* Removes the borders for the labels on the top row and the left column */
-            }
-            /* New class to remove borders for A, B, and C */
-            .label-letter {
-                border: none; /* Removes the borders for A, B, and C cells */
-            }
-            .grid-item img {
-                width: 100px;
-                height: 100px; 
-            }
-            .grid-item {
+            .cameraBTN, .ledBTN{
+                width: 45%;
+                padding: 5px 0px;
+                cursor: pointer;
                 display: inline-block;
-                font-size: 20px; /* Set the font size to 20 pixels */
+                margin: auto;
+                background-color:#009414;
+                color: #ffffff;
+                font-weight: normal;
+                font-size: 20px;
+                border: 0;
+                outline: none;
+                float: right;
+                margin-top: 8px;
             }
-            /* New CSS rule to make the labels (A, B, C, 1, 2, 3) bigger */
-            .label {
-                font-size: 20px; /* Set the font size to 24 pixels */
+            table{
+                margin-top: 62px;
+                margin-right: 13%;
+                float: right;
+                border-collapse: collapse;
+                border: none;                
             }
-            table {
-                margin: 0 auto; /* Sets left and right margins to "auto", which centers the table */
-                width: 100%;
+            th, td{
+                padding: 10px;
+                border: 3px solid #09BA20; /* Add a border to individual cells if needed */
+                padding: 8px; /* Add padding to cells for spacing */
             }
-            .selected-text {
-                display: none;
+            .plantInfoBlock td:first-child,
+            .plantInfoBlock th:first-child {
+                border-top: none; 
+                border-right: none;
+            }
+            .plantInfoBlock th:nth-child(1) {
+                border-left: none;
+            }
+            .plantInfoBlock tr:nth-child(4) {
+                border-bottom: none;
+            }
+            .plantInfoBlock td:nth-child(2),
+            .plantInfoBlock td:nth-child(3),
+            .plantInfoBlock td:nth-child(4) {
+                border-top: none;
+            }
+            .plantInfoBlock td:nth-child(4){
+                border-right: none;
+            }
+            .plantInfoBlock tr:nth-child(3) td{
+                border-bottom: none;
+            }
+            .plantInfoBlock tr:nth-child(3) th{
+                border-bottom: none;
             }
         </style>
     </head>
@@ -136,51 +135,43 @@
                 include 'menu.php';
             ?>
         </header>
+        <h2>PLANT</h2>
 
-        <div class="spacing" style="height: 100px;"></div>
-            <table>
-                <tr>
-                    <td>
-                        <div class="grid-container">
-                                <!-- Top row of labels -->
-                                <div class="grid-item label label-top"></div> <!-- Empty cell to position the top-left corner -->
-                                <div class="grid-item label label-letter">A</div> <!-- Label "A" in the top row -->
-                                <div class="grid-item label label-letter">B</div> <!-- Label "B" in the top row -->
-                                <div class="grid-item label label-letter">C</div> <!-- Label "C" in the top row -->
-
-                                <!-- First column of labels -->
-                                <div class="grid-item label label-left">1</div> <!-- Label "1" in the left column -->
-                                <div class="grid-item"><img src="https://media.istockphoto.com/id/1253289278/vector/cannabis-leaf-illustration.jpg?s=612x612&w=0&k=20&c=bOLtnIMxjRN11mri8vf9IC2Wwqyo7V8DirUKw1v9gS0=" id="plant1" onclick="sendPlantingPlantCommandToESP32(1)"></div> <!-- Content in the cell corresponding to row 1 and column "A" -->
-                                <div class="grid-item"><img src="https://media.istockphoto.com/id/181072765/photo/lettuce-isolated-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=axHLN2tckTBwUBZEsd1-LNhnQZ_LMWEGmMBLRVe1qwQ=" id="plant2" onclick="sendPlantingPlantCommandToESP32(2)"></div> <!-- Content in the cell corresponding to row 1 and column "B" -->
-                                <div class="grid-item"><img src="https://media.istockphoto.com/id/941825808/photo/tomato-isolated-tomato-on-white-background-with-clipping-path-full-depth-of-field.jpg?s=612x612&w=0&k=20&c=FOo7yfEpxmdTHYBHVr2og-nE_m4mib32rYxZQxUARbs=" id ="plant3" onclick="sendPlantingPlantCommandToESP32(3)"></div> <!-- Content in the cell corresponding to row 1 and column "C" -->
-
-                        </div>
-                    </td>
-                    <td>
-                        <div class="card" style="height: 140px;">
-                            <h2 id="lightStatus">LED Light</h2>
-                            <button id="ledButton" onclick="toggleLED()" style="margin-top:20px; ">Turn ON</button>
-                        </div>
-                        <div class="card" style="height: 140px;">
-                            <h2 id="cameraStatus">Camera</h2>
-                            <button id="openCameraButton" style="margin-top:20px; ">OPEN CAMERA</button>
-                            <!-- <table>
-                                <tr>
-                                    <td>
-                                        <button id="openCameraButton" >OPEN CAMERA</button>
-                                    </td>
-                                </tr>
-                            </table> -->
-                        </div>
-                    </td>
-                </th>
-            </table>
-        
-        <div class="card" id="cameraCard" style="display: none;">
-            <!-- Add camera content here -->
-            <h3>Camera Content</h3>
-            <p>This is the display for the camera.</p>
+        <div class="controlBlock">
+            <h4>CONTROL PANEL</h4>  
+            <div class="card" >
+                <span id="lightStatus">LED LIGHT</span>
+                <button id="ledButton" class="ledBTN" onclick="toggleLED()">TURN ON</button>
+            </div>
+            <div class="card" >
+                <span id="cameraStatus">CAMERA</span><button id="openCameraButton" class="cameraBTN">OPEN</button>
+            </div>
         </div>
+        <div class="plantInfoBlock">
+            <h4>PLANT INFO</h4> 
+            <table border="1"> <!-- You can adjust the border attribute as needed -->
+                <tr>
+                    <th>POSITION</th>
+                    <td>CUP 1</td>
+                    <td>CUP 2</td>
+                    <td>CUP 3</td>
+                </tr>
+                <tr>
+                    <th>TYPE</th>
+                    <td>STRAWBERRY</td>
+                    <td>STRAWBERRY</td>
+                    <td>STRAWBERRY</td>
+                </tr>
+                <tr>
+                    <th>GROWTH</th>
+                    <td>30 DAYS</td>
+                    <td>15 DAYS</td>
+                    <td>25 DAYS</td>
+                </tr>
+            </table>
+        </div>
+
+        
         <!-- Using an external javascript file for the buttons and timers: -->
         <script src="validate.js"></script>
         <script>
