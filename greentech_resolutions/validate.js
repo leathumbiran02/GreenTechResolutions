@@ -39,9 +39,9 @@
             document.register_form.confirm_pass.focus();
             return false;
         }
-        if(document.register_form.bot_id.value.trim() == ""){ //If BOT ID is empty:
+        if(document.register_form.bot_ip.value.trim() == ""){ //If BOT ID is empty:
             alert("Please enter your BOT ID number.");
-            document.register_form.bot_id.focus();
+            document.register_form.bot_ip.focus();
             return false;
         }
 
