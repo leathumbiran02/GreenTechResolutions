@@ -94,7 +94,8 @@
                 margin-right: 13%;
                 float: right;
                 border-collapse: collapse;
-                border: none;                
+                border: none;
+                border=1;               
             }
             th, td{
                 padding: 10px;
@@ -149,12 +150,12 @@
         </div>
         <div class="plantInfoBlock">
             <h4>PLANT INFO</h4> 
-            <table border="1"> <!-- You can adjust the border attribute as needed -->
+            <table> <!-- You can adjust the border attribute as needed -->
                 <tr>
                     <th>POSITION</th>
-                    <td>CUP 1</td>
-                    <td>CUP 2</td>
-                    <td>CUP 3</td>
+                    <td id="plant1" onclick="sendPlantingPlantCommandToESP32(1)">CUP 1</td>
+                    <td id="plant2" onclick="sendPlantingPlantCommandToESP32(2)">CUP 2</td>
+                    <td id ="plant3" onclick="sendPlantingPlantCommandToESP32(3)">CUP 3</td>
                 </tr>
                 <tr>
                     <th>TYPE</th>
