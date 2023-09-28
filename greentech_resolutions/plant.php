@@ -70,7 +70,6 @@
             span{
                 font-weight: normal;
                 display: inline-block; /* Make the span and button inline-block elements */
-                float: left;
                 position: absolute;
                 top: 30%;
             }
@@ -86,7 +85,6 @@
                 font-size: 20px;
                 border: 0;
                 outline: none;
-                float: right;
                 margin-top: 8px;
             }
             table{
@@ -95,7 +93,7 @@
                 float: right;
                 border-collapse: collapse;
                 border: none;
-                border=1;               
+                border:1;               
             }
             th, td{
                 padding: 10px;

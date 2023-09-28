@@ -202,8 +202,8 @@ void measureAndDisplayDistance() {
   Serial.println(" cm");
 
   if (distance >= HARVEST_DISTANCE_MIN && distance <= HARVEST_DISTANCE_MAX) {
-    Serial.println("Plant ready to harvest!");
+    Serial.println("Plant is ready to harvest!");
   } else {
-    Serial.println("Plant not ready for harvest.");
+    Serial.println("Plant is not ready for harvest.");
   }
 }
