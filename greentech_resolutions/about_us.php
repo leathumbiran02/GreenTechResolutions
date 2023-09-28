@@ -16,7 +16,6 @@
             .aboutUsSection {
                 display: flex;
                 align-items: center;
-                padding
             }
             .personHoldingPlant {
                 max-width: 35%; /* Adjust the image width as needed */
