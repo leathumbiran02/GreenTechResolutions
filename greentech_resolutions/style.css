@@ -648,6 +648,22 @@ th.user-th, td.user-td{
     border: 3px solid black;
 }
 
+.microphone{
+    position: fixed;
+    bottom: 40px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #09BA20;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 45px;
+    color: #ffffff;
+    cursor: pointer;
+    border: 3px solid black;
+}
+
 .addbutton{ /* Button when clicking on fish */
     background: linear-gradient(to right, #008f3f, #09BA20);
     cursor: pointer;
