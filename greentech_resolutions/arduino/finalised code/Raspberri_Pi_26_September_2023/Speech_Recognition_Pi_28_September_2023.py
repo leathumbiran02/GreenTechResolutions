@@ -24,8 +24,9 @@ def respond_to_input(text):
         "plants": "Really? Is that what you paid me to do? Why don't you check your website?",
         "weather": random.choice(["It's sunny and warm today.", "Expect some rain today.", "There are cloudy skies today."]),
         "attitude": "I don't have an attitude. I just don't respond to stupid questions.",
-        "bye": "Goodbye! Have a good day!",
+        "bye": "Goodbye! Have a great day!",
         "sushi": "Fish are friends, not food. You should consider becoming a vegetarian.",
+        "thank you": "You are welcome!",
 
         #AJAX FROM WEBSITE FOR COMPONENTS (telling the user what the system is currently doing):
         "light on": "Putting the light on.",
@@ -41,6 +42,7 @@ def respond_to_input(text):
         "check system": "Checking your system.",
         "check water level": "Checking the water level.",
         "check temperature": "Checking the temperature.",
+        "harvest": "Checking if your plant is ready to harvest.",
     }
 
     #If the response does not match any statement in the dictionary, return "I'm here to assist you"
@@ -98,12 +100,15 @@ def main():
                 if text.lower() == "check system":
                     send_command_to_esp32('e')  # Send 'e' to check the system:
 
-                if text.lower() == "check water level":
-                    send_command_to_esp32('f')  # Send 'f' to check the water level:
+                if text.lower() == "check water level": #should be 7 as seen in the Arduino code:
+                    send_command_to_esp32('7')  # Send 'f' to check the water level:
 
                 if text.lower() == "check temperature":
                     send_command_to_esp32('g')  # Send 'g' to check the temperature:
                 
+                if text.lower() == "harvest":
+                    send_command_to_esp32('0') # Send '0' to check if a plant is ready for harvest:
+
             #Exception handling:
             except sr.UnknownValueError:
                 print("Sorry, I couldn't understand.")
