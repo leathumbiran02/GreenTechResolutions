@@ -46,11 +46,12 @@ def respond_to_input(text):
     }
 
     #Extract keywords from the input text using regular expressions (regex):
-    keywords = re.findall(r'\b\w+\b', text.lower())
+    keywords = [word.lower() for word in responses.keys()]
+
 
     #Find the first keyword that matches a response key:
     for keyword in keywords:
-        if keyword in responses:
+        if keyword in text.lower():
             return responses[keyword]
 
     #If the response does not match any statement in the dictionary, return "I'm here to assist you"
@@ -72,11 +73,11 @@ def main():
                 print("You said: ", text)
                
                 #Respond to user input, if the user says 'bye' end the loop:
-                if text.lower()=="bye":
-                    is_running=False 
+                if "bye" in text.lower():
+                    is_running=False
 
                 #Send the response after converting it to text to the dictionary to check if it exists:
-                response = respond_to_input(text)
+                response = respond_to_input(text.lower())
                 speak(response) #Speak the response back:
 
                 # Check if the user said any commands for the website and send the commands to the ESP32:
@@ -131,12 +132,17 @@ def execute_camera_script():
 
 def stop_camera_script():
     global camera_process  #Access the global process instance:
-    try:
-        #Terminate the camera script:
-        camera_process.terminate()
-        print("Camera script stopped")
-    except Exception as e:
-        print("An error occurred while stopping the camera script:", e)
+
+    #check if the camera_process is not None before attempting to terminate it:
+    if camera_process is not None:
+        try:
+            #Terminate the camera script:
+            camera_process.terminate()
+            print("Camera script stopped")
+        except Exception as e:
+            print("An error occurred while stopping the camera script:", e)
+    else: 
+        print("Camera script is not running, nothing to stop.")
 
 def send_command_to_esp32(command):
     esp32_url = 'http://192.168.8.114/sendCommand'  #IP Address of the ESP32:
