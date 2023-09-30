@@ -161,6 +161,10 @@ def send_and_receive_water_level_to_esp32(command):
     except Exception as e:
         print("An error occurred while sending the command to ESP32:", e)
 
+#Route 3 for sending and receiving commands for system:
+
+#Route 4 for sending and receiving commands for camera:
+
 #Route 5 for sending and receiving commands for temperature:
 def send_and_receive_temperature_to_esp32(command):
     esp32_url = 'http://192.168.8.114/sendAndReceiveTemperatureCommand'  #IP Address of the ESP32:

@@ -51,6 +51,7 @@ void setup() {
   for the AJAX request with application/x-www-form-urlencoded content type. After making this change, 
   restart your ESP32 and try the web page again. The "Cross-Origin Request Blocked" error should be resolved, 
   and you should be able to communicate with the ESP32 without any issues.*/
+
   DefaultHeaders::Instance().addHeader("Access-Control-Allow-Origin", "*");
   DefaultHeaders::Instance().addHeader("Access-Control-Allow-Headers", "Content-Type");
 
@@ -79,6 +80,14 @@ void setup() {
       request->send(400, "text/plain", "Missing 'command' parameter");
     }
   });
+
+  //Route 3 - for system
+  //Setup web server route to handle incoming and outgoing commands (FOR CHECKING SYSTEM):
+
+
+  //Route 4 - for camera
+  //Setup web server route to handle incoming and outgoing commands (FOR CAMERA):
+
 
   //Route 5 - for temperature
   //Setup web server route to handle incoming and outgoing commands (FOR TEMPERATURE):
