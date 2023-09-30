@@ -124,6 +124,40 @@
                 outline: none;
                 border-color: #007bff;
             }
+            .tank {
+                position: relative;
+                width: 100%;
+                height: 535px;
+                background-color: #aad5f8; /* Light blue color for the tank */
+                margin: 50px auto;
+                border-radius: 15px;
+                overflow: hidden; /* Hide overflowing fish */
+                animation: tankMovement 4s ease-in-out infinite alternate; /* Create the tank movement animation */
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+            }
+            .water {
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(rgba(0, 119, 190, 0.5), rgba(0, 119, 190, 0.8)); /* Gradient for the water, creating a more realistic look */
+            }
+            .bubble {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white for bubbles */
+                border-radius: 50%; /* Make bubbles circular */
+                animation: bubbleFloat 4s linear infinite; /* Create the bubble floating animation with a linear timing function */
+            }
+            @keyframes bubbleFloat {
+                0% {
+                    transform: translateY(100%); /* Start from the bottom of the tank */
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100%); /* Float to the top of the tank */
+                    opacity: 0;
+                }
+            }
         </style>
     </head>
     <body>
@@ -167,8 +201,38 @@
                 </div>
             </div>
             <div class="right-block">
+                <div class="tank">
+                    <div class="water"></div>
+                    <div class="fish"></div>
+                    <script>
+                        for (let i = 0; i < 80; i++) {
+                            document.write('<div class="bubble"></div>');
+                        }
+                    </script>
+                </div>
             </div>
         </div>
+    <script>
+        // JavaScript code for creating bubbles
+        function createBubbles() {
+            const tank = document.querySelector('.tank');
+            const numBubbles = 30; // Adjust the number of bubbles as needed
+
+            for (let i = 0; i < numBubbles; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                bubble.style.left = Math.random() * 100 + '%'; // Random horizontal position
+                bubble.style.top = Math.random() * 100 + '%'; // Random vertical position
+                bubble.style.animationDuration = (Math.random() * 2 + 2) + 's'; // Random animation duration between 2s and 4s
+                const randomSize = Math.floor(Math.random() * 20 + 10); // Random size between 10px and 30px
+                bubble.style.width = randomSize + 'px';
+                bubble.style.height = randomSize + 'px';
+                tank.appendChild(bubble);
+            }
+        }
+        // Call the function to create random bubbles when the page loads
+        window.onload = createBubbles;
+    </script>
     <script src="validate.js"></script>
 </body>
 </html>
