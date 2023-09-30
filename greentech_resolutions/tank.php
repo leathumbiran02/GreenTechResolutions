@@ -176,7 +176,7 @@
                     <div class="card">     
                         <span>WATER LEVEL</span> <!-- WATER LEVEL: -->
                         <h4>Loading...</h4>
-                        <button class="checkLvlBTN">↺</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
+                        <button class="checkLvlBTN" onclick="checkWaterLevel()">↺</button> <!-- Check Water Level Button: -->
                         <button class="pumpBTN"id="pumpButton" onclick="togglePump()">TURN PUMP ON</button> <!-- WATER PUMP BUTTON: -->
                     </div>
                 </div>
@@ -184,7 +184,7 @@
                 <div class="card">
                     <span>TEMPERATURE</span>
                     <h4 id="temperatureValue">Loading...</h4> <!-- Use "Loading..." as a placeholder until the value is fetched from the arduino: -->
-                    <button class="checkTempBTN">↺</button> <!-- READ TEMPERATURE SENSOR BUTTON: -->
+                    <button class="checkTempBTN" onclick="checkTemperature()">↺</button> <!-- READ TEMPERATURE SENSOR BUTTON: -->
                 </div>
 
                 <div class="fish-feederCard">

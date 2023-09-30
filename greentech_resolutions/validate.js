@@ -542,6 +542,32 @@
         });
     }
 
+    /* Function to send a command to the ESP32 to check the water level: */
+    function checkWaterLevel(){
+        sendToESP32('7', function(response) {
+            if (response === 'OK') {
+                //Success:
+                console.log("Command successful. Response:", response);
+            } else {
+                //Failed:
+                console.log("Command failed. Response:", response); //Console log statement for debugging purposes:
+            }
+        });
+    }
+
+    /* Function to send a command to the ESP32 to check the temperature of the water: */
+    function checkTemperature(){
+        sendToESP32('g', function(response) {
+            if (response === 'OK') {
+                //Success:
+                console.log("Command successful. Response:", response);
+            } else {
+                //Failed:
+                console.log("Command failed. Response:", response); //Console log statement for debugging purposes:
+            }
+        });
+    }
+
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 
 /* --------------------------------------------------LEARN.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
