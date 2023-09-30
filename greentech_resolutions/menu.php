@@ -68,7 +68,7 @@
 </nav>
 
 <!-- Microphone button for users to talk to the system: -->
-<a class='microphone' href='#' style="font-size:30px;"><i class="fas fa-microphone"></i></a>
+<button id="microphoneButton" class='microphone' style="font-size:30px;"><i class="fas fa-microphone"></i></button>
 
 <!-- Provide the link for the JQuery Library: -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

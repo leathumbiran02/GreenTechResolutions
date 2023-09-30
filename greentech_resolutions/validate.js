@@ -815,6 +815,23 @@
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 
 /* --------------------------------------------------MENU.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
+    $(document).ready(function() {
+        $("#microphoneButton").click(function() {
+            $.ajax({
+                url: "http://192.168.1.10/execute_voice_chat", // Replace with the correct URL on your Raspberry Pi
+                method: "POST",
+                success: function(response) {
+                // Handle the response from the server if needed
+                console.log(response);
+                },
+                error: function(xhr, status, error) {
+                // Handle errors here
+                console.error(error);
+                }
+            });
+        });
+    });
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 
 /* Shop page cart test: Added on 12 August 2023: */
     // Cart items array
