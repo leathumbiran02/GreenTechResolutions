@@ -555,6 +555,14 @@
         });
     }
 
+    /* Function to update the water level on the website */
+    function updateWaterLevel(level) {
+        var waterLevelElement = document.getElementById('waterLevel');
+        if (waterLevelElement) {
+            waterLevelElement.textContent = "Water Level: " + level;
+        }
+    }
+
     /* Function to send a command to the ESP32 to check the temperature of the water: */
     function checkTemperature(){
         sendToESP32('g', function(response) {
@@ -694,6 +702,8 @@
             if (xhr.status === 200) {
                 var response = xhr.responseText;
                 if (typeof callback === 'function') {
+                    //Assuming the Arduino sends the water level as a response:
+                    updateWaterLevel(response); //Update the water level on the website:
                     callback(response);
                 }
             } else {

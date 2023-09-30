@@ -60,12 +60,16 @@ void loop() {
    
       
     } else if (command == '7') {
-      // Read and display soil moisture percentage
-      int sensorValue = analogRead(soilMoistureSensor); // Read the analog value from the soil moisture sensor
-      int percentage = map(sensorValue, 0, 1023, 0, 100); // Map the sensor value to a percentage (0-100)
-      Serial.print("Soil moisture: ");
+      //Read and display soil moisture percentage:
+      int sensorValue = analogRead(soilMoistureSensor); //Read the analog value from the soil moisture sensor
+      int percentage = map(sensorValue, 0, 1023, 0, 100); //Map the sensor value to a percentage (0-100)
+      
+      //Send the water level as a response to the ESP32:
+      Serial.println(percentage);
+
+      /* Serial.print("Soil moisture: ");
       Serial.print(percentage);
-      Serial.println("%");
+      Serial.println("%"); */
 
       // Display pump status
       Serial.print("Pump Status: ");

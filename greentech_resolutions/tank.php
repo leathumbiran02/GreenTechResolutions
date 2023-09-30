@@ -175,7 +175,7 @@
                 <div class="form-page">
                     <div class="card">     
                         <span>WATER LEVEL</span> <!-- WATER LEVEL: -->
-                        <h4>Loading...</h4>
+                        <h4 id="waterLevel">Loading...</h4>
                         <button class="checkLvlBTN" onclick="checkWaterLevel()">↺</button> <!-- Check Water Level Button: -->
                         <button class="pumpBTN"id="pumpButton" onclick="togglePump()">TURN PUMP ON</button> <!-- WATER PUMP BUTTON: -->
                     </div>
