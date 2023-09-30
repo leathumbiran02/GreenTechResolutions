@@ -20,49 +20,109 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
         <style>
-            .hero{ /* Centering the text: */
-                text-align: center;
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start; /* Adjust alignment as needed */
+                margin-top:-10px;
             }
-            /* Moved table styling here to avoid CSS conflicts: */
-            /* Ensure that the table and its cells take the full width of the container: */
-            table {
-                width: 100%;
+            .controlBlock{
+                display: inline-block; /* Make both blocks inline-block elements */
+                background-color: #4C4D5E;
+                height: auto;
+                padding-top: 5px;
+                width: 40%;
+                margin-left: 50px;
+                padding-bottom: 5px;
+                margin-top: 50px;
+            }
+            .right-block {
+                width: 50%; 
+                height: auto;
+                margin-right: 50px;
             }
 
-            td {
-                width: 33.33%; /* Divide the table width into equal parts for each cell: */
-            }
-            /* Adjusting the position of the cards: */
-            .form-page {
+            .card, .fish-feederCard{
+                width: 300px;
+                height: 80px;
+                margin: 40px auto;
+                padding: 10px;
+                border:none;
+                background-color: #252525; 
                 position: relative;
-                margin-top: -9px;
+                perspective: 1000px;
+                justify-content: space-between; 
             }
-            /* body{
-                background-color: #90ee9030;
-            } */
-            /* Adjusting the water tank image for mobile view: */
-            @media (max-width: 1900px) {
-                .water-tank-img {
-                    width: 100%;
-                    max-width: 400px; /* Set a maximum width for the water tank image on smaller screens: */
-                    height: auto;
-                    position: static; /* Reset position to allow normal flow on smaller screens: */
-                    margin: 0 auto;
-                    margin-top:110px;
-                }
-
-                /* Center the cards horizontally on smaller screens: */
-                .tank-card {
-                    margin: 10px auto;
-                }
-                
-                /* Center the image vertically on the screen: */
-                body {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh;
-                }
+            .fish-feederCard{
+                height: 130px;
+            }
+            h4, h2, span, th, td{
+                color: white;
+                text-align: center; /* Center the text horizontally */
+                font-size: 20px;
+            }
+            h2{
+                font-weight: bolder;
+                padding-top: 50px;
+            }
+            h4{
+                padding-top: 30px;
+                top: 18%;
+            }
+            span, h4{
+                font-weight: normal;
+                display: inline-block; /* Make the span and button inline-block elements */
+                float: left;
+                position: absolute;
+            }
+            span{
+                top: 15%;
+            }
+            .timer{
+                margin-top: -5px;
+                margin-left: -190px;
+            }
+            .pumpBTN, .feedFishBTN, .setTimerBTN{
+                width: 45%;
+                padding: 5px 0px;
+                cursor: pointer;
+                display: inline-block;
+                margin: auto;
+                background-color:#009414;
+                color: #ffffff;
+                font-weight: normal;
+                font-size: 20px;
+                border: 0;
+                outline: none;
+                margin-top: 1px;
+                float: right;
+            }
+            .setTimerBTN{
+                padding: 5px 9px;
+                margin-right: 10px;
+            }
+            .checkLvlBTN, .checkTempBTN{
+                width: 30px; /* Adjust the width as needed */
+                height: 30px; /* Make sure the height matches the width to create a perfect circle */
+                border-radius: 50%;
+                background-color:#009414;
+                color: #ffffff;
+                border: 0;
+                margin-top: 29px;
+                margin-left: 100px;
+                font-size: 28px;
+            }
+            .fish-feederCard input[type="time"] {
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+                background-color: #f5f5f5;
+                color: #333;
+            }
+            .fish-feederCard input[type="time"]:focus {
+                outline: none;
+                border-color: #007bff;
             }
         </style>
     </head>
@@ -74,78 +134,41 @@
             ?>
         </header>
 
-        <div class="form-page">
-            <!-- Water Tank Image: -->
-            <img src="images/tank-img.png" alt="Water Tank" class="water-tank-img">
+        <h2>TANK</h2>
+        <div class="container">
+            <div class="controlBlock">
+                <h2>CONTROL PANEL</h2> 
+                <div class="form-page">
+                    <div class="card">     
+                        <span>WATER LEVEL</span> <!-- WATER LEVEL: -->
+                        <h4>Loading...</h4>
+                        <button class="checkLvlBTN">↺</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
+                        <button class="pumpBTN"id="pumpButton" onclick="togglePump()">TURN PUMP ON</button> <!-- WATER PUMP BUTTON: -->
+                    </div>
+                </div>
 
-            <div class="tank-card">
-                <table>
-                    <tr class="tank-first-row">
-                        <td>
-                            <div class="tank-water-level">
-                                <div class="tank-water"></div>
-                            </div>
-                        </td>
-                        <td>
-                            <h2 style="margin-left: -90px;">WATER LEVEL</h2> <!-- WATER LEVEL: -->
-                            <div style="display:flex; align-items:center;">
-                                <h5 style="margin-left: -85px;">Loading...</h5>
-                                <button style="width: 80%; display: initial; margin-left: 50px; margin-top:20px;">CHECK LEVEL</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                <button id="pumpButton" onclick="togglePump()" style="margin-top: 20px;" >TURN PUMP ON</button> <!-- WATER PUMP BUTTON: -->
+                <div class="card">
+                    <span>TEMPERATURE</span>
+                    <h4 id="temperatureValue">Loading...</h4> <!-- Use "Loading..." as a placeholder until the value is fetched from the arduino: -->
+                    <button class="checkTempBTN">↺</button> <!-- READ TEMPERATURE SENSOR BUTTON: -->
+                </div>
+
+                <div class="fish-feederCard">
+                    <span >FISH FEEDER</span> <!-- FISH FEEDER: -->
+                    <h4>
+                        <!--Setting feeding time-->
+                        <div class="timer">00:00:00</div>  <!-- COUNTDOWN TIMER: -->
+                        <div class="fish-feeder">
+                            <input type="time" id="feedTimeInput" class="feedFishTimer"><!-- Store Time -->
+                            <button class="setTimerBTN" onclick="setFishFeederTimer()">SET TIMER</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
+                        </div>
+                    </h4>
+                    <button class= "feedFishBTN"onclick="sendFeedFishCommandToESP32()">FEED FISH</button> <!-- FEED FISH BUTTON: -->
+                </div>
             </div>
-
-            <div class="tank-card">
-                <table>
-                    <tr>
-                        <td><i class="fas fa-flask" style="font-size: 50px; color: #00aaff; margin-top:30px; margin-left: 20px;"></i></td>
-                        <td>
-                            <h2 style="margin-left: -90px;">PH LEVEL</h2> <!-- PH LEVEL: -->
-                            <h5 style="margin-left: -85px;">7</h5>
-                        </td>
-                    </tr>
-                </table>
-                <button onclick="showComingSoonMessage()" style="margin-top: 34px;">NEUTRALIZE</button> <!-- PH LEVEL BUTTON (UNUSED FEATURE) -->
-            </div>
-
-            <div class="tank-card">
-                <table>
-                    <tr>
-                        <td><i class="fas fa-thermometer-half" style="font-size: 50px; color: #00aaff; margin-top: 30px; margin-left: 22px;"></i></td>
-                        <td>
-                            <h2 style="margin-left: -90px;">TEMPERATURE</h2>
-                            <h5 id="temperatureValue" style="margin-left: -85px;">Loading...</h5> <!-- Use "Loading..." as a placeholder until the value is fetched from the arduino: -->
-                        </td>
-                    </tr>
-                </table>
-                <button style="margin-top: 34px;">READ TEMPERATURE</button> <!-- READ TEMPERATURE SENSOR BUTTON: -->
-            </div>
-
-            <div class="tank-card">
-                <table>
-                    <tr>
-                        <!-- <td class="clock-icon" style="width: 20%;">&#x23F1;</td> -->
-                        <td><i class="fas fa-stopwatch" style="font-size: 50px; color: #00aaff; margin-left: 20px;"></td>
-                        <td>
-                            <h2>FISH FEEDER</h2> <!-- FISH FEEDER: -->
-                            <h5>
-                                <!--Setting feeding time-->
-                                <div class="fish-feeder">
-                                    <input type="time" id="feedTimeInput" class="feedFishTimer"><!-- Store Time -->
-                                    <button onclick="setFishFeederTimer()" style="width: 120%; display: initial; margin-right: -2px;">SET REMINDER</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
-                                </div>
-                                <div class="timer">00:00:00</div>   <!-- COUNTDOWN TIMER: -->
-                            </h5>
-                        </td>
-                    </tr>
-                </table>
-                <button onclick="sendFeedFishCommandToESP32()">FEED FISH</button> <!-- FEED FISH BUTTON: -->
+            <div class="right-block">
             </div>
         </div>
-    <!-- Using an external javascript file for the buttons and timers: -->
     <script src="validate.js"></script>
 </body>
 </html>
