@@ -72,6 +72,3 @@
 
 <!-- Provide the link for the JQuery Library: -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Using an external javascript file for the buttons and timers: -->
-<script src="validate.js"></script>
