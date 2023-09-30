@@ -54,6 +54,7 @@ void setup() {
   DefaultHeaders::Instance().addHeader("Access-Control-Allow-Origin", "*");
   DefaultHeaders::Instance().addHeader("Access-Control-Allow-Headers", "Content-Type");
 
+  //Route 1 - for most components:
   //Setup web server route to handle incoming commands (FOR THE REST OF THE COMPONENTS ON THE WEBSITE):
   server.on("/sendCommand", HTTP_POST, [](AsyncWebServerRequest *request) {
     if (request->hasParam("command", true)) {
@@ -65,12 +66,27 @@ void setup() {
     }
   });
 
-  //Setup web server route to handle incoming and outgoing commands (FOR WATER LEVEL AND TEMPERATURE):
-  server.on("/sendAndReceiveCommand", HTTP_POST, [](AsyncWebServerRequest *request) {
+  //Route 2 - for water level:
+  //Setup web server route to handle incoming and outgoing commands (FOR WATER LEVEL):
+  server.on("/sendAndReceiveWaterLevelCommand", HTTP_POST, [](AsyncWebServerRequest *request) {
     if (request->hasParam("command", true)) {
       String command = request->getParam("command", true)->value();
       sendCommandToArduino(command[0], [&](String response) {
       // Forward the response (water level) to the client (website)
+      request->send(200, "text/plain", response);
+    });
+    }else{
+      request->send(400, "text/plain", "Missing 'command' parameter");
+    }
+  });
+
+  //Route 5 - for temperature
+  //Setup web server route to handle incoming and outgoing commands (FOR TEMPERATURE):
+  server.on("/sendAndReceiveTemperatureCommand", HTTP_POST, [](AsyncWebServerRequest *request) {
+    if (request->hasParam("command", true)) {
+      String command = request->getParam("command", true)->value();
+      sendCommandToArduino(command[0], [&](String response) {
+      // Forward the response (temperature) to the client (website)
       request->send(200, "text/plain", response);
     });
     }else{

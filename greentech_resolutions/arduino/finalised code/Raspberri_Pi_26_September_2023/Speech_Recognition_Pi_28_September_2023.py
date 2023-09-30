@@ -101,10 +101,10 @@ def main():
                     send_command_to_esp32('e')  # Send 'e' to check the system:
 
                 if text.lower() == "check water level": #should be 7 as seen in the Arduino code:
-                    send_and_receive_to_esp32('7')  # Send 'f' to check the water level:
+                    send_and_receive_water_level_to_esp32('7')  # Send 'f' to check the water level:
 
                 if text.lower() == "check temperature":
-                    send_command_to_esp32('g')  # Send 'g' to check the temperature:
+                    send_and_receive_temperature_to_esp32('g')  # Send 'g' to check the temperature:
                 
                 if text.lower() == "harvest":
                     send_command_to_esp32('0') # Send '0' to check if a plant is ready for harvest:
@@ -147,9 +147,23 @@ def send_command_to_esp32(command):
     except Exception as e:
         print("An error occurred while sending the command to ESP32:", e)
 
-#Route 2 for sending and receiving commands:
-def send_and_receive_to_esp32(command):
-    esp32_url = 'http://192.168.8.114/sendAndReceiveCommand'  #IP Address of the ESP32:
+#Route 2 for sending and receiving commands for water level:
+def send_and_receive_water_level_to_esp32(command):
+    esp32_url = 'http://192.168.8.114/sendAndReceiveWaterLevelCommand'  #IP Address of the ESP32:
+    payload = {'command': command}
+
+    try:
+        response = requests.post(esp32_url, data=payload)
+        if response.status_code == 200 and response.text == 'OK':
+            print("Command sent to ESP32 successfully")
+        else:
+            print("Failed to send command to ESP32")
+    except Exception as e:
+        print("An error occurred while sending the command to ESP32:", e)
+
+#Route 5 for sending and receiving commands for temperature:
+def send_and_receive_temperature_to_esp32(command):
+    esp32_url = 'http://192.168.8.114/sendAndReceiveTemperatureCommand'  #IP Address of the ESP32:
     payload = {'command': command}
 
     try:

@@ -544,7 +544,7 @@
 
     /* Function to send a command to the ESP32 to check the water level: */
     function checkWaterLevel(){
-        sendAndReceiveFromESP32('7', function(response) {
+        sendAndReceiveWaterLevelFromESP32('7', function(response) {
             if (response === 'OK') {
                 //Success:
                 console.log("Command successful. Response:", response);
@@ -565,7 +565,7 @@
 
     /* Function to send a command to the ESP32 to check the temperature of the water: */
     function checkTemperature(){
-        sendAndReceiveFromESP32('g', function(response) {
+        sendAndReceiveTemperatureFromESP32('g', function(response) {
             if (response === 'OK') {
                 //Success:
                 console.log("Command successful. Response:", response);
@@ -574,6 +574,14 @@
                 console.log("Command failed. Response:", response); //Console log statement for debugging purposes:
             }
         });
+    }
+
+    /* Function to update the temperature on the website */
+    function updateTemperature(temp) {
+        var temperatureValue = document.getElementById('temperatureValue');
+        if (temperatureValue) {
+            temperatureValue.textContent = "Temp: " + temp + "°C";
+        }
     }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
@@ -695,6 +703,7 @@
 
     /* ROUTE 1: */
     /*Function to send command to ESP32: */
+    /* USED FOR MOST COMPONENTS: */
     function sendToESP32(command, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'http://192.168.8.114/sendCommand', true);
@@ -717,9 +726,10 @@
 
     /* ROUTE 2: */
     /* Function to send and receive commands from the ESP32: */
-    function sendAndReceiveFromESP32(command, callback) {
+    /* USED FOR WATER LEVEL: */
+    function sendAndReceiveWaterLevelFromESP32(command, callback) {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://192.168.8.114/sendAndReceiveCommand', true);
+        xhr.open('POST', 'http://192.168.8.114/sendAndReceiveWaterLevelCommand', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onload = function() {
             if (xhr.status === 200) {
@@ -727,6 +737,39 @@
                 if (typeof callback === 'function') {
                     //Assuming the Arduino sends the water level as a response:
                     updateWaterLevel(response); //Update the water level on the website:
+                    callback(response);
+                }
+            } else {
+                if (typeof callback === 'function') {
+                    callback(null);
+                }
+            }
+        };
+
+        xhr.send('command=' + encodeURIComponent(command));
+    }
+
+    /* Route 3: */
+    /* Function to send and receive commands from the ESP32: */
+    /* USED FOR CHECK SYSTEM: */
+
+    /* Route 4: */
+    /* Function to send and receive commands from the ESP32: */
+    /* USED FOR CAMERA: */
+
+    /* Route 5: */
+    /* Function to send and receive commands from the ESP32: */
+    /* USED FOR CHECK TEMPERATURE: */
+    function sendAndReceiveTemperatureFromESP32(command, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://192.168.8.114/sendAndReceiveTemperatureCommand', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var response = xhr.responseText;
+                if (typeof callback === 'function') {
+                    //Assuming the Arduino sends the water level as a response:
+                    updateTemperature(response); //Update the water level on the website:
                     callback(response);
                 }
             } else {
