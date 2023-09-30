@@ -54,7 +54,7 @@ void setup() {
   DefaultHeaders::Instance().addHeader("Access-Control-Allow-Origin", "*");
   DefaultHeaders::Instance().addHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  // Setup web server route to handle incoming commands
+  //Setup web server route to handle incoming commands:
   server.on("/sendCommand", HTTP_POST, [](AsyncWebServerRequest *request) {
     if (request->hasParam("command", true)) {
       String command = request->getParam("command", true)->value();

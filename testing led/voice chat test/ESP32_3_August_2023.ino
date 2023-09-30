@@ -54,8 +54,19 @@ void setup() {
   DefaultHeaders::Instance().addHeader("Access-Control-Allow-Origin", "*");
   DefaultHeaders::Instance().addHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  // Setup web server route to handle incoming commands
+  //Setup web server route to handle incoming commands (FOR THE REST OF THE COMPONENTS ON THE WEBSITE):
   server.on("/sendCommand", HTTP_POST, [](AsyncWebServerRequest *request) {
+    if (request->hasParam("command", true)) {
+      String command = request->getParam("command", true)->value();
+      sendCommandToArduino(command[0]);
+      request->send(200, "text/plain", "OK");
+    } else {
+      request->send(400, "text/plain", "Missing 'command' parameter");
+    }
+  });
+
+  //Setup web server route to handle incoming and outgoing commands (FOR WATER LEVEL AND TEMPERATURE):
+  server.on("/sendAndReceiveCommand", HTTP_POST, [](AsyncWebServerRequest *request) {
     if (request->hasParam("command", true)) {
       String command = request->getParam("command", true)->value();
       sendCommandToArduino(command[0], [&](String response) {

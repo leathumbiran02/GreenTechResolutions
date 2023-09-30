@@ -544,7 +544,7 @@
 
     /* Function to send a command to the ESP32 to check the water level: */
     function checkWaterLevel(){
-        sendToESP32('7', function(response) {
+        sendAndReceiveFromESP32('7', function(response) {
             if (response === 'OK') {
                 //Success:
                 console.log("Command successful. Response:", response);
@@ -565,7 +565,7 @@
 
     /* Function to send a command to the ESP32 to check the temperature of the water: */
     function checkTemperature(){
-        sendToESP32('g', function(response) {
+        sendAndReceiveFromESP32('g', function(response) {
             if (response === 'OK') {
                 //Success:
                 console.log("Command successful. Response:", response);
@@ -693,10 +693,33 @@
         });
     }
 
+    /* ROUTE 1: */
     /*Function to send command to ESP32: */
     function sendToESP32(command, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'http://192.168.8.114/sendCommand', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var response = xhr.responseText;
+                if (typeof callback === 'function') {
+                    callback(response);
+                }
+            } else {
+                if (typeof callback === 'function') {
+                    callback(null);
+                }
+            }
+        };
+
+        xhr.send('command=' + encodeURIComponent(command));
+    }
+
+    /* ROUTE 2: */
+    /* Function to send and receive commands from the ESP32: */
+    function sendAndReceiveFromESP32(command, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://192.168.8.114/sendAndReceiveCommand', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onload = function() {
             if (xhr.status === 200) {
