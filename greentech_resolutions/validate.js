@@ -818,7 +818,7 @@
     $(document).ready(function() {
         $("#microphoneButton").click(function() {
             $.ajax({
-                url: "http://192.168.1.10/execute_voice_chat", // Replace with the correct URL on your Raspberry Pi
+                url: "http://192.168.8.117:5000/execute_voice_chat", // Replace with the correct URL on your Raspberry Pi
                 method: "POST",
                 success: function(response) {
                 // Handle the response from the server if needed

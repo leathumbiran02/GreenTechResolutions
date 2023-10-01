@@ -158,6 +158,6 @@ def send_command_to_esp32(command):
         print("An error occurred while sending the command to ESP32:", e)
 
 #When the program starts up, play the following message using the speak command:
-if __name__ == "__main__":
+if _name_ == "_main_":
     speak("Hello! I am GLITCH. How can I assist you today?")
     main()
