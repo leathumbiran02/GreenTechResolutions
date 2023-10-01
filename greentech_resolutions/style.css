@@ -650,18 +650,18 @@ th.user-th, td.user-td{
 
 .microphone{
     position: fixed;
-    bottom: 40px;
+    bottom: 20px;
     left: 20px;
     width: 50px;
     height: 50px;
-    background-color: #09BA20;
+    background-color:#009414;
     border-radius: 50%;
     text-align: center;
-    line-height: 50px;
+    line-height: 30px;
     font-size: 45px;
     color: #ffffff;
     cursor: pointer;
-    border: 3px solid black;
+    border: none;
 }
 
 .addbutton{ /* Button when clicking on fish */
