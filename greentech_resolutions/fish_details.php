@@ -106,6 +106,8 @@
                                 echo            "<li class='product_details_description'><i>{$description}</i></li>";
                             }
                             echo            "</ul>";
+                            echo            "<p class='product_details_description'>Health Benefits:" . $row["health_benefits"]. "</p>";
+                            echo            "<p class='product_details_description'>Recipes:" . $row["recipe"]. "</p>";
                             echo            "<br><div><a  href='learn.php' class='back_to_products' style='margin:10px -10px;'>GO BACK</a></div>";
                             echo        "</div>";
                             echo    "</div>";
