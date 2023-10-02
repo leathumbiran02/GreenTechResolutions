@@ -146,6 +146,31 @@
             document.bot_ip.bot_ip.focus();
             return false;
         }
+        return true;
+    }
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
+
+/*--------------------------------------------------MANAGE_NAME.PHP JAVASCRIPT:--------------------------------------------------------------------------------------- */
+    //Function to validate the name form:
+    function validate_full_name(){
+        if(document.manage_full_name.manage_full_name.value.trim()===""){ //If full name is empty:
+            alert("Please enter your full name.");
+            document.manage_full_name.manage_full_name.focus();
+            return false;
+        }
+        return true;
+    }
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
+
+/*--------------------------------------------------MANAGE_EMAIL.PHP JAVASCRIPT:--------------------------------------------------------------------------------------- */
+    //Function to validate the email form:
+    function validate_email(){
+        if(document.manage_email.manage_email.value.trim()===""){ //If email is empty:
+            alert("Please enter your email.");
+            document.manage_email.manage_email.focus();
+            return false;
+        }
+        return true;
     }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 
