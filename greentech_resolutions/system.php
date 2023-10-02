@@ -19,70 +19,64 @@
         <link rel="stylesheet" href="style.css">
 
         <style>
-            .hero{ /* Centering the text: */
-                text-align: center;
+            .systemStatus{
+                display: inline-block; /* Make both blocks inline-block elements */
+                background-color: #4C4D5E;
+                height: auto;
+                padding-top: 5px;
+                width: 40%;
+                margin-left: 50px;
+                padding-bottom: 5px;
+                margin-top: 50px;
             }
-
             .card{
-                width: 270px;
-                height: 90px;
-                margin: 0 auto;
-                /*margin-left: 0 auto;
-                margin-right: 0 auto;
-                margin-bottom: 0 auto;*/
+                width: 300px;
+                height: 80px;
+                margin: 40px auto;
                 padding: 10px;
-                border: 3px solid black;
-                border-radius: 10px;
-                background-color: lightgray; /* Replace 'lightgray' with your preferred shade of gray */
+                border:none;
+                background-color: #252525; 
                 position: relative;
                 perspective: 1000px;
+                justify-content: space-between; 
             }
-            .card button, button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto; 
-                width: 245px;
-                height: 40px;
-                background-color: #343A54; 
+            h4, h2, span{
                 color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 17px;
-                font-weight: bolder;
-                border: 3px solid black;
-                perspective: 1000px;
-            }
-            .card button:hover, button:hover{
-                background-color: #09BA20; /* Change to your preferred background color on hover */
-                color: #000546; /* Change to your preferred text color on hover */
-                border: 3px solid black;
-            }
-            .cards-wrapper {
-                display: flex;
-            }
-            
-            .card h2 {
+                text-align: center; /* Center the text horizontally */
                 font-size: 20px;
-                text-align: left;
-                margin-top: -10px; 
-                padding: 10px 0; 
-                color: #000546; 
             }
-            .card h5, h5 {
-                font-size: 16px;
-                text-align: left;
-                margin-top: -20px; 
-                padding: 10px 0; 
-                color: #000546; 
+            h2{
+                font-weight: bolder;
+                padding-top: 50px;
             }
-            .card h4 {
-                font-size: 16px;
-                text-align: left;
-                margin: 0; 
-                padding: 10px 0; 
-                color: #000546; 
+            h4{
+                padding-top: 30px;
+                top: 18%;
+            }
+            span, h4{
+                font-weight: normal;
+                display: inline-block; /* Make the span and button inline-block elements */
+                float: left;
+                position: absolute;
+            }
+            span{
+                top: 15%;
+            }
+            .dateAndTime{
+                text-align:left;
+            }
+            .testSystemBTN{
+                width: 30px; /* Adjust the width as needed */
+                height: 30px; /* Make sure the height matches the width to create a perfect circle */
+                border-radius: 50%;
+                background-color:#009414;
+                color: #ffffff;
+                border: 0;
+                margin-top: 29px;
+                margin-left: 100px;
+                font-size: 28px;
+                float: right;
+                margin-top: -3px;
             }
             #testCard {
                 display: none;
@@ -111,7 +105,6 @@
                 margin-top: -13px;
                 font-size: 45px; 
                 text-align: right;
-                margin-top: -13px;
             }
         </style>
     </head>
@@ -122,36 +115,27 @@
                 include 'menu.php';
             ?>
         </header>
-                <div class="card">
-                    <table>
-                        <tr>
-                            <td>
-                                <h2>ARM</h2>
-                                <h5>Operational</h5>
-                            </td>
-                            <td>
-                                <p id="armStatus">&#11044;</p>
-                            </td>
-                        </tr>
-                    </table>
+        <h2>SYSTEM</h2>
+                <div class="systemStatus">
+                    <h2>SYSTEM STATUS</h2>
+                    <div class="card">    
+                        <span>ARM</span>
+                        <h4>Operational</h4>
+                        <p id="armStatus">&#11044;</p>
+                    </div>
+                    <div class="card">
+                        <span>TANK</span>
+                        <h4>Operational</h4>
+                        <p id="tankStatus">&#11044;</p>
+                    </div>
+                    <div class="card">
+                        <span>LAST TEST</span>
+                        <button id="refreshButton" onclick="refreshButton();" class="testSystemBTN">↺</button>
+                        <h4 class="dateAndTime"id="lastRefreshed"></h4>
+                    </div>
                 </div>
-                <div class="card">
-                    <table>
-                        <tr>
-                            <td>
-                                <h2>TANK</h2>
-                                <h5>Operational</h5>
-                            </td>
-                            <td>
-                                <p id="tankStatus">&#11044;</p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <button id="refreshButton"  onclick="refreshButton();" style="margin-top: 30px;" >TEST SYSTEM</button>
-                    <h5 style="text-align: center; margin-top: -10px;"><span id="lastRefreshed"></span></h5>
-                </div>
+                
+  
                 <div id="testCard">
                     <h2 id="systemError">SYSTEM ERROR!!!</h2>
                     <div class="card">
@@ -343,8 +327,6 @@
                     const now = new Date();
                     const formattedDateTime = formatDate(now);
 
-                    // Update the button label and lastRefreshed text
-                    refreshButton.innerText = 'TESTING...';
                     lastRefreshed.innerText = formattedDateTime;
                     // Add the "red" class to armStatus to change its color to red
                     armStatus.classList.add('red');
@@ -352,14 +334,9 @@
 
                     testCard.style.display = 'block'; // Show the card
 
-                    // Reset the button label after a delay (e.g., 2 seconds)
-                    setTimeout(() => {
-                        refreshButton.innerText = 'TEST SYSTEM';
-                    }, 2000); // Change this value to adjust how long the "Refreshed" label stays visible (in milliseconds)
                 }
 
                 function formatDate(date) {
-                    // Format the date and time as desired (e.g., "YYYY-MM-DD HH:MM:SS")
                     const year = date.getFullYear();
                     const month = padZero(date.getMonth() + 1);
                     const day = padZero(date.getDate());
@@ -373,7 +350,7 @@
                         time = hours + ":" + minutes +"am";
                     }
 
-                    return `Last Test: ${day}/${month}/${year} at ${time}`;
+                    return `${day}/${month}/${year} at ${time}`;
                 }
 
                 function padZero(number) {
