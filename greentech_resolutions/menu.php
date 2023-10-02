@@ -57,6 +57,9 @@
                         </form>
                 </a>
             </li>
+        
+            <!-- Microphone button for users to talk to the system: -->
+            <button id="microphoneButton" class='microphone' style="font-size:30px;"><i class="fas fa-microphone"></i></button>
         <?php else: ?> <!-- Display this menu for guest users only: -->
             <li><a href="about_us.php">About Us</a></li>
             <li><a href="partners.php">Partners</a></li>
@@ -66,9 +69,6 @@
         <?php endif; ?>
     </ul>
 </nav>
-
-<!-- Microphone button for users to talk to the system: -->
-<button id="microphoneButton" class='microphone' style="font-size:30px;"><i class="fas fa-microphone"></i></button>
 
 <!-- Provide the link for the JQuery Library: -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
