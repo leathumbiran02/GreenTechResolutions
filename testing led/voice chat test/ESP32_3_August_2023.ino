@@ -83,7 +83,17 @@ void setup() {
 
   //Route 3 - for system
   //Setup web server route to handle incoming and outgoing commands (FOR CHECKING SYSTEM):
-
+  server.on("/sendAndReceiveCheckSystemCommand", HTTP_POST, [](AsyncWebServerRequest *request) {
+      if (request->hasParam("command", true)) {
+        String command = request->getParam("command", true)->value();
+        sendCommandToArduino(command[0], [&](String response) {
+        // Forward the response (check system) to the client (website)
+        request->send(200, "text/plain", response);
+      });
+      }else{
+        request->send(400, "text/plain", "Missing 'command' parameter");
+      }
+    });
 
   //Route 4 - for camera
   //Setup web server route to handle incoming and outgoing commands (FOR CAMERA):
