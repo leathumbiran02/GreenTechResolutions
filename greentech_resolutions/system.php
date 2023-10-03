@@ -1,5 +1,5 @@
 <?php
-    //Starting the session so we can che^ck if the user is logged in:
+    //Starting the session so we can check if the user is logged in:
     session_start();
 
     //Checking if the email address is stored in the session:
@@ -7,6 +7,10 @@
         echo "<script>alert('You must be logged in to view this page.')</script>";
         header('Refresh: 1; url=login_register.php');
         exit();
+    }
+
+    if (isset($_SESSION['lastTestTime'])) {
+        echo $_SESSION['lastTestTime'];
     }
 ?>
 <!DOCTYPE html>
@@ -318,44 +322,6 @@
                 function showText() {
                     const displayText = document.getElementById('displayText');
                     displayText.style.display = 'block';
-                }
-                function refreshButton() {
-                    const refreshButton = document.getElementById('refreshButton');
-                    const lastRefreshed = document.getElementById('lastRefreshed');
-
-                    // Get the current date and time
-                    const now = new Date();
-                    const formattedDateTime = formatDate(now);
-
-                    lastRefreshed.innerText = formattedDateTime;
-                    // Add the "red" class to armStatus to change its color to red
-                    armStatus.classList.add('red');
-                    tankStatus.classList.add('red');
-
-                    testCard.style.display = 'block'; // Show the card
-
-                }
-
-                function formatDate(date) {
-                    const year = date.getFullYear();
-                    const month = padZero(date.getMonth() + 1);
-                    const day = padZero(date.getDate());
-                    let hours = padZero(date.getHours());
-                    let minutes = padZero(date.getMinutes());
-                    let time;
-
-                    if(hours > 12){
-                        time = (hours - 12) + ":" + minutes +"pm";
-                    }else{
-                        time = hours + ":" + minutes +"am";
-                    }
-
-                    return `${day}/${month}/${year} at ${time}`;
-                }
-
-                function padZero(number) {
-                    // Add a leading zero if the number is less than 10
-                    return number < 10 ? `0${number}` : number;
                 }
             </script>
     </body>

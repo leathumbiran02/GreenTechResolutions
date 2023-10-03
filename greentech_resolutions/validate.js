@@ -611,6 +611,90 @@
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 
+/* --------------------------------------------------SYSTEM.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
+    function refreshButton() {
+        // Get the current date and time
+        const now = new Date();
+        const formattedDateTime = formatDate(now);
+
+        // Update last test time in localStorage
+        localStorage.setItem('lastTestTime', formattedDateTime);
+
+        // Update the displayed time
+        updateLastTestTime();
+
+        // Send an AJAX request to update the database with the current date and time
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "update_last_refresh.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                // Request is successful, you can handle the response if needed
+                console.log(xhr.responseText);
+            }
+        };
+
+        // Send a simple request to indicate that the refresh button was clicked
+        xhr.send("refreshed=true");
+    }
+
+    function formatDate(date) {
+        const year = date.getFullYear();
+        const month = padZero(date.getMonth() + 1);
+        const day = padZero(date.getDate());
+        let hours = padZero(date.getHours());
+        let minutes = padZero(date.getMinutes());
+        let time;
+
+        if(hours > 12){
+            time = (hours - 12) + ":" + minutes +"pm";
+        }else{
+            time = hours + ":" + minutes +"am";
+        }
+
+        return `${day}/${month}/${year} at ${time}`;
+    }
+
+    function padZero(number) {
+        // Add a leading zero if the number is less than 10
+        return number < 10 ? `0${number}` : number;
+    }
+
+    // JavaScript function for updating the last test time
+    function updateLastTestTime() {
+        const lastRefreshed = document.getElementById('lastRefreshed');
+        const lastTestTime = localStorage.getItem('lastTestTime');
+
+        if (lastTestTime) {
+            lastRefreshed.innerText = lastTestTime;
+        }
+    }
+
+    // Trigger the updateLastTestTime function when the page loads
+    window.addEventListener("load", function() {
+        // Call the updateLastTestTime function to fetch and display the last test time
+        updateLastTestTime();
+    });
+
+    function updateSessionLastTestTime(lastTestTime) {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "update_session_last_test_time.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                // Request is successful, you can handle the response if needed
+                console.log(xhr.responseText);
+            }
+        };
+    
+        // Send the last test time to be stored in the session
+        xhr.send("lastTestTime=" + lastTestTime);
+    }
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
+
 /* --------------------------------------------------LEARN.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
     //Function to handle fish and plant search:
     function searchProductsLearn() {
