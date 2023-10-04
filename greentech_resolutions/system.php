@@ -8,10 +8,6 @@
         header('Refresh: 1; url=login_register.php');
         exit();
     }
-
-    if (isset($_SESSION['lastTestTime'])) {
-        echo $_SESSION['lastTestTime'];
-    }
 ?>
 <!DOCTYPE html>
 <html>
