@@ -26,7 +26,7 @@
                 align-items: flex-start; /* Adjust alignment as needed */
                 margin-top:-10px;
             }
-            .controlBlock{
+            .controlBlock, .newFeaturesBlock{
                 display: inline-block; /* Make both blocks inline-block elements */
                 background-color: #4C4D5E;
                 height: auto;
@@ -36,13 +36,19 @@
                 padding-bottom: 5px;
                 margin-top: 50px;
             }
+            .newFeaturesBlock{
+                display: flex;
+                justify-content: space-between;
+                height: 150px;
+                width: 90%;
+                margin-bottom: 50px;
+            }
             .right-block {
                 width: 50%; 
                 height: auto;
                 margin-right: 50px;
             }
-
-            .card, .fish-feederCard{
+            .card, .fish-feederCard, .featuresCard{
                 width: 300px;
                 height: 80px;
                 margin: 40px auto;
@@ -52,6 +58,9 @@
                 position: relative;
                 perspective: 1000px;
                 justify-content: space-between; 
+            }
+            .featuresCard{
+                display: inline-block;
             }
             .fish-feederCard{
                 height: 130px;
@@ -78,11 +87,15 @@
             span{
                 top: 15%;
             }
+            .newfeatureText{
+                margin-top:-60px;
+                margin-bottom:-10px;
+            }
             .timer{
                 margin-top: -5px;
                 margin-left: -190px;
             }
-            .pumpBTN, .feedFishBTN, .setTimerBTN{
+            .pumpBTN, .feedFishBTN, .setTimerBTN, .cleanBTN, .balanceBTN, .heaterBTN{
                 width: 45%;
                 padding: 5px 0px;
                 cursor: pointer;
@@ -101,7 +114,7 @@
                 padding: 5px 9px;
                 margin-right: 10px;
             }
-            .checkLvlBTN, .checkTempBTN{
+            .checkLvlBTN, .checkTempBTN, .checkpHBTN{
                 width: 30px; /* Adjust the width as needed */
                 height: 30px; /* Make sure the height matches the width to create a perfect circle */
                 border-radius: 50%;
@@ -210,6 +223,24 @@
                         }
                     </script>
                 </div>
+            </div>
+        </div>
+        <h2 class="newfeatureText">NEW FEATURES</h2>
+        <div class="newFeaturesBlock">
+            <div class="featuresCard">
+                <span>CLEAN TANK</span>
+                <button class="cleanBTN">NOW</button>
+            </div>
+            <div class="featuresCard">
+                <span>pH LEVEL</span>
+                <h4>7</h4>
+                <button class="balanceBTN">BALANCE</button>
+                <button class="checkpHBTN">↺</button>
+            </div>
+            <div class="featuresCard">
+                <span>HEATER</span>
+                <h4>20°</h4>
+                <button class="heaterBTN">TURN OFF</button>
             </div>
         </div>
     <script>
