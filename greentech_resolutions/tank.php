@@ -229,18 +229,18 @@
         <div class="newFeaturesBlock">
             <div class="featuresCard">
                 <span>CLEAN TANK</span>
-                <button class="cleanBTN">NOW</button>
+                <button onclick="showComingSoonMessage()" class="cleanBTN">START</button>
             </div>
             <div class="featuresCard">
                 <span>pH LEVEL</span>
                 <h4>7</h4>
-                <button class="balanceBTN">BALANCE</button>
-                <button class="checkpHBTN">↺</button>
+                <button onclick="showComingSoonMessage()" class="balanceBTN">BALANCE</button>
+                <button onclick="showComingSoonMessage()" class="checkpHBTN">↺</button>
             </div>
             <div class="featuresCard">
                 <span>HEATER</span>
                 <h4>20°</h4>
-                <button class="heaterBTN">TURN OFF</button>
+                <button onclick="showComingSoonMessage()" class="heaterBTN">TURN OFF</button>
             </div>
         </div>
     <script>
