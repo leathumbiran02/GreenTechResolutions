@@ -107,10 +107,10 @@ def main():
                     stop_camera_script() #Execute the script to stop the camera:
 
                 if text.lower() == "check system":
-                    send_command_to_esp32('e')  # Send 'e' to check the system:
+                    check_system_send_command_to_esp32('e')  # Send 'e' to check the system:
 
                 if text.lower() == "check water level":
-                    send_command_to_esp32('f')  # Send 'f' to check the water level:
+                    water_level_send_command_to_esp32('f')  # Send 'f' to check the water level:
 
                 if text.lower() == "check temperature":
                     send_command_to_esp32('g')  # Send 'g' to check the temperature:
@@ -146,6 +146,32 @@ def stop_camera_script():
 
 def send_command_to_esp32(command):
     esp32_url = 'http://192.168.8.114/sendCommand'  #IP Address of the ESP32:
+    payload = {'command': command}
+
+    try:
+        response = requests.post(esp32_url, data=payload)
+        if response.status_code == 200 and response.text == 'OK':
+            print("Command sent to ESP32 successfully")
+        else:
+            print("Failed to send command to ESP32")
+    except Exception as e:
+        print("An error occurred while sending the command to ESP32:", e)
+
+def water_level_send_command_to_esp32(command):
+    esp32_url = 'http://192.168.8.114/sendAndReceiveWaterLevelCommand'  #IP Address of the ESP32:
+    payload = {'command': command}
+
+    try:
+        response = requests.post(esp32_url, data=payload)
+        if response.status_code == 200 and response.text == 'OK':
+            print("Command sent to ESP32 successfully")
+        else:
+            print("Failed to send command to ESP32")
+    except Exception as e:
+        print("An error occurred while sending the command to ESP32:", e)
+
+def check_system_send_command_to_esp32(command):
+    esp32_url = 'http://192.168.8.114/sendAndReceiveCheckSystemCommand'  #IP Address of the ESP32:
     payload = {'command': command}
 
     try:
