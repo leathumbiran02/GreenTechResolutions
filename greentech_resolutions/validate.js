@@ -637,8 +637,27 @@
 
         // Send a simple request to indicate that the refresh button was clicked
         xhr.send("refreshed=true");
+
+        //Sends a command to the ESP32 to check the system status:
+        sendAndReceiveCheckSystemFromESP32('e', function(response) {
+            if (response === 'OK') {
+                //Success:
+                console.log("Command successful. Response:", response);
+            } else {
+                //Failed:
+                console.log("Command failed. Response:", response); //Console log statement for debugging purposes:
+            }
+        });
     }
 
+    /* Function to update the system status on the website */
+    function updateSystemStatus(status) {
+        var systemStatusElement = document.getElementById('system_status');
+        if (systemStatusElement) {
+            systemStatusElement.textContent = status;
+        }
+    }
+    
     function formatDate(date) {
         const year = date.getFullYear();
         const month = padZero(date.getMonth() + 1);
@@ -861,6 +880,27 @@
     /* Route 3: */
     /* Function to send and receive commands from the ESP32: */
     /* USED FOR CHECK SYSTEM: */
+    function sendAndReceiveCheckSystemFromESP32(command, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://192.168.8.114/sendAndReceiveCheckSystemCommand', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var response = xhr.responseText;
+                if (typeof callback === 'function') {
+                    //Assuming the Arduino sends the system status as a response:
+                    updateSystemStatus(response); //Update the system status on the website:
+                    callback(response);
+                }
+            } else {
+                if (typeof callback === 'function') {
+                    callback(null);
+                }
+            }
+        };
+
+        xhr.send('command=' + encodeURIComponent(command));
+    }
 
     /* Route 4: */
     /* Function to send and receive commands from the ESP32: */

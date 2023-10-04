@@ -40,7 +40,7 @@
                 display: flex;
                 justify-content: space-between;
                 height: 150px;
-                width: 90%;
+                width: 95%;
                 margin-bottom: 50px;
             }
             .right-block {
