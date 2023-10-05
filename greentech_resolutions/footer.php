@@ -12,7 +12,7 @@
                 height: 80px;
                 width: auto;
                 padding-left: 50px;
-                margin-top: 55px;
+                /* margin-top: 55px; */
             }
             .info {
                 display: flex;
@@ -29,7 +29,7 @@
     </head>
     <body>
         <div class="block">
-            <img class="logo" src="images/gtr-logo2.png" alt="GreenTechResolutions">
+            <img class="logo" src="images/gtr-logo2.png" alt="GreenTechResolutions" style="margin-top: 55px;">
             <div class="info">
                 <span>9 Concorde E Rd, Bedfordview JHB</span><br>  
                 <span>+27 74 614 9038</span><br> 
