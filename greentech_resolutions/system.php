@@ -136,7 +136,7 @@
                 </div>
                 
                 <!-- Code for testing that the data has been retrieved from the Arduino: -->
-                <p id="system_status">Loading...</p>
+               <!--  <p id="system_status">Loading...</p> -->
 
                 <div id="testCard">
                     <h2 id="systemError">SYSTEM ERROR!!!</h2>
