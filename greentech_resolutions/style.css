@@ -13,8 +13,8 @@ body{
 }
 
 header{
-    position: absolute;
-    top:35px;
+    position: fixed;
+    top:0px;
     left:50px;
     right:50px;
     background: #4C4D5E; /* Color of the menu :) */
