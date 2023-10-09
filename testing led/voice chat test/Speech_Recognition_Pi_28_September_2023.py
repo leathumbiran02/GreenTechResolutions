@@ -110,7 +110,7 @@ def main():
                     check_system_send_command_to_esp32('e')  # Send 'e' to check the system:
 
                 if text.lower() == "check water level":
-                    water_level_send_command_to_esp32('f')  # Send 'f' to check the water level:
+                    water_level_send_command_to_esp32('7')  # Send '7' to check the water level:
 
                 if text.lower() == "check temperature":
                     send_command_to_esp32('g')  # Send 'g' to check the temperature:

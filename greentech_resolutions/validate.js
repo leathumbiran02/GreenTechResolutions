@@ -584,7 +584,7 @@
     function updateWaterLevel(level) {
         var waterLevelElement = document.getElementById('waterLevel');
         if (waterLevelElement) {
-            waterLevelElement.textContent = "Water Level: " + level;
+            waterLevelElement.textContent = "Water Level: " + level + " %";
         }
     }
 
