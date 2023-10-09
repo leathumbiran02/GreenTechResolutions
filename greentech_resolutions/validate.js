@@ -613,6 +613,14 @@
 
 /* --------------------------------------------------SYSTEM.PHP JAVASCRIPT:----------------------------------------------------------------------------------------------- */
     function refreshButton() {
+        const refreshButton = document.getElementById('refreshButton');
+        const lastRefreshed = document.getElementById('lastRefreshed');
+        // Add the "red" class to armStatus to change its color to red
+        armStatus.classList;
+        tankStatus.classList;
+
+        testCard.style.display = 'block';
+
         // Get the current date and time
         const now = new Date();
         const formattedDateTime = formatDate(now);
@@ -648,6 +656,8 @@
                 console.log("Command failed. Response:", response); //Console log statement for debugging purposes:
             }
         });
+
+
     }
 
     /* Function to update the system status on the website */

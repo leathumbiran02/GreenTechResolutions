@@ -91,17 +91,8 @@
                 text-align: right;
                 margin-top: -13px; 
             }
-            #armStatus.red, 
-            #tankStatus.red{
-                color: red;
-            }
-            #systemError{
-                color: red;
-                text-align: center; 
-                margin-top: 30px;
-            }
             #status{
-                color:red; 
+                color:green; 
                 margin-top: -13px;
                 font-size: 45px; 
                 text-align: right;
@@ -312,7 +303,6 @@
                             </tr>
                         </table>
                     </div>
-                    
                 </div>
             <!-- Using an external javascript file for the buttons and timers: -->
             <script src="validate.js"></script>
@@ -324,10 +314,3 @@
             </script>
     </body>
 </html>
-<!--
-Status operational and error 
-system error 
-Alert button green and red 
-Icons 
-Time saves
--->
