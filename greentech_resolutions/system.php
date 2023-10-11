@@ -19,15 +19,33 @@
         <link rel="stylesheet" href="style.css">
 
         <style>
-            .systemStatus{
-                display: inline-block; /* Make both blocks inline-block elements */
+            .systemStatus, .statuses {
                 background-color: #4C4D5E;
                 height: auto;
                 padding-top: 5px;
                 width: 40%;
                 margin-left: 50px;
                 padding-bottom: 5px;
-                margin-top: 50px;
+                margin-top: 20px;
+            }
+            .systemStatus{
+                display: inline-block; 
+            }
+            .statuses{
+                width: 92%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .armStatusBlock, .tankStatusBlock{
+                flex: 1;
+                display: inline-block;
+            }
+            .armStatusBlock{
+                margin-left: 240px;
+                margin-right: 170px;
+            } 
+            .tankStatusBlock{
+                margin-right: -300px;
             }
             .card{
                 width: 300px;
@@ -91,7 +109,7 @@
                 text-align: right;
                 margin-top: -13px; 
             }
-            #status{
+            p{
                 color:green; 
                 margin-top: -13px;
                 font-size: 45px; 
@@ -129,179 +147,62 @@
                 <!-- Code for testing that the data has been retrieved from the Arduino: -->
                <!--  <p id="system_status">Loading...</p> -->
 
-                <div id="testCard">
-                    <h2 id="systemError">SYSTEM ERROR!!!</h2>
-                    <div class="card">
-                        <!--All arm errors-->
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2 style="margin-top: 0px;">BASE MOTOR</h2>
-                                    <h5>Arm</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
+                <div id="testCard" class="statuses">
+                    <div class="armStatusBlock">
+                    <h2>ARM</h2>
+                        <div class="card">
+                            <span>BASE MOTOR</span>
+                            <h4>Motor 1</h4>
+                            <p>&#11044;</p>      
+                        </div>
+                        <div class="card">
+                            <span>SHOULDER MOTOR</span>
+                            <h4>Motor 2</h4>
+                            <p>&#11044;</p>         
+                        </div>
+                        <div class="card">
+                            <span>ELBOW MOTOR</span>
+                            <h4>Motor 3</h4>
+                            <p>&#11044;</p>       
+                        </div>
+                        <div class="card">
+                            <span>WRIST 1 MOTOR</span>
+                            <h4>Motor 4</h4>
+                            <p>&#11044;</p>        
+                        </div>
+                        <div class="card">
+                            <span>WRIST 2 MOTOR</span>
+                            <h4>Motor 5</h4>
+                            <p>&#11044;</p>       
+                        </div>
                     </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2 style="margin-top: 0px;">SHOULDER MOTOR</h2>
-                                    <h5>Arm</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2 style="margin-top: 0px;">ELBOW MOTOR</h2>
-                                    <h5>Arm</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2>WRIST 1 MOTOR</h2>
-                                    <h5>Arm</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2>WRIST 2 MOTOR</h2>
-                                    <h5>Arm</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2>HAND MOTOR</h2>
-                                    <h5>Arm</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <!--All tank errors-->
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2>FISH FEEDER</h2>
-                                    <h5>Tank</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2>ULTRASONIC SENSOR</h2>
-                                    <h5>Tank</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2>PUMP</h2>
-                                    <h5>Tank</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2>TEMPERATURE SENSOR</h2>
-                                    <h5>Tank</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2>WATER LEVEL SENSOR</h2>
-                                    <h5>Tank</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2>LED LIGHT</h2>
-                                    <h5>Tank</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="card">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2>CAMERA</h2>
-                                    <h5>Tank</h5>
-                                </td>
-                                <td>
-                                    <p id="status">&#11044;</p>
-                                </td>
-                            </tr>
-                        </table>
+                    <div class="tankStatusBlock">
+                        <h2>TANK</h2>
+                        <div class="card">
+                            <span>FISH FEEDER</span>
+                            <h4>Motor 6</h4>
+                            <p>&#11044;</p>       
+                        </div>
+                        <div class="card">
+                            <span>TEMPREATURE SENSOR</span>
+                            <h4>Sensor 1</h4>
+                            <p>&#11044;</p>       
+                        </div>
+                        <div class="card">
+                            <span>Water Level Sensor</span>
+                            <h4>Sensor 2</h4>
+                            <p>&#11044;</p>        
+                        </div>
+                        <div class="card">
+                            <span>FILL TANK PUMP</span>
+                            <h4>Pump 1</h4>
+                            <p>&#11044;</p>        
+                        </div>
+                        <div class="card">
+                            <span>WATER FLOW PUMP</span>
+                            <h4>Pump 2</h4>
+                            <p>&#11044;</p>         
+                        </div>
                     </div>
                 </div>
             <!-- Using an external javascript file for the buttons and timers: -->
