@@ -184,7 +184,7 @@
                             <p>&#11044;</p>       
                         </div>
                         <div class="card">
-                            <span>TEMPREATURE SENSOR</span>
+                            <span>TEMPERATURE SENSOR</span>
                             <h4>Sensor 1</h4>
                             <p>&#11044;</p>       
                         </div>
