@@ -23,7 +23,7 @@
                 background-color: #4C4D5E;
                 height: auto;
                 padding-top: 5px;
-                width: 40%;
+                width:50%;
                 margin-left: 50px;
                 padding-bottom: 5px;
                 margin-top: 20px;
@@ -115,6 +115,12 @@
                 font-size: 45px; 
                 text-align: right;
             }
+            .roboticArm {
+                width: auto;
+                height: 485px; 
+                padding-left: 80px;
+                margin-bottom: -200px;
+            }
         </style>
     </head>
     <body>
@@ -143,6 +149,7 @@
                         <h4 class="dateAndTime"id="lastRefreshed"></h4>
                     </div>
                 </div>
+                <img class="roboticArm" src="images/roboticArm.png">
                 
                 <!-- Code for testing that the data has been retrieved from the Arduino: -->
                <!--  <p id="system_status">Loading...</p> -->
