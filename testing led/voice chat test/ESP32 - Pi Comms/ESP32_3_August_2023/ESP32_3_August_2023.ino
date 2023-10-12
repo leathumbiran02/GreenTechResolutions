@@ -49,7 +49,7 @@ void setup() {
   });
 
   // Route 1 - for most components - pi
-  server2.on("/sendCommandFromPi", HTTP_POST, [](AsyncWebServerRequest *request) {
+  server2.on("/sendCommand", HTTP_POST, [](AsyncWebServerRequest *request) {
     if (request->hasParam("command", true)) {
       String command = request->getParam("command", true)->value();
       sendCommandToArduino(command[0], [&](String response) {
