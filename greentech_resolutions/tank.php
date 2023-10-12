@@ -31,7 +31,7 @@
                 background-color: #4C4D5E;
                 height: auto;
                 padding-top: 5px;
-                width: 40%;
+                width: 30%;
                 margin-left: 50px;
                 padding-bottom: 5px;
                 margin-top: 50px;
@@ -40,13 +40,17 @@
                 display: flex;
                 justify-content: space-between;
                 height: 150px;
-                width: 95%;
+                width: 93%;
                 margin-bottom: 50px;
             }
             .right-block {
-                width: 50%; 
+                width: 45%; 
                 height: auto;
                 margin-right: 50px;
+                width: 810px;
+                height: 530px;
+                margin-top: 50px;
+                overflow: hidden;
             }
             .card, .fish-feederCard, .featuresCard{
                 width: 300px;
@@ -88,7 +92,7 @@
                 top: 15%;
             }
             .newfeatureText{
-                margin-top:-60px;
+                margin-top:10px;
                 margin-bottom:-10px;
             }
             .timer{
@@ -137,40 +141,15 @@
                 outline: none;
                 border-color: #007bff;
             }
-            .tank {
-                position: relative;
-                width: 100%;
-                height: 535px;
-                background-color: #aad5f8; /* Light blue color for the tank */
-                margin: 50px auto;
-                border-radius: 15px;
-                overflow: hidden; /* Hide overflowing fish */
-                animation: tankMovement 4s ease-in-out infinite alternate; /* Create the tank movement animation */
-                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
-            }
-            .water {
+            .fishTankVideo{
+                width:810px;
+                height: 600px;
+                margin-top: 0px;
+                overflow: hidden;
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(rgba(0, 119, 190, 0.5), rgba(0, 119, 190, 0.8)); /* Gradient for the water, creating a more realistic look */
-            }
-            .bubble {
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white for bubbles */
-                border-radius: 50%; /* Make bubbles circular */
-                animation: bubbleFloat 4s linear infinite; /* Create the bubble floating animation with a linear timing function */
-            }
-            @keyframes bubbleFloat {
-                0% {
-                    transform: translateY(100%); /* Start from the bottom of the tank */
-                    opacity: 1;
-                }
-                100% {
-                    transform: translateY(-100%); /* Float to the top of the tank */
-                    opacity: 0;
-                }
-            }
+                transform: scale(1.5);
+            }           
         </style>
     </head>
     <body>
@@ -214,15 +193,9 @@
                 </div>
             </div>
             <div class="right-block">
-                <div class="tank">
-                    <div class="water"></div>
-                    <div class="fish"></div>
-                    <script>
-                        for (let i = 0; i < 80; i++) {
-                            document.write('<div class="bubble"></div>');
-                        }
-                    </script>
-                </div>
+            <video class="fishTankVideo" autoplay loop muted playsinline controls>
+                <source src="videos/fishTankVideo.mp4" type="video/mp4">
+            </video>
             </div>
         </div>
         <h2 class="newfeatureText">NEW FEATURES</h2>
