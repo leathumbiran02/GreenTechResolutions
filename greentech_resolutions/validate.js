@@ -584,7 +584,7 @@
     function updateWaterLevel(level) {
         var waterLevelElement = document.getElementById('waterLevel');
         if (waterLevelElement) {
-            waterLevelElement.textContent = "Water Level: " + level + " %";
+            waterLevelElement.textContent = level + " %";
         }
     }
 
@@ -605,7 +605,7 @@
     function updateTemperature(temp) {
         var temperatureValue = document.getElementById('temperatureValue');
         if (temperatureValue) {
-            temperatureValue.textContent = "Temp: " + temp + "°C";
+            temperatureValue.textContent = temp + "°C";
         }
     }
 

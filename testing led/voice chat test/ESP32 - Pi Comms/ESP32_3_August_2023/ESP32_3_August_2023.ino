@@ -49,7 +49,7 @@ void setup() {
   });
 
   // Route 1 - for most components - pi
-  server2.on("/sendCommand", HTTP_POST, [](AsyncWebServerRequest *request) {
+  server2.on("/sendCommandFromPi", HTTP_POST, [](AsyncWebServerRequest *request) {
     if (request->hasParam("command", true)) {
       String command = request->getParam("command", true)->value();
       sendCommandToArduino(command[0], [&](String response) {
@@ -115,6 +115,17 @@ void loop() {
 void sendCommandToArduino(char command, std::function<void(String)> callback) {
   espSerial.write(command); // Send command to Arduino:
   Serial.println("Command sent to Arduino");
+
+  if(command=='7'){
+    String responseFromArduino = "80"; // Define a string to store the response:
+  
+    callback(responseFromArduino);
+  }
+  else if(command=='g'){
+    String responseFromArduino = "25"; // Define a string to store the response:
+  
+    callback(responseFromArduino);
+  }
 
   String responseFromArduino = ""; // Define a string to store the response:
   

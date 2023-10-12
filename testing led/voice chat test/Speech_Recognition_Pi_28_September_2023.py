@@ -26,7 +26,7 @@ def respond_to_input(text):
         "plants": "Really? Is that what you paid me to do? Why don't you check your website?",
         "weather": random.choice(["It's sunny and warm today.", "Expect some rain today.", "There are cloudy skies today."]),
         "attitude": "I don't have an attitude. I just don't respond to stupid questions.",
-        "bye": "Goodbye! Have a good day!",
+        "good bye": "Goodbye! Have a good day!",
         "sushi": "Fish are friends, not food. You should consider becoming a vegetarian.",
 
         #AJAX FROM WEBSITE FOR COMPONENTS (telling the user what the system is currently doing):
@@ -145,7 +145,7 @@ def stop_camera_script():
         print("Camera script is not running, nothing to stop.")
 
 def send_command_to_esp32(command):
-    esp32_url = 'http://192.168.8.114/sendCommand'  #IP Address of the ESP32:
+    esp32_url = 'http://192.168.8.114/sendCommandFromPi'  #IP Address of the ESP32:
     payload = {'command': command}
 
     try:
