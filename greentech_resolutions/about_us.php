@@ -76,11 +76,9 @@
             .galleryImg1,
             .galleryImg2 {
                 flex: 1; /* Distribute available space equally between these images */
-                width: 35%;
+                width: 30%;
                 max-width: none; /* Remove the max-width restriction to allow bigger width */
                 max-height: none; /* Allow the image to use its natural height */
-                margin-left: 50px;
-                margin-right: 50px;
             }
 
             .aquaponicDiagram {
@@ -270,9 +268,9 @@
             </div>  
         </div>
         <div class="aquaponicsGallery">
-            <img class="galleryImg1" src="images/aquaponicsGallery1.jpg" >
+            <img class="galleryImg1" style="margin-left:50px;" src="images/aquaponicsGallery1.jpg" >
             <img class="aquaponicDiagram" src="images/aquaponicsDiagram.JPG" >
-            <img class="galleryImg2" src="images/aquaponicsGallery2.JPG" >
+            <img class="galleryImg2" style="margin-right:50px;" src="images/aquaponicsGallery2.JPG" >
         </div>
         <div class="ourTeamSection">
             <h2>OUR TEAM</h2>
