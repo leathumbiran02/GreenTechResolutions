@@ -84,12 +84,7 @@
                         </div>
                     </form>
                 </div>
-                <footer style="filter:drop-shadow(1px 1px 3px black);"> <!-- Have a terms and conditions appear at the bottom of the page: -->
-                    <div class="spacing" style="height:0px;"></div>
-                    <div class="center-text">
-                        <br><p style="font-size: 20px;"><i>Terms & Conditions: By creating an account you agree to share your full name, email address, and Bot IP with GreenTech Resolutions.</i></p>
-                    </div>
-                </footer>
+                       <!-- <br><p style="font-size: 20px;"><i>Terms & Conditions: By creating an account you agree to share your full name, email address, and Bot IP with GreenTech Resolutions.</i></p>-->
             </div>
         </div>   
         <!--Use an external javascript file named validate.js to validate the form:-->
