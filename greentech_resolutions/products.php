@@ -12,128 +12,64 @@
         <link rel="stylesheet" href="style.css">
 
         <style>
-            body {
+            .productContainer{
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                background-color: white;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                background-image: url(https://www.theaquaponicsource.com/wp-content/uploads/2020/05/Organic_Aquaponic_Vegetable-1200x484-1.jpg);
-                background-position:center;
-                background-size:cover;
-                background-attachment: fixed;
-                backdrop-filter: blur(2px);
-            }
-
-            .container {
-                width: 80%;
-                min-height: 350px;
-                border-radius: 20px; /* Set only the top-left and top-right corners to create a curved top border */
-                position: relative;
-                /* Removed transition and transform-style */
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: 27px;
-                background-size: cover;
-            }
-            .side {
-                /* Removed position and backface-visibility */
-                text-align: center;
-                width: 100%;
-                height: 100%;
-                padding: 0px 0px;
-                color: white;
-                border-radius: 20px;
-                border-radius: 10px 10px 0 0;
-            }
-
-            .content {
-                line-height: 1.5em;
-                padding: 0px 0px;
+                width: 92%;
                 height: auto;
-                width: 80%;
-                margin-left: 27px;
-                position: relative;
-                background-color: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(5px);
-                padding-top: 0;
-                border-radius: 0 0 10px 10px;
-                display: flex;
-                flex-direction: column; /* Make the child elements stack vertically */
-                justify-content: center; /* Center the content vertically */
-                align-items: center; /* Center the content horizontally */
-            }
-
-            .content h2,
-            h2 {
-                position: relative;
-                font-size: 25px;
+                justify-content: space-between;
+                margin-left: 50px;
+                margin-right: 50px;
+                margin-bottom: 50px;
                 text-align: center;
-                color: white;
-                border-radius: 10px;
-                padding: 10px;
-                margin-bottom: 0;  
             }
-
-            .content h4,
-            h4 {
-                margin-top: 0px;
-                line-height: 2em;
+            .productCard{
+                background-color: #4C4D5E;
+                flex-basis: 32%;
+                height: auto;
+            }
+            h4, h2, span{
+                color: white;
+                text-align: center; 
                 font-size: 20px;
-                text-align: center;
-                margin-bottom: 10px;
-                color: white;
-                border-radius: 10px;
-                padding: 0px;
-                font-weight: normal;
-                padding-bottom: 0px;
             }
-
-            .content button {
-                display: block;
-                width: 245px;
-                height: 40px;
-                background-color: transparent; 
-                color: #09BA20;
-                border: none;
-                cursor: pointer;
-                font-size: 17px;
+            h2{
                 font-weight: bolder;
-                margin-top: 20px;
-                margin: 0px;
-                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
             }
-
-            table {
-                width: 90%;
-                margin-top: 100px;
-                border-collapse: collapse;
+            h4{
+                font-weight: bolder;
+                padding-top: 15px;
+                margin-bottom: -20px;
             }
-
-            td {
-                width: 30%; 
-                padding: 5px;
+            span{
+                font-weight: normal;
+                display: inline-block;
+                float:left;
+                padding: 0px 40px;
+                padding-bottom: 20px;
             }
-            .front {
-                z-index: 2;
-                background-size:100% 100%;
+            .smallIndoorSystem, .biggerIndoorSystem, .smallOutdoorSystem{
+                height: 400px;
+                width: 310px;
+                margin-left: 5px;
+                margin-top: 40px;
             }
-            .indoor {
-                background-image: url(images/small-IndoorSystem.jpg);
+            .button{
+                width: 45%;
+                padding: 5px 0px;
+                cursor: pointer;
+                margin: auto;
+                background-color:#009414;
+                color: #ffffff;
+                font-weight: normal;
+                font-size: 20px;
+                border: 0;
+                outline: none;
+                margin-top: 1px;
+                align: center; 
+                margin-bottom: 30px
             }
-
-            .biggerIndoor {
-                background-image: url(https://i.pinimg.com/564x/7e/26/78/7e267824b2b1e7be78093732af6fb0ea.jpg);
-            }
-
-            .outdoor {
-                background-image: url(https://i.pinimg.com/564x/4e/a2/3c/4ea23c2fc163acdb063ec896b1fbc441.jpg);
-            }
-
         </style>  
     </head>
     <body>
@@ -142,42 +78,26 @@
                 include 'menu.php';
             ?>
         </header>
-        <table>
-            <tr>
-                <td>
-                    <div class="container" >
-                        <div class="front indoor side">
-                        </div>
-                    </div>
-                    <div class="content">
-                        <h2>INDOOR SYSTEM</h2>
-                        <button>View More</button>
-                    </div>
-                </td>
-                <td>
-                    <div class="container">
-                        <div class="front biggerIndoor side">
-                        </div>
-                    </div>
-                    <div class="content">
-                        <h2>INDOOR SYSTEM</h2>
-                        <button>View More</button>
-                    </div>
-                </td>
-                <td>
-                    <div class="container" >
-                        <div class="front outdoor side">
-                        </div>
-                    </div>
-                    <div class="content">
-                        <h2>OUTDOOR SYSTEM</h2>
-                        <button>View More</button>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <script>
-            
-        </script>
+        <h2>PRODUCTS</h2>
+        <div class="productContainer">
+            <div class="productCard">
+                <img class="smallIndoorSystem" src="images/small-IndoorSystem.jpg">
+                <h2>AQUA-BOT 1.0</h2>
+                <span>Automated Freshwater Indoor System</span>
+                <button class="button">Add to Card</button>
+            </div>
+            <div class="productCard">
+                <img class="biggerIndoorSystem" src="images/bigger-IndoorSystem.jpg">
+                <h2>AQUA-BOT 2.0</h2>
+                <span>Medium Sized Indoor Freshwater System</span>
+                <button class="button">Add to Card</button>
+            </div>
+            <div class="productCard">
+                <img class="smallOutdoorSystem" src="images/small-OutdoorSystem.jpg">
+                <h2>OUTDOOR SYSTEM</h2>
+                <span>Medium Outdoor Freshwater System</span>
+                <button class="button">Add to Card</button>
+            </div>
+        </div>
     </body>
 </html>
