@@ -60,7 +60,7 @@
                 padding-bottom: 20px;
             }
             .product-img{
-                height: 200px;
+                height: 300px;
                 width: 350px;
                 margin-left: 5px;
                 margin-top: 40px;
