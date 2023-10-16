@@ -25,20 +25,20 @@
     //Generate HTML code for the webpage to display the details about each fish:
     if($result->num_rows>0){ //If rows were found in the table:
 
-        echo    "<div class='products-row'>";
         
+        echo    "<div class='productContainer'>";
             while($row = $result->fetch_assoc()){
-                echo    "<div class='product'>";
-                echo        "<img class='product-img' src='" . $row["image"] . "' alt='" . $row['fish_name'] . "'>"; /* Fish image: */
-                echo        "<div class='product-info'>";
-                echo            "<h3 class='product-title' style='color:#6cff7f; font-size: 25px;'>" . $row["fish_name"] . "</h3>"; /* Fish name: */
-                echo            "<h3 class='product-title' style='font-size: 22px;'>" . $row["description"] . "</h3>"; /* Fish Description: */
-                echo            "<span class='product-price-discount' style='font-size: 22px;'>R" . $row["price"] . "</span>"; /* Fish price: */
-                echo        "<a href='fish_details.php?id=" . $row["fish_id"] . "'><button class='addbutton' style='margin-top:10px;'>BUY</button></a>";
+                echo        "<div class='productCard'>";
+                echo            "<img class='product-img' src='" . $row["image"] . "' alt='" . $row['fish_name'] . "'>"; /* Fish image: */
+                echo            "<div class='product-info'>";
+                echo                "<h2>" . $row["fish_name"] . "</h2 >"; /* Fish name: */
+                echo                "<span>" . $row["description"] . "</span >"; /* Fish Description: */
+                echo                "<span>R" . $row["price"] . "</span>"; /* Fish price: */
+                echo            "<a href='fish_details.php?id=" . $row["fish_id"] . "'><button class='addbutton'>BUY</button></a>";
+                echo            "</div>";
                 echo        "</div>";
-                echo    "</div>";
             }
-        echo    "</div>";
+            echo    "</div>";
     }else{ //There are no rows or the table is empty, display an error message directly on the page:
         echo    "<div class='center-text'>";
         echo        "<h2 style='color:#09BA20;'>No Fish Were Found.</h2>"; 
