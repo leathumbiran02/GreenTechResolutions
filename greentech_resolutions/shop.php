@@ -57,7 +57,7 @@
                 padding: 0px 40px;
                 padding-bottom: 20px;
             }
-            .smallIndoorSystem, .biggerIndoorSystem, .smallOutdoorSystem{
+            .productImg{
                 height: 300px;
                 width: 300px;
                 margin-left: 5px;
@@ -91,19 +91,19 @@
         <h2>PRODUCTS</h2>
         <div class="productContainer">
             <div class="productCard">
-                <img class="smallIndoorSystem" src="images/servoMotor.webp">
+                <img class="productImg" src="images/servoMotor.webp">
                 <span>HKD Servo Motor MG995 13KG</span>
                 <span>R120.87</span>
                 <button class="button">Add to Card</button>
             </div>
             <div class="productCard">
-                <img class="biggerIndoorSystem" src="images/waterPump.webp">
+                <img class="productImg" src="images/waterPump.webp">
                 <span>AHKD Subm Water Pump 3-6VDC</span>
                 <span>R23.48</span>
                 <button class="button">Add to Card</button>
             </div>
             <div class="productCard">
-                <img class="smallOutdoorSystem" src="images/tempSensor.webp">
+                <img class="productImg" src="images/tempSensor.webp">
                 <span>HKD Temprature Probe DS18B20</span>
                 <span>R39.13</span>
                 <button class="button">Add to Card</button>
@@ -112,19 +112,19 @@
 
         <div class="productContainer">
             <div class="productCard">
-                <img class="smallIndoorSystem" src="images/smallServoMotor.jpg">
+                <img class="productImg" src="images/smallServoMotor.jpg">
                 <span>HKD Micro Servo 9G 3V-7</span>
                 <span>R39.00</span>
                 <button class="button">Add to Card</button>
             </div>
             <div class="productCard">
-                <img class="biggerIndoorSystem" src="images/moistureSensor.webp">
+                <img class="productImg" src="images/moistureSensor.webp">
                 <span>BMT Soil Moisture Sensor</span>
                 <span>R26.00</span>
                 <button class="button">Add to Card</button>
             </div>
             <div class="productCard">
-                <img class="smallOutdoorSystem" src="images/ledLight.jpg">
+                <img class="productImg" src="images/ledLight.jpg">
                 <span>LED 120B 12V N/WPR New 5MT</span>
                 <span>R310.98</span>
                 <button class="button">Add to Card</button>
