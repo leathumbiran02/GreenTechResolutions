@@ -153,11 +153,13 @@ header label{
 }
 
 .register_login_btn_box{
-    width: 260px;
-    margin: 35px auto;
+    width: 238px;
+    margin: auto;
     position: relative;
     box-shadow: none;
-    border-radius: 30px;
+    border-radius: 0px;
+    background-color: #4C4D5E;
+    border-bottom: 5px solid #09BA20;
 }
 
 .toggle_register_login_btn{
@@ -167,7 +169,7 @@ header label{
     border: 0;
     outline: none;
     position: relative;   
-    color: #09BA20;
+    color: White;
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
@@ -176,12 +178,12 @@ header label{
     top:0;
     left: 0;
     position: absolute;
-    width: 140px;
+    width: 110px;
     height: 100%;
-    background: linear-gradient(to right, #09BA20, #6cff7f);
-    border-radius: 30px;
+    background: #09BA20;
+    border-radius: 0px;
     transition: .5s;
-    border: 3px solid black;
+    border: none;
 }
 
 .login_input_group{
@@ -452,11 +454,11 @@ th.user-th, td.user-td{
     font-weight: bolder;
 }
 
-/* CSS for the community fish: */
-.products-row{ /* Code to style the products from the database */
+/* CSS for the community fish: 
+.products-row{ Code to style the products from the database
     display:flex;
     flex-wrap: wrap;
-}
+} */
 
 .product{
     width:50%;
@@ -468,12 +470,12 @@ th.user-th, td.user-td{
     justify-content: space-between;
     margin-bottom: 20px;
 }
-
-.product-img{ /* Images displayed with each product*/
+/* 
+.product-img{ Images displayed with each product
     width:11em;
     max-width: 11em;
     height: 11em;
-}
+}*/
 
 .product-info {
     display: flex;
@@ -483,19 +485,19 @@ th.user-th, td.user-td{
     flex:1;
 }
 
-.product-title{
+/*.product-title{
     margin-top:0;
     margin-bottom:10px;
     color: #ffffff;
     font-size:20px;
-}
+}*/
 
-.product-price-discount{
+/*.product-price-discount{
     font-family: Montserrat, sans-serif;
     font-size: 1.2em;
     font-weight: bold;
     color: #ffffff;
-}
+}*/
 
 
 /*Styling for smaller screens:*/
@@ -663,24 +665,6 @@ th.user-th, td.user-td{
     cursor: pointer;
     border: none;
 }
-
-.addbutton{ /* Button when clicking on fish */
-    background: linear-gradient(to right, #008f3f, #09BA20);
-    cursor: pointer;
-    display: block;
-    padding: 3px;
-    width:50%;
-    color: #ffffff;
-    opacity: 100%;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    border:none;
-    border-radius: 10px;
-    transition: background-color 0.3s ease-in-out;
-    text-decoration: none;
-}
-
 a.addbutton{
     display: inline-block;
     text-decoration: none;
@@ -688,34 +672,39 @@ a.addbutton{
 
 .search-bar {
     float: right;
-    margin-top: -95px;
-    margin-right: 20px;
+    width: 350px;
+    margin-top: -30px;
+    margin-right: 50px;
     display: flex;
     align-items: center;
-    border-radius: 30px;
-    background-color: #CED1D8;
+    border-radius: 0px;
+    color: #ffffff;
+    background-color: #4C4D5E;
     padding: 10px 20px;
-    border:3px solid black;
 }
 
 .search-bar input {
     flex: 1; 
     padding: 8px;
-    margin-right: 100px;
+    margin-right: 500px;
     border: none;
     outline: none;
-    background-color: #CED1D8;
-    color: #000000;
+    background-color: #4C4D5E;
+    color: #ffffff;
     font-weight: bolder;
-    border-radius: 30px;
+    border-radius: 0px;
     font-size: 19px;
+    width:30px;
+}
+.search-bar input::placeholder{
+    color: #ffffff;
 }
 
 .search-bar-btn{
-    margin-right: 50px;
+    margin-left: -300px;
     cursor: pointer;
-    color: #000000;
-    background-color: #CED1D8;
+    color: #ffffff;
+    background-color: #4C4D5E;
     font-size: 25px;
     border: none;
 }

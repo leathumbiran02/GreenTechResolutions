@@ -21,58 +21,71 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
         <style>
-            h5{
-                font-size:1.1em;
-            } 
-            .product{
-                opacity: 100%;
-                border: 5px solid #000000;
-                background: #010007eb;
+            .productContainer{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0 auto 50px;
+                padding: 0 50px;
+                text-align: center;
+                margin-top: 50px;
             }
-            .form-page{
-                background: url(images/account_background.jpg);
+            .productCard{
+                flex-basis: calc(33% - 20px); 
+                background-color: #4C4D5E;
+                height: auto;
+                margin-bottom: 20px
             }
-            .register_login_btn_box{
-                margin:35px;
-            }
-            #btn{
-                width:120px;
-                border: 3px solid black;
-            }
-            .chat-page-toggle_register_login_btn{
-                font-size:40px;
-                padding: 0px 30px;
+            h4, h2, span{
                 color: white;
-                filter:drop-shadow(1px 1px 3px black);
+                text-align: center; 
+                font-size: 20px;
             }
-            .addbutton{
-                width: 20%;
-                border-radius: 30px;
-                border: 3px solid #000000;
-                color: white;
+            h2{
                 font-weight: bolder;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            h4{
+                font-weight: bolder;
+                padding-top: 15px;
+                margin-bottom: -20px;
+            }
+            span{
+                font-weight: normal;
+                display: inline-block;
+                float:center;
+                padding-top: 20px;
+                padding: 0px 40px;
+                padding-bottom: 20px;
             }
             .product-img{
-                border-radius: 15px;
+                height: 200px;
+                width: 350px;
+                margin-left: 5px;
+                margin-top: 40px;
+                padding-bottom: 20px;
             }
-            .toggle_register_login_btn{
-                color: white;
+            .addbutton{
+                width: 40%;
+                padding: 5px 0px;
+                cursor: pointer;
+                margin: auto;
+                background-color:#009414;
+                color: #ffffff;
+                font-weight: normal;
+                font-size: 20px;
+                border: 0;
+                outline: none;
+                margin-top: 1px;
+                align: center; 
+                margin-bottom: 30px
             }
-
-            /* Testing a feature of locking certain elements when scrolling: */
-            .center-text, .register_login_btn_box, .search-bar {
-            position: sticky;
-            top: 0;
-            z-index: 1;
+            .register_login_btn_box{
+                margin-left: 50px;
+                margin-bottom: -30px;
             }
-            #products {
-            overflow-y: scroll;
-            max-height: calc(100vh - 350px);
-            scroll-behavior: smooth;
-            }
-            .blur_background{
-                backdrop-filter: blur(5px);
-            }
+            
         </style>
     </head>
     <body>
@@ -83,12 +96,8 @@
             ?>
         </header>
 
-        <div class="form-page">
-            <div class="blur_background">
-                <div class="center-text"> <!-- Class to center the top heading: -->
-                    <h1 class="chat-page-toggle_register_login_btn"><br>Community Market</h1>
-                </div>
-
+        <h2>Community Market</h2>
+        
                 <div class="register_login_btn_box" > <!-- The buttons that switches between both the login and register form: -->
                     <div id="btn"></div>
                     <button type="button" class="toggle_register_login_btn" onclick="fish()">Fish</button> 
@@ -96,11 +105,11 @@
                 </div>
 
                 <div class="search-bar">
-                    <input type="text" id="search" placeholder="Search products...">
+                    <input type="text" id="search" placeholder="Search">
                     <button type="button" class="search-bar-btn" onclick="searchProducts()"><i class="fas fa-search"></i></button>
                 </div>
 
-                <div id="products">
+                <div id="products" class="<div class='productContainer'>">
                     <!-- All the products from the database will be displayed here: -->
                     <?php 
                     include 'get_community_fish.php'; 
