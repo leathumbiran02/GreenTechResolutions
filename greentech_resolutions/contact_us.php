@@ -17,7 +17,7 @@
                 height: auto;
                 justify-content: space-between;
                 margin: 0px 50px;
-                margin-top: -20px;
+                margin-top: 40px;
                 text-align: center;
             }
             p, span{
@@ -34,31 +34,32 @@
             }
             h2{
                 color: white;
-                text-align: center; /* Center the text horizontally */
+                text-align: center;
                 font-size: 20px;
-                font-weight: bolder;
-                padding-bottom: 0px;
+                font-weight: bold;
+                padding-top: 50px;
             }
-            
             .addressCard {
                 display: flex;
-                flex-direction: column;
-                align-items: left;
+                align-items: flex-start;
                 text-align: left;
-                padding-left: 50px;
             }
-
+            .addressInfo {
+                display: flex;
+                flex-direction: column;
+            }
             .addressItem {
-                margin: 10px 0;
-                text-align: left !important;
+                display: flex; 
+                align-items: center;
+                margin-left: 0px;
+                text-align: left;
             }
-
             .addressItem a {
                 color: white;
                 font-size: 20px;
                 text-decoration: none;
-                margin-left: 0px;
-                padding-left: -1000px;
+                margin-top: 10px;
+                margin-left: 15px;
             }
             .contact-us-form-box {
                 background: none;
@@ -66,14 +67,14 @@
                 border-radius: 0;
                 margin: 0;
                 padding: 0;
+                margin-right: 0px;
             }
-
             .contact_us_submit_btn {
                 width: 45%;
-                padding: 5px 0;
+                padding: 5px;
                 cursor: pointer;
                 display: inline-block;
-                margin: 40px 0; /* Fix the margin property here */
+                margin: 40px 0; 
                 background-color: #009414;
                 color: #ffffff;
                 font-weight: normal;
@@ -81,16 +82,23 @@
                 border: 0;
                 outline: none;
                 margin-top: 10px;
-                text-align: center; /* Center the text horizontally within the button */
+                text-align: center; 
             }
-
             .contact-us-login_input_group{
-                margin-top: -110px;
+                margin-top: -125px;
                 padding: 0px;
             }
+            .mapCard {         
+                margin-right: 20px;
+            }
             .map{
-                width: 600px;
+                width: 400px;
                 height: auto;
+            }
+            .icon{
+                height: 50px;
+                width: auto;
+                padding-top: 10px;
             }
         </style>
     </head>
@@ -111,13 +119,19 @@
                 </div>
                 <div class="addressInfo">
                     <div class="addressItem">
-                        <a href="https://goo.gl/maps/UNgsTJUgLagswkQE6">9 Concorde E Rd, Bedfordview Johannesburg</a>
+                        <img class="icon" src="images/iconLocation.png">
+                        <a href="https://goo.gl/maps/UNgsTJUgLagswkQE6"> 
+                            9 Concorde E Rd, Bedfordview Johannesburg</a>
                     </div>
                     <div class="addressItem">
-                        <a href="tel:+27746149038">+27 74 614 9038</a>
+                        <img class="icon" src="images/iconPhone.png">
+                        <a href="tel:+27746149038">
+                            +27 74 614 9038</a>
                     </div>
                     <div class="addressItem">
-                        <a href="mailto:greentechresolutions@gmail.com">greentechresolutions@gmail.com</a>
+                        <img class="icon" src="images/iconEmail.png">
+                        <a href="mailto:greentechresolutions@gmail.com">
+                            greentechresolutions@gmail.com</a>
                     </div>
                 </div>
             </div>
