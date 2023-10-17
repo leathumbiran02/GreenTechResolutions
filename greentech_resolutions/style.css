@@ -354,25 +354,23 @@ th.user-th, td.user-td{
     border-radius: 30px;
 }*/
 
-.contact-us-form-box{ /* For the form */
+.contact-us-form-box{ 
     width: 450px;
     height:400px;
     position: relative;
     margin: 0 auto;
-    background-color: #CED1D8;
     border-radius: 35px;
     padding: 5px;
     overflow: hidden;
-    border: 3px solid black;
 }
 
-.contact-us-register_login_btn_box{
+/*.contact-us-register_login_btn_box{
     width: 260px;
     margin: 35px auto;
     position: relative;
     box-shadow: none;
     border-radius: 30px;
-}
+}*/
 
 .contact-us-toggle_register_login_btn{
     padding: 20px 30px;
