@@ -81,19 +81,19 @@
         <h2>PRODUCTS</h2>
         <div class="productContainer">
             <div class="productCard">
-                <img class="smallIndoorSystem" src="images/small-IndoorSystem.jpg">
+                <img class="smallIndoorSystem" src="images/small-IndoorSystem.jpg" onclick="showComingSoonMessage()">
                 <h2>AQUA-BOT 1.0</h2>
                 <span>Automated Freshwater Indoor System</span>
                 <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
             <div class="productCard">
-                <img class="biggerIndoorSystem" src="images/bigger-IndoorSystem.jpg">
+                <img class="biggerIndoorSystem" src="images/bigger-IndoorSystem.jpg" onclick="showComingSoonMessage()">
                 <h2>AQUA-BOT 2.0</h2>
                 <span>Medium Sized Indoor Freshwater System</span>
                 <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
             <div class="productCard">
-                <img class="smallOutdoorSystem" src="images/small-OutdoorSystem.jpg">
+                <img class="smallOutdoorSystem" src="images/small-OutdoorSystem.jpg" onclick="showComingSoonMessage()">
                 <h2>OUTDOOR SYSTEM</h2>
                 <span>Medium Outdoor Freshwater System</span>
                 <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
