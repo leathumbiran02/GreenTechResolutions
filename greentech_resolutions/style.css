@@ -252,18 +252,14 @@ header label{
 }
 
 .user-info{
-    width: 80%;
-    background-color: #010007eb;
-    border: 3px solid #000000;
-    border-radius: 30px;
+    width: 50%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content:center;
-    padding:30px;
     text-align: justify;
-    padding: 50px;
+    padding: 0px;
 }
 
 .user-info-table{ /* Table to display the users' information on the account page */
@@ -273,6 +269,7 @@ header label{
     font-weight: bold;
     width:100%;
     font-size:2em;
+    margin-left:270px;
 }
 
 th.user-th, td.user-td{
