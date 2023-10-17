@@ -84,37 +84,62 @@
         <!--Using a CSS style sheet for the page:-->
         <link rel="stylesheet" href="style.css">
         <style>
-            .hero{ /* Centering the text on the page: */
-                backdrop-filter: blur(5px);
-            }
-            .contact-us-register_login_btn_box{
-                margin: 35px 130px;
-            }
-            .contact-us-form-box{
-                height: 330px;
-                border: 3px solid black;
-                background-color: #010007eb;
-            }
-            .contact-us-login_input_group input{
-                border: 3px solid black;
-                color:black;
-                background-color: white;
-            }
-            .contact-us-submit_btn{
-                color: black;
-                border: 3px solid black;
-            }
             body{ /* Adding a background image to the page: */
-                width: 100%;
-                background-image: url(images/account_background.jpg);
-                background-position:center;
-                background-size:cover;
-                background-attachment: fixed;
-                overflow: hidden;
-                margin-top: 80px;
+                width: 97%;
+                /*overflow: hidden; does not allow page to scroll down*/ 
+                margin-top: 150px;
+                text-align: center; 
             }
-            .contact-us-toggle_register_login_btn{
+            p, span{
                 color: white;
+                font-size: 20px;
+                font-weight: normal;
+            }
+            p{
+                margin-top: 15px;
+            }
+            span{
+                font-weight: normal;
+                display: inline-block;
+                float:center;
+                padding: 0px 40px;
+                padding-top: 40px
+            }
+            h2{
+                color: white;
+                text-align: center; /* Center the text horizontally */
+                font-size: 20px;
+                font-weight: bolder;
+                padding-bottom: 0px;
+            }
+            .input_field, select{
+                width:100%;
+                padding: 10px 15px;
+                margin: 5px 0;
+                outline: none;
+                background-color: #252525;
+                border:none;
+                border-bottom: 1px solid #ffffff;
+                font-size: 15px;
+            }
+            .input_field::placeholder,select {
+                color: white;
+
+            }
+            .submit_btn{
+                width: 45%;
+                padding: 5px 0px;
+                cursor: pointer;
+                display: inline-block;
+                margin: auto;
+                background-color:#009414;
+                color: #ffffff;
+                font-weight: normal;
+                font-size: 20px;
+                border: 0;
+                outline: none;
+                margin-top: 1px;
+                float: center;
             }
         </style>
     </head>
@@ -126,18 +151,17 @@
             ?>
         </header>
         <div class="hero">
-            <div class="spacing" style="height:200px;"></div>
             <div class="form_page"> <!-- The body of the page: -->
                 <div class="contact-us-form-box"> 
                     <div class="contact-us-register_login_btn_box">
-                        <button type="button" class="contact-us-toggle_register_login_btn">Edit BOT IP</button> 
+                        <h2>Edit BOT IP</h2> 
                     </div>
 
                     <form class="contact-us-login_input_group" id="bot_ip" name = "bot_ip" action="manage_bot_ip.php" method="POST" onsubmit = "return(validate_bot_ip());">
                         <!-- BOT IP: -->
-                        <input type="text" class="contact-us-input_field" id="bot_ip" name="bot_ip" value="<?php echo $bot_ip; ?>"><br><br>  
+                        <input type="text" class="input_field" id="bot_ip" name="bot_ip" value="<?php echo $bot_ip; ?>"><br><br>  
                         <!-- Button to submit the details to the database: -->
-                        <button type="submit" name="submit" class="contact-us-submit_btn">Save</button>
+                        <button type="submit" name="submit" class="submit_btn">Save</button>
 
                         <div class="center-text">
                             <!-- Go Back:-->
