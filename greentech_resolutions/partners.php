@@ -66,20 +66,20 @@
         <div class="container">
             <!-- Woolworths -->
             <div class="card">
-                <img class="woolworthsLogo" src="images/woolworthsLogo.jpg">
-                <h2>WOOLWORTHS</h2>
+                <a href="https://www.woolworthsholdings.co.za/"><img class="woolworthsLogo" src="images/woolworthsLogo.jpg"></a>
+                <a href="https://www.woolworthsholdings.co.za/"><h2>WOOLWORTHS</h2></a>
                 <span>Is committed to minimizing its environmental impact, promoting responsible sourcing, and supporting sustainable agriculture.</span>
             </div>
             <!-- LightsOut -->
             <div class="card">
-                <img class="lightsOutLogo" src= "images/lightsOutLogo.jpg">
-                <h2>LIGHTS OUT</h2>
+                <a href="https://lights-out-south-africa.000webhostapp.com/index.php"><img class="lightsOutLogo" src= "images/lightsOutLogo.jpg"></a>
+                <a href="https://lights-out-south-africa.000webhostapp.com/index.php"><h2>LIGHTS OUT</h2></a>
                 <span>Lights Out is a company that provides products to businesses and individuals that experience the effects of load-shedding.</span>
             </div>
             <!-- Checkers -->
             <div class="card">
-                <img class="checkersLogo" src="images/checkersLogo.png">
-                <h2>CHECKERS</h2>
+                <a href="https://www.checkers.co.za/our-sustainability-journey"><img class="checkersLogo" src="images/checkersLogo.png"></a>
+                <a href="https://www.checkers.co.za/our-sustainability-journey"><h2>CHECKERS</h2></a>
                 <span>Places a strong emphasis on sourcing fresh produce and other food products from local suppliers</span>
             </div>
         <div>
