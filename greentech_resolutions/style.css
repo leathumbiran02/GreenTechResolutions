@@ -285,11 +285,6 @@ th.user-th, td.user-td{
     height:380px;
     position: relative;
     margin: 0 auto;
-    background-color: #CED1D8;
-    border-radius: 35px;
-    padding: 5px;
-    overflow: hidden;
-    border: 3px solid black;
 }
 
 .chat-page-register_login_btn_box{
@@ -335,7 +330,7 @@ th.user-th, td.user-td{
     font-size: 15px;
 }
 
-.chat-page-input_field{
+/*.chat-page-input_field{
     width:100%;
     padding: 10px 15px;
     margin: 5px 20px;
@@ -360,7 +355,7 @@ th.user-th, td.user-td{
     border: 0;
     outline: none;
     border-radius: 30px;
-}
+}*/
 
 .contact-us-form-box{ /* For the form */
     width: 450px;

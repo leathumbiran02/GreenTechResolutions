@@ -18,22 +18,62 @@
         <!--Using a CSS style sheet for the page-->
         <link rel="stylesheet" href="style.css">
         <style>
-            .chat-page-submit_btn{
-                border: 3px solid black;
-                color:black;
-            }
             body{ /* Adding a background image to the page: */
-                width: 100%;
-                padding: 20px;
-                background-image: url(images/chat_background.jpg);
-                background-position:center;
-                background-size:cover;
-                background-attachment: fixed;
-                /* backdrop-filter: blur(2px); */
+                width: 97%;
+                /*overflow: hidden; does not allow page to scroll down*/ 
+                margin-top: 150px;
+                text-align: center; 
             }
-            .chat-page-toggle_register_login_btn{
-                color: #62f875;
-                filter:drop-shadow(1px 1px 3px black);
+            p, span{
+                color: white;
+                font-size: 20px;
+                font-weight: normal;
+            }
+            p{
+                margin-top: 15px;
+            }
+            span{
+                font-weight: normal;
+                display: inline-block;
+                float:center;
+                padding: 0px 40px;
+                padding-top: 40px
+            }
+            h2{
+                color: white;
+                text-align: center; /* Center the text horizontally */
+                font-size: 20px;
+                font-weight: bolder;
+                padding-bottom: 0px;
+            }
+            .input_field, select{
+                width:100%;
+                padding: 10px 15px;
+                margin: 5px 0;
+                outline: none;
+                background-color: #252525;
+                border:none;
+                border-bottom: 1px solid #ffffff;
+                font-size: 15px;
+            }
+            .input_field::placeholder,select {
+                color: white;
+
+            }
+            .submit_btn{
+                width: 45%;
+                padding: 5px 0px;
+                cursor: pointer;
+                display: inline-block;
+                margin: auto;
+                background-color:#009414;
+                color: #ffffff;
+                font-weight: normal;
+                font-size: 20px;
+                border: 0;
+                outline: none;
+                margin-top: 1px;
+                float: center;
             }
         </style>
     </head>
@@ -43,24 +83,21 @@
                 include 'menu.php';
             ?>
         </header>
-        <div class="spacing" style="height:100px;"></div>
         <div class="form_page"> <!-- The body of the page: -->
-            <div class="center-text"> <!-- Class to center the top heading: -->
-                <h1 class="chat-page-toggle_register_login_btn"><br>Chat with us! We'd love to hear your feedback or answer any questions that you may have.</h1><br>
-            </div>
-
+            <h2>CONNECT WITH US</h2>
+            <span> We'd love to hear your feedback or answer any questions that you may have.</span>
             <div class="chat-page-form-box"> <!-- Class used to style the chat form: -->
                 <!-- Chat form: -->
                 <form class="chat-page-login_input_group" id="chat" name = "chat" action="chat_send_email.php" method="POST" onsubmit = "return(validate_chat_form());">
                     
                     <!-- Full Name: -->
-                    <input type = "text" class="chat-page-input_field" name = "full_name" placeholder = "Full Name"/>
+                    <input type = "text" class="input_field" name = "full_name" placeholder = "Full Name"/>
 
                     <!-- Email Address: -->
-                    <input type = "email" class="chat-page-input_field" name = "email" placeholder = "Email Address"/>
+                    <input type = "email" class="input_field" name = "email" placeholder = "Email Address"/>
 
                     <!-- Reason for contacting GreenTech Resolutions: -->
-                    <select class="chat-page-input_field" name="reason" id="reasonSelect" onchange="toggleOtherReason()">
+                    <select class="input_field" name="reason" id="reasonSelect" onchange="toggleOtherReason()">
 
                         <option value="" disabled selected>Reason for contacting</option> <!-- Option 1 (a placeholder message which is disabled): -->
                         <option value="I want to become a supplier for GreenTech Resolutions">I want to become a supplier for GreenTech Resolutions</option> <!-- Option 2: -->
@@ -71,10 +108,10 @@
                     </select>
 
                     <!-- Text field that only appears if the user clicks on Other: -->
-                    <input type = "text" class="chat-page-input_field" name = "other_reason" id="otherReasonInput" placeholder = "Reason For Contacting (Please specify)" style="display:none;"/><br><br>
+                    <input type = "text" class="input_field" name = "other_reason" id="otherReasonInput" placeholder = "Reason For Contacting (Please specify)" style="display:none;"/><br><br>
                     
                     <!-- Button to submit the details to the database: -->
-                    <button type="submit" name="chat_submit" class="chat-page-submit_btn">Confirm</button>
+                    <button type="submit" name="chat_submit" class="submit_btn">Confirm</button>
 
                 </form>
             </div>
