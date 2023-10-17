@@ -67,7 +67,10 @@
                 display: inline-block;
             }
             .fish-feederCard{
-                height: 130px;
+                height: 125px;
+            }
+            .fish-feederCard span, .timer{
+                margin-top: -5px;
             }
             h4, h2, span, th, td{
                 color: white;
@@ -97,9 +100,10 @@
             }
             .timer{
                 margin-top: -5px;
-                margin-left: -190px;
+                margin-left: 0px;
+                text-align: left;
             }
-            .pumpBTN, .feedFishBTN, .setTimerBTN, .cleanBTN, .balanceBTN, .heaterBTN{
+            .pumpBTN, .feedFishBTN, .cleanBTN, .balanceBTN, .heaterBTN{
                 width: 45%;
                 padding: 5px 0px;
                 cursor: pointer;
@@ -114,11 +118,7 @@
                 margin-top: 1px;
                 float: right;
             }
-            .setTimerBTN{
-                padding: 5px 9px;
-                margin-right: 10px;
-            }
-            .checkLvlBTN, .checkTempBTN, .checkpHBTN{
+            .checkLvlBTN, .checkTempBTN, .checkpHBTN, .setTimerBTN{
                 width: 30px; /* Adjust the width as needed */
                 height: 30px; /* Make sure the height matches the width to create a perfect circle */
                 border-radius: 50%;
@@ -129,17 +129,31 @@
                 margin-left: 100px;
                 font-size: 28px;
             }
+            .setTimerBTN{
+                padding: 0px;
+                margin-left: -10px;
+                margin-top: -10px;
+                width: 30px;
+                font-size: 20px;
+            }
+            .checkpHBTN{
+                margin-left: 40px;
+            }
             .fish-feederCard input[type="time"] {
-                padding: 8px;
+                padding: 5px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
                 font-size: 16px;
-                background-color: #f5f5f5;
-                color: #333;
+                background-color: #4C4D5E;
+                color: #ffffff;
             }
             .fish-feederCard input[type="time"]:focus {
                 outline: none;
-                border-color: #007bff;
+                border-color:#009414;
+            }
+            .feedFishTimer{
+                color: #4C4D5E;
+                margin-top: -5px;
             }
             .fishTankVideo{
                 width:810px;
@@ -186,7 +200,7 @@
                         <div class="timer">00:00:00</div>  <!-- COUNTDOWN TIMER: -->
                         <div class="fish-feeder">
                             <input type="time" id="feedTimeInput" class="feedFishTimer"><!-- Store Time -->
-                            <button class="setTimerBTN" onclick="setFishFeederTimer()">SET TIMER</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
+                            <button class="setTimerBTN" onclick="setFishFeederTimer()">✎</button> <!-- SET REMINDER FOR FISH FEEDER BUTTON: -->
                         </div>
                     </h4>
                     <button class= "feedFishBTN"onclick="sendFeedFishCommandToESP32()">FEED FISH</button> <!-- FEED FISH BUTTON: -->
