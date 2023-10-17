@@ -225,53 +225,6 @@
                 include 'menu.php';
             ?>
         </header> 
-        <div class="aboutUsSection">
-            <img class="personHoldingPlant" src="images/about_us_holding_plant.jpg">
-            <div class="aboutUsContent">
-                <h2>ABOUT US</h2>
-                <h4 style="margin-left:50px; margin-right:50px; text-align:justify;  line-height: 1.6;">
-                <br><i>Welcome to GreenTech Resolutions, a company dedicated to
-                sustainability and promoting Eco-friendly practices. We aim to create 
-                a greener future using technology, education
-                and innovation. There is an urgent need to address
-                environmental challenges and a strive to lead in sustainable
-                solutions.
-                <br> <br> 
-                Our mission is to educate and empower individuals about
-                sustainable living and to provide them with the tools and knowledge
-                to make a positive impact. We offer aquaponics systems that
-                integrate robotics and automation, providing a seamless and
-                user-friendly experience. Our technology allows for full
-                automation and a website interface that lets users monitor and
-                control their aquaponics system.
-                </i></h4>
-            </div>
-        </div>
-        <div class="aquaponicsSection">
-            <div class="aquaponicsContent">
-                <h2>WHAT IS AQUAPONICS?</h2>
-                <h4 style="margin-left:50px; margin-right:50px; text-align:justify;  line-height: 1.6;"><i><br>Aquaponics is a sustainable farming method that combines
-                aquaculture (fish farming) and hydroponics (growing plants in
-                water) in a symbiotic system.
-                In an aquaponics system, fish
-                waste provides nutrients for the plants, while the plants
-                naturally filter the water for the fish. The fish waste, which contains ammonia, is broken down by beneficial bacteria into
-                nitrates. These nitrates serve as fertilizer for the plants,
-                allowing them to grow without the need for soil. As the plants
-                absorb the nutrients, they purify the water, creating a clean
-                and healthy environment for the fish. <br><br> Its advantages are that it
-                requires significantly less water compared to conventional
-                agriculture as the water is recycled within the system and it
-                eliminates the need for chemical fertilizers and pesticides. This
-                promotes organic and sustainable food production.
-            </i></h4>
-            </div>  
-        </div>
-        <div class="aquaponicsGallery">
-            <img class="galleryImg1" style="margin-left:50px;" src="images/aquaponicsGallery1.jpg" >
-            <img class="aquaponicDiagram" src="images/aquaponicsDiagram.JPG" >
-            <img class="galleryImg2" style="margin-right:50px;" src="images/aquaponicsGallery2.JPG" >
-        </div>
         <div class="ourTeamSection">
             <h2>OUR TEAM</h2>
             <div class="ourTeamContent">
@@ -296,6 +249,28 @@
                     <a href="https://www.linkedin.com/in/tonisha-govender-584785219/"><br>LinkedIn</a>
                     <a href="https://github.com/TonishaGovender"><br>GitHub</a>
                 </div>
+            </div>
+        </div>
+        <div class="aboutUsSection">
+            <img class="personHoldingPlant" src="images/about_us_holding_plant.jpg">
+            <div class="aboutUsContent">
+                <h2>ABOUT US</h2>
+                <h4 style="margin-left:50px; margin-right:50px; text-align:justify;  line-height: 1.6;">
+                <br><i>Welcome to GreenTech Resolutions, a company dedicated to
+                sustainability and promoting Eco-friendly practices. We aim to create 
+                a greener future using technology, education
+                and innovation. There is an urgent need to address
+                environmental challenges and a strive to lead in sustainable
+                solutions.
+                <br> <br> 
+                Our mission is to educate and empower individuals about
+                sustainable living and to provide them with the tools and knowledge
+                to make a positive impact. We offer aquaponics systems that
+                integrate robotics and automation, providing a seamless and
+                user-friendly experience. Our technology allows for full
+                automation and a website interface that lets users monitor and
+                control their aquaponics system.
+                </i></h4>
             </div>
         </div>
         <div class="chooseUsSection">
@@ -338,6 +313,32 @@
                 </div>
             </div>
         </div>
+        <div class="aquaponicsSection">
+            <div class="aquaponicsContent">
+                <h2>WHAT IS AQUAPONICS?</h2>
+                <h4 style="margin-left:50px; margin-right:50px; text-align:justify;  line-height: 1.6;"><i><br>Aquaponics is a sustainable farming method that combines
+                aquaculture (fish farming) and hydroponics (growing plants in
+                water) in a symbiotic system.
+                In an aquaponics system, fish
+                waste provides nutrients for the plants, while the plants
+                naturally filter the water for the fish. The fish waste, which contains ammonia, is broken down by beneficial bacteria into
+                nitrates. These nitrates serve as fertilizer for the plants,
+                allowing them to grow without the need for soil. As the plants
+                absorb the nutrients, they purify the water, creating a clean
+                and healthy environment for the fish. <br><br> Its advantages are that it
+                requires significantly less water compared to conventional
+                agriculture as the water is recycled within the system and it
+                eliminates the need for chemical fertilizers and pesticides. This
+                promotes organic and sustainable food production.
+            </i></h4>
+            </div>  
+        </div>
+        <div class="aquaponicsGallery">
+            <img class="galleryImg1" style="margin-left:50px;" src="images/aquaponicsGallery1.jpg" >
+            <img class="aquaponicDiagram" src="images/aquaponicsDiagram.JPG" >
+            <img class="galleryImg2" style="margin-right:50px;" src="images/aquaponicsGallery2.JPG" >
+        </div>
+        
     </body>
     <footer>
         <?php 
