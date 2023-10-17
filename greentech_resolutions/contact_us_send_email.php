@@ -24,7 +24,26 @@
         if (!$connect) { //If the connection fails, display an error:
             die("Connection failed!" . mysqli_connect_error());
         }
-            
+        
+        //Check for duplicate emails in the database:
+        /* Prepare the statement: */
+        $duplicateEmail = $connect->prepare("
+        SELECT email FROM contact_us
+        WHERE email=?");
+        /* Bind parameters: */
+        $duplicateEmail->bind_param("s",$email);
+        /* Execute the statement: */
+        $duplicateEmail->execute();
+        /* Store the result: */
+        $duplicateResult = $duplicateEmail->get_result();
+
+        /* If a row was found display an error: */
+        if($duplicateResult->num_rows>0){
+            echo '<script>alert("This email address is already in use. Please use a different email.")</script>';
+            header("Refresh:1; url=contact_us.php");
+            exit;
+        }
+
         //Prepare the statement:
         $sqlquery = $connect->prepare("
         INSERT INTO contact_us

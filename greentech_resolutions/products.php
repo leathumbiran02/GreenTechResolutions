@@ -84,20 +84,22 @@
                 <img class="smallIndoorSystem" src="images/small-IndoorSystem.jpg">
                 <h2>AQUA-BOT 1.0</h2>
                 <span>Automated Freshwater Indoor System</span>
-                <button class="button">Add to Card</button>
+                <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
             <div class="productCard">
                 <img class="biggerIndoorSystem" src="images/bigger-IndoorSystem.jpg">
                 <h2>AQUA-BOT 2.0</h2>
                 <span>Medium Sized Indoor Freshwater System</span>
-                <button class="button">Add to Card</button>
+                <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
             <div class="productCard">
                 <img class="smallOutdoorSystem" src="images/small-OutdoorSystem.jpg">
                 <h2>OUTDOOR SYSTEM</h2>
                 <span>Medium Outdoor Freshwater System</span>
-                <button class="button">Add to Card</button>
+                <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
         </div>
+        <!--Use an external javascript file named validate.js to validate the form:-->
+        <script src="validate.js"></script>
     </body>
 </html>
