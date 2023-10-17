@@ -17,7 +17,7 @@
         $smtp_server = 'smtp.gmail.com'; //Using gmail:
         $smtp_port = 587; //Using a specific port number:
         $smtp_username = 'greentechresolutions@gmail.com'; //Email address that will be used to send the emails:
-        $smtp_password = 'atxctbwwroycsivl'; //App password that was generated for gmail so that the email address can be used by other programs:
+        $smtp_password = 'tiqgnnzmkbsnssdq'; //App password that was generated for gmail so that the email address can be used by other programs:
             
         //Creating a connection to the database:
         $connect = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
