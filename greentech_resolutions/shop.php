@@ -63,6 +63,7 @@
                 margin-left: 5px;
                 margin-top: 40px;
                 padding-bottom: 20px;
+                overflow: auto;
             }
             .button{
                 width: 40%;

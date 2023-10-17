@@ -29,16 +29,18 @@
                 padding-top: 5px;
             }
             .controlBlock{
-                width: 30%;
+                width: 47%;
                 margin-left: 50px;
                 padding-bottom: 5px;
+                height: 280px;
             }
             .plantInfoBlock{
-                width: 60%;
-                margin-right: 50px;
-                float: right;
+                display: block;
+                width: 1250px;
+                margin: 40px 50px;
+                float: center;
                 justify-content: center;
-                padding-bottom: 80px;
+                padding-bottom: 50px;
             }
             .card{
                 width: 270px;
@@ -90,12 +92,13 @@
                 margin-top: 8px;
             }
             table{
-                margin-top: 62px;
                 margin-right: 13%;
-                float: right;
+                float: center;
                 border-collapse: collapse;
                 border: none;
-                border:1;               
+                border:1;   
+                margin:10px 350px; 
+                margin-top: 62px;           
             }
             th, td{
                 padding: 10px;
@@ -127,6 +130,14 @@
             .plantInfoBlock tr:nth-child(3) th{
                 border-bottom: none;
             }
+            .cupsImg{
+                width: 550px;
+                float:right;
+                margin-right: 50px;
+                margin-top: -280px;
+                height: 280px;
+                overflow: auto;
+            }
         </style>
     </head>
     <body>
@@ -147,6 +158,9 @@
             <div class="card" >
                 <span id="cameraStatus">CAMERA</span><button id="openCameraButton" class="cameraBTN">OPEN</button>
             </div>
+        </div>
+        <div>
+            <img class="cupsImg" src="images/cupsImage.png">
         </div>
         <div class="plantInfoBlock">
             <h4>PLANT INFO</h4> 
