@@ -25,14 +25,14 @@
     //Generate HTML code for the webpage to display the details about each plant:
     if($result->num_rows>0){ //If rows were found in the table:
 
-        echo    "<div class='products-row'>";
+        echo    "<div class='productContainer'>";
         
             while($row = $result->fetch_assoc()){
-                echo    "<div class='product'>";
+                echo    "<div class='productCard'>";
                 echo        "<img class='product-img' src='" . $row["image"] . "' alt='" . $row['plant_name'] . "'>"; /* Plant image: */
                 echo        "<div class='product-info'>";
-                echo            "<h3 class='product-title' style='color:#6cff7f; font-size:25px;'>" . $row["plant_name"] . "</h3>"; /* Plant name: */
-                echo            "<h3 class='product-title' style='color:white; font-size:22px;'>" . $row["description"] . "</h3>"; /* Plant Description: */
+                echo            "<h2 class='product-title'>" . $row["plant_name"] . "</h2>"; /* Plant name: */
+                echo            "<span class='product-title'>" . $row["description"] . "</span>"; /* Plant Description: */
                 echo        "<a href='plant_details.php?id=" . $row["plant_details_id"] . "'><button class='addbutton' style='margin-top:10px;'>READ MORE</button></a>"; /* Read more button: */
                 echo        "</div>";
                 echo    "</div>";
