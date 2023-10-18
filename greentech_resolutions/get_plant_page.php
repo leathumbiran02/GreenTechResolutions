@@ -29,7 +29,7 @@
         
             while($row = $result->fetch_assoc()){
                 echo    "<div class='productCard'>";
-                echo        "<img class='product-img' src='" . $row["image"] . "' alt='" . $row['plant_name'] . "'>"; /* Plant image: */
+                echo        "<a  href='plant_details.php?id=" . $row["plant_details_id"] . "'><img class='product-img' src='" . $row["image"] . "' alt='" . $row['plant_name'] . "'></a>"; /* Plant image: */
                 echo        "<div class='product-info'>";
                 echo            "<h2 class='product-title'>" . $row["plant_name"] . "</h2>"; /* Plant name: */
                 echo            "<span class='product-title'>" . $row["description"] . "</span>"; /* Plant Description: */

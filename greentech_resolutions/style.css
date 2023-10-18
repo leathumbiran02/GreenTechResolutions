@@ -159,7 +159,6 @@ header label{
     box-shadow: none;
     border-radius: 0px;
     background-color: #4C4D5E;
-    border-bottom: 5px solid #09BA20;
 }
 
 .toggle_register_login_btn{
@@ -178,7 +177,7 @@ header label{
     top:0;
     left: 0;
     position: absolute;
-    width: 110px;
+    width: 128px;
     height: 100%;
     background: #09BA20;
     border-radius: 0px;

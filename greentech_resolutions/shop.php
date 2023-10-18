@@ -92,43 +92,43 @@
         <h2>PRODUCTS</h2>
         <div class="productContainer">
             <div class="productCard">
-                <img class="productImg" src="images/servoMotor.webp">
+                <img class="productImg" src="images/servoMotor.webp" onclick="showComingSoonMessage()">
                 <span>HKD Servo Motor MG995 13KG</span>
                 <span>R120.87</span>
-                <button class="button">Add to Card</button>
+                <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
             <div class="productCard">
-                <img class="productImg" src="images/waterPump.webp">
+                <img class="productImg" src="images/waterPump.webp" onclick="showComingSoonMessage()">
                 <span>AHKD Subm Water Pump 3-6VDC</span>
                 <span>R23.48</span>
-                <button class="button">Add to Card</button>
+                <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
             <div class="productCard">
-                <img class="productImg" src="images/tempSensor.webp">
+                <img class="productImg" src="images/tempSensor.webp" onclick="showComingSoonMessage()">
                 <span>HKD Temprature Probe DS18B20</span>
                 <span>R39.13</span>
-                <button class="button">Add to Card</button>
+                <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
         </div>
 
         <div class="productContainer">
             <div class="productCard">
-                <img class="productImg" src="images/smallServoMotor.jpg">
+                <img class="productImg" src="images/smallServoMotor.jpg" onclick="showComingSoonMessage()">
                 <span>HKD Micro Servo 9G 3V-7</span>
                 <span>R39.00</span>
-                <button class="button">Add to Card</button>
+                <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
             <div class="productCard">
-                <img class="productImg" src="images/moistureSensor.webp">
+                <img class="productImg" src="images/moistureSensor.webp" onclick="showComingSoonMessage()">
                 <span>BMT Soil Moisture Sensor</span>
                 <span>R26.00</span>
-                <button class="button">Add to Card</button>
+                <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
             <div class="productCard">
-                <img class="productImg" src="images/ledLight.jpg">
+                <img class="productImg" src="images/ledLight.jpg" onclick="showComingSoonMessage()">
                 <span>LED 120B 12V N/WPR New 5MT</span>
                 <span>R310.98</span>
-                <button class="button">Add to Card</button>
+                <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
         </div>
     <!--Use an external javascript file named validate.js to validate the form:-->

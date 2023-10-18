@@ -28,7 +28,7 @@
         echo    "<div class='productContainer'>";
             while($row = $result->fetch_assoc()){
                 echo    "<div class='productCard'>";
-                echo        "<img class='product-img' src='" . $row["image"] . "' alt='" . $row['fish_name'] . "'>"; /* Fish image: */
+                echo        "<a  href='fish_details.php?id=" . $row["fish_details_id"] . "'><img class='product-img' src='" . $row["image"] . "' alt='" . $row['fish_name'] . "'></a>"; /* Fish image: */
                 echo        "<div class='product-info'>";
                 echo            "<h2 class='product-title'>" . $row["fish_name"] . "</h2>"; /* Fish name: */
                 echo            "<span class='product-title'>" . $row["description"] . "</span>"; /* Fish Description: */

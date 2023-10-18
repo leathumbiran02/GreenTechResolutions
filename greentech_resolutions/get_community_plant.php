@@ -29,12 +29,12 @@
         
             while($row = $result->fetch_assoc()){
                 echo    "<div class='productCard'>";
-                echo        "<img class='product-img' src='" . $row["image"] . "' alt='" . $row['plant_name'] . "'>"; /* Plant image: */
+                echo        "<img class='product-img' src='" . $row["image"] . "' alt='" . $row['plant_name'] . "' onclick='showComingSoonMessage()'>"; /* Plant image: */
                 echo        "<div class='product-info'>";
                 echo            "<h2 class='product-title'>" . $row["plant_name"] . "</h2>"; /* Plant name: */
                 echo            "<span class='product-title'>" . $row["description"] . "</span>"; /* Plant Description: */
                 echo            "<span class='product-price-discount'>R" . $row["price"] . "</span>"; /* Plant price: */
-                echo        "<a href='plant_details.php?id=" . $row["plant_id"] . "'><button class='addbutton'>BUY</button></a>";
+                echo        "<a><button class='addbutton' onclick='showComingSoonMessage()'>BUY</button></a>";
                 echo        "</div>";
                 echo    "</div>";
             }
