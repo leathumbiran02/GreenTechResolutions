@@ -22,25 +22,33 @@
             .hero{ /* Centering the text: */
                 text-align: center;
             }
-            .controlBlock, .plantInfoBlock{
+            .controlBlock, .plantInfoBlock, .cupBlock{
                 display: inline-block; /* Make both blocks inline-block elements */
                 background-color: #4C4D5E;
                 height: auto;
                 padding-top: 5px;
             }
             .controlBlock{
-                width: 47%;
+                width: 47%; 
                 margin-left: 50px;
                 padding-bottom: 5px;
                 height: 280px;
             }
             .plantInfoBlock{
-                display: block;
+                display: inline-block;
                 width: 1250px;
                 margin: 40px 50px;
                 float: center;
                 justify-content: center;
                 padding-bottom: 50px;
+            }
+            .cup{
+                display: block; 
+
+            }
+            .cupsCard{
+                display: flex;
+                margin-left: 50px;
             }
             .card{
                 width: 270px;
@@ -53,7 +61,14 @@
                 perspective: 1000px;
                 justify-content: space-between; 
             }
-
+            .cupBlock{
+                width: 550px;
+                float:right;
+                margin-right: 50px;
+                margin-top: 0px;
+                height: 280px;
+                overflow: auto;
+            }
             h4, h2, span, th, td{
                 color: white;
                 text-align: center; /* Center the text horizontally */
@@ -71,10 +86,9 @@
             }
             span{
                 font-weight: normal;
-                display: inline-block; /* Make the span and button inline-block elements */
-                float:left;
+                float:center;
                 position: absolute;
-                top: 30%;
+                color: white; 
             }
             .cameraBTN, .ledBTN{
                 width: 45%;
@@ -130,13 +144,17 @@
             .plantInfoBlock tr:nth-child(3) th{
                 border-bottom: none;
             }
-            .cupsImg{
-                width: 550px;
-                float:right;
-                margin-right: 50px;
-                margin-top: -280px;
-                height: 280px;
-                overflow: auto;
+            .strawberryIcon{
+                width: 100px;
+                height: auto;
+                margin:10px 30px;
+            }
+            .cupTxt{
+                margin-top: 140px;
+                margin-left: -100px;
+            }
+            .heading{
+                margin-top:-30px;
             }
         </style>
     </head>
@@ -159,8 +177,22 @@
                 <span id="cameraStatus">CAMERA</span><button id="openCameraButton" class="cameraBTN">OPEN</button>
             </div>
         </div>
-        <div>
-            <img class="cupsImg" src="images/cupsImage.png">
+        <div class="cupBlock">
+            <h2 class="heading">PLANTING</h2>
+            <div class="cupsCard">
+                <div class="cup">
+                    <img class="strawberryIcon"src="images/strawberry.png" onclick="sendPlantingPlantCommandToESP32(1)">
+                    <span class="cupTxt" onclick="sendPlantingPlantCommandToESP32(1)">Cup 1</span>
+                </div>
+                <div class="cup">
+                    <img class="strawberryIcon"src="images/strawberry.png"onclick="sendPlantingPlantCommandToESP32(2)">
+                    <span class="cupTxt" onclick="sendPlantingPlantCommandToESP32(2)">Cup 2</span>
+                </div>
+                <div class="cup">
+                    <img class="strawberryIcon"src="images/strawberry.png"onclick="sendPlantingPlantCommandToESP32(3)">
+                    <span class="cupTxt" onclick="sendPlantingPlantCommandToESP32(3)">Cup 3</span>
+                </div>
+            </div>
         </div>
         <div class="plantInfoBlock">
             <h4>PLANT INFO</h4> 
@@ -169,7 +201,7 @@
                     <th>POSITION</th>
                     <td id="plant1" onclick="sendPlantingPlantCommandToESP32(1)">CUP 1</td>
                     <td id="plant2" onclick="sendPlantingPlantCommandToESP32(2)">CUP 2</td>
-                    <td id ="plant3" onclick="sendPlantingPlantCommandToESP32(3)">CUP 3</td>
+                    <td id="plant3" onclick="sendPlantingPlantCommandToESP32(3)">CUP 3</td>
                 </tr>
                 <tr>
                     <th>TYPE</th>
