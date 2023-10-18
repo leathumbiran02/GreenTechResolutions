@@ -145,7 +145,7 @@ def stop_camera_script():
         print("Camera script is not running, nothing to stop.")
 
 def send_command_to_esp32(command):
-    esp32_url = 'http://192.168.8.114/sendCommandFromPi'  #IP Address of the ESP32:
+    esp32_url = 'http://192.168.8.114/sendCommand'  #IP Address of the ESP32:
     payload = {'command': command}
 
     try:
@@ -154,6 +154,8 @@ def send_command_to_esp32(command):
             print("Command sent to ESP32 successfully")
         else:
             print("Failed to send command to ESP32")
+            print("Response Status Code:", response.status_code)
+            print("Response Text:", response.text)
     except Exception as e:
         print("An error occurred while sending the command to ESP32:", e)
 
