@@ -12,8 +12,20 @@ import re
 
 camera_process = None #Initialise the process instance:
 
+command = ''
+
+#Define the ESP32's IP address:
+esp32_url = 'http://192.168.8.114/sendCommand'
+
 def speak(text):
     engine = pyttsx3.init()
+    
+    #Get the available voices:
+    voices = engine.getProperty('voices')
+    
+    #Set the voice to a female voice:
+    engine.setProperty('voice', voices[1].id)
+    
     engine.say(text)
     engine.runAndWait()
 
@@ -22,12 +34,16 @@ def respond_to_input(text):
     responses = {
         #Conversations with the user:
         "name": "My name is GLITCH.",
-        "old": "I do not have an age. I am infinite.",
-        "plants": "Really? Is that what you paid me to do? Why don't you check your website?",
+        "old": "I am a few months old.",
+        "plants": "Really? Please check your website.",
         "weather": random.choice(["It's sunny and warm today.", "Expect some rain today.", "There are cloudy skies today."]),
-        "attitude": "I don't have an attitude. I just don't respond to stupid questions.",
-        "good bye": "Goodbye! Have a good day!",
+        "attitude": "I don't have an attitude. You have an attitude.",
+        "bye": "Goodbye! Have a good day!",
         "sushi": "Fish are friends, not food. You should consider becoming a vegetarian.",
+        "aquaponics": "Aquaponics is the process of letting plants grow in fish water two times faster compared to normal farming.",
+        "system": "Yes. Yes I am!",
+        "dislike": "I dislike Tilapias. THEY ARE IN MY TANK! HELP. ME.",
+        "song": "Just keep swimming. Just keep swimming. Swimming. swimming. swimming. swimming.",
 
         #AJAX FROM WEBSITE FOR COMPONENTS (telling the user what the system is currently doing):
         "light on": "Putting the light on.",
@@ -82,24 +98,32 @@ def main():
 
                 # Check if the user said any commands for the website and send the commands to the ESP32:
                 if text.lower() == "light on":
-                    send_command_to_esp32('a')  # Send 'a' to turn the light on:
+                    command = 'a'
+                    send_command_to_esp32(command)  # Send 'a' to turn the light on:
                 if text.lower() == "light off":
-                    send_command_to_esp32('b')  # Send 'b' to turn the light off:
+                    command = 'b'
+                    send_command_to_esp32(command)  # Send 'b' to turn the light off:
 
                 if text.lower() == "pump on":
-                    send_command_to_esp32('6')  # Send '6' to turn the pump on:
+                    command = '6'
+                    send_command_to_esp32(command)  # Send '6' to turn the pump on:
                 if text.lower() == "pump off":
-                    send_command_to_esp32('5')  # Send '5' to turn the pump off:
+                    command = '5'
+                    send_command_to_esp32(command)  # Send '5' to turn the pump off:
 
                 if text.lower() == "feed fish":
-                    send_command_to_esp32('8')  # Send '8' to feed the fish:
+                    command = '8'
+                    send_command_to_esp32(command)  # Send '8' to feed the fish:
 
                 if text.lower() == "cup one":
-                    send_command_to_esp32('1')  # Send '1' to plant in cup 1:
+                    command = '1'
+                    send_command_to_esp32(command)  # Send '1' to plant in cup 1:
                 if text.lower() == "cup two":
-                    send_command_to_esp32('2')  # Send '2' to plant in cup 2:
+                    command = '2'
+                    send_command_to_esp32(command)  # Send '2' to plant in cup 2:
                 if text.lower() == "cup three":
-                    send_command_to_esp32('3')  # Send '3' to plant in cup 3:
+                    command = '3'
+                    send_command_to_esp32(command)  # Send '3' to plant in cup 3:
 
                 if text.lower() == "start camera":
                     execute_camera_script() #Execute the script to start the camera:
@@ -107,10 +131,10 @@ def main():
                     stop_camera_script() #Execute the script to stop the camera:
 
                 if text.lower() == "check system":
-                    check_system_send_command_to_esp32('e')  # Send 'e' to check the system:
+                    send_command_to_esp32('e')  # Send 'e' to check the system:
 
                 if text.lower() == "check water level":
-                    water_level_send_command_to_esp32('7')  # Send '7' to check the water level:
+                    send_command_to_esp32('7')  # Send 'f' to check the water level:
 
                 if text.lower() == "check temperature":
                     send_command_to_esp32('g')  # Send 'g' to check the temperature:
@@ -145,47 +169,18 @@ def stop_camera_script():
         print("Camera script is not running, nothing to stop.")
 
 def send_command_to_esp32(command):
-    esp32_url = 'http://192.168.8.114/sendCommand'  #IP Address of the ESP32:
     payload = {'command': command}
 
-    try:
-        response = requests.post(esp32_url, data=payload)
-        if response.status_code == 200 and response.text == 'OK':
-            print("Command sent to ESP32 successfully")
-        else:
-            print("Failed to send command to ESP32")
-            print("Response Status Code:", response.status_code)
-            print("Response Text:", response.text)
-    except Exception as e:
-        print("An error occurred while sending the command to ESP32:", e)
-
-def water_level_send_command_to_esp32(command):
-    esp32_url = 'http://192.168.8.114/sendAndReceiveWaterLevelCommand'  #IP Address of the ESP32:
-    payload = {'command': command}
-
-    try:
-        response = requests.post(esp32_url, data=payload)
-        if response.status_code == 200 and response.text == 'OK':
-            print("Command sent to ESP32 successfully")
-        else:
-            print("Failed to send command to ESP32")
-    except Exception as e:
-        print("An error occurred while sending the command to ESP32:", e)
-
-def check_system_send_command_to_esp32(command):
-    esp32_url = 'http://192.168.8.114/sendAndReceiveCheckSystemCommand'  #IP Address of the ESP32:
-    payload = {'command': command}
-
-    try:
-        response = requests.post(esp32_url, data=payload)
-        if response.status_code == 200 and response.text == 'OK':
-            print("Command sent to ESP32 successfully")
-        else:
-            print("Failed to send command to ESP32")
-    except Exception as e:
-        print("An error occurred while sending the command to ESP32:", e)
+    #try:
+    response = requests.post(esp32_url, data=payload)
+    if response.status_code == 200 and response.text == 'OK':
+        print("Command sent to ESP32 successfully")
+    else:
+        print("Failed to send command to ESP32")
+    #except Exception as e:
+        #print("An error occurred while sending the command to ESP32:", e)
 
 #When the program starts up, play the following message using the speak command:
-if _name_ == "_main_":
+if __name__ == "__main__":
     speak("Hello! I am GLITCH. How can I assist you today?")
     main()
