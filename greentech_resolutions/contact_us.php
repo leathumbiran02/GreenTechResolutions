@@ -109,8 +109,10 @@
                 include 'menu.php';
             ?>
         </header>
-        <div class="contact-us-register_login_btn_box">
-            <button type="button" class="contact-us-toggle_register_login_btn"><h2>CONTACT US<h2></button> 
+        <div class="center-text">
+            <div class="contact-us-register_login_btn_box">
+                <button type="button" class="contact-us-toggle_register_login_btn"><h2>CONTACT US<h2></button> 
+            </div>
         </div>
         <div class="contactUsContainer"> <!-- The body of the page: -->
             <div class="addressCard">

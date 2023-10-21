@@ -218,6 +218,9 @@
             a {
                 text-decoration: none;
             }
+            .about_us_animation:hover{
+                color: #009414; /* Change the colour to green to show it can be clicked on: */
+            }
         </style>  
     <body>
         <header>
@@ -233,22 +236,22 @@
                     <img class="ourPictures" src="images/mackylesPic.png" >
                     <h2><br>MACKYLE NAIDOO</h2>
                     <h4>BSc IT Robotics</h4>
-                    <a href="https://www.linkedin.com/in/mackyle-naidoo-15552723b/"><br>LinkedIn</a>
-                    <a href="https://github.com/Kyle1802"><br>GitHub</a>
+                    <a class="about_us_animation" href="https://www.linkedin.com/in/mackyle-naidoo-15552723b/"><br>LinkedIn</a>
+                    <a class="about_us_animation" href="https://github.com/Kyle1802"><br>GitHub</a>
                 </div>
                 <div class="ourTeamSecondCard">
                     <img class="ourPictures" src="images/leasPic.png" >
                     <h2><br>LEA THUMBIRAN</h2>
                     <h4>BSc IT Software Engineering</h4>
-                    <a href="https://www.linkedin.com/in/lea-t-42b352211/"><br>LinkedIn</a>
-                    <a href="https://github.com/leathumbiran02"><br>GitHub</a>
+                    <a class="about_us_animation" href="https://www.linkedin.com/in/lea-t-42b352211/"><br>LinkedIn</a>
+                    <a class="about_us_animation" href="https://github.com/leathumbiran02"><br>GitHub</a>
                 </div>
                 <div class="ourTeamThirdCard">
                     <img class="ourPictures" src="images/toniPic.jpg" >
                     <h2><br>TONISHA GOVENDER</h2>
                     <h4>BSc IT Software Engineering</h4>
-                    <a href="https://www.linkedin.com/in/tonisha-govender-584785219/"><br>LinkedIn</a>
-                    <a href="https://github.com/TonishaGovender"><br>GitHub</a>
+                    <a class="about_us_animation" href="https://www.linkedin.com/in/tonisha-govender-584785219/"><br>LinkedIn</a>
+                    <a class="about_us_animation" href="https://github.com/TonishaGovender"><br>GitHub</a>
                 </div>
             </div>
         </div>
