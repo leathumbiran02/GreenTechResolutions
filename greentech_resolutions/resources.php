@@ -18,10 +18,10 @@
                 align-items: center;
             }
             .personHoldingPlant {
-                max-width: 35%; /* Adjust the image width as needed */
+                max-width: 50%; /* Adjust the image width as needed */
                 margin-right: 20px; /* Add some spacing between the image and text */
                 height: auto;
-                padding: 50px;
+                padding: 25px;
             }
             .aboutUsContent {
                 flex: 1; /* Allow the text to take up remaining space */
@@ -163,9 +163,6 @@
                 margin-left:50px;
                 margin-right:50px;
             }
-            .chooseUsContent{
-                padding-top:20px;
-            }
             .chooseUsFirstRow, .chooseUsSecondtRow
             {
                 padding-top:20px;
@@ -226,118 +223,35 @@
                 include 'menu.php';
             ?>
         </header> 
-        <div class="ourTeamSection">
-            <h2>OUR TEAM</h2>
-            <div class="ourTeamContent">
-                <div class="ourTeamFirstCard">
-                    <img class="ourPictures" src="images/mackylesPic.png" >
-                    <h2><br>MACKYLE NAIDOO</h2>
-                    <h4>BSc IT Robotics</h4>
-                    <a href="https://www.linkedin.com/in/mackyle-naidoo-15552723b/"><br>LinkedIn</a>
-                    <a href="https://github.com/Kyle1802"><br>GitHub</a>
-                </div>
-                <div class="ourTeamSecondCard">
-                    <img class="ourPictures" src="images/leasPic.png" >
-                    <h2><br>LEA THUMBIRAN</h2>
-                    <h4>BSc IT Software Engineering</h4>
-                    <a href="https://www.linkedin.com/in/lea-t-42b352211/"><br>LinkedIn</a>
-                    <a href="https://github.com/leathumbiran02"><br>GitHub</a>
-                </div>
-                <div class="ourTeamThirdCard">
-                    <img class="ourPictures" src="images/toniPic.jpg" >
-                    <h2><br>TONISHA GOVENDER</h2>
-                    <h4>BSc IT Software Engineering</h4>
-                    <a href="https://www.linkedin.com/in/tonisha-govender-584785219/"><br>LinkedIn</a>
-                    <a href="https://github.com/TonishaGovender"><br>GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="aboutUsSection">
-            <img class="personHoldingPlant" src="images/about_us_holding_plant.jpg">
-            <div class="aboutUsContent">
-                <h2>ABOUT US</h2>
-                <h4 style="margin-left:50px; margin-right:50px; text-align:justify;  line-height: 1.6;">
-                <br><i>Welcome to GreenTech Resolutions, a company dedicated to
-                sustainability and promoting Eco-friendly practices. We aim to create 
-                a greener future using technology, education
-                and innovation. There is an urgent need to address
-                environmental challenges and a strive to lead in sustainable
-                solutions.
-                <br> <br> 
-                Our mission is to educate and empower individuals about
-                sustainable living and to provide them with the tools and knowledge
-                to make a positive impact. We offer aquaponics systems that
-                integrate robotics and automation, providing a seamless and
-                user-friendly experience. Our technology allows for full
-                automation and a website interface that lets users monitor and
-                control their aquaponics system.
-                </i></h4>
+        <div class="chooseUsSection">
+            <h2>SCHEMATICS DIAGRAM<br></h2>
+            <div class="chooseUsContent">
+            <img class="personHoldingPlant" src="images/resources/schematics.png">
             </div>
         </div>
         <div class="chooseUsSection">
-            <h2>WHY CHOOSE US?<br></h2>
+            <h2>NETWORK CONNECTION DIAGRAM<br></h2>
             <div class="chooseUsContent">
-                <div class="chooseUsFirstRow">
-                    <div class="chooseUsFirstCard">
-                    <img class="chooseUs1" src="images/chooseUs1.png" >
-                        <h2>Sustainable Leadership</h2>
-                        <h4><br>We’re committed to leading the charge in Eco-friendly practices and solutions that minimize environmental impact.</h4>
-                    </div>
-                    <div class="chooseUsSecondCard">
-                        <img class="chooseUs2" src="images/chooseUs2.png" >
-                        <h2>Cutting Edge Technology</h2>
-                        <h4><br>Our aquaponics systems integrate robotics and automation to create an efficient, user-friendly experience.</h4>
-                    </div>
-                    <div class="chooseUsThirdCard">
-                        <img class="chooseUs3" src="images/chooseUs3.png" >
-                        <h2>Educational Empowerment</h2>
-                        <h4><br>We believe in empowering individuals to make informed choices. 
-                            We provide education about sustainable living and the benefits of aquaponics.</h4>
-                    </div>
-                </div>
-                <div class="chooseUsSecondtRow">
-                    <div class="chooseUsFirstCard">
-                        <img class="chooseUs4" src="images/chooseUs4.png" >
-                        <h2>Seamless User Experience</h2>
-                        <h4><br>Our aquaponics systems come with a website interface that lets you monitor and control your system from anywhere.</h4>
-                    </div>
-                    <div class="chooseUsSecondCard">
-                        <img class="chooseUs5" src="images/chooseUs5.png" >
-                        <h2>Resource Efficiency</h2>
-                        <h4><br>This means you will not only be growing food, you’ll be doing it in a way that conserves precious resources and eco-friendly.</h4>
-                    </div>
-                    <div class="chooseUsThirdCard">
-                        <img class="chooseUs6" src="images/chooseUs6.png" >
-                        <h2>Promoting Organic Practices</h2>
-                        <h4><br>Our systems foster organic food production without relying on synthetic fertilizers and pesticides.</h4>
-                    </div>
-                </div>
+            <img class="personHoldingPlant" src="images/resources/network.png">
             </div>
         </div>
-        <div class="aquaponicsSection">
-            <div class="aquaponicsContent">
-                <h2>WHAT IS AQUAPONICS?</h2>
-                <h4 style="margin-left:50px; margin-right:50px; text-align:justify;  line-height: 1.6;"><i><br>Aquaponics is a sustainable farming method that combines
-                aquaculture (fish farming) and hydroponics (growing plants in
-                water) in a symbiotic system.
-                In an aquaponics system, fish
-                waste provides nutrients for the plants, while the plants
-                naturally filter the water for the fish. The fish waste, which contains ammonia, is broken down by beneficial bacteria into
-                nitrates. These nitrates serve as fertilizer for the plants,
-                allowing them to grow without the need for soil. As the plants
-                absorb the nutrients, they purify the water, creating a clean
-                and healthy environment for the fish. <br><br> Its advantages are that it
-                requires significantly less water compared to conventional
-                agriculture as the water is recycled within the system and it
-                eliminates the need for chemical fertilizers and pesticides. This
-                promotes organic and sustainable food production.
-            </i></h4>
-            </div>  
+        <div class="chooseUsSection">
+            <h2>ENHANCED ENTITY RELATIONSHIP DIAGRAM (EERD)<br></h2>
+            <div class="chooseUsContent">
+            <img class="personHoldingPlant" src="images/resources/eerd.png">
+            </div>
         </div>
-        <div class="aquaponicsGallery">
-            <img class="galleryImg1" style="margin-left:50px;" src="images/aquaponicsGallery1.jpg" >
-            <img class="aquaponicDiagram" src="images/aquaponicsDiagram.JPG" >
-            <img class="galleryImg2" style="margin-right:50px;" src="images/aquaponicsGallery2.JPG" >
+        <div class="chooseUsSection">
+            <h2>BUDGET<br></h2>
+            <div class="chooseUsContent">
+            <img class="personHoldingPlant" src="images/resources/budget.png">
+            </div>
+        </div>
+        <div class="chooseUsSection">
+            <h2>BURNDOWN CHART<br></h2>
+            <div class="chooseUsContent">
+            <!-- <img class="personHoldingPlant" src="images/resources/budget.png"> -->
+            </div>
         </div>
         
     </body>

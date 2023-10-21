@@ -4,8 +4,8 @@
         <style>
             .block{
                 background-color: #4C4D5E;
-                width: 93%;
-                height: 200px;
+                /* width: 93%; */
+                height: 230px;
                 margin-bottom: 50px;
                 display: flex;
                 margin-left: 50px;
@@ -125,6 +125,7 @@
                                 <li><a href="products.php">Products</a></li>
                                 <li><a href="contact_us.php">Contact Us</a></li>
                                 <li><a href="login_register.php">Connect Bot</a></li>
+                                <li><a href="resources.php">Resources</a></li>
                             </div>
                         <?php endif; ?>
                     </ul>
