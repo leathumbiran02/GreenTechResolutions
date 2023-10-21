@@ -59,8 +59,8 @@
                 background-color: #4C4D5E;
                 padding-right:50px;
                 padding-left:50px;
-                padding-bottom:20px;
-                padding-top:30px;/* Space in section above text */
+                padding-bottom:50px;
+                padding-top:50px;/* Space in section above text */
                 margin-top:5px;/* Space above section */
             }
             .aquaponicsGallery {

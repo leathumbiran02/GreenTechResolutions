@@ -14,7 +14,7 @@
         <style>
             .productContainer{
                 display: flex;
-                width: 92%;
+               /*  width: 92%; */
                 height: auto;
                 justify-content: space-between;
                 margin-left: 50px;
@@ -45,7 +45,7 @@
             span{
                 font-weight: normal;
                 display: inline-block;
-                float:left;
+                /* float:left; */
                 padding: 0px 40px;
                 padding-bottom: 20px;
             }
