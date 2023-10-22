@@ -14,7 +14,7 @@
         <style>
             .container {
                 display: flex;
-                width: 96%;
+                width: 98%;
                 height: auto;
                 justify-content: space-between;
                 margin-left: 50px;
