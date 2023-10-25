@@ -906,10 +906,9 @@ a.addbutton{
 
 .product_details_description{
     font-size:1.5em;
-    font-weight: bolder;
+    font-weight: normal;
     color: rgb(255, 255, 255);
     margin-bottom: 10px;
-    text-align: justify;
 }
 
 .back_to_products{
