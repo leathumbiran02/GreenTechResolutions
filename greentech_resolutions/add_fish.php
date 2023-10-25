@@ -61,37 +61,12 @@
         <!--Using a CSS style sheet for the page:-->
         <link rel="stylesheet" href="style.css">
         <style>
-            .hero{ /* Centering the text on the page: */
-                backdrop-filter: blur(5px);
-            }
-            .contact-us-register_login_btn_box{
-                margin: 35px 130px;
-            }
-            .contact-us-form-box{
-                height: 500px;
-                border: 3px solid black;
-                background-color: #010007eb;
-            }
-            .contact-us-login_input_group input{
-                border: 3px solid black;
-                color:black;
-                background-color: white;
-            }
-            .contact-us-submit_btn{
-                color: black;
-                border: 3px solid black;
-            }
-            body{ /* Adding a background image to the page: */
-                width: 100%;
-                background-image: url(images/account_background.jpg);
-                background-position:center;
-                background-size:cover;
-                background-attachment: fixed;
-                overflow: hidden;
-                margin-top: 80px;
-            }
-            .contact-us-toggle_register_login_btn{
+            h2{
                 color: white;
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                padding-top: 50px;
             }
         </style>
     </head>
@@ -103,28 +78,27 @@
             ?>
         </header>
         <div class="hero">
-            <div class="spacing" style="height:150px;"></div>
             <div class="form_page"> <!-- The body of the page: -->
                 <div class="contact-us-form-box"> 
                     <div class="contact-us-register_login_btn_box">
-                        <button type="button" class="contact-us-toggle_register_login_btn">Add Fish</button> 
+                        <h2>Add Fish</h2> 
                     </div>
 
                     <form class="contact-us-login_input_group" id="community_fish" name = "community_fish" action="add_fish.php" method="POST" onsubmit = "return(validate_add_fish());">
                         <!-- Fish name: -->
-                        <input type="text" class="contact-us-input_field" id="fish_name" name="fish_name" placeholder="Fish Name">
+                        <input type="text" class="input_field" id="fish_name" name="fish_name" placeholder="Fish Name">
 
                         <!-- Description: -->
-                        <input type="text" class="contact-us-input_field" id="description" name="description" placeholder="Description">
+                        <input type="text" class="input_field" id="description" name="description" placeholder="Description">
                         
                         <!-- Image -->
-                        <input type="text" class="contact-us-input_field" id="image" name="image" placeholder="Link to image">
+                        <input type="text" class="input_field" id="image" name="image" placeholder="Link to image">
                         
                         <!-- Price: -->
-                        <input type="number" step="0.01" min="0" class="contact-us-input_field" id="price" name="price" placeholder="Price"><br><br>  
+                        <input type="number" step="0.01" min="0" class="input_field" id="price" name="price" placeholder="Price"><br><br>  
 
                         <!-- Button to submit the details to the database: -->
-                        <button type="submit" name="submit" class="contact-us-submit_btn">Save</button>
+                        <button type="submit" name="submit" class="submit_btn">Save</button>
 
                         <div class="center-text">
                             <!-- Go Back:-->
