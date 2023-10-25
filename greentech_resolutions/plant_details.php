@@ -19,9 +19,26 @@
         <link rel="stylesheet" href="style.css">
 
         <style> /* Applying additional styling for this specific page: */
-            .hero h1{
+            .container{
+                display: flex;
+                width: 95%;
+                height: auto;
+                justify-content: space-between;
+                margin: 0px 50px;
+                margin-top: 40px;
                 text-align: center;
-                color:black;
+            }
+            h2{
+                color: white;
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                padding-top: 50px;
+            }
+            p{
+                color: white;
+                font-size: 18px;
+                font-weight: normal;
             }
             .product_details_info ul li{
                 list-style-type: none; /* Hide the bullet point symbols */
@@ -89,8 +106,8 @@
 
                     if($result->num_rows>0){ //If a row was found execute the following code:
                             $row=$result->fetch_assoc();
-                            echo    "<h1>" . $row["plant_name"] . "</h1>"; /* Fish Name: */
-                            echo    "<div class='product_details_page'>";
+                            echo    "<h2>" . $row["plant_name"] . "</h2>"; /* Fish Name: */
+                            echo    "<div class='container'>";
                             echo        "<div class='product_details_image_box'>";
                             echo            "<img class='product_details_img' src='" . $row["image"] . "' />"; /* Image: */
                             echo        "</div>";
@@ -106,8 +123,8 @@
                                 echo            "<li class='product_details_description'><i>{$description}</i></li>";
                             }
                             echo            "</ul>";
-                            echo "<p class='product_details_description'>Health Benefits: <a href='" . $row["health_benefits"] . "' target='_blank'>" . $row["health_benefits"] . "</a></p>";
-                            echo "<p class='product_details_description'>Recipes: <a href='" . $row["recipe"] . "' target='_blank'>" . $row["recipe"] . "</a></p>";                            
+                            echo            "<p class='product_details_description'>Health Benefits: <a href='" . $row["health_benefits"] . "' target='_blank'>" . $row["health_benefits"] . "</a></p>";
+                            echo            "<p class='product_details_description'>Recipes: <a href='" . $row["recipe"] . "' target='_blank'>" . $row["recipe"] . "</a></p>";                            
                             echo            "<br><div><a  href='learn.php' class='back_to_products' style='margin:10px -10px;'>GO BACK</a></div>";
                             echo        "</div>";
                             echo    "</div>";
