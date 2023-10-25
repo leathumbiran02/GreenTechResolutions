@@ -39,6 +39,7 @@
             }
             .youtubeLogo{
                 width: 75px;
+                margin-left: -10px;
             }
             .socialMedia{
                 margin-top: 70px;
@@ -47,7 +48,7 @@
             .menuList{
                 width: 250px;
                 margin-top: -10px;
-                margin-left: -100px;
+                margin-left: -120px;
             }
             .fa {
                 padding: 5px;
@@ -94,31 +95,17 @@
                     <ul class="list" style="list-style-type: none;">
                         <!-- Only display this menu if the person logged in is a user: -->
                         <?php if(isset($_SESSION['users']) && $_SESSION['users'] == true): ?>
-                            <li><a>AquaBot</a>
-                                <ul style="list-style-type: none;">
-                                    <li><a href="plant.php">Plants</a></li>
-                                    <li><a href="tank.php">Tank</a></li>
-                                    <li><a href="system.php">System</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="shop.php">Shop</a></li>
-                            <li><a>Connect</a>
-                                <ul style="list-style-type: none;">
-                                    <li><a href="chat.php">With Us</a></li>
-                                    <li><a href="community.php">Community</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="learn.php">Learn</a></li>
-                            <li><a href="account.php">Account</a>
-                                <ul style="list-style-type: none;">
-                                    <li><a href="logout.php" onclick="return confirm('Are you sure that you want to logout?')">Logout</a></li>
-                                </ul>
-                            </li>
-                        
+                            <div class = "menuList">
+                                <li><a href="plant.php">Aquabot</a></li>
+                                <li><a href="shop.php">Shop</a></li>
+                                <li><a href="chat.php">Connect</a></li>
+                                <li><a href="learn.php">Learn</a></li>
+                                <li><a href="account.php">Account</a></li>
+                            </div>
                             <!-- Microphone button for users to talk to the system: -->
                             <button id="microphoneButton" class='microphone' style="font-size:30px;"><i class="fas fa-microphone"></i></button>
                         
-                            <?php else: ?> <!-- Display this menu for guest users only: -->
+                        <?php else: ?> <!-- Display this menu for guest users only: -->
                             <div class = "menuList">
                                 <li><a href="about_us.php">About Us</a></li>
                                 <li><a href="partners.php">Partners</a></li>

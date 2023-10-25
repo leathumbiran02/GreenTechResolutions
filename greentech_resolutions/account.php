@@ -22,25 +22,19 @@
                 margin-top: 100px;
                 text-align: center; 
             }
-            p, span{
-                color: white;
-                font-size: 20px;
-                font-weight: normal;
-            }
-            p{
-                margin-top: 15px;
-            }
-            span{
-                font-weight: normal;
-                display: inline-block;
-                float:center;
-            }
-            h2{
+            h4, h2, a{
                 color: white;
                 text-align: center; /* Center the text horizontally */
                 font-size: 20px;
-                font-weight: bold;
-                padding-bottom: 0px;
+            }
+            h2{
+                font-weight: bolder;
+            }
+            h4, a{
+                font-weight: normal;
+            }
+            a {
+                text-decoration: none;
             }
             .editButton{
                 width: 80px;
@@ -55,6 +49,12 @@
                 padding: 0px;
                 margin-left: 8px;
                 margin-top: -10px;
+            }
+            .user-info{
+                padding-bottom: 0px;
+            }
+            footer{
+                margin-top: -250px;
             }
         </style>
     </head>
@@ -148,4 +148,9 @@
             ?>
         </div>
     </body>
+    <footer>
+        <?php 
+            include 'footer.php';
+        ?>
+    </footer>
 </html>
