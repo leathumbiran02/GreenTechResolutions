@@ -41,7 +41,7 @@ CREATE TABLE `plant_details` (
 --
 
 INSERT INTO `plant_details` (`plant_details_id`, `plant_name`, `description`, `image`, `health_benefits`, `recipe`) VALUES
-(1, 'Tomato', 'Tomato is a versatile and delicious fruit commonly used in various culinary dishes.', 'https://i.pinimg.com/originals/f4/db/1b/f4db1bc6273b8479c6c354f325228748.jpg\r\n', 'placeholderlink1', 'placeholderlink1'),
+(1, 'Tomato', 'Tomato is a versatile and delicious fruit commonly used in various culinary dishes.', 'https://i.pinimg.com/originals/f4/db/1b/f4db1bc6273b8479c6c354f325228748.jpg', 'placeholderlink1', 'placeholderlink1'),
 (2, 'Cauliflower', 'Cauliflower is a nutritious vegetable with a mild, versatile flavor.', 'https://i.pinimg.com/originals/2e/a0/7c/2ea07c91b80166bc23cf1c195c71a260.jpg', 'placeholderlink2', 'placeholderlink2'),
 (3, 'Spinach', 'Spinach is a nutritious leafy green vegetable packed with vitamins and minerals.', 'https://cdn.mos.cms.futurecdn.net/atyrpYQoxdoTzmEgu8HMWE-1200-80.jpg', 'placeholderlink3', 'placeholderlink3'),
 (4, 'Carrot', 'The carrot is a nutritious orange root vegetable.', 'https://i.pinimg.com/originals/d9/a6/1b/d9a61ba54f0381c4bc022aba9a5beefc.jpg', 'placeholderlink4', 'placeholderlink4'),
