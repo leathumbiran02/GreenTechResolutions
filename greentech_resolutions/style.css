@@ -217,13 +217,13 @@ header label{
     cursor: pointer;
     display: block;
     margin: auto;
-    margin-top: -5px;
     background-color:#009414;
     color: #ffffff;
     font-weight: bolder;
     font-size: 20px;
     border: 0;
     outline: none;
+    margin-bottom: 10px;
 }
 
 .check_box{
@@ -436,9 +436,9 @@ th.user-th, td.user-td{
 
 .back-button{
     color: #ffffff;
-    font-size: 18px;
-    bottom:-25px;
-    margin-left:40px;
+    font-size: 20px;
+    /* bottom: 25px; */
+    /* margin-left:40px; */
     position: relative;
     font-weight: bolder;
 }

@@ -57,7 +57,7 @@
                         <!-- Button to submit the details to the database: -->
                         <button type="submit" name="login_submit" class="submit_btn">Login</button>
                         <div style ="text-align: center;">
-                            <span class="account">Don't have an account?</span><button type="button" class="toggle_register_login_btn" onclick="register()">Sign Up</button> <!-- When the Register button is clicked call the register() function: -->
+                            <span class="account">Don't have an account?</span><button type="button" class="toggle_register_login_btn" style="color: #009414;" onclick="register()">Sign Up</button> <!-- When the Register button is clicked call the register() function: -->
                         </div>
                     </form>
                     <!--Create a registration form that sends the information to the database:-->
@@ -80,7 +80,7 @@
                         <!--Button to submit the form:-->
                         <button type="submit" name="register_submit" class="submit_btn">Sign Up</button>    
                         <div style ="text-align: center;">
-                            <span >Already have an account?</span><button type="button" class="toggle_register_login_btn" onclick="login()">Login</button> <!-- When the Login button is clicked call the login() function: -->
+                            <span >Already have an account?</span><button type="button" class="toggle_register_login_btn"  style="color: #009414;" onclick="login()">Login</button> <!-- When the Login button is clicked call the login() function: -->
                         </div>
                     </form>
                 </div>

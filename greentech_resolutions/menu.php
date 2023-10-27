@@ -39,22 +39,22 @@
             </li>
             <li>
                 <a>
-                    <div class="cart-icon" onclick="toggleCartItems()">
+                    <div class="cart-icon" onclick="showComingSoonMessage()">
                             <i class="fas fa-shopping-cart fa-2x" style="font-size: 25px; margin-top: -2.5px;"></i>
                             <ul class="cart-items">
                             <!-- Cart items go here -->
-                                <li class="checkout" onclick="checkout()">Checkout</li>
-                                <li class="total-price hidden">Total: R0</li>
+                                <!-- <li class="checkout" onclick="checkout()">Checkout</li>
+                                <li class="total-price hidden">Total: R0</li> -->
                             </ul>
                         </div>
                         <ul class="cart-items hidden">
                             <!-- Cart items go here -->
                         </ul>
-                        <form id="checkout-form" method="post" action="save_cart_items.php">
+                        <!-- <form id="checkout-form" method="post" action="save_cart_items.php">
                             <input type="hidden" name="order_number" value="1">
-                            <input type="hidden" name="total_price" value="0">
+                            <input type="hidden" name="total_price" value="0"> -->
                             <!-- <button class="cart-items hidden" type="submit">Checkout</button> -->
-                        </form>
+                        <!-- </form> -->
                 </a>
             </li>
         

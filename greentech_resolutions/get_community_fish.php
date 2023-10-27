@@ -34,7 +34,7 @@
                 echo                "<h2>" . $row["fish_name"] . "</h2 >"; /* Fish name: */
                 echo                "<span>" . $row["description"] . "</span >"; /* Fish Description: */
                 echo                "<span>R" . $row["price"] . "</span>"; /* Fish price: */
-                echo            "<a><button class='addbutton' onclick='showComingSoonMessage()'>BUY</button></a>";
+                echo            "<a><button class='addbutton' onclick='showComingSoonMessage()'>Add To Cart</button></a>";
                 echo            "</div>";
                 echo        "</div>";
             }

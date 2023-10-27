@@ -34,7 +34,7 @@
                 echo            "<h2 class='product-title'>" . $row["plant_name"] . "</h2>"; /* Plant name: */
                 echo            "<span class='product-title'>" . $row["description"] . "</span>"; /* Plant Description: */
                 echo            "<span class='product-price-discount'>R" . $row["price"] . "</span>"; /* Plant price: */
-                echo        "<a><button class='addbutton' onclick='showComingSoonMessage()'>BUY</button></a>";
+                echo        "<a><button class='addbutton' onclick='showComingSoonMessage()'>Add To Cart</button></a>";
                 echo        "</div>";
                 echo    "</div>";
             }

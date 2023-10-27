@@ -68,6 +68,9 @@
                 font-weight: bold;
                 padding-top: 50px;
             }
+            .contact-us-form-box{
+                height: 450px;
+            }
         </style>
     </head>
     <body>

@@ -99,14 +99,14 @@
             </div>
             <div class="productCard">
                 <img class="productImg" src="images/waterPump.webp" onclick="showComingSoonMessage()">
-                <span>AHKD Subm Water Pump 3-6VDC</span>
-                <span>R23.48</span>
+                <span>Mini DC 3-6V Water 120L/H Brushless Motor Submersible Pump</span>
+                <span>R43.99</span>
                 <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
             <div class="productCard">
                 <img class="productImg" src="images/tempSensor.webp" onclick="showComingSoonMessage()">
-                <span>HKD Temprature Probe DS18B20</span>
-                <span>R39.13</span>
+                <span>Water proof DS18B20 temperature sensor</span>
+                <span>R62.16</span>
                 <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>
         </div>
@@ -114,7 +114,7 @@
         <div class="productContainer">
             <div class="productCard">
                 <img class="productImg" src="images/smallServoMotor.jpg" onclick="showComingSoonMessage()">
-                <span>HKD Micro Servo 9G 3V-7</span>
+                <span>SG90 Micro Servo Motor 180 degrees</span>
                 <span>R39.00</span>
                 <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
             </div>

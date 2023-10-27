@@ -994,7 +994,7 @@
 
 /* Shop page cart test: Added on 12 August 2023: */
     // Cart items array
-    let cartItems = [];
+   /*  let cartItems = [];
 
     // Function to add item to cart
     function addToCart(productName, price) {
@@ -1054,4 +1054,4 @@
     function checkout() {
         const total = calculateTotal();
         // Your checkout logic here, e.g., redirect to checkout page or display a message
-    }
+    } */

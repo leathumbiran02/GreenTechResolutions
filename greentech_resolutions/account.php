@@ -147,5 +147,8 @@
                 $connect->close();
             ?>
         </div>
+
+        <!-- Using an external javascript file for the buttons and timers: -->
+        <script src="validate.js"></script>
     </body>
 </html>
