@@ -17,11 +17,14 @@
                 display: flex;
                 align-items: center;
             }
-            .personHoldingPlant {
+            .personHoldingPlant, .aquaponicDiagram {
                 max-width: 35%; /* Adjust the image width as needed */
                 margin-right: 20px; /* Add some spacing between the image and text */
                 height: auto;
                 padding: 50px;
+            }
+            .aquaponicDiagram{
+
             }
             .aboutUsContent {
                 flex: 1; /* Allow the text to take up remaining space */
@@ -33,7 +36,7 @@
                     display: flex;
                     flex-direction: column; /* Change flex direction to column on small screens */
                 }
-                .personHoldingPlant {
+                .personHoldingPlant, .aquaponicDiagram {
                     max-width: 100%; /* Make the image full width on small screens */
                     margin-right: 0; /* Remove the spacing between the image and text */
                     padding: 50px; /* Adjust padding as needed */
@@ -327,6 +330,27 @@
             </div>
         </div>
 
+        <div class="aboutUsSection" style="background-color: #4C4D5E; margin : 0px 50px;">
+            <div class="aboutUsContent" style="margin-left: 50px" >
+                <h2>WHAT IS AQUAPONICS?</h2>
+                <h4><i><br>Aquaponics is a sustainable farming method that combines
+                aquaculture (fish farming) and hydroponics (growing plants in
+                water) in a symbiotic system.
+                In an aquaponics system, fish
+                waste provides nutrients for the plants, while the plants
+                naturally filter the water for the fish. The fish waste, which contains ammonia, is broken down by beneficial bacteria into
+                nitrates. These nitrates serve as fertilizer for the plants,
+                allowing them to grow without the need for soil. As the plants
+                absorb the nutrients, they purify the water, creating a clean
+                and healthy environment for the fish. <br><br> Its advantages are that it
+                requires significantly less water compared to conventional
+                agriculture as the water is recycled within the system and it
+                eliminates the need for chemical fertilizers and pesticides. This
+                promotes organic and sustainable food production.
+            </i></h4>
+            </div>
+            <img class="aquaponicDiagram" src="images/Aquaponics1.png"  style="min-width: 550px; height: 500px;">  
+        </div>
         <div class="chooseUsSection">
             <h2>WHY CHOOSE US?<br></h2>
             <div class="chooseUsContent">
@@ -367,32 +391,6 @@
                 </div>
             </div>
         </div>
-        <div class="aquaponicsSection">
-            <div class="aquaponicsContent">
-                <h2>WHAT IS AQUAPONICS?</h2>
-                <h4 style="margin-left:50px; margin-right:50px; text-align:justify;  line-height: 1.6;"><i><br>Aquaponics is a sustainable farming method that combines
-                aquaculture (fish farming) and hydroponics (growing plants in
-                water) in a symbiotic system.
-                In an aquaponics system, fish
-                waste provides nutrients for the plants, while the plants
-                naturally filter the water for the fish. The fish waste, which contains ammonia, is broken down by beneficial bacteria into
-                nitrates. These nitrates serve as fertilizer for the plants,
-                allowing them to grow without the need for soil. As the plants
-                absorb the nutrients, they purify the water, creating a clean
-                and healthy environment for the fish. <br><br> Its advantages are that it
-                requires significantly less water compared to conventional
-                agriculture as the water is recycled within the system and it
-                eliminates the need for chemical fertilizers and pesticides. This
-                promotes organic and sustainable food production.
-            </i></h4>
-            </div>  
-        </div>
-        <div class="aquaponicsGallery">
-            <img class="galleryImg1" style="margin-left:50px;" src="images/aquaponicsGallery1.jpg" >
-            <img class="aquaponicDiagram" src="images/aquaponicsDiagram.JPG" >
-            <img class="galleryImg2" style="margin-right:50px;" src="images/aquaponicsGallery2.JPG" >
-        </div>
-        
     </body>
     <footer>
         <?php 
