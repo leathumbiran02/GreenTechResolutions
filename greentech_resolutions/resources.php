@@ -18,7 +18,7 @@
                 align-items: center;
             }
             .personHoldingPlant {
-                max-width: 50%; /* Adjust the image width as needed */
+                max-width: 70%; /* Adjust the image width as needed */
                 margin-right: 20px; /* Add some spacing between the image and text */
                 height: auto;
                 padding: 25px;
@@ -224,15 +224,27 @@
             ?>
         </header> 
         <div class="chooseUsSection">
+            <h2>MODEL<br></h2>
+            <div class="chooseUsContent">
+            <img class="personHoldingPlant" src="images/SketchUp.png">
+            </div>
+        </div>
+        <div class="chooseUsSection">
             <h2>SCHEMATICS DIAGRAM<br></h2>
             <div class="chooseUsContent">
             <img class="personHoldingPlant" src="images/resources/schematics.png">
             </div>
         </div>
         <div class="chooseUsSection">
+            <h2>TOOLS AND TECHNOLOGY STACK<br></h2>
+            <div class="chooseUsContent">
+            <img class="personHoldingPlant" src="images/Tech Stack.png">
+            </div>
+        </div>
+        <div class="chooseUsSection">
             <h2>NETWORK CONNECTION DIAGRAM<br></h2>
             <div class="chooseUsContent">
-            <img class="personHoldingPlant" src="images/resources/network.png">
+            <img class="personHoldingPlant" src="images/NetworkDiagram.png">
             </div>
         </div>
         <div class="chooseUsSection">
@@ -248,12 +260,17 @@
             </div>
         </div>
         <div class="chooseUsSection">
-            <h2>BURNDOWN CHART<br></h2>
+            <h2>GANTT CHART<br></h2>
             <div class="chooseUsContent">
-            <!-- <img class="personHoldingPlant" src="images/resources/budget.png"> -->
+            <img class="personHoldingPlant" src="images/GanttChart.jpg">
             </div>
         </div>
-        
+        <div class="chooseUsSection">
+            <h2>BURNDOWN CHART<br></h2>
+            <div class="chooseUsContent">
+            <img class="personHoldingPlant" src="images/burndown.png">
+            </div>
+        </div>
     </body>
     <footer>
         <?php 
