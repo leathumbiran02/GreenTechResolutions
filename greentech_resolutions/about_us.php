@@ -277,9 +277,9 @@
             </div>
         </div>
 
-        <div class="aquaponicsSection" style="background-color:transparent;">
+        <div class="aquaponicsSection" style="background-color:transparent; margin: 0px 20px;  margin-top: -30px">
             <div class="aquaponicsContent" style="background-color:transparent;">
-                <h2>ABSTRACT</h2>
+                <h2>OUR RESEARCH</h2>
                 <h4 style="text-align:justify;  line-height: 1.6;"><i><br>
                 We have selected the topic of accessible education focusing on equal opportunities for all. 
                 We will be focusing on disability-related barriers in aquaculture and agriculture through education, 
@@ -289,7 +289,7 @@
         </div>
 
         <div class="aquaponicsSection">
-            <br><br><h2>TECHNOLOGY<br></h2><br><br>
+        <br><br><h2>TECHNOLOGY<br></h2><br><br>
             <!-- <br><br><h2>What technologies are out there?<br></h2><br><br> -->
             <div class="aquaponicsGallery">
                 <img class="galleryImg1" style="margin-left:50px;" src="images/FarmBot.png" >
@@ -297,7 +297,7 @@
             </div>
         </div>
 
-        <div class="aquaponicsSection" style="background-color:transparent;">
+        <div class="aquaponicsSection" style="background-color:transparent; ">
             <br><br><h2>ENVIRONMENT<br></h2><br><br>
             <!-- <br><br><h2>What issues are we yet to face?<br></h2><br><br> -->
             <div class="aquaponicsGallery">
@@ -309,18 +309,21 @@
         <div class="aquaponicsSection">
             <br><br><h2>EDUCATION<br></h2><br><br>
            <!--  <br><br><h2>What research did we do?<br></h2><br><br> -->
-            <div class="aquaponicsGallery">
-                <img class="galleryImg1" src="images/Environment1.png" >
-                <img class="galleryImg2" src="images/Environment2.png" >
+            <div class="aquaponicsGallery" style="padding: 0px 50px;">
+                <img class="galleryImg1" src="images/Education1.png" style="padding-right:25px;" >
+                <img class="galleryImg2" src="images/Education2.png" style="padding-left:25px;" >
+            </div>
+            <div class="aquaponicsGallery" style="padding: 0px 50px;">
+                <img class="galleryImg1" src="images/Education3.jpg" style="padding-right:25px;" >
+                <img class="galleryImg2" src="images/Education4.png" style="padding-left:25px;">
             </div>
         </div>
 
         <div class="aquaponicsSection" style="background-color:transparent;">
             <br><br><h2>ENTREPRENEURSHIP<br></h2><br><br>
-            <!-- <br><br><h2>What ?<br></h2><br><br> -->
-            <div class="aquaponicsGallery">
-                <img class="galleryImg1" src="images/Environment1.png" >
-                <img class="galleryImg2" src="images/Environment2.png" >
+            <div class="aquaponicsGallery" style="padding: 0px 0px;">
+                <img class="galleryImg1" src="images/Entrepreneurship1.jpg" style="padding-right:25px;" >
+                <img class="galleryImg2" src="images/Entrepreneurship2.png" style="padding-left:25px;" >
             </div>
         </div>
 
@@ -330,17 +333,17 @@
                 <div class="chooseUsFirstRow">
                     <div class="chooseUsFirstCard">
                     <img class="chooseUs1" src="images/chooseUs1.png" >
-                        <h2>Sustainable Leadership</h2>
-                        <h4><br>We’re committed to leading the charge in Eco-friendly practices and solutions that minimize environmental impact.</h4>
+                        <h2>We Create More Value </h2>
+                        <h4><br>Our aquaponics systems integrate robotics and automation to create an efficient, user-friendly experience.</h4>
                     </div>
                     <div class="chooseUsSecondCard">
                         <img class="chooseUs2" src="images/chooseUs2.png" >
-                        <h2>Cutting Edge Technology</h2>
+                        <h2>Sustainable System For The Future</h2>
                         <h4><br>Our aquaponics systems integrate robotics and automation to create an efficient, user-friendly experience.</h4>
                     </div>
                     <div class="chooseUsThirdCard">
                         <img class="chooseUs3" src="images/chooseUs3.png" >
-                        <h2>Educational Empowerment</h2>
+                        <h2>Our Business Benefit</h2>
                         <h4><br>We believe in empowering individuals to make informed choices. 
                             We provide education about sustainable living and the benefits of aquaponics.</h4>
                     </div>
@@ -348,17 +351,17 @@
                 <div class="chooseUsSecondtRow">
                     <div class="chooseUsFirstCard">
                         <img class="chooseUs4" src="images/chooseUs4.png" >
-                        <h2>Seamless User Experience</h2>
+                        <h2>Everyone is our target market</h2>
                         <h4><br>Our aquaponics systems come with a website interface that lets you monitor and control your system from anywhere.</h4>
                     </div>
                     <div class="chooseUsSecondCard">
                         <img class="chooseUs5" src="images/chooseUs5.png" >
-                        <h2>Resource Efficiency</h2>
+                        <h2>Our System Reduces Waste </h2>
                         <h4><br>This means you will not only be growing food, you’ll be doing it in a way that conserves precious resources and eco-friendly.</h4>
                     </div>
                     <div class="chooseUsThirdCard">
                         <img class="chooseUs6" src="images/chooseUs6.png" >
-                        <h2>Promoting Organic Practices</h2>
+                        <h2>Our System Offers Value Propsitions</h2>
                         <h4><br>Our systems foster organic food production without relying on synthetic fertilizers and pesticides.</h4>
                     </div>
                 </div>
