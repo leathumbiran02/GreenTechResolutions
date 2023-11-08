@@ -255,28 +255,75 @@
                 </div>
             </div>
         </div>
+
         <div class="aboutUsSection">
             <img class="personHoldingPlant" src="images/about_us_holding_plant.jpg">
             <div class="aboutUsContent">
                 <h2>ABOUT US</h2>
                 <h4 style="margin-left:50px; margin-right:50px; text-align:justify;  line-height: 1.6;">
-                <br><i>Welcome to GreenTech Resolutions, a company dedicated to
-                sustainability and promoting Eco-friendly practices. We aim to create 
-                a greener future using technology, education
-                and innovation. There is an urgent need to address
-                environmental challenges and a strive to lead in sustainable
-                solutions.
+                <br><i>Green Tech Resolutions are about recognizing the urgency of educating and empowering individuals to embrace sustainable 
+                    living while providing the tools and knowledge to make a positive impact. 
                 <br> <br> 
-                Our mission is to educate and empower individuals about
-                sustainable living and to provide them with the tools and knowledge
-                to make a positive impact. We offer aquaponics systems that
-                integrate robotics and automation, providing a seamless and
-                user-friendly experience. Our technology allows for full
-                automation and a website interface that lets users monitor and
-                control their aquaponics system.
-                </i></h4>
+                We offer aquaponics systems that incorporate robotics and automation for an effortless and user-friendly experience. 
+                Our technology enables full automation and a web interface for users to monitor and control their aquaponics systems.
+                </i></h4><br><br>
+                <!-- <h2>ABSTRACT</h2>
+                <h4 style="margin-left:50px; margin-right:50px; text-align:justify;  line-height: 1.6;">
+                <br><i>We have selected the topic of accessible education focusing on equal opportunities for all. 
+                We will be focusing on disability-related barriers in aquaculture and agriculture through education, 
+                technology, entrepreneurship, and environmental sustainability.
+                <br><br> 
+                </i></h4> -->
             </div>
         </div>
+
+        <div class="aquaponicsSection" style="background-color:transparent;">
+            <div class="aquaponicsContent" style="background-color:transparent;">
+                <h2>ABSTRACT</h2>
+                <h4 style="text-align:justify;  line-height: 1.6;"><i><br>
+                We have selected the topic of accessible education focusing on equal opportunities for all. 
+                We will be focusing on disability-related barriers in aquaculture and agriculture through education, 
+                technology, entrepreneurship, and environmental sustainability.
+                </i></h4>
+            </div>  
+        </div>
+
+        <div class="aquaponicsSection">
+            <br><br><h2>TECHNOLOGY<br></h2><br><br>
+            <!-- <br><br><h2>What technologies are out there?<br></h2><br><br> -->
+            <div class="aquaponicsGallery">
+                <img class="galleryImg1" style="margin-left:50px;" src="images/FarmBot.png" >
+                <img class="galleryImg2" style="margin-right:50px;" src="images/Smart Aquaponic System.png" >
+            </div>
+        </div>
+
+        <div class="aquaponicsSection" style="background-color:transparent;">
+            <br><br><h2>ENVIRONMENT<br></h2><br><br>
+            <!-- <br><br><h2>What issues are we yet to face?<br></h2><br><br> -->
+            <div class="aquaponicsGallery">
+                <img class="galleryImg1" src="images/Environment1.png" >
+                <img class="galleryImg2" src="images/Environment2.png" >
+            </div>
+        </div>
+
+        <div class="aquaponicsSection">
+            <br><br><h2>EDUCATION<br></h2><br><br>
+           <!--  <br><br><h2>What research did we do?<br></h2><br><br> -->
+            <div class="aquaponicsGallery">
+                <img class="galleryImg1" src="images/Environment1.png" >
+                <img class="galleryImg2" src="images/Environment2.png" >
+            </div>
+        </div>
+
+        <div class="aquaponicsSection" style="background-color:transparent;">
+            <br><br><h2>ENTREPRENEURSHIP<br></h2><br><br>
+            <!-- <br><br><h2>What ?<br></h2><br><br> -->
+            <div class="aquaponicsGallery">
+                <img class="galleryImg1" src="images/Environment1.png" >
+                <img class="galleryImg2" src="images/Environment2.png" >
+            </div>
+        </div>
+
         <div class="chooseUsSection">
             <h2>WHY CHOOSE US?<br></h2>
             <div class="chooseUsContent">
