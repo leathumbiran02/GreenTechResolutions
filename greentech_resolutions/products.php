@@ -81,10 +81,10 @@
         <h2>PRODUCTS</h2>
         <div class="productContainer">
             <div class="productCard">
-                <img class="smallIndoorSystem" src="images/small-IndoorSystem.jpg" onclick="showComingSoonMessage()">
+                <a href="resources.php"><img class="smallIndoorSystem" src="images/small-IndoorSystem.jpg"></a>
                 <h2>AQUA-BOT 1.0</h2>
                 <span>Automated Freshwater Indoor System</span>
-                <button class="button" onclick="showComingSoonMessage()">Add to Cart</button>
+                <a href="resources.php"><button class="button">Add to Cart</button></a>
             </div>
             <div class="productCard">
                 <img class="biggerIndoorSystem" src="images/bigger-IndoorSystem.jpg" onclick="showComingSoonMessage()">
