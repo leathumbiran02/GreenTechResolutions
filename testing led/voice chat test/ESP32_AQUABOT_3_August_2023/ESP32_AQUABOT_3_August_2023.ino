@@ -25,11 +25,11 @@ Servo wrist2;  // Wrist 2 servo declaration
 Servo hand;
 
 const int HOME_POSITION[] = {90, 180, 100, 180, 0, 180}; // Adjusted base angle to 40
-const int PICKUP_POSITION[] = {116, 154, 150, 180, 0, 180}; // Hand at 180 degrees to close
+const int PICKUP_POSITION[] = {114, 154, 145, 180, 0, 180}; // Hand at 180 degrees to close
 const int DROP_POSITIONS[][6] = {
-  {99, 140, 145, 180, 0, 180},
-  {85, 140, 145, 180, 0, 180},
-  {71, 140, 145, 180, 0, 180}
+  {97, 140, 147, 180, 0, 180},
+  {83, 140, 147, 180, 0, 180},
+  {69, 140, 147, 180, 0, 180}
 };
 const int NUM_DROP_POSITIONS = sizeof(DROP_POSITIONS) / sizeof(DROP_POSITIONS[0]);
 
