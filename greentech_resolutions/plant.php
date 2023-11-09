@@ -181,7 +181,7 @@
             <h2 class="heading">PLANTING</h2>
             <div class="cupsCard">
                 <div class="cup">
-                    <img class="strawberryIcon"src="images/strawberry.png" onclick="sendPlantingPlantCommandToESP32(1)">
+                    <img class="strawberryIcon"src="images/strawberry.png" onclick="sendPlantingPlantCommandToESP32(3)">
                     <span class="cupTxt" onclick="sendPlantingPlantCommandToESP32(1)">Cup 1</span>
                 </div>
                 <div class="cup">
@@ -189,7 +189,7 @@
                     <span class="cupTxt" onclick="sendPlantingPlantCommandToESP32(2)">Cup 2</span>
                 </div>
                 <div class="cup">
-                    <img class="strawberryIcon"src="images/strawberry.png"onclick="sendPlantingPlantCommandToESP32(3)">
+                    <img class="strawberryIcon"src="images/strawberry.png"onclick="sendPlantingPlantCommandToESP32(1)">
                     <span class="cupTxt" onclick="sendPlantingPlantCommandToESP32(3)">Cup 3</span>
                 </div>
             </div>
