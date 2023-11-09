@@ -376,12 +376,12 @@
                     <div class="chooseUsFirstCard">
                         <img class="chooseUs4" src="images/chooseUs4.png" >
                         <h2>Everyone is our target market</h2>
-                        <h4><br>Our aquaponics systems is aimed to everyone who that would like to learn farming , technology and business.</h4>
+                        <h4><br>Our aquaponics systems is aimed at people that want to learn about farming , technology and business.</h4>
                     </div>
                     <div class="chooseUsSecondCard">
                         <img class="chooseUs5" src="images/chooseUs5.png" >
                         <h2>Our System Reduces Waste </h2>
-                        <h4><br>This means you will not only be growing food, you’ll be doing it in a way that conserves precious resources and eco-friendly way.</h4>
+                        <h4><br>This means you will not only be growing food, you’ll be doing it in a resource efficient and eco-friendly way.</h4>
                     </div>
                     <div class="chooseUsThirdCard">
                         <img class="chooseUs6" src="images/chooseUs6.png" >
