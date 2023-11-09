@@ -320,6 +320,9 @@
                 <img class="galleryImg1" src="images/Education3.jpg" style="padding-right:25px;" >
                 <img class="galleryImg2" src="images/Education4.png" style="padding-left:25px;">
             </div>
+            <div class="center-text">
+                <a href="https://docs.google.com/forms/d/1izr06M2_7SlP5D9NYLok79SNnz7h52w0eLoMvmljQtk/viewform?pli=1&pli=1&edit_requested=true#question=1174480037&field=701610669">Google Form</a>
+            </div>
         </div>
 
         <div class="aquaponicsSection" style="background-color:transparent;">
