@@ -358,7 +358,7 @@
                     <div class="chooseUsFirstCard">
                     <img class="chooseUs1" src="images/chooseUs1.png" >
                         <h2>We Create More Value </h2>
-                        <h4><br>Our aquaponics systems integrate robotics and automation to create an efficient, user-friendly experience.</h4>
+                        <h4><br>Our aim is  sustainability in using technology to make life easier.</h4>
                     </div>
                     <div class="chooseUsSecondCard">
                         <img class="chooseUs2" src="images/chooseUs2.png" >
@@ -376,12 +376,12 @@
                     <div class="chooseUsFirstCard">
                         <img class="chooseUs4" src="images/chooseUs4.png" >
                         <h2>Everyone is our target market</h2>
-                        <h4><br>Our aquaponics systems come with a website interface that lets you monitor and control your system from anywhere.</h4>
+                        <h4><br>Our aquaponics systems is aimed to everyone who that would like to learn farming , technology and business.</h4>
                     </div>
                     <div class="chooseUsSecondCard">
                         <img class="chooseUs5" src="images/chooseUs5.png" >
                         <h2>Our System Reduces Waste </h2>
-                        <h4><br>This means you will not only be growing food, you’ll be doing it in a way that conserves precious resources and eco-friendly.</h4>
+                        <h4><br>This means you will not only be growing food, you’ll be doing it in a way that conserves precious resources and eco-friendly way.</h4>
                     </div>
                     <div class="chooseUsThirdCard">
                         <img class="chooseUs6" src="images/chooseUs6.png" >
