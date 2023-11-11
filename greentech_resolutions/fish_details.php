@@ -123,8 +123,8 @@
                                 echo            "<li class='product_details_description'><i>{$description}</i></li>";
                             }
                             echo            "</ul>";
-                            echo            "<p class='product_details_description'>Health Benefits: <a href='" . $row["health_benefits"] . "' target='_blank'>" . $row["health_benefits"] . "</a></p>";
-                            echo            "<p class='product_details_description'>Recipes: <a href='" . $row["recipe"] . "' target='_blank'>" . $row["recipe"] . "</a></p>";                            
+                            echo            "<p class='product_details_description'><a href='" . $row["health_benefits"] . "' target='_blank'>Health Benefits</a></p>";
+                            echo            "<p class='product_details_description'><a href='" . $row["recipe"] . "' target='_blank'>Recipes</a></p>";
                             echo            "<br><div><a  href='learn.php' class='back_to_products' style='margin:10px -10px;'>GO BACK</a></div>";
                             echo        "</div>";
                             echo    "</div>";
