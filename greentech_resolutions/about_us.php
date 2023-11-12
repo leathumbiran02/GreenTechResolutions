@@ -265,7 +265,7 @@
                 <h2>ABOUT US</h2>
                 <h4 style="margin-left:50px; margin-right:50px; text-align:justify;  line-height: 1.6;">
                 <br><i>Green Tech Resolutions is about recognizing the urgency of educating and empowering individuals through aquaponics to embrace sustainable 
-                    living while providing the tools and knowledge such as robotics and automation to make a positive impact through their Aquabot system. 
+                    living while providing the tools and knowledge such as robotics to make a positive impact  through their Aquabot system. 
                 <br> <br> 
                 We offer aquaponics systems that incorporate robotics and automation for an effortless and user-friendly experience. 
                 Our technology enables full automation and a web interface for users to monitor and control their aquaponics systems.
